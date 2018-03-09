@@ -7,7 +7,7 @@ import torchvision.datasets as dsets
 import torchvision.transforms as transforms
 from torch.autograd import Variable
 
-# Hyper Parameters
+# Hyperparameters
 num_epochs = 50
 batch_size = 128
 learning_rate = 0.001
@@ -19,7 +19,6 @@ def show(img):
     remap = "  .*#"+"#"*100
     img = (img.flatten()+.5)*3
     if len(img) != 784: return
-    #print("START")
     for i in range(28):
         print("".join([remap[int(round(x))] for x in img[i*28:i*28+28]]))
 
@@ -41,8 +40,8 @@ def load_data():
 
 
 class CNN(nn.Module):
-    """ Custom CNN for MNIST (From C&W paper)
-        stride = 1, padding = 0
+    """ Custom CNN for MNIST
+        stride = 1, padding = 2
         Layer 1: Conv2d 5x5x16, BatchNorm(16), ReLU, Max Pooling 2x2
         Layer 2: Conv2d 5x5x32, BatchNorm(32), ReLU, Max Pooling 2x2
         FC 10
