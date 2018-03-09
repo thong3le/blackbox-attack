@@ -129,7 +129,7 @@ def attack(model, dataset, x0, y0, alpha = 0.018, beta = 0.05, iterations = 1000
         return
 
     timestart = time.time()
-    print("Looking for the initial direction: ")
+    print("Searching for the initial direction: ")
     mindist = float('inf')
     theta = None
     info = None
@@ -149,7 +149,7 @@ def attack(model, dataset, x0, y0, alpha = 0.018, beta = 0.05, iterations = 1000
     g1 = g2 = 1.0
 
     for i in range(iterations):
-        u = torch.randn(theta.size())
+        u = torch.randn(theta.size()).type(torch.FloatTensor)
         g1, count1 = backtracking_line_search(model, x0, y0, theta + beta * u, initial_lbd = g1)
         g2, count2 = backtracking_line_search(model, x0, y0, theta, initial_lbd = g2)
         gradient = (g1-g2)/beta * u
