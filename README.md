@@ -39,11 +39,11 @@ conda install pytorch torchvision -c pytorch
 #### To run the Tensorflow version:
 
 ```bash
-python python blackbox_attack_tensorflow.py
+python blackbox_attack_tensorflow.py
 ```
 
 #### To run the Pytorch version:
 
 ```bash
-python python blackbox_attack_pytorch.py
+python blackbox_attack_pytorch.py
 ```
