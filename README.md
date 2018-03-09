@@ -36,13 +36,13 @@ pip install pillow scipy numpy tensorflow keras h5py
 conda install pytorch torchvision -c pytorch
 ```
    
-#### To run the Tensorflow version:
+#### To run the Tensorflow version (python3.6):
 
 ```bash
 python blackbox_attack_tensorflow.py
 ```
 
-#### To run the Pytorch version:
+#### To run the Pytorch version (python3.6):
 
 ```bash
 python blackbox_attack_pytorch.py
