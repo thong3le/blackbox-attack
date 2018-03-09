@@ -16,9 +16,13 @@ This is the CNN model that C&W uses in there paper for MNIST data.
 #### Pytorch version: 
 
 This is a simpler CNN model.
+
 stride = 1, padding = 0
+
 Layer 1: Conv2d 5x5x16, BatchNorm(16), ReLU, Max Pooling 2x2
+
 Layer 2: Conv2d 5x5x32, BatchNorm(32), ReLU, Max Pooling 2x2
+
 Layer 3: FC 10
 
 
@@ -28,8 +32,8 @@ The following steps should be sufficient to get these attacks up and running on
 most Linux-based systems.
 
 ```bash
-    pip install pillow scipy numpy tensorflow keras h5py
-    conda install pytorch torchvision -c pytorch
+pip install pillow scipy numpy tensorflow keras h5py
+conda install pytorch torchvision -c pytorch
 ```
    
 #### To run the Tensorflow version:
@@ -38,7 +42,7 @@ most Linux-based systems.
 python python blackbox_attack_tensorflow.py
 ```
 
-#### TO run the Pytorch version:
+#### To run the Pytorch version:
 
 ```bash
 python python blackbox_attack_pytorch.py
