@@ -164,7 +164,7 @@ def attack(model, train_dataset, x0, y0, alpha = 0.018, beta = 0.05, query_limit
     best_theta = None
     best_distortion = float('inf')
     g_theta = None
-    query_search_each = 200
+    query_search_each = 100
     query_count = 0
     print("Searching for the initial direction on %d samples: " % (num_samples))
 
@@ -263,6 +263,7 @@ def main():
     #save_model(net,'./models/mnist.pt')
     net.eval()
 
+    query_limit = 100000
     num_images = 50
 
     for i, (image, label) in enumerate(test_dataset):
@@ -272,7 +273,7 @@ def main():
         show(image.numpy())
         print("Original label: ", label)
         print("Predicted label: ", net.module.predict(image))
-        adversarial = attack(net.module, train_dataset, image, label, alpha = alpha, beta = beta, query_limit = 500000)
+        adversarial = attack(net.module, train_dataset, image, label, alpha = alpha, beta = beta, query_limit = query_limit)
         show(adversarial.numpy())
         print("Predicted label for adversarial example: ", net.module.predict(adversarial))
         #print("mindist: ", mindist)
@@ -287,7 +288,7 @@ def main():
         show(image.numpy())
         print("Original label: ", label)
         print("Predicted label: ", net.module.predict(image))
-        adversarial = attack(net.module, train_dataset, image, label, alpha = alpha, beta = beta, query_limit = 500000)
+        adversarial = attack(net.module, train_dataset, image, label, alpha = alpha, beta = beta, query_limit = query_limit)
         show(adversarial.numpy())
         print("Predicted label for adversarial example: ", net.module.predict(adversarial))
 
