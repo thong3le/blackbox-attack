@@ -3,7 +3,7 @@
 
 ### About
 
-Implementations of the blackbox attack algorithms in Tensorflow and Pytorch. 
+Implementations of the blackbox attack algorithms in Pytorch and Tensorflow. 
 
 ### Model description
 
@@ -15,7 +15,9 @@ This is the CNN model that C&W uses in their paper for MNIST data. (https://arxi
 
 #### Pytorch version: 
 
-This is a simpler CNN model.
+There are two CNN models for this version: a simple model and C&W model.
+
+Simple Model:
 
 stride = 1, padding = 0
 
@@ -36,14 +38,29 @@ pip install pillow scipy numpy tensorflow keras h5py
 conda install pytorch torchvision -c pytorch
 ```
    
+#### To run the Pytorch on simple model (python3.6):
+
+```bash
+python blackbox_attack_mnist_simple.py
+```
+
+#### To run the Pytorch on C&W model without GPU (python3.6):
+
+```bash
+python blackbox_attack_mnist.py
+```
+
+#### To run the Pytorch on C&W model with GPU (python3.6):
+
+```bash
+python blackbox_attack_mnist_gpu.py
+```
+
 #### To run the Tensorflow version (python3.6):
 
 ```bash
 python blackbox_attack_tensorflow.py
 ```
 
-#### To run the Pytorch version (python3.6):
 
-```bash
-python blackbox_attack_pytorch.py
-```
+
