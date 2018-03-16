@@ -6,146 +6,11 @@ import torch.nn as nn
 import torchvision.datasets as dsets
 import torchvision.transforms as transforms
 from torch.autograd import Variable
-
 import torch.nn.functional as F
-
-# Hyperparameters
-num_epochs = 50
-batch_size = 128
-learning_rate = 0.001
+from models import MNIST, CIFAR10, SimpleMNIST, load_mnist_data, load_cifar10_data, load_model, show_image
 
 alpha = 0.2
 beta = 0.001
-
-def show(img):
-    """
-    Show MNSIT digits in the console.
-    """
-    remap = "  .*#"+"#"*100
-    img = (img.flatten()+.5)*3
-    if len(img) != 784: return
-    for i in range(28):
-        print("".join([remap[int(round(x))] for x in img[i*28:i*28+28]]))
-
-
-def load_data():
-    """ Load MNIST data from torchvision.datasets 
-        input: None
-        output: minibatches of train and test sets 
-    """
-    # MNIST Dataset
-    train_dataset = dsets.MNIST(root='./mnist/', train=True, transform=transforms.ToTensor(), download=True)
-    test_dataset = dsets.MNIST(root='./mnist/', train=False, transform=transforms.ToTensor())
-    
-    # Data Loader (Input Pipeline)
-    train_loader = torch.utils.data.DataLoader(dataset=train_dataset, batch_size=batch_size, shuffle=True, num_workers=2)
-    test_loader = torch.utils.data.DataLoader(dataset=test_dataset, batch_size=batch_size, shuffle=False, num_workers=2)
-    return train_loader, test_loader, train_dataset, test_dataset
-
-
-class CNN(nn.Module):
-    def __init__(self):
-        super(CNN, self).__init__()
-        self.features = self._make_layers()
-        self.fc1 = nn.Linear(1024,200)
-        self.relu = nn.ReLU()
-        self.fc2 = nn.Linear(200,200)
-        self.dropout = nn.Dropout(p=0.5)
-        self.fc3 = nn.Linear(200,10)
-
-    def forward(self, x):
-        out = self.features(x)
-        out = out.view(out.size(0), -1)
-        out = self.fc1(out)
-        out = self.relu(out)
-        out = self.dropout(out)
-        out = self.fc2(out)
-        out = self.relu(out)
-        out = self.dropout(out)
-        out = self.fc3(out)
-        return out
-
-    def _make_layers(self):
-        layers=[]
-        in_channels= 1
-        layers += [nn.Conv2d(in_channels, 32, kernel_size=3),
-                   nn.BatchNorm2d(32),
-                   nn.ReLU()]
-        layers += [nn.Conv2d(32, 32, kernel_size=3),
-                   nn.BatchNorm2d(32),
-                   nn.ReLU()]
-        layers += [nn.MaxPool2d(kernel_size=2, stride=2)]
-        layers += [nn.Conv2d(32, 64, kernel_size=3),
-                   nn.BatchNorm2d(64),
-                   nn.ReLU()]
-        layers += [nn.Conv2d(64, 64, kernel_size=3),
-                   nn.BatchNorm2d(64),
-                   nn.ReLU()]
-        layers += [nn.MaxPool2d(kernel_size=2, stride=2)]
-        
-        return nn.Sequential(*layers)
-
-
-    def predict(self, image):
-        self.eval()
-        image = Variable(image).view(1,1,28,28)
-        if torch.cuda.is_available():
-            image = image.cuda()
-        output = self(image)
-        _, predict = torch.max(output.data, 1)
-        return predict[0]
-
-   
-
-def train(model, train_loader):
-    # Loss and Optimizer
-    model.train()
-    lr = 0.01
-    momentum = 0.9
-    criterion = nn.CrossEntropyLoss()
-    optimizer = torch.optim.SGD(model.parameters(), lr=lr, momentum=momentum, nesterov=True)
-    # Train the Model
-    for epoch in range(num_epochs):
-        for i, (images, labels) in enumerate(train_loader):
-            if torch.cuda.is_available():
-                images, labels = images.cuda(), labels.cuda()
-            optimizer.zero_grad()
-            images = Variable(images)
-            labels = Variable(labels)
-        
-            # Forward + Backward + Optimize
-            outputs = model(images)
-            loss = criterion(outputs, labels)
-            loss.backward()
-            optimizer.step()
-        
-            if (i+1) % 100 == 0:
-                print ('Epoch [%d/%d], Iter [%d] Loss: %.4f' 
-                    %(epoch+1, num_epochs, i+1, loss.data[0]))
-
-def test(model, test_loader):
-    # Test the Model
-    model.eval()  # Change model to 'eval' mode (BN uses moving mean/var).
-    correct = 0
-    total = 0
-    for images, labels in test_loader:
-        if torch.cuda.is_available():
-            images, labels = images.cuda(), labels.cuda()
-        images = Variable(images)
-        outputs = model(images)
-        _, predicted = torch.max(outputs.data, 1)
-        total += labels.size(0)
-        correct += (predicted == labels).sum()
-
-    print('Test Accuracy of the model on the 10000 test images: %.2f %%' % (100.0 * correct / total))
-
-def save_model(model, filename):
-    """ Save the trained model """
-    torch.save(model.state_dict(), filename)
-
-def load_model(model, filename):
-    """ Load the training model """
-    model.load_state_dict(torch.load(filename))
 
 def attack(model, train_dataset, x0, y0, alpha = 0.018, beta = 0.05, query_limit = 100000):
     """ Attack the original image and return adversarial example"""
@@ -293,19 +158,18 @@ def fine_grained_binary_search(model, x0, y0, theta, initial_lbd = 1.0, query_li
             break
     return lbd_hi, nquery
 
-def main():
-    train_loader, test_loader, train_dataset, test_dataset = load_data()
-    net = CNN()
+def attack_mnist():
+    train_loader, test_loader, train_dataset, test_dataset = load_mnist_data()
+    net = MNIST()
     if torch.cuda.is_available():
         net.cuda()
         net = torch.nn.DataParallel(net, device_ids=[0])
         #net = torch.nn.DataParallel(net, device_ids=range(torch.cuda.device_count()))
         
-    
     #train(net, train_loader)
     #load_model(net, 'models/mnist_gpu.pt')
     load_model(net, 'models/mnist.pt')
-    test(net, test_loader)
+    #test(net, test_loader)
     #save_model(net,'./models/mnist.pt')
     net.eval()
 
@@ -318,12 +182,12 @@ def main():
         if i >= num_images:
             break
         print("\n\n\n\n======== Image %d =========" % i)
-        show(image.numpy())
+        show_image(image.numpy())
         print("Original label: ", label)
         print("Predicted label: ", model.predict(image))
         
         adversarial = attack(model, train_dataset, image, label, alpha = alpha, beta = beta, query_limit = query_limit)
-        show(adversarial.numpy())
+        show_image(adversarial.numpy())
         print("Predicted label for adversarial example: ", model.predict(adversarial))
         #print("mindist: ", mindist)
         #print(theta)
@@ -345,12 +209,10 @@ def main():
 
 if __name__ == '__main__':
     timestart = time.time()
-    main()
+    attack_mnist()
+    #attack_cifar10()
     timeend = time.time()
     print("\n\nTotal running time: %.4f seconds\n" % (timeend - timestart))
 
     # estimate time per one iteration (two examples)
-    # query = 100000 -> 100 seconds 
-    # query = 200000 
-    # query = 500000 ->  
-    # query = 1000000 ->  
+    # query = 100000 -> 100 seconds  
