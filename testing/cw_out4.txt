@@ -4,6 +4,7 @@ query limit: Q = 1000000
 (alpha, beta, q2) = 0.018, 0.05, 200
 proportion = 50%
 
+Average: 1.87
 
 
 ======== Image 0 =========
