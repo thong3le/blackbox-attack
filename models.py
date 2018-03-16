@@ -187,8 +187,8 @@ def load_cifar10_data():
         output: minibatches of train and test sets 
     """
     # CIFAR10 Dataset
-    train_dataset = dsets.CIFAR10('./data', download=False, train=True, transform= transforms.ToTensor())
-    test_dataset = dsets.CIFAR10('./data', download=False, train=False, transform= transforms.ToTensor())
+    train_dataset = dsets.CIFAR10('./data/cifar10-py', download=False, train=True, transform= transforms.ToTensor())
+    test_dataset = dsets.CIFAR10('./data/cifar10-py', download=False, train=False, transform= transforms.ToTensor())
 
     # Data Loader (Input Pipeline)
     train_loader = torch.utils.data.DataLoader(dataset=train_dataset, batch_size=batch_size, shuffle=True, num_workers=2)
