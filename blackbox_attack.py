@@ -308,8 +308,9 @@ def attack_mnist():
         show_image(image.numpy())
         print("Original label: ", label)
         print("Predicted label: ", model.predict(image))
-        
-        adversarial = attack_targeted(model, train_dataset, image, label, 1, alpha = alpha, beta = beta)
+        adversarial = attack_untargeted(model, train_dataset, image, label, alpha = alpha, beta = beta)
+        # target = 1
+        #adversarial = attack_targeted(model, train_dataset, image, label, target, alpha = alpha, beta = beta)
         show_image(adversarial.numpy())
         print("Predicted label for adversarial example: ", model.predict(adversarial))
         distortion_fixsample += torch.norm(adversarial - image)
