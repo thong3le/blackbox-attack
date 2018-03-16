@@ -35,20 +35,17 @@ most Linux-based systems.
 conda install pytorch torchvision -c pytorch
 ```
    
-#### To run the Pytorch on C&W model:
-
+#### To train the model
 ```bash
-python3 blackbox_attack_mnist.py
+python3 models.py
 ```
 
-#### To run the Pytorch on simple model:
+#### To run the attack:
 
 ```bash
-python3 blackbox_attack_mnist_simple.py
+python3 blackbox_attack.py
 ```
+ 
 
-#### Remarks:
-
-You can also load the gpu model to run using gpu. 
 
 
