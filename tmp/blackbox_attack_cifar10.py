@@ -96,7 +96,7 @@ class CNN(nn.Module):
 
     def predict(self, image):
         self.eval()
-        image = Variable(image).cuda().view(1,3, 32,32)
+        image = Variable(image).view(1,3, 32,32)
         output = self(image)
         _, predict = torch.max(output.data, 1)
         return predict[0]
@@ -117,7 +117,7 @@ def train(model, train_loader):
             momentum = momentum * 0.5
             optimizer = torch.optim.SGD(model.parameters(), lr=lr, momentum=momentum, nesterov=True)
         for i, (images, labels) in enumerate(train_loader):
-            images, labels = images.cuda(), labels.cuda()
+            #images, labels = images.cuda(), labels.cuda()
             optimizer.zero_grad()
             images = Variable(images)
             labels = Variable(labels)
@@ -138,14 +138,14 @@ def test(model, test_loader):
     correct = 0
     total = 0
     for images, labels in test_loader:
-        images, labels = images.cuda(), labels.cuda()
+        #images, labels = images.cuda(), labels.cuda()
         images = Variable(images)
         outputs = model(images)
         _, predicted = torch.max(outputs.data, 1)
         total += labels.size(0)
         correct += (predicted == labels).sum()
 
-    print('Test Accuracy of the model on the 10000 test images: %.4f %%' % (100.0 * correct / total))
+    print('Test Accuracy of the model on the 10000 test images: %.2f %%' % (100.0 * correct / total))
 
 def save_model(model, filename):
     """ Save the trained model """
@@ -221,12 +221,13 @@ def backtracking_line_search(model, x0, y0, theta, initial_lbd = 1.0):
 if __name__ == '__main__':
     train_loader, test_loader, train_dataset, test_dataset = load_data()
     net = CNN()
-    net.cuda()
-    net = torch.nn.DataParallel(net, device_ids=range(torch.cuda.device_count()))
-    #train(net, train_loader)
-    load_model(net, 'models/cifar10_gpu.pt')
+    #net.cuda()
+    #net = torch.nn.DataParallel(net, device_ids=range(torch.cuda.device_count()))
+    train(net, train_loader)
+    #load_model(net, 'models/cifar10.pt')
     test(net, test_loader)
-    #save_model(net,'./cifar10.pt')
+    save_model(net,'./cifar10.pt')
+
     num_images = 5
     for _ in range(num_images):
         idx = random.randint(1, 10000)
