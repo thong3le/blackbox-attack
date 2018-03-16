@@ -7,9 +7,9 @@ Implementations of the blackbox attack algorithms in Pytorch
 
 ### Model description 
 
-There are two CNN models: a simple model and C&W model.
+There are two CNN models for MNIST dataset: a simple model and C&W model.
 
-Simple Model:
+Simple Model for MNIST:
 
 stride = 1, padding = 0
 
@@ -19,9 +19,12 @@ Layer 2: Conv2d 5x5x32, BatchNorm(32), ReLU, Max Pooling 2x2
 
 Layer 3: FC 10
 
-C&W model:
+C&W model for MNIST:
 This can be found in C&W paper their paper for MNIST data. (https://arxiv.org/abs/1608.04644)
 
+
+C&W model for CIFAR10:
+This can be found in C&W paper their paper for CIFAR10 data. (https://arxiv.org/abs/1608.04644)
 
 ### Pre-requisites
 
