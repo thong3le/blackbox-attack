@@ -14,8 +14,8 @@ num_epochs = 50
 batch_size = 128
 learning_rate = 0.001
 
-alpha = 0.018
-beta = 0.05
+alpha = 0.2
+beta = 0.001
 
 def show(img):
     """
@@ -160,7 +160,7 @@ def attack(model, train_dataset, x0, y0, alpha = 0.018, beta = 0.05, query_limit
         print("Fail to classify the image. No need to attack.")
         return x0
 
-    num_samples = 500 
+    num_samples = 1000 
     best_theta = None
     best_distortion = float('inf')
     g_theta = None
@@ -176,8 +176,9 @@ def attack(model, train_dataset, x0, y0, alpha = 0.018, beta = 0.05, query_limit
         query_count += 1
         if model.predict(xi) != y0:
             theta = xi - x0
-            query_count += query_search_each
-            lbd = fine_grained_binary_search(model, x0, y0, theta, query_limit = query_search_each)
+            #query_count += query_search_each
+            lbd, count = fine_grained_binary_search(model, x0, y0, theta, query_limit = query_search_each)
+            query_count += count
             distortion = torch.norm(lbd*theta)
             if distortion < best_distortion:
                 best_theta, g_theta = theta, lbd
@@ -185,7 +186,7 @@ def attack(model, train_dataset, x0, y0, alpha = 0.018, beta = 0.05, query_limit
                 print("--------> Found distortion %.4f and g_theta = %.4f" % (best_distortion, g_theta))
 
     timeend = time.time()
-    print("==========> Found best distortion %.4f and g_theta = %.4f in %.4f seconds" % (best_distortion, g_theta, timeend-timestart))
+    print("==========> Found best distortion %.4f and g_theta = %.4f in %.4f seconds using %d queries" % (best_distortion, g_theta, timeend-timestart, query_count))
 
     query_limit -= query_count
 
@@ -193,32 +194,73 @@ def attack(model, train_dataset, x0, y0, alpha = 0.018, beta = 0.05, query_limit
     timestart = time.time()
 
     query_search_each = 200  # limit for each lambda search
-    iterations = (query_limit - query_search_each)//(2*query_search_each)
+#    iterations = (query_limit - query_search_each)//(2*query_search_each)
+    iterations = 5000
     g1 = 1.0
     g2 = g_theta
     theta = best_theta
 
+    opt_count = 0
     for i in range(iterations):
         u = torch.randn(theta.size()).type(torch.FloatTensor)
-        g1 = fine_grained_binary_search(model, x0, y0, theta + beta * u, initial_lbd = g1, query_limit = query_search_each)
-        g2 = fine_grained_binary_search(model, x0, y0, theta, initial_lbd = g2, query_limit = query_search_each)
+        u = u/torch.norm(u)
+        #g1, count = fine_grained_binary_search(model, x0, y0, theta + beta * u, initial_lbd = g1, query_limit = query_search_each)
+        #opt_count += count
+        g2, count = fine_grained_binary_search(model, x0, y0, theta, initial_lbd = g2, query_limit = query_search_each)
+        opt_count += count
+        ttt = theta+beta * u
+        ttt = ttt/torch.norm(ttt)
+        g1, count = fine_grained_binary_search_local(model, x0, y0, ttt, initial_lbd = g2, query_limit = query_search_each)
+        opt_count += count
         if g1 == float('inf'):
             print("WHY g1 = INF???")
         if g2 == float('inf'):
             print("WHY g2 = INF???")
         if (i+1)%50 == 0:
-            print("Iteration %3d: g(theta + beta*u) = %.4f g(theta) = %.4f distortion %.4f" % (i+1, g1, g2, torch.norm(g2*theta)))
-        gradient = (g1-g2)/beta * u
+            print("Iteration %3d: g(theta + beta*u) = %.4f g(theta) = %.4f distortion %.4f num_queries %d" % (i+1, g1, g2, torch.norm(g2*theta), opt_count))
+        gradient = (g1-g2)/torch.norm(ttt-theta) * u
+        #gradient = (g1-g2)/beta * u
         theta.sub_(alpha*gradient)
+        theta = theta/torch.norm(theta)
 
-    g2 = fine_grained_binary_search(model, x0, y0, theta, initial_lbd = g2, query_limit = query_search_each)
+    g2, count = fine_grained_binary_search(model, x0, y0, theta, initial_lbd = g2, query_limit = query_search_each)
     distortion = torch.norm(g2*theta)
     target = model.predict(x0 + g2*theta)
     timeend = time.time()
     print("\nAdversarial Example Found Successfully: distortion %.4f target %d \nTime: %.4f seconds" % (distortion, target, timeend-timestart))
     return x0 + g2*theta
 
+def fine_grained_binary_search_local(model, x0, y0, theta, initial_lbd = 1.0, query_limit = 200):
+    nquery = 0
+    lbd = initial_lbd
+   
+    if model.predict(x0+lbd*theta) == y0:
+        lbd_lo = lbd
+        lbd_hi = lbd*1.01
+        nquery += 1
+        while model.predict(x0+lbd_hi*theta) == y0:
+            lbd_hi = lbd_hi*1.01
+            nquery += 1
+    else:
+        lbd_hi = lbd
+        lbd_lo = lbd*0.99
+        nquery += 1
+        while model.predict(x0+lbd_lo*theta) != y0 :
+            lbd_lo = lbd_lo*0.99
+            nquery += 1
+
+    while (lbd_hi - lbd_lo) > 1e-8:
+        lbd_mid = (lbd_lo + lbd_hi)/2.0
+        nquery += 1
+        if model.predict(x0 + lbd_mid*theta) != y0:
+            lbd_hi = lbd_mid
+        else:
+            lbd_lo = lbd_mid
+    return lbd_hi, nquery
+
+
 def fine_grained_binary_search(model, x0, y0, theta, initial_lbd = 1.0, query_limit = 200):
+    nquery = 0
     lbd = initial_lbd
     while model.predict(x0 + lbd*theta) == y0:
         lbd *= 2.0
@@ -232,36 +274,43 @@ def fine_grained_binary_search(model, x0, y0, theta, initial_lbd = 1.0, query_li
     query_fine_grained = query_limit // 2
     query_binary_search = query_limit - query_fine_grained
 
-    lambdas = np.linspace(lbd, 0.0, query_fine_grained)[1:]
+    lambdas = np.linspace(0.0, lbd, query_fine_grained)[1:]
+    #print lambdas
     lbd_hi = lbd
     lbd_hi_index = 0
     for i, lbd in enumerate(lambdas):
+        nquery += 1
         if model.predict(x0 + lbd*theta) != y0:
             lbd_hi = lbd
             lbd_hi_index = i
-
+            break
+    #print lbd_hi, lbd_hi_index
     lbd_lo = lambdas[lbd_hi_index - 1]
 
     while query_binary_search > 0:
         lbd_mid = (lbd_lo + lbd_hi)/2.0
+        nquery += 1
         if model.predict(x0 + lbd_mid*theta) != y0:
             lbd_hi = lbd_mid
         else:
             lbd_lo = lbd_mid
         query_binary_search -= 1
-    
-    return lbd_hi
+        if (lbd_hi - lbd_lo) < 1e-7:
+            break
+    return lbd_hi, nquery
 
 def main():
     train_loader, test_loader, train_dataset, test_dataset = load_data()
     net = CNN()
     net.cuda()
-    net = torch.nn.DataParallel(net, device_ids=range(torch.cuda.device_count()))
+    #net = torch.nn.DataParallel(net, device_ids=range(torch.cuda.device_count()))
+    net = torch.nn.DataParallel(net, device_ids=[0])
     #train(net, train_loader)
     load_model(net, 'models/mnist_gpu.pt')
     test(net, test_loader)
     #save_model(net,'./models/mnist.pt')
     net.eval()
+
 
     query_limit = 100000
     num_images = 50
