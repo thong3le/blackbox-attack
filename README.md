@@ -32,12 +32,6 @@ most Linux-based systems.
 conda install pytorch torchvision -c pytorch
 ```
    
-#### To run the Pytorch on simple model (python3.6):
-
-```bash
-python3 blackbox_attack_mnist_simple.py
-```
-
 #### To run the Pytorch on C&W model without GPU:
 
 ```bash
@@ -48,6 +42,12 @@ python3 blackbox_attack_mnist.py
 
 ```bash
 python3 blackbox_attack_mnist_gpu.py
+```
+
+#### To run the Pytorch on simple model:
+
+```bash
+python3 blackbox_attack_mnist_simple.py
 ```
 
 
