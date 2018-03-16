@@ -194,7 +194,7 @@ def attack_untargeted(model, train_dataset, x0, y0, alpha = 0.2, beta = 0.001):
 
     #query_search_each = 200  # limit for each lambda search
     #iterations = (query_limit - query_search_each)//(2*query_search_each)
-    iterations = 5000
+    iterations = 500
     g1 = 1.0
     g2 = g_theta
     theta = best_theta
@@ -313,7 +313,7 @@ def attack_mnist():
         #adversarial = attack_targeted(model, train_dataset, image, label, target, alpha = alpha, beta = beta)
         show_image(adversarial.numpy())
         print("Predicted label for adversarial example: ", model.predict(adversarial))
-        distortion_fixsample += torch.norm(adversarial - image)
+        distortion_fix_sample += torch.norm(adversarial - image)
 
     print("\n\n\n\n\n Running on {} random images \n\n\n".format(num_images))
 
@@ -323,17 +323,17 @@ def attack_mnist():
         idx = random.randint(100, len(test_dataset)-1)
         image, label = test_dataset[idx]
         print("\n\n\n\n======== Image %d =========" % idx)
-        show(image.numpy())
+        show_image(image.numpy())
         print("Original label: ", label)
         print("Predicted label: ", model.predict(image))
         
         adversarial = attack(model, train_dataset, image, label, alpha = alpha, beta = beta, query_limit = query_limit)
-        show(adversarial.numpy())
+        show_image(adversarial.numpy())
         print("Predicted label for adversarial example: ", model.predict(adversarial))
-        distortion_fixsample += torch.norm(adversarial - image)
+        distortion_random_sample += torch.norm(adversarial - image)
 
-    print("\n\nAverage distortion on first {} images is {}".format(num_images, distortion_fixsample/num_images))
-    print("Average distortion on random {} images is {}".format(num_images, distortion_fixsample/num_images))
+    print("\n\nAverage distortion on first {} images is {}".format(num_images, distortion_fix_sample/num_images))
+    print("Average distortion on random {} images is {}".format(num_images, distortion_random_sample/num_images))
 
 
 if __name__ == '__main__':
