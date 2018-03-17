@@ -99,14 +99,15 @@ def zoo_attack(dataset):
     if dataset == 'cifar10':
         train_loader, test_loader, train_dataset, test_dataset = load_cifar10_data()
         net = CIFAR10()
+        load_model(net, 'models/cifar10.pt')
     else:
         train_loader, test_loader, train_dataset, test_dataset = load_mnist_data()
         net = MNIST()
+        load_model(net, 'models/mnist.pt')
 
     if torch.cuda.is_available():
         net.cuda()
         net = torch.nn.DataParallel(net, device_ids=[0])
-    load_model(net, 'models/cifar10.pt')
     #save_model(net,'./models/mnist.pt')
     net.eval()
 
@@ -143,7 +144,7 @@ def zoo_attack(dataset):
 
 if __name__ == '__main__':
     timestart = time.time()
-    zoo_attack('cifar10')
+    zoo_attack('mnist')
     timeend = time.time()
     print("\n\nTotal running time: %.4f seconds\n" % (timeend - timestart))
 

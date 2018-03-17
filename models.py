@@ -110,6 +110,7 @@ class MNIST(nn.Module):
 
     def predict(self, image):
         self.eval()
+        image = torch.clamp(image,0,1)
         image = Variable(image).view(1,1,28,28)
         if torch.cuda.is_available():
             image = image.cuda()
@@ -172,8 +173,8 @@ def load_mnist_data():
         output: minibatches of train and test sets 
     """
     # MNIST Dataset
-    train_dataset = dsets.MNIST(root='./data/', train=True, transform=transforms.ToTensor(), download=True)
-    test_dataset = dsets.MNIST(root='./data/', train=False, transform=transforms.ToTensor())
+    train_dataset = dsets.MNIST(root='./data/mnist', train=True, transform=transforms.ToTensor(), download=True)
+    test_dataset = dsets.MNIST(root='./data/mnist', train=False, transform=transforms.ToTensor())
 
     # Data Loader (Input Pipeline)
     train_loader = torch.utils.data.DataLoader(dataset=train_dataset, batch_size=batch_size, shuffle=True)
