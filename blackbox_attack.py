@@ -175,7 +175,7 @@ def attack_untargeted(model, train_dataset, x0, y0, alpha = 0.2, beta = 0.001):
         query_count += 1
         if model.predict(xi) != y0:
             theta = xi - x0
-            #query_count += query_search_each
+            theta = theta/torch.norm(theta)
             lbd, count = fine_grained_binary_search(model, x0, y0, theta)
             query_count += count
             distortion = torch.norm(lbd*theta)
@@ -203,8 +203,6 @@ def attack_untargeted(model, train_dataset, x0, y0, alpha = 0.2, beta = 0.001):
     for i in range(iterations):
         u = torch.randn(theta.size()).type(torch.FloatTensor)
         u = u/torch.norm(u)
-        g2, count = fine_grained_binary_search(model, x0, y0, theta, initial_lbd = g2)
-        opt_count += count
         ttt = theta+beta * u
         ttt = ttt/torch.norm(ttt)
         g1, count = fine_grained_binary_search_local(model, x0, y0, ttt, initial_lbd = g2)
@@ -214,8 +212,10 @@ def attack_untargeted(model, train_dataset, x0, y0, alpha = 0.2, beta = 0.001):
         gradient = (g1-g2)/torch.norm(ttt-theta) * u
         theta.sub_(alpha*gradient)
         theta = theta/torch.norm(theta)
+        g2, count = fine_grained_binary_search(model, x0, y0, theta, initial_lbd = g2)
+        opt_count += count
 
-    g2, count = fine_grained_binary_search(model, x0, y0, theta, initial_lbd = g2)
+    #g2, count = fine_grained_binary_search(model, x0, y0, theta, initial_lbd = g2)
     distortion = torch.norm(g2*theta)
     target = model.predict(x0 + g2*theta)
     timeend = time.time()
@@ -327,7 +327,7 @@ def attack_mnist():
         print("Original label: ", label)
         print("Predicted label: ", model.predict(image))
         
-        adversarial = attack_untargeted(model, train_dataset, image, label, alpha = alpha, beta = beta, query_limit = query_limit)
+        adversarial = attack_untargeted(model, train_dataset, image, label, alpha = alpha, beta = beta)
         show_image(adversarial.numpy())
         print("Predicted label for adversarial example: ", model.predict(adversarial))
         distortion_random_sample += torch.norm(adversarial - image)
