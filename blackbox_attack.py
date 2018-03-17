@@ -295,7 +295,7 @@ def attack_mnist():
 
     model = net.module if torch.cuda.is_available() else net
 
-    num_images = 50
+    num_images = 100
 
     print("\n\n\n\n\n Running on first {} images \n\n\n".format(num_images))
 
@@ -327,7 +327,7 @@ def attack_mnist():
         print("Original label: ", label)
         print("Predicted label: ", model.predict(image))
         
-        adversarial = attack(model, train_dataset, image, label, alpha = alpha, beta = beta, query_limit = query_limit)
+        adversarial = attack_untargeted(model, train_dataset, image, label, alpha = alpha, beta = beta, query_limit = query_limit)
         show_image(adversarial.numpy())
         print("Predicted label for adversarial example: ", model.predict(adversarial))
         distortion_random_sample += torch.norm(adversarial - image)
