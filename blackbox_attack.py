@@ -13,7 +13,7 @@ alpha = 0.2
 beta = 0.001
 
 
-def attack_targeted(model, train_dataset, x0, y0, t, alpha = 0.2, beta = 0.001):
+def attack_targeted(model, train_dataset, x0, y0, t, alpha = 0.02, beta = 0.0001):
     """ Attack the original image and return adversarial example of target t
         model: (pytorch model)
         train_dataset: set of training data
@@ -40,7 +40,9 @@ def attack_targeted(model, train_dataset, x0, y0, t, alpha = 0.2, beta = 0.001):
         query_count += 1
         if model.predict(xi) == t:
             theta = xi - x0
-            lbd, count = fine_grained_binary_search_target(model, x0, y0, t, theta)
+            initial_lbd = torch.norm(theta)
+            theta = theta/torch.norm(theta)
+            lbd, count = fine_grained_binary_search_targeted(model, x0, y0, t, theta, initial_lbd)
             query_count += count
             distortion = torch.norm(lbd*theta)
             if distortion < best_distortion:
@@ -60,34 +62,30 @@ def attack_targeted(model, train_dataset, x0, y0, t, alpha = 0.2, beta = 0.001):
 
     opt_count = 0
     for i in range(iterations):
-        g2, count = fine_grained_binary_search_target(model, x0, y0, t, theta, initial_lbd = g2)
-        opt_count += count
-        
         u = torch.randn(theta.size()).type(torch.FloatTensor)
         u = u/torch.norm(u)
         ttt = theta+beta * u
         ttt = ttt/torch.norm(ttt)
-        #opt_count += 1
-        #print("opt_count: {}".format(opt_count))
-        #if model.predict(x0 + g2*ttt) == t:
-        #   break
-
-        g1, count = fine_grained_binary_search_local_target(model, x0, y0, t, ttt, initial_lbd = g2)
+        g1, count = fine_grained_binary_search_local_targeted(model, x0, y0, t, ttt, initial_lbd = g2)
         opt_count += count
         if (i+1)%1 == 0:
             print("Iteration %3d: g(theta + beta*u) = %.4f g(theta) = %.4f distortion %.4f num_queries %d" % (i+1, g1, g2, torch.norm(g2*theta), opt_count))
         gradient = (g1-g2)/torch.norm(ttt-theta) * u
         theta.sub_(alpha*gradient)
         theta = theta/torch.norm(theta)
+        g2, count = fine_grained_binary_search_targeted(model, x0, y0, t, theta, initial_lbd = g2)
+        if g2 == float('inf'):
+            break
+        opt_count += count
+        best_theta, g_theta = theta, g2
 
-    g2, count = fine_grained_binary_search_target(model, x0, y0, t, theta, initial_lbd = g2)
-    distortion = torch.norm(g2*theta)
-    target = model.predict(x0 + g2*theta)
+    distortion = torch.norm(best_theta*g_theta)
+    target = model.predict(x0 + best_theta*g_theta)
     timeend = time.time()
     print("\nAdversarial Example Found Successfully: distortion %.4f target %d queries %d \nTime: %.4f seconds" % (distortion, target, query_count + opt_count, timeend-timestart))
-    return x0 + g2*theta
+    return x0 + g_theta*best_theta
 
-def fine_grained_binary_search_local_target(model, x0, y0, t, theta, initial_lbd = 1.0):
+def fine_grained_binary_search_local_targeted(model, x0, y0, t, theta, initial_lbd = 1.0):
     nquery = 0
     lbd = initial_lbd
    
@@ -115,16 +113,18 @@ def fine_grained_binary_search_local_target(model, x0, y0, t, theta, initial_lbd
             lbd_lo = lbd_mid
     return lbd_hi, nquery
 
-def fine_grained_binary_search_target(model, x0, y0, t, theta, initial_lbd = 1.0):
+def fine_grained_binary_search_targeted(model, x0, y0, t, theta, initial_lbd = 1.0):
     nquery = 0
     lbd = initial_lbd
 
     # lead to bug
-    print(lbd)
+    #print(lbd)
     while model.predict(x0 + lbd*theta) != t:
-        lbd *= 2.0
-        print(lbd)
+        lbd *= 1.01
+        #print(lbd)
         nquery += 1
+        if lbd > 1000: 
+            return float('inf'), nquery
 
     num_intervals = 100
 
@@ -308,9 +308,9 @@ def attack_mnist():
         show_image(image.numpy())
         print("Original label: ", label)
         print("Predicted label: ", model.predict(image))
-        adversarial = attack_untargeted(model, train_dataset, image, label, alpha = alpha, beta = beta)
-        # target = 1
-        #adversarial = attack_targeted(model, train_dataset, image, label, target, alpha = alpha, beta = beta)
+        #adversarial = attack_untargeted(model, train_dataset, image, label, alpha = alpha, beta = beta)
+        target = 1
+        adversarial = attack_targeted(model, train_dataset, image, label, target)
         show_image(adversarial.numpy())
         print("Predicted label for adversarial example: ", model.predict(adversarial))
         distortion_fix_sample += torch.norm(adversarial - image)
@@ -327,7 +327,10 @@ def attack_mnist():
         print("Original label: ", label)
         print("Predicted label: ", model.predict(image))
         
-        adversarial = attack_untargeted(model, train_dataset, image, label, alpha = alpha, beta = beta)
+        #adversarial = attack_untargeted(model, train_dataset, image, label, alpha = alpha, beta = beta)
+        target = 1
+        adversarial = attack_targeted(model, train_dataset, image, label, target)
+
         show_image(adversarial.numpy())
         print("Predicted label for adversarial example: ", model.predict(adversarial))
         distortion_random_sample += torch.norm(adversarial - image)
