@@ -77,7 +77,7 @@ def attack_targeted(model, train_dataset, x0, y0, target, alpha = 0.1, beta = 0.
         
         while alpha > 1e-6:
             new_theta = theta - alpha*gradient
-            new_theta = newtheta/torch.norm(new_theta)
+            new_theta = new_theta/torch.norm(new_theta)
             new_g2, count = fine_grained_binary_search_targeted(model, x0, y0, target, new_theta, initial_lbd = g2)
             opt_count += count
             if newg2 != float('inf'):
