@@ -70,7 +70,7 @@ def attack_targeted(model, train_dataset, x0, y0, target, alpha = 0.1, beta = 0.
                 break
             beta *= 0.8
 
-        if (i+1)%1 == 0:
+        if (i+1)%10 == 0:
             print("Iteration %3d: g(theta + beta*u) = %.4f g(theta) = %.4f distortion %.4f num_queries %d alpha %.5f beta %.5f" % (i+1, g1, g2, g2, opt_count, alpha, beta))
             
         gradient = (g1-g2)/torch.norm(ttt-theta) * u
@@ -80,7 +80,7 @@ def attack_targeted(model, train_dataset, x0, y0, target, alpha = 0.1, beta = 0.
             new_theta = new_theta/torch.norm(new_theta)
             new_g2, count = fine_grained_binary_search_targeted(model, x0, y0, target, new_theta, initial_lbd = g2)
             opt_count += count
-            if newg2 != float('inf'):
+            if new_g2 != float('inf'):
                 g2 = new_g2
                 theta = new_theta
                 break
