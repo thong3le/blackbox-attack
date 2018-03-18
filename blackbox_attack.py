@@ -81,8 +81,8 @@ def attack_targeted(model, train_dataset, x0, y0, target, alpha = 0.1, beta = 0.
             new_g2, count = fine_grained_binary_search_targeted(model, x0, y0, target, new_theta, initial_lbd = g2)
             opt_count += count
             if newg2 != float('inf'):
-                g2 = newg2
-                theta = newtheta
+                g2 = new_g2
+                theta = new_theta
                 break
             alpha *= 0.8
 
@@ -327,7 +327,6 @@ def attack_mnist():
         targets = list(range(10))
         targets.pop(label)
         target = random.choice(targets)
-        print(target)
         #target = None   --> uncomment of untarget
         distortion_random_sample += attack_mnist_single(model, train_dataset, image, label, target)
 
