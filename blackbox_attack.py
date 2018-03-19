@@ -26,7 +26,7 @@ def attack_targeted(model, train_dataset, x0, y0, target, alpha = 0.1, beta = 0.
 
     # STEP I: find initial direction (theta, g_theta)
 
-    num_samples = 1000 
+    num_samples = 10000 
     best_theta, g_theta = None, float('inf')
     query_count = 0
 
