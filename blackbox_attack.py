@@ -60,10 +60,11 @@ def attack_targeted(model, train_dataset, x0, y0, target, alpha = 0.1, beta = 0.
     for i in range(iterations):
 
         while beta > 1e-6:
-            u = torch.randn(theta.size()).type(torch.FloatTensor)
+            u = torch.randn(theta.size())
             u = u/torch.norm(u)
             ttt = theta+beta * u
             ttt = ttt/torch.norm(ttt)
+            ttt = ttt.type(torch.FloatTensor)
             g1, count = fine_grained_binary_search_local_targeted(model, x0, y0, target, ttt, initial_lbd = g2)
             opt_count += count
             if g1 != float('inf'):
@@ -108,7 +109,7 @@ def fine_grained_binary_search_local_targeted(model, x0, y0, t, theta, initial_l
         while model.predict(x0+lbd_hi*theta) != t:
             lbd_hi = lbd_hi*1.01
             nquery += 1
-            if lbd > 100: 
+            if lbd_hi > 100: 
                 return float('inf'), nquery
     else:
         lbd_hi = lbd
@@ -293,10 +294,10 @@ def attack_mnist_single(model, train_dataset,image, label, target = None):
     print("Original label: ", label)
     print("Predicted label: ", model.predict(image))
     if target == None:
-        adversarial = attack_untargeted(model, train_dataset, image, label, alpha = alpha, beta = beta)
+        adversarial = attack_untargeted(model, train_dataset, image, label, alpha = alpha, beta = beta, iterations = 5000)
     else:
         print("Targeted attack: %d" % target)
-        adversarial = attack_targeted(model, train_dataset, image, label, target, alpha = alpha, beta = beta)
+        adversarial = attack_targeted(model, train_dataset, image, label, target, alpha = alpha, beta = beta, iterations = 5000)
     show_image(adversarial.numpy())
     print("Predicted label for adversarial example: ", model.predict(adversarial))
     return torch.norm(adversarial - image)
@@ -315,7 +316,7 @@ def attack_mnist():
 
     model = net.module if torch.cuda.is_available() else net
 
-    num_images = 1
+    num_images = 10
 
     print("\n\n\n\n\n Running on {} random images \n\n\n".format(num_images))
     distortion_random_sample = 0.0
