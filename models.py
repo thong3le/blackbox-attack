@@ -57,12 +57,24 @@ class CIFAR10(nn.Module):
 
     def predict(self, image):
         self.eval()
+        image = torch.clamp(image,0,1)
         image = Variable(image).view(1,3, 32,32)
         if torch.cuda.is_available():
             image = image.cuda()
         output = self(image)
         _, predict = torch.max(output.data, 1)
         return predict[0]
+    
+    def predict_batch(self, image):
+        self.eval()
+        image = torch.clamp(image,0,1)
+        image = Variable(image)
+        if torch.cuda.is_available():
+            image = image.cuda()
+        output = self(image)
+        _, predict = torch.max(output.data, 1)
+        return predict
+
 
 
 class MNIST(nn.Module):
@@ -117,6 +129,17 @@ class MNIST(nn.Module):
         output = self(image)
         _, predict = torch.max(output.data, 1)
         return predict[0]
+
+    def predict_batch(self, image):
+        self.eval()
+        image = torch.clamp(image,0,1)
+        image = Variable(image)
+        if torch.cuda.is_available():
+            image = image.cuda()
+        output = self(image)
+        _, predict = torch.max(output.data, 1)
+        return predict
+
 
 
 class SimpleMNIST(nn.Module):
@@ -177,8 +200,8 @@ def load_mnist_data():
     test_dataset = dsets.MNIST(root='./data/mnist', train=False, transform=transforms.ToTensor())
 
     # Data Loader (Input Pipeline)
-    train_loader = torch.utils.data.DataLoader(dataset=train_dataset, batch_size=batch_size, shuffle=True)
-    test_loader = torch.utils.data.DataLoader(dataset=test_dataset, batch_size=batch_size, shuffle=False)
+    train_loader = torch.utils.data.DataLoader(dataset=train_dataset, batch_size=1000, shuffle=True)
+    test_loader = torch.utils.data.DataLoader(dataset=test_dataset, batch_size=10, shuffle=False)
 
     return train_loader, test_loader, train_dataset, test_dataset
 
