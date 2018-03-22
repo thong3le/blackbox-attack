@@ -46,7 +46,7 @@ def attack_targeted(model, train_loader, x0, y0, target, alpha = 0.1, beta = 0.0
             break
         xi,yi=xi.cuda(),yi.cuda()
         #temp_x0, temp_y0 = x0[index], y0[index]
-        temp_x0, temp_y0 = x0, y0
+        temp_x0 = x0 
         #temp_x0 = temp_x0.expand(100,1,28,28)
             
         #b_target = torch.LongTensor([target[index]]).expand(100).cuda()
@@ -105,7 +105,7 @@ def attack_targeted(model, train_loader, x0, y0, target, alpha = 0.1, beta = 0.0
         gradient = (g1-g2)/torch.norm(ttt-theta) * u
         theta.sub_(alpha*gradient)
         theta /= torch.norm(theta)
-    g2, count = fine_grained_binary_search(model, x0, y0, theta, initial_lbd = g2)
+    g2, count = fine_grained_binary_search(model, x0, target, theta, initial_lbd = g2)
     distorch = torch.norm(g2*theta)
     out_target = model.predict(x0 + g2*theta)  # should be the target
     timeend = time.time()
@@ -142,14 +142,14 @@ def fine_grained_binary_search_local_targeted(model, x0, t, theta, initial_lbd =
             lbd_lo = lbd_mid
     return lbd_hi, nquery
 
-def initial_fine_grained_binary_search_targeted(model, x0, y0, theta, initial_lbd = 1.0):
+def initial_fine_grained_binary_search_targeted(model, x0, target, theta, initial_lbd = 1.0):
     nquery = 0
     initial_lbd = torch.ones(theta.size()).cuda()
     lbd = initial_lbd
     limit = torch.ones(lbd.size()).cuda()
     predicted = model.predict_batch(x0+ lbd * theta)
     nquery += 1000
-    candidate = (predicted != y0).nonzero().view(-1)
+    candidate = (predicted != target).nonzero().view(-1)
     while len(candidate.size())>0:
         lbd[candidate] = lbd[candidate].mul(1.05)
         nquery += candidate.size()[0]
@@ -158,7 +158,7 @@ def initial_fine_grained_binary_search_targeted(model, x0, y0, theta, initial_lb
             break
         predicted = model.predict_batch(x0+ lbd * theta)
         nquery += candidate.size()[0]
-        candidate = (predicted != y0).nonzero().view(-1)
+        candidate = (predicted != target).nonzero().view(-1)
    
     #lbd = torch.clamp(lbd,0,100)
     num_intervals = 100
@@ -177,7 +177,7 @@ def initial_fine_grained_binary_search_targeted(model, x0, y0, theta, initial_lb
         temp_x0 = x0[i].unsqueeze(0).expand(num_intervals-1,1,28,28)
         predicted = model.predict_batch(temp_x0+temp_lbd*temp_theta)
         nquery += num_intervals-1
-        candidate = (predicted == y0).nonzero().view(-1)
+        candidate = (predicted == target).nonzero().view(-1)
         if len(candidate.size())==0:
             lbd_hi_index[i]=0
             #print(lbd[i][0],lbd_hi[i])
@@ -194,18 +194,18 @@ def initial_fine_grained_binary_search_targeted(model, x0, y0, theta, initial_lb
         predicted = model.predict_batch(x0+temp_lbd_mid*theta)
         nquery += lbd_mid.size()[0]
         
-        candidate_y = (predicted == y0).nonzero().view(-1)
-        candidate_n = (predicted != y0).nonzero().view(-1)
+        candidate_y = (predicted == target).nonzero().view(-1)
+        candidate_n = (predicted != target).nonzero().view(-1)
         if len(candidate_y.size())>0:
             lbd_hi[candidate_y] = lbd_mid[candidate_y]
         if len(candidate_n.size())>0:
             lbd_lo[candidate_n] = lbd_mid[candidate_n]
     return lbd_hi, nquery
 
-def fine_grained_binary_search_targeted(model, x0, y0, theta, initial_lbd = 1.0):
+def fine_grained_binary_search_targeted(model, x0, target, theta, initial_lbd = 1.0):
     nquery = 0
     lbd = initial_lbd
-    while model.predict(x0+lbd*theta) != y0:
+    while model.predict(x0+lbd*theta) != target:
         lbd *= 1.05
         nquery +=1
 
@@ -228,7 +228,7 @@ def fine_grained_binary_search_targeted(model, x0, y0, theta, initial_lbd = 1.0)
     temp_x0 = x0.expand(num_intervals-1,1,28,28)
     predicted = model.predict_batch(temp_x0+temp_lbd*temp_theta)
     #print(predicted[98])
-    candidate = (predicted == y0).nonzero().view(-1)
+    candidate = (predicted == target).nonzero().view(-1)
     if len(candidate.size())==0:
         lbd_hi_index = 0
         lbd_hi = lbd
@@ -240,7 +240,7 @@ def fine_grained_binary_search_targeted(model, x0, y0, theta, initial_lbd = 1.0)
     while (lbd_hi - lbd_lo) > 1e-6:
         lbd_mid = (lbd_lo + lbd_hi)/2.0
         nquery += 1
-        if model.predict(x0+lbd_mid*theta) ==y0:
+        if model.predict(x0+lbd_mid*theta) == target:
             lbd_hi = lbd_mid
         else:
             lbd_lo = lbd_mid
