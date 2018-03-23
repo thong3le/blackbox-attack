@@ -114,7 +114,7 @@ def attack_targeted(model, train_loader, x0, y0, target, alpha = 0.1, beta = 0.0
             theta.sub_(alpha*gradient)
             theta /= torch.norm(theta)
 
-    g2, count = fine_grained_binary_search(model, x0, target, theta, initial_lbd = g2)
+    g2, count = fine_grained_binary_search_local_targeted(model, x0, target, theta, initial_lbd = g2)
     #distorch = torch.norm(g2*theta)
     out_target = model.predict(x0 + g2*theta)  # should be the target
     timeend = time.time()
@@ -322,6 +322,8 @@ def attack_untargeted(model, train_loader, x0, y0, alpha = 0.2, beta = 0.001, it
  
         if (i+1)%50 == 0:
             print("Iteration %3d: g(theta + beta*u) = %.4f g(theta) = %.4f distortion %.4f num_queries %d alpha %.5f beta %.5f" % (i+1, g1, g2, g2, opt_count, alpha, beta))
+        
+        gradient = (g1-g2)/torch.norm(ttt-theta) * u
         temp_theta = theta - alpha*gradient
         temp_theta /= torch.norm(temp_theta)
         g3, count = fine_grained_binary_search_local_targeted(model, x0, y0, temp_theta, initial_lbd = g2)
@@ -334,7 +336,7 @@ def attack_untargeted(model, train_loader, x0, y0, alpha = 0.2, beta = 0.001, it
             theta /= torch.norm(theta)
 
    
-    g2, count = fine_grained_binary_search(model, x0, y0, theta, initial_lbd = g2)
+    g2, count = fine_grained_binary_search_local(model, x0, y0, theta, initial_lbd = g2)
     out_target = model.predict(x0 + g2*theta)  # should be the target
     timeend = time.time()
     print("\nAdversarial Example Found Successfully: distortion %.4f target %d queries %d alpha %.5f beta %.5f \nTime: %.4f seconds" % (g2, out_target, query_count + opt_count, alpha, beta, timeend-timestart))
@@ -477,7 +479,7 @@ def attack_mnist_single(model, train_loader, image, label, target = None):
         adversarial = attack_untargeted(model, train_loader, image, label, alpha = alpha, beta = beta, iterations = 5000)
     else:
         print("Targeted attack: %d" % target)
-        adversarial = attack_targeted(model, train_loader, image, label, target, alpha = 1e-3, beta = beta, iterations = 5000)
+        adversarial = attack_targeted(model, train_loader, image, label, target, alpha = 1e-3, beta = beta, iterations = 3000)
     show_image(adversarial.numpy())
     print("Predicted label for adversarial example: ", model.predict(adversarial))
     return torch.norm(adversarial - image)
@@ -511,7 +513,7 @@ def attack_mnist():
         targets.pop(label)
         target = random.choice(targets)
         #target = 4
-        #target = None   #--> uncomment of untarget
+        target = None   #--> uncomment of untarget
         distortion_random_sample += attack_mnist_single(model, train_loader, image, label, target)
 
     print("\n\n\n\n\n Running on first {} images \n\n\n".format(num_images))
