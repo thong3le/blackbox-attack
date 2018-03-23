@@ -326,7 +326,7 @@ def attack_untargeted(model, train_loader, x0, y0, alpha = 0.2, beta = 0.001, it
         gradient = (g1-g2)/torch.norm(ttt-theta) * u
         temp_theta = theta - alpha*gradient
         temp_theta /= torch.norm(temp_theta)
-        g3, count = fine_grained_binary_search_local_targeted(model, x0, y0, temp_theta, initial_lbd = g2)
+        g3, count = fine_grained_binary_search_local(model, x0, y0, temp_theta, initial_lbd = g2)
         if g3 > g1:
             #print("aa")
             theta = ttt
