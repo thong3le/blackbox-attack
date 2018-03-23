@@ -103,13 +103,22 @@ def attack_targeted(model, train_loader, x0, y0, target, alpha = 0.1, beta = 0.0
             print("Iteration %3d: g(theta + beta*u) = %.4f g(theta) = %.4f distortion %.4f num_queries %d alpha %.5f beta %.5f" % (i+1, g1, g2, g2, opt_count, alpha, beta))
 
         gradient = (g1-g2)/torch.norm(ttt-theta) * u
-        theta.sub_(alpha*gradient)
-        theta /= torch.norm(theta)
+        temp_theta = theta - alpha*gradient
+        temp_theta /= torch.norm(temp_theta)
+        g3, count = fine_grained_binary_search_local_targeted(model, x0, target, temp_theta, initial_lbd = g2)
+        if g3 > g1:
+            #print("aa")
+            theta = ttt
+            #print(fine_grained_binary_search_targeted(model, x0, target, ttt, initial_lbd = g2))
+        else:
+            theta.sub_(alpha*gradient)
+            theta /= torch.norm(theta)
+
     g2, count = fine_grained_binary_search(model, x0, target, theta, initial_lbd = g2)
-    distorch = torch.norm(g2*theta)
+    #distorch = torch.norm(g2*theta)
     out_target = model.predict(x0 + g2*theta)  # should be the target
     timeend = time.time()
-    print("\nAdversarial Example Tageted %d Found Successfully: distortion %.4f target %d queries %d alpha %.5f beta %.5f \nTime: %.4f seconds" % (target, g_theta, out_target, query_count + opt_count, alpha, beta, timeend-timestart))
+    print("\nAdversarial Example Tageted %d Found Successfully: distortion %.4f target %d queries %d alpha %.5f beta %.5f \nTime: %.4f seconds" % (target, g2, out_target, query_count + opt_count, alpha, beta, timeend-timestart))
     return x0 + g2*theta
 
 def fine_grained_binary_search_local_targeted(model, x0, t, theta, initial_lbd = 1.0):
@@ -313,16 +322,22 @@ def attack_untargeted(model, train_loader, x0, y0, alpha = 0.2, beta = 0.001, it
  
         if (i+1)%50 == 0:
             print("Iteration %3d: g(theta + beta*u) = %.4f g(theta) = %.4f distortion %.4f num_queries %d alpha %.5f beta %.5f" % (i+1, g1, g2, g2, opt_count, alpha, beta))
+        temp_theta = theta - alpha*gradient
+        temp_theta /= torch.norm(temp_theta)
+        g3, count = fine_grained_binary_search_local_targeted(model, x0, y0, temp_theta, initial_lbd = g2)
+        if g3 > g1:
+            #print("aa")
+            theta = ttt
+            #print(fine_grained_binary_search_targeted(model, x0, y0, ttt, initial_lbd = g2))
+        else:
+            theta.sub_(alpha*gradient)
+            theta /= torch.norm(theta)
 
-        gradient = (g1-g2)/torch.norm(ttt-theta) * u
-        theta.sub_(alpha*gradient)
-        theta /= torch.norm(theta)
-    
+   
     g2, count = fine_grained_binary_search(model, x0, y0, theta, initial_lbd = g2)
-    distorch = torch.norm(g2*theta)
     out_target = model.predict(x0 + g2*theta)  # should be the target
     timeend = time.time()
-    print("\nAdversarial Example Found Successfully: distortion %.4f target %d queries %d alpha %.5f beta %.5f \nTime: %.4f seconds" % (g_theta, out_target, query_count + opt_count, alpha, beta, timeend-timestart))
+    print("\nAdversarial Example Found Successfully: distortion %.4f target %d queries %d alpha %.5f beta %.5f \nTime: %.4f seconds" % (g2, out_target, query_count + opt_count, alpha, beta, timeend-timestart))
     return x0 + g2*theta
 
 def fine_grained_binary_search_local(model, x0, y0, theta, initial_lbd = 1.0):
