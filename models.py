@@ -215,8 +215,8 @@ def load_cifar10_data():
     test_dataset = dsets.CIFAR10('./data/cifar10-py', download=False, train=False, transform= transforms.ToTensor())
 
     # Data Loader (Input Pipeline)
-    train_loader = torch.utils.data.DataLoader(dataset=train_dataset, batch_size=batch_size, shuffle=True, num_workers=2)
-    test_loader = torch.utils.data.DataLoader(dataset=test_dataset, batch_size=batch_size, shuffle=False, num_workers=2)
+    train_loader = torch.utils.data.DataLoader(dataset=train_dataset, batch_size=1000, shuffle=True)
+    test_loader = torch.utils.data.DataLoader(dataset=test_dataset, batch_size=10, shuffle=False)
 
     return train_loader, test_loader, train_dataset, test_dataset
 

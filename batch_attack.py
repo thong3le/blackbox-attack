@@ -472,14 +472,14 @@ def fine_grained_binary_search(model, x0, y0, theta, initial_lbd = 1.0):
 
 
 def attack_mnist_single(model, train_loader, image, label, target = None):
-    #show_image(image.numpy())
+    show_image(image.numpy())
     print("Original label: ", label)
     print("Predicted label: ", model.predict(image))
     if target == None:
         adversarial = attack_untargeted(model, train_loader, image, label, alpha = alpha, beta = beta, iterations = 5000)
     else:
         print("Targeted attack: %d" % target)
-        adversarial = attack_targeted(model, train_loader, image, label, target, alpha = 1e-3, beta = beta, iterations = 3000)
+        adversarial = attack_targeted(model, train_loader, image, label, target, alpha = 1e-3, beta = beta, iterations = 5000)
     show_image(adversarial.numpy())
     print("Predicted label for adversarial example: ", model.predict(adversarial))
     return torch.norm(adversarial - image)
@@ -504,7 +504,7 @@ def attack_mnist():
     distortion_random_sample = 0.0
 
     for _ in range(num_images):
-        #random.seed(9000)
+        random.seed(5000)
         idx = random.randint(100, len(test_dataset)-1)
         #idx = 3743
         image, label = test_dataset[idx]
@@ -513,10 +513,11 @@ def attack_mnist():
         targets.pop(label)
         target = random.choice(targets)
         #target = 4
-        target = None   #--> uncomment of untarget
+        #target = None   #--> uncomment of untarget
         distortion_random_sample += attack_mnist_single(model, train_loader, image, label, target)
 
-    print("\n\n\n\n\n Running on first {} images \n\n\n".format(num_images))
+    #print("\n\n\n\n\n Running on first {} images \n\n\n".format(num_images))
+    print("Average distortion on random {} images is {}".format(num_images, distortion_random_sample/num_images))
     '''
     distortion_fix_sample = 0.0
 
