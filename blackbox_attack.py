@@ -76,8 +76,10 @@ def attack_targeted(model, train_dataset, x0, y0, target, alpha = 0.1, beta = 0.
             
         gradient = (g1-g2)/torch.norm(ttt-theta) * u
         
-        while alpha > 1e-6:
-            new_theta = theta - alpha*gradient
+        # make sure the step-size is good
+        new_alpha = alpha
+        while new_alpha > 1e-6:
+            new_theta = theta - new_alpha*gradient
             new_theta = new_theta/torch.norm(new_theta)
             new_g2, count = fine_grained_binary_search_targeted(model, x0, y0, target, new_theta, initial_lbd = g2)
             opt_count += count
@@ -85,9 +87,9 @@ def attack_targeted(model, train_dataset, x0, y0, target, alpha = 0.1, beta = 0.
                 g2 = new_g2
                 theta = new_theta
                 break
-            alpha *= 0.8
+            new_alpha *= 0.8
 
-        if beta <= 1e-6 or alpha <= 1e-6:
+        if beta <= 1e-6 or new_alpha <= 1e-6:
             break
 
         if g2 < g_theta:
@@ -122,7 +124,7 @@ def fine_grained_binary_search_local_targeted(model, x0, y0, t, theta, initial_l
     while (lbd_hi - lbd_lo) > 1e-8:
         lbd_mid = (lbd_lo + lbd_hi)/2.0
         nquery += 1
-        if model.predict(x0 + lbd_mid*theta) != y0:
+        if model.predict(x0 + lbd_mid*theta) == t:
             lbd_hi = lbd_mid
         else:
             lbd_lo = lbd_mid
