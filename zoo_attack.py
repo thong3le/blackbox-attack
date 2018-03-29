@@ -41,10 +41,10 @@ def coordinate_ADAM(losses, indice, grad,  batch_size, mt_arr, vt_arr, real_modi
     adam_epoch[indice] = epoch + 1
 
 
-def attack(input, label, net, c, batch_size= 1, TARGETED=False):
-    input_v = Variable(input.cuda()).view(1,3,32,32)
+def attack(input, label, net, c, batch_size= 128, TARGETED=False):
+    input_v = Variable(input.cuda())
     n_class = 10
-    index = torch.LongTensor([label]).view(-1,1)
+    index = label.view(-1,1)
     label_onehot = torch.FloatTensor(input_v.size()[0] , n_class)
     label_onehot.zero_()
     label_onehot.scatter_(1,index,1)
@@ -87,7 +87,7 @@ def attack(input, label, net, c, batch_size= 1, TARGETED=False):
         np_modifier = real_modifier.cpu().numpy()
         lr = 0.2
         beta1, beta2 = 0.9, 0.999
-        #for i in range(batch_size):
+        #for i in range(1):
         coordinate_ADAM(losses, random_set[:batch_size], grad, batch_size, mt, vt, np_modifier, lr, adam_epoch, beta1, beta2)
         real_modifier = torch.from_numpy(np_modifier)
     real_modifier_v = Variable(real_modifier, requires_grad=True).cuda()
@@ -99,35 +99,35 @@ def zoo_attack(dataset):
     if dataset == 'cifar10':
         train_loader, test_loader, train_dataset, test_dataset = load_cifar10_data()
         net = CIFAR10()
-        load_model(net, 'models/cifar10.pt')
     else:
         train_loader, test_loader, train_dataset, test_dataset = load_mnist_data()
         net = MNIST()
-        load_model(net, 'models/mnist.pt')
 
     if torch.cuda.is_available():
         net.cuda()
         net = torch.nn.DataParallel(net, device_ids=[0])
+    
+    if dataset == 'cifar10':
+        load_model(net, 'models/cifar10.pt')
+    else:
+        load_model(net, 'models/mnist_gpu.pt')
     #save_model(net,'./models/mnist.pt')
     net.eval()
 
+    model = net.module
 
-    query_limit = 100000
-    num_images = 50
+    #num_images = 10
 
-    for i, (image, label) in enumerate(test_dataset):
-        if i >= num_images:
-            break
-        print("\n\n\n\n======== Image %d =========" % i)
-        show_image(image.numpy())
-        print("Original label: ", label)
-        print("Predicted label: ", net.module.predict(image))
-        adversarial = attack(image, label, net.module, 1)
-        show_image(adversarial.numpy())
-        print("Predicted label for adversarial example: ", net.module.predict(adversarial))
+    for i, (image, label) in enumerate(test_loader):
+        #print("\n\n\n\n======== Image %d =========" % i)
+        #show_image(image.numpy())
+        print("Original label:" , label)
+        print("Predicted label:" , model.predict_batch(image))
+        adversarial = attack(image, label, model, 1)
+        print("Predicted label for adversarial example: ", model.predict_batch(adversarial))
         #print("mindist: ", mindist)
         #print(theta)
-
+    '''
     print("\n\n\n\n\n Random Sample\n\n\n")
 
     for _ in range(num_images):
@@ -140,7 +140,7 @@ def zoo_attack(dataset):
         adversarial = attack(image, label, net.module, 1)
         show_image(adversarial.numpy())
         print("Predicted label for adversarial example: ", net.module.predict(adversarial))
-
+    '''
 
 if __name__ == '__main__':
     timestart = time.time()
