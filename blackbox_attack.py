@@ -335,6 +335,47 @@ def attack_mnist():
     
     print("Average distortion on random {} images is {}".format(num_images, distortion_random_sample/num_images))
 
+def attack_cifar10_single(model, train_dataset,image, label, target = None):
+    print("Original label: ", label)
+    print("Predicted label: ", model.predict(image))
+    if target == None:
+        adversarial = attack_untargeted(model, train_dataset, image, label, alpha = alpha, beta = beta, iterations = 5000)
+    else:
+        print("Targeted attack: %d" % target)
+        adversarial = attack_targeted(model, train_dataset, image, label, target, alpha = alpha, beta = beta, iterations = 5000)
+    print("Predicted label for adversarial example: ", model.predict(adversarial))
+    return torch.norm(adversarial - image)
+
+def attack_cifar10():
+    train_loader, test_loader, train_dataset, test_dataset = load_cifar10_data()
+    net = CIFAR10()
+    if torch.cuda.is_available():
+        net.cuda()
+        net = torch.nn.DataParallel(net, device_ids=[0])
+        #net = torch.nn.DataParallel(net, device_ids=range(torch.cuda.device_count()))
+        
+    #load_model(net, 'models/cifar10_gpu.pt')
+    load_model(net, 'models/cifar10_cpu.pt')
+    net.eval()
+
+    model = net.module if torch.cuda.is_available() else net
+
+    num_images = 10
+
+    print("\n\n\n\n\n Running on {} random images \n\n\n".format(num_images))
+    distortion_random_sample = 0.0
+
+    for _ in range(num_images):
+        idx = random.randint(100, len(test_dataset)-1)
+        image, label = test_dataset[idx]
+        print("\n\n\n\n======== Image %d =========" % idx)
+        targets = list(range(10))
+        targets.pop(label)
+        target = random.choice(targets)
+        #target = None   --> uncomment of untarget
+        distortion_random_sample += attack_cifar10_single(model, train_dataset, image, label, target)
+    
+    print("Average distortion on random {} images is {}".format(num_images, distortion_random_sample/num_images))
 
 if __name__ == '__main__':
     timestart = time.time()
