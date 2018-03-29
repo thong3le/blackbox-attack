@@ -76,7 +76,7 @@ def attack(input, label, net, c, batch_size= 128, TARGETED=False):
                 loss2 = c* torch.sum(torch.clamp(real - other, min=0))
             error = loss1 + loss2
             losses[i] = error.data[0]
-        if (iter+1)%50 == 0:
+        if (iter+1)%10 == 0:
             print(np.sum(losses))
         #if loss2.data[0]==0:
         #    break
