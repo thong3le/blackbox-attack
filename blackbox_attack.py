@@ -333,26 +333,27 @@ def attack_mnist():
         #target = None   --> uncomment of untarget
         distortion_random_sample += attack_mnist_single(model, train_dataset, image, label, target)
 
-    print("\n\n\n\n\n Running on first {} images \n\n\n".format(num_images))
+    # print("\n\n\n\n\n Running on first {} images \n\n\n".format(num_images))
 
-    distortion_fix_sample = 0.0
+    # distortion_fix_sample = 0.0
 
-    for i, (image, label) in enumerate(test_dataset):
-        if i >= num_images:
-            break
-        print("\n\n\n\n======== Image %d =========" % i)
-        targets = list(range(10))
-        targets.pop(label)
-        target = random.choice(targets)
-        #target = None   --> uncomment of untarget
-        distortion_fix_sample += attack_mnist_single(model, train_dataset, image, label, target)
+    # for i, (image, label) in enumerate(test_dataset):
+    #     if i >= num_images:
+    #         break
+    #     print("\n\n\n\n======== Image %d =========" % i)
+    #     targets = list(range(10))
+    #     targets.pop(label)
+    #     target = random.choice(targets)
+    #     #target = None   --> uncomment of untarget
+    #     distortion_fix_sample += attack_mnist_single(model, train_dataset, image, label, target)
 
-    print("\n\nAverage distortion on first {} images is {}".format(num_images, distortion_fix_sample/num_images))
+    # print("\n\nAverage distortion on first {} images is {}".format(num_images, distortion_fix_sample/num_images))
     print("Average distortion on random {} images is {}".format(num_images, distortion_random_sample/num_images))
 
 
 if __name__ == '__main__':
     timestart = time.time()
+    random.seed(0)
     attack_mnist()
     #attack_cifar10()
     timeend = time.time()
