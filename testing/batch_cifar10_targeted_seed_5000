@@ -1,0 +1,237 @@
+
+
+
+
+
+ Running on 10 random images 
+
+
+
+
+
+
+
+======== Image 3918 =========
+Original label:  6
+Predicted label:  6
+Targeted attack: 5
+--------> Found g() 9.6089
+==========> Found best distortion 9.6089 in 7.6759 seconds using 24600 queries
+5
+Iteration  50: g(theta + beta*u) = 24.1020 g(theta) = 23.8633 distortion 23.8633 num_queries 2223 alpha 0.00100 beta 0.00100
+aa
+Iteration 100: g(theta + beta*u) = 15.3262 g(theta) = 15.1745 distortion 15.1745 num_queries 4413 alpha 0.00100 beta 0.00100
+Iteration 150: g(theta + beta*u) = 9.9026 g(theta) = 10.0026 distortion 10.0026 num_queries 6539 alpha 0.00100 beta 0.00100
+Iteration 200: g(theta + beta*u) = 7.6004 g(theta) = 7.6772 distortion 7.6772 num_queries 8617 alpha 0.00100 beta 0.00100
+Iteration 250: g(theta + beta*u) = 6.2944 g(theta) = 6.3580 distortion 6.3580 num_queries 10666 alpha 0.00100 beta 0.00100
+Iteration 300: g(theta + beta*u) = 5.6209 g(theta) = 5.5652 distortion 5.5652 num_queries 12681 alpha 0.00100 beta 0.00100
+Iteration 350: g(theta + beta*u) = 4.8312 g(theta) = 4.7834 distortion 4.7834 num_queries 14689 alpha 0.00100 beta 0.00100
+Iteration 400: g(theta + beta*u) = 4.1924 g(theta) = 4.2347 distortion 4.2347 num_queries 16699 alpha 0.00100 beta 0.00100
+Iteration 450: g(theta + beta*u) = 3.9524 g(theta) = 3.9133 distortion 3.9133 num_queries 18666 alpha 0.00100 beta 0.00100
+Iteration 500: g(theta + beta*u) = 3.5442 g(theta) = 3.5800 distortion 3.5800 num_queries 20625 alpha 0.00100 beta 0.00100
+Iteration 550: g(theta + beta*u) = 3.3523 g(theta) = 3.3191 distortion 3.3191 num_queries 22583 alpha 0.00100 beta 0.00100
+Iteration 600: g(theta + beta*u) = 3.0148 g(theta) = 3.0453 distortion 3.0453 num_queries 24500 alpha 0.00100 beta 0.00100
+Iteration 650: g(theta + beta*u) = 2.7873 g(theta) = 2.8154 distortion 2.8154 num_queries 26406 alpha 0.00100 beta 0.00100
+Iteration 700: g(theta + beta*u) = 2.7136 g(theta) = 2.6867 distortion 2.6867 num_queries 28315 alpha 0.00100 beta 0.00100
+Iteration 750: g(theta + beta*u) = 2.5429 g(theta) = 2.5686 distortion 2.5686 num_queries 30223 alpha 0.00100 beta 0.00100
+Iteration 800: g(theta + beta*u) = 2.3956 g(theta) = 2.4198 distortion 2.4198 num_queries 32129 alpha 0.00100 beta 0.00100
+Iteration 850: g(theta + beta*u) = 2.2517 g(theta) = 2.2744 distortion 2.2744 num_queries 34037 alpha 0.00100 beta 0.00100
+Iteration 900: g(theta + beta*u) = 2.1240 g(theta) = 2.1454 distortion 2.1454 num_queries 35941 alpha 0.00100 beta 0.00100
+Iteration 950: g(theta + beta*u) = 1.9875 g(theta) = 2.0075 distortion 2.0075 num_queries 37811 alpha 0.00100 beta 0.00100
+Iteration 1000: g(theta + beta*u) = 1.9125 g(theta) = 1.9318 distortion 1.9318 num_queries 39667 alpha 0.00100 beta 0.00100
+Iteration 1050: g(theta + beta*u) = 1.8486 g(theta) = 1.8303 distortion 1.8303 num_queries 41523 alpha 0.00100 beta 0.00100
+Iteration 1100: g(theta + beta*u) = 1.7680 g(theta) = 1.7858 distortion 1.7858 num_queries 43384 alpha 0.00100 beta 0.00100
+Iteration 1150: g(theta + beta*u) = 1.7338 g(theta) = 1.7166 distortion 1.7166 num_queries 45243 alpha 0.00100 beta 0.00100
+Iteration 1200: g(theta + beta*u) = 1.6621 g(theta) = 1.6456 distortion 1.6456 num_queries 47098 alpha 0.00100 beta 0.00100
+Iteration 1250: g(theta + beta*u) = 1.6431 g(theta) = 1.6268 distortion 1.6268 num_queries 48957 alpha 0.00100 beta 0.00100
+Iteration 1300: g(theta + beta*u) = 1.5807 g(theta) = 1.5651 distortion 1.5651 num_queries 50777 alpha 0.00100 beta 0.00100
+Iteration 1350: g(theta + beta*u) = 1.5387 g(theta) = 1.5235 distortion 1.5235 num_queries 52583 alpha 0.00100 beta 0.00100
+Iteration 1400: g(theta + beta*u) = 1.5016 g(theta) = 1.4868 distortion 1.4868 num_queries 54389 alpha 0.00100 beta 0.00100
+Iteration 1450: g(theta + beta*u) = 1.4463 g(theta) = 1.4609 distortion 1.4609 num_queries 56196 alpha 0.00100 beta 0.00100
+Iteration 1500: g(theta + beta*u) = 1.3937 g(theta) = 1.4078 distortion 1.4078 num_queries 58001 alpha 0.00100 beta 0.00100
+Iteration 1550: g(theta + beta*u) = 1.3666 g(theta) = 1.3804 distortion 1.3804 num_queries 59812 alpha 0.00100 beta 0.00100
+Iteration 1600: g(theta + beta*u) = 1.3400 g(theta) = 1.3535 distortion 1.3535 num_queries 61619 alpha 0.00100 beta 0.00100
+Iteration 1650: g(theta + beta*u) = 1.3108 g(theta) = 1.3240 distortion 1.3240 num_queries 63428 alpha 0.00100 beta 0.00100
+Iteration 1700: g(theta + beta*u) = 1.3196 g(theta) = 1.3066 distortion 1.3066 num_queries 65241 alpha 0.00100 beta 0.00100
+Iteration 1750: g(theta + beta*u) = 1.2708 g(theta) = 1.2836 distortion 1.2836 num_queries 67049 alpha 0.00100 beta 0.00100
+Iteration 1800: g(theta + beta*u) = 1.2443 g(theta) = 1.2569 distortion 1.2569 num_queries 68854 alpha 0.00100 beta 0.00100
+Iteration 1850: g(theta + beta*u) = 1.2156 g(theta) = 1.2279 distortion 1.2279 num_queries 70658 alpha 0.00100 beta 0.00100
+Iteration 1900: g(theta + beta*u) = 1.2112 g(theta) = 1.1992 distortion 1.1992 num_queries 72466 alpha 0.00100 beta 0.00100
+Iteration 1950: g(theta + beta*u) = 1.1768 g(theta) = 1.1651 distortion 1.1651 num_queries 74278 alpha 0.00100 beta 0.00100
+Iteration 2000: g(theta + beta*u) = 1.1509 g(theta) = 1.1395 distortion 1.1395 num_queries 76084 alpha 0.00100 beta 0.00100
+aa
+Iteration 2050: g(theta + beta*u) = 1.1170 g(theta) = 1.1283 distortion 1.1283 num_queries 77883 alpha 0.00100 beta 0.00100
+aa
+Iteration 2100: g(theta + beta*u) = 1.1070 g(theta) = 1.1182 distortion 1.1182 num_queries 79683 alpha 0.00100 beta 0.00100
+Iteration 2150: g(theta + beta*u) = 1.0863 g(theta) = 1.0973 distortion 1.0973 num_queries 81489 alpha 0.00100 beta 0.00100
+Iteration 2200: g(theta + beta*u) = 1.0958 g(theta) = 1.0850 distortion 1.0850 num_queries 83299 alpha 0.00100 beta 0.00100
+Iteration 2250: g(theta + beta*u) = 1.0752 g(theta) = 1.0646 distortion 1.0646 num_queries 85104 alpha 0.00100 beta 0.00100
+Iteration 2300: g(theta + beta*u) = 1.0398 g(theta) = 1.0503 distortion 1.0503 num_queries 86912 alpha 0.00100 beta 0.00100
+Iteration 2350: g(theta + beta*u) = 1.0211 g(theta) = 1.0314 distortion 1.0314 num_queries 88668 alpha 0.00100 beta 0.00100
+Iteration 2400: g(theta + beta*u) = 1.0269 g(theta) = 1.0168 distortion 1.0168 num_queries 90430 alpha 0.00100 beta 0.00100
+Iteration 2450: g(theta + beta*u) = 1.0163 g(theta) = 1.0062 distortion 1.0062 num_queries 92191 alpha 0.00100 beta 0.00100
+Iteration 2500: g(theta + beta*u) = 0.9864 g(theta) = 0.9964 distortion 0.9964 num_queries 93952 alpha 0.00100 beta 0.00100
+Iteration 2550: g(theta + beta*u) = 0.9936 g(theta) = 0.9838 distortion 0.9838 num_queries 95710 alpha 0.00100 beta 0.00100
+Iteration 2600: g(theta + beta*u) = 0.9620 g(theta) = 0.9717 distortion 0.9717 num_queries 97466 alpha 0.00100 beta 0.00100
+Iteration 2650: g(theta + beta*u) = 0.9712 g(theta) = 0.9616 distortion 0.9616 num_queries 99222 alpha 0.00100 beta 0.00100
+Iteration 2700: g(theta + beta*u) = 0.9382 g(theta) = 0.9477 distortion 0.9477 num_queries 100979 alpha 0.00100 beta 0.00100
+Iteration 2750: g(theta + beta*u) = 0.9293 g(theta) = 0.9387 distortion 0.9387 num_queries 102740 alpha 0.00100 beta 0.00100
+Iteration 2800: g(theta + beta*u) = 0.9388 g(theta) = 0.9295 distortion 0.9295 num_queries 104499 alpha 0.00100 beta 0.00100
+Iteration 2850: g(theta + beta*u) = 0.9291 g(theta) = 0.9199 distortion 0.9199 num_queries 106256 alpha 0.00100 beta 0.00100
+Iteration 2900: g(theta + beta*u) = 0.8995 g(theta) = 0.9086 distortion 0.9086 num_queries 108015 alpha 0.00100 beta 0.00100
+Iteration 2950: g(theta + beta*u) = 0.8886 g(theta) = 0.8976 distortion 0.8976 num_queries 109772 alpha 0.00100 beta 0.00100
+Iteration 3000: g(theta + beta*u) = 0.8933 g(theta) = 0.8845 distortion 0.8845 num_queries 111528 alpha 0.00100 beta 0.00100
+Iteration 3050: g(theta + beta*u) = 0.8803 g(theta) = 0.8716 distortion 0.8716 num_queries 113285 alpha 0.00100 beta 0.00100
+Iteration 3100: g(theta + beta*u) = 0.8720 g(theta) = 0.8634 distortion 0.8634 num_queries 115041 alpha 0.00100 beta 0.00100
+Iteration 3150: g(theta + beta*u) = 0.8617 g(theta) = 0.8532 distortion 0.8532 num_queries 116799 alpha 0.00100 beta 0.00100
+Iteration 3200: g(theta + beta*u) = 0.8500 g(theta) = 0.8416 distortion 0.8416 num_queries 118552 alpha 0.00100 beta 0.00100
+Iteration 3250: g(theta + beta*u) = 0.8439 g(theta) = 0.8355 distortion 0.8355 num_queries 120314 alpha 0.00100 beta 0.00100
+Iteration 3300: g(theta + beta*u) = 0.8330 g(theta) = 0.8247 distortion 0.8247 num_queries 122070 alpha 0.00100 beta 0.00100
+Iteration 3350: g(theta + beta*u) = 0.8088 g(theta) = 0.8170 distortion 0.8170 num_queries 123830 alpha 0.00100 beta 0.00100
+Iteration 3400: g(theta + beta*u) = 0.8144 g(theta) = 0.8064 distortion 0.8064 num_queries 125569 alpha 0.00100 beta 0.00100
+Iteration 3450: g(theta + beta*u) = 0.8082 g(theta) = 0.8002 distortion 0.8002 num_queries 127287 alpha 0.00100 beta 0.00100
+Iteration 3500: g(theta + beta*u) = 0.7856 g(theta) = 0.7935 distortion 0.7935 num_queries 128999 alpha 0.00100 beta 0.00100
+Iteration 3550: g(theta + beta*u) = 0.7938 g(theta) = 0.7860 distortion 0.7860 num_queries 130713 alpha 0.00100 beta 0.00100
+Iteration 3600: g(theta + beta*u) = 0.7862 g(theta) = 0.7784 distortion 0.7784 num_queries 132433 alpha 0.00100 beta 0.00100
+aa
+Iteration 3650: g(theta + beta*u) = 0.7796 g(theta) = 0.7719 distortion 0.7719 num_queries 134138 alpha 0.00100 beta 0.00100
+Iteration 3700: g(theta + beta*u) = 0.7576 g(theta) = 0.7652 distortion 0.7652 num_queries 135846 alpha 0.00100 beta 0.00100
+Iteration 3750: g(theta + beta*u) = 0.7685 g(theta) = 0.7609 distortion 0.7609 num_queries 137554 alpha 0.00100 beta 0.00100
+Iteration 3800: g(theta + beta*u) = 0.7467 g(theta) = 0.7542 distortion 0.7542 num_queries 139259 alpha 0.00100 beta 0.00100
+Iteration 3850: g(theta + beta*u) = 0.7587 g(theta) = 0.7512 distortion 0.7512 num_queries 140971 alpha 0.00100 beta 0.00100
+Iteration 3900: g(theta + beta*u) = 0.7398 g(theta) = 0.7472 distortion 0.7472 num_queries 142680 alpha 0.00100 beta 0.00100
+Iteration 3950: g(theta + beta*u) = 0.7350 g(theta) = 0.7425 distortion 0.7425 num_queries 144389 alpha 0.00100 beta 0.00100
+Iteration 4000: g(theta + beta*u) = 0.7446 g(theta) = 0.7372 distortion 0.7372 num_queries 146096 alpha 0.00100 beta 0.00100
+Iteration 4050: g(theta + beta*u) = 0.7241 g(theta) = 0.7315 distortion 0.7315 num_queries 147805 alpha 0.00100 beta 0.00100
+Iteration 4100: g(theta + beta*u) = 0.7186 g(theta) = 0.7258 distortion 0.7258 num_queries 149514 alpha 0.00100 beta 0.00100
+Iteration 4150: g(theta + beta*u) = 0.7259 g(theta) = 0.7187 distortion 0.7187 num_queries 151222 alpha 0.00100 beta 0.00100
+aa
+Iteration 4200: g(theta + beta*u) = 0.7197 g(theta) = 0.7126 distortion 0.7126 num_queries 152915 alpha 0.00100 beta 0.00100
+Iteration 4250: g(theta + beta*u) = 0.7002 g(theta) = 0.7073 distortion 0.7073 num_queries 154627 alpha 0.00100 beta 0.00100
+Iteration 4300: g(theta + beta*u) = 0.6960 g(theta) = 0.7030 distortion 0.7030 num_queries 156341 alpha 0.00100 beta 0.00100
+Iteration 4350: g(theta + beta*u) = 0.6922 g(theta) = 0.6992 distortion 0.6992 num_queries 158053 alpha 0.00100 beta 0.00100
+Iteration 4400: g(theta + beta*u) = 0.6869 g(theta) = 0.6939 distortion 0.6939 num_queries 159761 alpha 0.00100 beta 0.00100
+Iteration 4450: g(theta + beta*u) = 0.6961 g(theta) = 0.6892 distortion 0.6892 num_queries 161470 alpha 0.00100 beta 0.00100
+Iteration 4500: g(theta + beta*u) = 0.6893 g(theta) = 0.6825 distortion 0.6825 num_queries 163179 alpha 0.00100 beta 0.00100
+Iteration 4550: g(theta + beta*u) = 0.6713 g(theta) = 0.6781 distortion 0.6781 num_queries 164888 alpha 0.00100 beta 0.00100
+Iteration 4600: g(theta + beta*u) = 0.6653 g(theta) = 0.6720 distortion 0.6720 num_queries 166597 alpha 0.00100 beta 0.00100
+Iteration 4650: g(theta + beta*u) = 0.6601 g(theta) = 0.6667 distortion 0.6667 num_queries 168302 alpha 0.00100 beta 0.00100
+Iteration 4700: g(theta + beta*u) = 0.6691 g(theta) = 0.6625 distortion 0.6625 num_queries 170007 alpha 0.00100 beta 0.00100
+Iteration 4750: g(theta + beta*u) = 0.6637 g(theta) = 0.6572 distortion 0.6572 num_queries 171713 alpha 0.00100 beta 0.00100
+Iteration 4800: g(theta + beta*u) = 0.6452 g(theta) = 0.6518 distortion 0.6518 num_queries 173422 alpha 0.00100 beta 0.00100
+Iteration 4850: g(theta + beta*u) = 0.6543 g(theta) = 0.6479 distortion 0.6479 num_queries 175126 alpha 0.00100 beta 0.00100
+Iteration 4900: g(theta + beta*u) = 0.6378 g(theta) = 0.6442 distortion 0.6442 num_queries 176834 alpha 0.00100 beta 0.00100
+aa
+Iteration 4950: g(theta + beta*u) = 0.6342 g(theta) = 0.6406 distortion 0.6406 num_queries 178526 alpha 0.00100 beta 0.00100
+Iteration 5000: g(theta + beta*u) = 0.6448 g(theta) = 0.6384 distortion 0.6384 num_queries 180236 alpha 0.00100 beta 0.00100
+
+Adversarial Example Tageted 5 Found Successfully: distortion 0.6320 target 6 queries 204836 alpha 0.00100 beta 0.00100 
+Time: 807.7380 seconds
+Predicted label for adversarial example:  6
+
+
+
+
+======== Image 3918 =========
+Original label:  6
+Predicted label:  6
+Targeted attack: 5
+--------> Found g() 10.1394
+--------> Found g() 9.7171
+--------> Found g() 9.3324
+==========> Found best distortion 9.3324 in 7.8256 seconds using 23339 queries
+5
+Iteration  50: g(theta + beta*u) = 8.6595 g(theta) = 8.5738 distortion 8.5738 num_queries 2123 alpha 0.00100 beta 0.00100
+Iteration 100: g(theta + beta*u) = 7.5702 g(theta) = 7.4952 distortion 7.4952 num_queries 4206 alpha 0.00100 beta 0.00100
+Iteration 150: g(theta + beta*u) = 6.2701 g(theta) = 6.3334 distortion 6.3334 num_queries 6260 alpha 0.00100 beta 0.00100
+Iteration 200: g(theta + beta*u) = 5.4278 g(theta) = 5.4826 distortion 5.4826 num_queries 8272 alpha 0.00100 beta 0.00100
+Iteration 250: g(theta + beta*u) = 4.8221 g(theta) = 4.8708 distortion 4.8708 num_queries 10285 alpha 0.00100 beta 0.00100
+Iteration 300: g(theta + beta*u) = 4.2612 g(theta) = 4.2190 distortion 4.2190 num_queries 12292 alpha 0.00100 beta 0.00100
+Iteration 350: g(theta + beta*u) = 4.0993 g(theta) = 4.0587 distortion 4.0587 num_queries 14274 alpha 0.00100 beta 0.00100
+Iteration 400: g(theta + beta*u) = 3.5821 g(theta) = 3.5467 distortion 3.5467 num_queries 16230 alpha 0.00100 beta 0.00100
+Iteration 450: g(theta + beta*u) = 3.4091 g(theta) = 3.3753 distortion 3.3753 num_queries 18194 alpha 0.00100 beta 0.00100
+Iteration 500: g(theta + beta*u) = 3.0887 g(theta) = 3.1199 distortion 3.1199 num_queries 20126 alpha 0.00100 beta 0.00100
+Iteration 550: g(theta + beta*u) = 2.7680 g(theta) = 2.7959 distortion 2.7959 num_queries 22032 alpha 0.00100 beta 0.00100
+Iteration 600: g(theta + beta*u) = 2.6462 g(theta) = 2.6200 distortion 2.6200 num_queries 23943 alpha 0.00100 beta 0.00100
+Iteration 650: g(theta + beta*u) = 2.4609 g(theta) = 2.4858 distortion 2.4858 num_queries 25851 alpha 0.00100 beta 0.00100
+Iteration 700: g(theta + beta*u) = 2.3226 g(theta) = 2.2996 distortion 2.2996 num_queries 27759 alpha 0.00100 beta 0.00100
+Iteration 750: g(theta + beta*u) = 2.1339 g(theta) = 2.1128 distortion 2.1128 num_queries 29668 alpha 0.00100 beta 0.00100
+Iteration 800: g(theta + beta*u) = 2.0232 g(theta) = 2.0032 distortion 2.0032 num_queries 31537 alpha 0.00100 beta 0.00100
+Iteration 850: g(theta + beta*u) = 1.8804 g(theta) = 1.8994 distortion 1.8994 num_queries 33392 alpha 0.00100 beta 0.00100
+Iteration 900: g(theta + beta*u) = 1.7816 g(theta) = 1.7996 distortion 1.7996 num_queries 35249 alpha 0.00100 beta 0.00100
+Iteration 950: g(theta + beta*u) = 1.6615 g(theta) = 1.6782 distortion 1.6782 num_queries 37103 alpha 0.00100 beta 0.00100
+Iteration 1000: g(theta + beta*u) = 1.5920 g(theta) = 1.6081 distortion 1.6081 num_queries 38947 alpha 0.00100 beta 0.00100
+Iteration 1050: g(theta + beta*u) = 1.5475 g(theta) = 1.5322 distortion 1.5322 num_queries 40758 alpha 0.00100 beta 0.00100
+Iteration 1100: g(theta + beta*u) = 1.4903 g(theta) = 1.4756 distortion 1.4756 num_queries 42569 alpha 0.00100 beta 0.00100
+Iteration 1150: g(theta + beta*u) = 1.4254 g(theta) = 1.4398 distortion 1.4398 num_queries 44379 alpha 0.00100 beta 0.00100
+Iteration 1200: g(theta + beta*u) = 1.4138 g(theta) = 1.3998 distortion 1.3998 num_queries 46187 alpha 0.00100 beta 0.00100
+Iteration 1250: g(theta + beta*u) = 1.3701 g(theta) = 1.3565 distortion 1.3565 num_queries 47995 alpha 0.00100 beta 0.00100
+Iteration 1300: g(theta + beta*u) = 1.3038 g(theta) = 1.3170 distortion 1.3170 num_queries 49799 alpha 0.00100 beta 0.00100
+Iteration 1350: g(theta + beta*u) = 1.2634 g(theta) = 1.2762 distortion 1.2762 num_queries 51604 alpha 0.00100 beta 0.00100
+Iteration 1400: g(theta + beta*u) = 1.2215 g(theta) = 1.2339 distortion 1.2339 num_queries 53410 alpha 0.00100 beta 0.00100
+Iteration 1450: g(theta + beta*u) = 1.2172 g(theta) = 1.2052 distortion 1.2052 num_queries 55216 alpha 0.00100 beta 0.00100
+Iteration 1500: g(theta + beta*u) = 1.1907 g(theta) = 1.1789 distortion 1.1789 num_queries 57027 alpha 0.00100 beta 0.00100
+Iteration 1550: g(theta + beta*u) = 1.1516 g(theta) = 1.1632 distortion 1.1632 num_queries 58837 alpha 0.00100 beta 0.00100
+Iteration 1600: g(theta + beta*u) = 1.1140 g(theta) = 1.1253 distortion 1.1253 num_queries 60641 alpha 0.00100 beta 0.00100
+Iteration 1650: g(theta + beta*u) = 1.1133 g(theta) = 1.1023 distortion 1.1023 num_queries 62444 alpha 0.00100 beta 0.00100
+Iteration 1700: g(theta + beta*u) = 1.0939 g(theta) = 1.0831 distortion 1.0831 num_queries 64253 alpha 0.00100 beta 0.00100
+Iteration 1750: g(theta + beta*u) = 1.0472 g(theta) = 1.0578 distortion 1.0578 num_queries 66060 alpha 0.00100 beta 0.00100
+Iteration 1800: g(theta + beta*u) = 1.0530 g(theta) = 1.0425 distortion 1.0425 num_queries 67853 alpha 0.00100 beta 0.00100
+Iteration 1850: g(theta + beta*u) = 1.0182 g(theta) = 1.0284 distortion 1.0284 num_queries 69609 alpha 0.00100 beta 0.00100
+Iteration 1900: g(theta + beta*u) = 1.0227 g(theta) = 1.0126 distortion 1.0126 num_queries 71366 alpha 0.00100 beta 0.00100
+Iteration 1950: g(theta + beta*u) = 0.9893 g(theta) = 0.9993 distortion 0.9993 num_queries 73124 alpha 0.00100 beta 0.00100
+Iteration 2000: g(theta + beta*u) = 0.9776 g(theta) = 0.9875 distortion 0.9875 num_queries 74882 alpha 0.00100 beta 0.00100
+Iteration 2050: g(theta + beta*u) = 0.9650 g(theta) = 0.9747 distortion 0.9747 num_queries 76639 alpha 0.00100 beta 0.00100
+Iteration 2100: g(theta + beta*u) = 0.9530 g(theta) = 0.9626 distortion 0.9626 num_queries 78396 alpha 0.00100 beta 0.00100
+Iteration 2150: g(theta + beta*u) = 0.9598 g(theta) = 0.9503 distortion 0.9503 num_queries 80156 alpha 0.00100 beta 0.00100
+Iteration 2200: g(theta + beta*u) = 0.9399 g(theta) = 0.9306 distortion 0.9306 num_queries 81910 alpha 0.00100 beta 0.00100
+Iteration 2250: g(theta + beta*u) = 0.9082 g(theta) = 0.9174 distortion 0.9174 num_queries 83667 alpha 0.00100 beta 0.00100
+Iteration 2300: g(theta + beta*u) = 0.9034 g(theta) = 0.9126 distortion 0.9126 num_queries 85428 alpha 0.00100 beta 0.00100
+Iteration 2350: g(theta + beta*u) = 0.8935 g(theta) = 0.9025 distortion 0.9025 num_queries 87183 alpha 0.00100 beta 0.00100
+Iteration 2400: g(theta + beta*u) = 0.9002 g(theta) = 0.8913 distortion 0.8913 num_queries 88940 alpha 0.00100 beta 0.00100
+Iteration 2450: g(theta + beta*u) = 0.8858 g(theta) = 0.8770 distortion 0.8770 num_queries 90695 alpha 0.00100 beta 0.00100
+Iteration 2500: g(theta + beta*u) = 0.8782 g(theta) = 0.8695 distortion 0.8695 num_queries 92455 alpha 0.00100 beta 0.00100
+Iteration 2550: g(theta + beta*u) = 0.8650 g(theta) = 0.8565 distortion 0.8565 num_queries 94211 alpha 0.00100 beta 0.00100
+Iteration 2600: g(theta + beta*u) = 0.8374 g(theta) = 0.8458 distortion 0.8458 num_queries 95969 alpha 0.00100 beta 0.00100
+Iteration 2650: g(theta + beta*u) = 0.8466 g(theta) = 0.8382 distortion 0.8382 num_queries 97728 alpha 0.00100 beta 0.00100
+Iteration 2700: g(theta + beta*u) = 0.8208 g(theta) = 0.8291 distortion 0.8291 num_queries 99490 alpha 0.00100 beta 0.00100
+Iteration 2750: g(theta + beta*u) = 0.8067 g(theta) = 0.8148 distortion 0.8148 num_queries 101243 alpha 0.00100 beta 0.00100
+Iteration 2800: g(theta + beta*u) = 0.8146 g(theta) = 0.8065 distortion 0.8065 num_queries 102976 alpha 0.00100 beta 0.00100
+Iteration 2850: g(theta + beta*u) = 0.8055 g(theta) = 0.7975 distortion 0.7975 num_queries 104686 alpha 0.00100 beta 0.00100
+Iteration 2900: g(theta + beta*u) = 0.7963 g(theta) = 0.7884 distortion 0.7884 num_queries 106400 alpha 0.00100 beta 0.00100
+Iteration 2950: g(theta + beta*u) = 0.7879 g(theta) = 0.7801 distortion 0.7801 num_queries 108116 alpha 0.00100 beta 0.00100
+Iteration 3000: g(theta + beta*u) = 0.7626 g(theta) = 0.7703 distortion 0.7703 num_queries 109833 alpha 0.00100 beta 0.00100
+Iteration 3050: g(theta + beta*u) = 0.7557 g(theta) = 0.7633 distortion 0.7633 num_queries 111537 alpha 0.00100 beta 0.00100
+Iteration 3100: g(theta + beta*u) = 0.7482 g(theta) = 0.7558 distortion 0.7558 num_queries 113243 alpha 0.00100 beta 0.00100
+Iteration 3150: g(theta + beta*u) = 0.7428 g(theta) = 0.7503 distortion 0.7503 num_queries 114951 alpha 0.00100 beta 0.00100
+Iteration 3200: g(theta + beta*u) = 0.7552 g(theta) = 0.7477 distortion 0.7477 num_queries 116660 alpha 0.00100 beta 0.00100
+Iteration 3250: g(theta + beta*u) = 0.7309 g(theta) = 0.7383 distortion 0.7383 num_queries 118366 alpha 0.00100 beta 0.00100
+Iteration 3300: g(theta + beta*u) = 0.7393 g(theta) = 0.7320 distortion 0.7320 num_queries 120071 alpha 0.00100 beta 0.00100
+Iteration 3350: g(theta + beta*u) = 0.7188 g(theta) = 0.7260 distortion 0.7260 num_queries 121781 alpha 0.00100 beta 0.00100
+Iteration 3400: g(theta + beta*u) = 0.7261 g(theta) = 0.7189 distortion 0.7189 num_queries 123488 alpha 0.00100 beta 0.00100
+Iteration 3450: g(theta + beta*u) = 0.7041 g(theta) = 0.7112 distortion 0.7112 num_queries 125193 alpha 0.00100 beta 0.00100
+Iteration 3500: g(theta + beta*u) = 0.7129 g(theta) = 0.7059 distortion 0.7059 num_queries 126902 alpha 0.00100 beta 0.00100
+Iteration 3550: g(theta + beta*u) = 0.7064 g(theta) = 0.6994 distortion 0.6994 num_queries 128608 alpha 0.00100 beta 0.00100
+Iteration 3600: g(theta + beta*u) = 0.6863 g(theta) = 0.6932 distortion 0.6932 num_queries 130314 alpha 0.00100 beta 0.00100
+Iteration 3650: g(theta + beta*u) = 0.6942 g(theta) = 0.6873 distortion 0.6873 num_queries 132021 alpha 0.00100 beta 0.00100
+Iteration 3700: g(theta + beta*u) = 0.6887 g(theta) = 0.6819 distortion 0.6819 num_queries 133727 alpha 0.00100 beta 0.00100
+Iteration 3750: g(theta + beta*u) = 0.6832 g(theta) = 0.6765 distortion 0.6765 num_queries 135434 alpha 0.00100 beta 0.00100
+Iteration 3800: g(theta + beta*u) = 0.6774 g(theta) = 0.6707 distortion 0.6707 num_queries 137140 alpha 0.00100 beta 0.00100
+Iteration 3850: g(theta + beta*u) = 0.6585 g(theta) = 0.6652 distortion 0.6652 num_queries 138846 alpha 0.00100 beta 0.00100
+Iteration 3900: g(theta + beta*u) = 0.6528 g(theta) = 0.6594 distortion 0.6594 num_queries 140551 alpha 0.00100 beta 0.00100
+Iteration 3950: g(theta + beta*u) = 0.6500 g(theta) = 0.6566 distortion 0.6566 num_queries 142261 alpha 0.00100 beta 0.00100
+Iteration 4000: g(theta + beta*u) = 0.6456 g(theta) = 0.6521 distortion 0.6521 num_queries 143970 alpha 0.00100 beta 0.00100
+Iteration 4050: g(theta + beta*u) = 0.6540 g(theta) = 0.6476 distortion 0.6476 num_queries 145680 alpha 0.00100 beta 0.00100
+Iteration 4100: g(theta + beta*u) = 0.6499 g(theta) = 0.6435 distortion 0.6435 num_queries 147386 alpha 0.00100 beta 0.00100
+Iteration 4150: g(theta + beta*u) = 0.6463 g(theta) = 0.6399 distortion 0.6399 num_queries 149096 alpha 0.00100 beta 0.00100
+Iteration 4200: g(theta + beta*u) = 0.6409 g(theta) = 0.6346 distortion 0.6346 num_queries 150808 alpha 0.00100 beta 0.00100
+Iteration 4250: g(theta + beta*u) = 0.6371 g(theta) = 0.6308 distortion 0.6308 num_queries 152514 alpha 0.00100 beta 0.00100
+Iteration 4300: g(theta + beta*u) = 0.6320 g(theta) = 0.6258 distortion 0.6258 num_queries 154218 alpha 0.00100 beta 0.00100
+Iteration 4350: g(theta + beta*u) = 0.6157 g(theta) = 0.6219 distortion 0.6219 num_queries 155926 alpha 0.00100 beta 0.00100
+Iteration 4400: g(theta + beta*u) = 0.6245 g(theta) = 0.6183 distortion 0.6183 num_queries 157639 alpha 0.00100 beta 0.00100
+Iteration 4450: g(theta + beta*u) = 0.6077 g(theta) = 0.6138 distortion 0.6138 num_queries 159344 alpha 0.00100 beta 0.00100
+Iteration 4500: g(theta + beta*u) = 0.6042 g(theta) = 0.6103 distortion 0.6103 num_queries 161052 alpha 0.00100 beta 0.00100
+Iteration 4550: g(theta + beta*u) = 0.6140 g(theta) = 0.6079 distortion 0.6079 num_queries 162763 alpha 0.00100 beta 0.00100
+Iteration 4600: g(theta + beta*u) = 0.5994 g(theta) = 0.6055 distortion 0.6055 num_queries 164472 alpha 0.00100 beta 0.00100
+Iteration 4650: g(theta + beta*u) = 0.5947 g(theta) = 0.6007 distortion 0.6007 num_queries 166179 alpha 0.00100 beta 0.00100
+Iteration 4700: g(theta + beta*u) = 0.5906 g(theta) = 0.5966 distortion 0.5966 num_queries 167884 alpha 0.00100 beta 0.00100
