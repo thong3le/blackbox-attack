@@ -1,3 +1,2 @@
-mnist/
-data/
+__pycache__/
 models.pyc
