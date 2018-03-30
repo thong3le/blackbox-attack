@@ -499,7 +499,7 @@ def attack_mnist():
         #net = torch.nn.DataParallel(net, device_ids=range(torch.cuda.device_count()))
         
     #load_model(net, 'models/mnist_gpu.pt')
-    load_model(net, 'models/cifar10.pt')
+    load_model(net, 'models/cifar10_gpu.pt')
     net.eval()
 
     model = net.module if torch.cuda.is_available() else net

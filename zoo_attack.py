@@ -35,7 +35,8 @@ def coordinate_ADAM(losses, indice, grad,  batch_size, mt_arr, vt_arr, real_modi
     m = real_modifier.reshape(-1)
     old_val = m[indice] 
     old_val -= lr * corr * mt / (np.sqrt(vt) + 1e-8)
-    # print(grad)
+    #old_val = np.maximum(np.minimum(old_val, 1.0), 0.0)    
+# print(grad)
     # print(old_val - m[indice])
     m[indice] = old_val
     adam_epoch[indice] = epoch + 1
@@ -53,7 +54,7 @@ def attack(input, label, net, c, batch_size= 128, TARGETED=False):
     var_size = input_v.view(-1).size()[0]
     #print(var_size)
     real_modifier = torch.FloatTensor(input_v.size()).zero_().cuda()
-    for iter in range(2000): 
+    for iter in range(200): 
         random_set = np.random.permutation(var_size)
         losses = np.zeros(2*batch_size, dtype=np.float32)
         #print(torch.sum(real_modifier))
@@ -65,18 +66,19 @@ def attack(input, label, net, c, batch_size= 128, TARGETED=False):
                 modifier[random_set[i//2]] -= 0.0001
             modifier = modifier.view(input_v.size())
             modifier_v = Variable(modifier, requires_grad=True).cuda()
-            output = net(input_v + modifier_v)
+            output = net(torch.clamp(input_v + modifier_v,0,1))
             #print(output)
             real = torch.max(torch.mul(output, label_onehot_v), 1)[0]
             other = torch.max(torch.mul(output, (1-label_onehot_v))-label_onehot_v*10000,1)[0]
-            loss1 = torch.sum(modifier_v*modifier_v)
+            loss1 = torch.sum(modifier_v*modifier_v)/1
             if TARGETED:
                 loss2 = c* torch.sum(torch.clamp(other - real, min=0))
             else:
                 loss2 = c* torch.sum(torch.clamp(real - other, min=0))
-            error = loss1 + loss2
+            error = loss2 + loss1 
+            #error = loss2
             losses[i] = error.data[0]
-        if (iter+1)%10 == 0:
+        if (iter+1)%1 == 0:
             print(np.sum(losses))
         #if loss2.data[0]==0:
         #    break
@@ -85,13 +87,14 @@ def attack(input, label, net, c, batch_size= 128, TARGETED=False):
         vt = np.zeros(var_size, dtype=np.float32)
         adam_epoch = np.ones(var_size, dtype = np.int32)
         np_modifier = real_modifier.cpu().numpy()
-        lr = 0.2
+        lr = 0.1
         beta1, beta2 = 0.9, 0.999
         #for i in range(1):
+        #print(np.count_nonzero(np_modifier))
         coordinate_ADAM(losses, random_set[:batch_size], grad, batch_size, mt, vt, np_modifier, lr, adam_epoch, beta1, beta2)
         real_modifier = torch.from_numpy(np_modifier)
     real_modifier_v = Variable(real_modifier, requires_grad=True).cuda()
-    
+    print(torch.norm(real_modifier_v)) 
     return (input_v + real_modifier_v).data.cpu()
 
 
@@ -108,7 +111,7 @@ def zoo_attack(dataset):
         net = torch.nn.DataParallel(net, device_ids=[0])
     
     if dataset == 'cifar10':
-        load_model(net, 'models/cifar10.pt')
+        load_model(net, 'models/cifar10_gpu.pt')
     else:
         load_model(net, 'models/mnist_gpu.pt')
     #save_model(net,'./models/mnist.pt')
@@ -117,6 +120,8 @@ def zoo_attack(dataset):
     model = net.module
 
     #num_images = 10
+    test_dataset = dsets.MNIST(root='./data/mnist', train=True, transform=transforms.ToTensor(), download=False)
+    test_loader = torch.utils.data.DataLoader(dataset=test_dataset, batch_size=1, shuffle=False)
 
     for i, (image, label) in enumerate(test_loader):
         #print("\n\n\n\n======== Image %d =========" % i)
