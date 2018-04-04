@@ -64,7 +64,7 @@ class CIFAR10(nn.Module):
     def predict(self, image):
         self.eval()
         image = torch.clamp(image,0,1)
-        image = Variable(image).view(1,3, 32,32)
+        image = Variable(image, volatile=True).view(1,3, 32,32)
         if torch.cuda.is_available():
             image = image.cuda()
         output = self(image)
@@ -74,7 +74,7 @@ class CIFAR10(nn.Module):
     def predict_batch(self, image):
         self.eval()
         image = torch.clamp(image,0,1)
-        image = Variable(image)
+        image = Variable(image, volatile=True)
         if torch.cuda.is_available():
             image = image.cuda()
         output = self(image)
@@ -129,7 +129,7 @@ class MNIST(nn.Module):
     def predict(self, image):
         self.eval()
         image = torch.clamp(image,0,1)
-        image = Variable(image).view(1,1,28,28)
+        image = Variable(image, volatile=True).view(1,1,28,28)
         if torch.cuda.is_available():
             image = image.cuda()
         output = self(image)
@@ -139,7 +139,7 @@ class MNIST(nn.Module):
     def predict_batch(self, image):
         self.eval()
         image = torch.clamp(image,0,1)
-        image = Variable(image)
+        image = Variable(image, volatile=True)
         if torch.cuda.is_available():
             image = image.cuda()
         output = self(image)
@@ -249,7 +249,7 @@ class ImagenetTestDataset(Dataset):
        self.img_name = sorted(os.listdir(root_file))
        for img in self.img_name:
            name = img.split('.')
-           self.label.append(int(name[0]))
+           self.label.append(int(name[0])-1)
 
     def __getitem__(self, idx):
         image = Image.open(self.root_dir + '/' + self.img_name[idx])
@@ -257,7 +257,7 @@ class ImagenetTestDataset(Dataset):
         if self.transform:
             image = self.transform(image)
         #label = torch.LongTensor(self.label[idx])
-        label = self.label[idx]
+        label = self.label[idx] 
         return image, label
 
     def __len__(self):
