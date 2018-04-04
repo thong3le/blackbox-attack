@@ -6,6 +6,12 @@ import torch.nn as nn
 import torchvision.datasets as dsets
 import torchvision.transforms as transforms
 from torch.autograd import Variable
+from torch.utils.data.dataset import Dataset
+import os
+from PIL import Image
+import pretrainedmodels
+import pretrainedmodels.utils as utils
+
 
 # Hyperparameters
 num_epochs = 50
@@ -215,10 +221,59 @@ def load_cifar10_data():
     test_dataset = dsets.CIFAR10('./data/cifar10-py', download=True, train=False, transform= transforms.ToTensor())
 
     # Data Loader (Input Pipeline)
-    train_loader = torch.utils.data.DataLoader(dataset=train_dataset, batch_size=1000, shuffle=True)
+    train_loader = torch.utils.data.DataLoader(dataset=train_dataset, batch_size=1000, shuffle=False)
     test_loader = torch.utils.data.DataLoader(dataset=test_dataset, batch_size=10, shuffle=False)
 
     return train_loader, test_loader, train_dataset, test_dataset
+
+def load_imagenet_data():
+    """ Load MNIST data from torchvision.datasets 
+        input: None
+        output: minibatches of train and test sets 
+    """
+    train_dataset = dsets.ImageFolder('/data/train', transform= transforms.ToTensor())
+    test_dataset = dsets.ImageFolder('/data/val', transform= transforms.ToTensor())
+
+    # Data Loader (Input Pipeline)
+    train_loader = torch.utils.data.DataLoader(dataset=train_dataset, batch_size=1000, shuffle=False)
+    test_loader = torch.utils.data.DataLoader(dataset=test_dataset, batch_size=10, shuffle=False)
+
+    return train_loader, test_loader, train_dataset, test_dataset
+
+
+class ImagenetTestDataset(Dataset):
+    def __init__(self, root_file, transform=None):
+       self.label =[]
+       self.root_dir = root_file
+       self.transform = transform
+       self.img_name = sorted(os.listdir(root_file))
+       for img in self.img_name:
+           name = img.split('.')
+           self.label.append(int(name[0]))
+
+    def __getitem__(self, idx):
+        image = Image.open(self.root_dir + '/' + self.img_name[idx])
+        image = image.convert('RGB')
+        if self.transform:
+            image = self.transform(image)
+        #label = torch.LongTensor(self.label[idx])
+        label = self.label[idx]
+        return image, label
+
+    def __len__(self):
+        return len(self.label)
+
+#def imagenettest():
+#    normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]) 
+#    test_dataset = ImagenetTestDataset('/data/test')
+
+    #test_dataset = ImagenetTestDataset('/data/test', transforms.Compose([transforms.Resize(300), transforms.CenterCrop(255), transforms.ToTensor(), normalize,]))
+
+    # Data Loader (Input Pipeline)
+#    test_loader = torch.utils.data.DataLoader(dataset=test_dataset, batch_size=10, shuffle=True)
+
+#    return test_dataset
+
 
 
 def train_simple_mnist(model, train_loader):
@@ -334,6 +389,24 @@ def test_cifar10(model, test_loader):
 
     print('Test Accuracy of the model on the 10000 test images: %.4f %%' % (100.0 * correct / total))
 
+class ToSpaceBGR(object):
+    def __init__(self, is_bgr):
+        self.is_bgr = is_bgr
+    def __call__(self, tensor):
+        if self.is_bgr:
+            new_tensor = tensor.clone()
+            new_tensor[0] = tensor[2]
+            new_tensor[2] = tensor[0]
+            tensor = new_tensor
+        return tensor
+
+class ToRange255(object):
+    def __init__(self, is_255):
+        self.is_255 = is_255
+    def __call__(self, tensor):
+        if self.is_255:
+            tensor.mul_(255)
+        return tensor
 
 def save_model(model, filename):
     """ Save the trained model """
