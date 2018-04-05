@@ -7,7 +7,7 @@ import torchvision.datasets as dsets
 import torchvision.transforms as transforms
 from torch.autograd import Variable
 import torch.nn.functional as F
-from models import ImagenetTestDataset, ToSpaceBGR, ToRange255
+from models import ImagenetTestDataset, ToSpaceBGR, ToRange255, IMAGENET
 import pretrainedmodels
 import torchvision
 #import pretrainedmodels.utils
@@ -272,7 +272,7 @@ def attack_untargeted(model, train_loader, x0, y0, alpha = 0.2, beta = 0.001, it
         (x0, y0): original image
     """
 
-    if (model_predict(model,x0)[0] != y0):
+    if (model.predict(x0) != y0):
         print("Fail to classify the image. No need to attack.")
         return x0
 
@@ -291,7 +291,7 @@ def attack_untargeted(model, train_loader, x0, y0, alpha = 0.2, beta = 0.001, it
         xi,yi=xi.cuda(),yi.cuda()
         dim = xi.size()[3]
         temp_x0, temp_y0 = x0, y0
-        predicted = model_predict(model, xi)
+        predicted = model.predict_batch(xi)
         b_index = (predicted !=y0).nonzero().squeeze()
         if len(b_index.size()) == 0:
             continue
@@ -317,7 +317,7 @@ def attack_untargeted(model, train_loader, x0, y0, alpha = 0.2, beta = 0.001, it
     timestart = time.time()
     g1 = 1.0
     theta, g2 = best_theta.clone(), g_theta
-    print(model_predict(model, x0+theta*g2))
+    print(model.predict(x0+theta*g2))
     opt_count = 0
     torch.cuda.manual_seed(0)
     for i in range(iterations):
@@ -337,6 +337,7 @@ def attack_untargeted(model, train_loader, x0, y0, alpha = 0.2, beta = 0.001, it
         gradient = (g1-g2)/torch.norm(ttt-theta) * u
         temp_theta = theta - alpha*gradient
         temp_theta /= torch.norm(temp_theta)
+        
         g3, count = fine_grained_binary_search_local(model, x0, y0, temp_theta, initial_lbd = g2)
         if g3 > g1:
             #print("aa")
@@ -356,24 +357,24 @@ def attack_untargeted(model, train_loader, x0, y0, alpha = 0.2, beta = 0.001, it
 def fine_grained_binary_search_local(model, x0, y0, theta, initial_lbd = 1.0):
     nquery = 0
     lbd = initial_lbd
-    if model_predict(model, x0+lbd*theta)[0] == y0:
+    if model.predict(x0+lbd*theta) == y0:
         lbd_lo = lbd
         lbd_hi = lbd*1.01
         nquery += 1
-        while model_predict(model, x0+lbd_hi*theta)[0] == y0:
+        while model.predict(x0+lbd_hi*theta) == y0:
             lbd_hi = lbd_hi*1.01
             nquery += 1
     else:
         lbd_hi = lbd
         lbd_lo = lbd*0.99
         nquery += 1
-        while model_predict(model, x0+lbd_lo*theta)[0] != y0 :
+        while model.predict(x0+lbd_lo*theta) != y0 :
             lbd_lo = lbd_lo*0.99
             nquery += 1
     while (lbd_hi - lbd_lo) > 1e-8:
         lbd_mid = (lbd_lo + lbd_hi)/2.0
         nquery += 1
-        if model_predict(model, x0 + lbd_mid*theta)[0] != y0:
+        if model.predict(x0 + lbd_mid*theta) != y0:
             lbd_hi = lbd_mid
         else:
             lbd_lo = lbd_mid
@@ -383,7 +384,7 @@ def initial_fine_grained_binary_search(model, x0, y0, theta, initial_lbd = 1.0):
     nquery = 0
     lbd = torch.ones(theta.size()).cuda()
     limit = torch.ones(lbd.size()).cuda()
-    predicted = model_predict(model, x0+ lbd * theta)
+    predicted = model.predict_batch(x0+ lbd * theta)
     nquery += 1000
     candidate = (predicted == y0).nonzero().view(-1)
     while len(candidate.size())>0:
@@ -392,7 +393,7 @@ def initial_fine_grained_binary_search(model, x0, y0, theta, initial_lbd = 1.0):
         limit.resize_(candidate.size())
         if torch.max(lbd) > 100: 
             break
-        predicted = model_predict(model, x0+ lbd * theta)
+        predicted = model.predict_batch(x0+ lbd * theta)
         nquery += candidate.size()[0]
         candidate = (predicted == y0).nonzero().view(-1)
     num_intervals = 100
@@ -409,7 +410,7 @@ def initial_fine_grained_binary_search(model, x0, y0, theta, initial_lbd = 1.0):
         temp_lbd = lambdas[i].unsqueeze(1).unsqueeze(2).expand(num_intervals-1,3,dim).unsqueeze(3).expand(num_intervals-1,3,dim,dim)
         temp_theta = theta[i].unsqueeze(0).expand(num_intervals-1,3,dim,dim)
         temp_x0 = x0[i].unsqueeze(0).expand(num_intervals-1,3,dim,dim)
-        predicted = model_predict(model, temp_x0+temp_lbd*temp_theta)
+        predicted = model.predict_batch(temp_x0+temp_lbd*temp_theta)
         nquery += num_intervals-1
         candidate = (predicted!=y0).nonzero().view(-1)
         if len(candidate.size())==0:
@@ -425,7 +426,7 @@ def initial_fine_grained_binary_search(model, x0, y0, theta, initial_lbd = 1.0):
     while torch.max(lbd_hi - lbd_lo) > 1e-5:
         lbd_mid = (lbd_lo + lbd_hi)/2.0
         temp_lbd_mid = lbd_mid.unsqueeze(1).unsqueeze(2).expand(lbd_mid.size()[0],3,dim).unsqueeze(3).expand(lbd_mid.size()[0],3,dim,dim)
-        predicted = model_predict(model, x0+temp_lbd_mid*theta)
+        predicted = model.predict_batch(x0+temp_lbd_mid*theta)
         #print(predicted)
         nquery += lbd_mid.size()[0]
         
@@ -442,7 +443,7 @@ def fine_grained_binary_search(model, x0, y0, theta, initial_lbd = 1.0):
     nquery = 0
     lbd = initial_lbd
     dim = x0.size()[3]
-    while model_predict(model, x0+lbd*theta)[0] == y0:
+    while model.predict(x0+lbd*theta) == y0:
         lbd *= 1.05
         nquery +=1
 
@@ -463,7 +464,7 @@ def fine_grained_binary_search(model, x0, y0, theta, initial_lbd = 1.0):
     #print(temp_lbd[98][0][0][0])
     temp_theta = theta.expand(num_intervals-1,3,dim,dim)
     temp_x0 = x0.expand(num_intervals-1,3,dim,dim)
-    predicted = model_predict(model, temp_x0+temp_lbd*temp_theta)
+    predicted = model.predict_batch(temp_x0+temp_lbd*temp_theta)
     #print(predicted[98])
     candidate = (predicted!=y0).nonzero().view(-1)
     if len(candidate.size())==0:
@@ -477,7 +478,7 @@ def fine_grained_binary_search(model, x0, y0, theta, initial_lbd = 1.0):
     while (lbd_hi - lbd_lo) > 1e-6:
         lbd_mid = (lbd_lo + lbd_hi)/2.0
         nquery += 1
-        if model_predict(model, x0+lbd_mid*theta)[0] !=y0:
+        if model.predict(x0+lbd_mid*theta) !=y0:
             lbd_hi = lbd_mid
         else:
             lbd_lo = lbd_mid
@@ -489,16 +490,16 @@ def attack_single(model, train_loader, image, label, target = None):
     #show_image(image.numpy())
     image = image.unsqueeze(0)
     print("Original label: ", label)
-    print("Predicted label: ", model_predict(model,image)[0])
+    print("Predicted label: ", model.predict(image))
     if target == None:
-        adversarial = attack_untargeted(model, train_loader, image, label, alpha = 0.05, beta = 0.0001, iterations = 5000)
+        adversarial = attack_untargeted(model, train_loader, image, label, alpha = 0.05, beta = 0.001, iterations = 5000)
     else:
         print("Targeted attack: %d" % target)
         adversarial = attack_targeted(model, train_loader, image, label, target, alpha = 1e-3, beta = beta, iterations = 5000)
     #show_image(adversarial.numpy())
     print("Predicted label for adversarial example: ", model.predict(adversarial))
     return torch.norm(adversarial - image)
-
+'''
 def model_predict(model, image):
     model.eval()
     image = torch.clamp(image,-1,1)
@@ -508,20 +509,17 @@ def model_predict(model, image):
     output = model(image)
     _, predict = torch.max(output.data, 1)
     return predict
+'''
 
 def attack_imgnet():
     '''
     model_name = 'inceptionresnetv2' # could be fbresnet152 or inceptionresnetv2
     model = pretrainedmodels.__dict__[model_name](num_classes=1000, pretrained='imagenet')
     '''
-    model = torchvision.models.vgg19(pretrained=True)
-
-    if torch.cuda.is_available():
-        model = model.cuda()
-        model = torch.nn.DataParallel(model, device_ids=range(torch.cuda.device_count()))
-        #model = torch.nn.DataParallel(model, device_ids=[0])
+    #model = torchvision.models.vgg19(pretrained=True)
+    model = IMAGENET('vgg19')
     
-    model = model.module if torch.cuda.is_available() else net
+    #model = model.module if torch.cuda.is_available() else net
     '''
     input_size = model.input_size
     input_space = model.input_space
