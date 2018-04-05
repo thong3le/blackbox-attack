@@ -11,12 +11,38 @@ import os
 from PIL import Image
 import pretrainedmodels
 import pretrainedmodels.utils as utils
-
+import torchvision.models as models
 
 # Hyperparameters
 num_epochs = 50
 batch_size = 128
 learning_rate = 0.001
+
+class IMAGENET():
+    def __init__(self, arch):
+        self.model = models.__dict__[arch](pretrained=True)
+        self.model.eval()
+        if torch.cuda.is_available():
+            self.model = self.model.cuda()
+            self.model = torch.nn.DataParallel(self.model, device_ids=[0])
+ 
+    def predict(self, image):
+        image = torch.clamp(image, -1, 1)
+        image = Variable(image, volatile=True).view(1,3,224,224)
+        output = self.model(image)
+        _, predict = torch.max(output.data, 1)
+        return predict[0]
+    
+    def predict_batch(self, image):
+        image = torch.clamp(image, -1 ,1)
+        image = Variable(image, volatile=True)
+        if torch.cuda.is_available():
+            image = image.cuda()
+        output = self.model(image)
+        _, predict = torch.max(output.data, 1)
+        return predict
+
+
 
 class CIFAR10(nn.Module):
     def __init__(self):
