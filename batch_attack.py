@@ -42,7 +42,7 @@ def attack_targeted(model, train_loader, x0, y0, target, alpha = 0.1, beta = 0.0
     b_best_lbd = float('inf')
     #for index in range(batch_size):
     for i, (xi, yi) in enumerate(train_loader):
-        if i == 10:
+        if i == 1:
             break
         xi,yi=xi.cuda(),yi.cuda()
         #temp_x0, temp_y0 = x0[index], y0[index]
@@ -98,9 +98,9 @@ def attack_targeted(model, train_loader, x0, y0, target, alpha = 0.1, beta = 0.0
         ttt = ttt.type(torch.FloatTensor)
         g1, count = fine_grained_binary_search_local_targeted(model, x0, target, ttt, initial_lbd = g2)
         opt_count += count
- 
+        temp_output = model.predict(x0+g2*theta)
         if (i+1)%50 == 0:
-            print("Iteration %3d: g(theta + beta*u) = %.4f g(theta) = %.4f distortion %.4f num_queries %d alpha %.5f beta %.5f" % (i+1, g1, g2, g2, opt_count, alpha, beta))
+            print("Iteration %3d: g(theta + beta*u) = %.4f g(theta) = %.4f distortion %.4f num_queries %d alpha %.5f beta %.5f output %d" % (i+1, g1, g2, g2, opt_count, alpha, beta, temp_output))
 
         gradient = (g1-g2)/torch.norm(ttt-theta) * u
         temp_theta = theta - alpha*gradient
@@ -277,7 +277,7 @@ def attack_untargeted(model, train_loader, x0, y0, alpha = 0.2, beta = 0.001, it
     b_train_size = 1000
     b_best_lbd = float('inf')
     for i, (xi, yi) in enumerate(train_loader):
-        if i == 10:
+        if i == 1:
             break
         xi,yi=xi.cuda(),yi.cuda()
         temp_x0, temp_y0 = x0, y0
