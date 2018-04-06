@@ -44,7 +44,7 @@ def attack_targeted(model, train_loader, x0, y0, target, alpha = 0.1, beta = 0.0
     dim3 = x0.size()[2]
     #for index in range(batch_size):
     for i, (xi, yi) in enumerate(train_loader):
-        if i == 1:
+        if i == 2:
             break
         xi,yi=xi.cuda(),yi.cuda()
         #temp_x0, temp_y0 = x0[index], y0[index]
@@ -448,7 +448,7 @@ def fine_grained_binary_search(model, x0, y0, theta, initial_lbd = 1.0):
         lbd *= 1.05
         nquery +=1
 
-    if lbd> 100:
+    if lbd> 1000:
         return float('inf')
     
     num_intervals = 100
@@ -486,7 +486,7 @@ def fine_grained_binary_search(model, x0, y0, theta, initial_lbd = 1.0):
     return lbd_hi, nquery
 
 
-def attack_single(model, train_loader, image, label, target = None):
+def attack_single(model, train_loader, image, label, target = None, alpha=0.2):
     #show_image(image.numpy())
     print("Original label: ", label)
     print("Predicted label: ", model.predict(image))
@@ -649,7 +649,7 @@ def attack_imgnet():
         target = random.choice(targets)
         #target = 4
         target = None   #--> uncomment of untarget
-        distortion_random_sample += attack_single(model, test_loader, image, label, target)
+        distortion_random_sample += attack_single(model, test_loader, image, label, target, 0.2)
 
     #print("\n\n\n\n\n Running on first {} images \n\n\n".format(num_images))
     print("Average distortion on random {} images is {}".format(num_images, distortion_random_sample/num_images))
