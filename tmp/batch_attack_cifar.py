@@ -109,12 +109,12 @@ def attack_targeted(model, train_loader, x0, y0, target, alpha = 0.1, beta = 0.0
         temp_theta = theta - alpha*gradient
         temp_theta /= torch.norm(temp_theta)
         g3, count = fine_grained_binary_search_local_targeted(model, x0, target, temp_theta, initial_lbd = g2)
-        
-        if (i+1)%1000 == 0:
+        ''' 
+        if (i+1)%500 == 0:
             alpha = alpha*2
             if alpha>0.01:
                 alpha = 0.01
-        
+        '''
         #if (i+1)>1500:
         #    print(g3-g2)
         if g3 > g1:
@@ -255,7 +255,6 @@ def fine_grained_binary_search_targeted(model, x0, target, theta, initial_lbd = 
     predicted = model.predict_batch(temp_x0+temp_lbd*temp_theta)
     #print(predicted[98])
     candidate = (predicted == target).nonzero().view(-1)
-    nquery += num_intervals -1 - candidate.size()[0]
     if len(candidate.size())==0:
         lbd_hi_index = 0
         lbd_hi = lbd
@@ -264,6 +263,7 @@ def fine_grained_binary_search_targeted(model, x0, target, theta, initial_lbd = 
         lbd_hi_index = torch.min(candidate)
         lbd_hi = lambdas[lbd_hi_index]
     lbd_lo = lambdas[lbd_hi_index - 1]
+    nquery += num_intervals -1 - candidate.size()[0]
     while (lbd_hi - lbd_lo) > 1e-6:
         lbd_mid = (lbd_lo + lbd_hi)/2.0
         nquery += 1
@@ -534,7 +534,7 @@ def attack_cifar():
     print("\n\n\n\n\n Running on {} random images \n\n\n".format(num_images))
     distortion_random_sample = 0.0
 
-    random.seed(5000)
+    random.seed(6000)
     for _ in range(num_images):
         idx = random.randint(100, len(test_dataset)-1)
         #idx = 5474

@@ -7,7 +7,7 @@ import torchvision.datasets as dsets
 import torchvision.transforms as transforms
 from torch.autograd import Variable
 import torch.nn.functional as F
-from models import MNIST, CIFAR10, SimpleMNIST, load_mnist_data, load_cifar10_data, load_model, show_image
+from models import MNIST, CIFAR10, IMAGENET, SimpleMNIST, load_mnist_data, load_cifar10_data, load_model, show_image, ImagenetTestDataset
 
 alpha = 0.2
 beta = 0.001
@@ -40,6 +40,8 @@ def attack_targeted(model, train_loader, x0, y0, target, alpha = 0.1, beta = 0.0
     #samples = set(random.sample(range(len(train_dataset)), num_samples))
     b_train_size = 1000
     b_best_lbd = float('inf')
+    dim1 = x0.size()[0]
+    dim3 = x0.size()[2]
     #for index in range(batch_size):
     for i, (xi, yi) in enumerate(train_loader):
         if i == 1:
@@ -59,7 +61,7 @@ def attack_targeted(model, train_loader, x0, y0, target, alpha = 0.1, beta = 0.0
         temp_x0 = temp_x0.expand(xi.size()).cuda()
         theta = xi - temp_x0
         initial_lbd = torch.norm(torch.norm(torch.norm(theta,2,1),2,1),2,1)
-        initial_lbd = initial_lbd.unsqueeze(1).unsqueeze(2).expand(xi.size()[0],1,28).unsqueeze(3).expand(xi.size()[0],1,28,28)
+        initial_lbd = initial_lbd.unsqueeze(1).unsqueeze(2).expand(xi.size()[0],dim1,dim3).unsqueeze(3).expand(xi.size()[0],dim1,dim3,dim3)
         theta /= initial_lbd
         lbd, query_count = initial_fine_grained_binary_search_targeted(model, temp_x0, target, theta, initial_lbd)
         #print(lbd)    
@@ -152,6 +154,8 @@ def fine_grained_binary_search_local_targeted(model, x0, t, theta, initial_lbd =
     return lbd_hi, nquery
 
 def initial_fine_grained_binary_search_targeted(model, x0, target, theta, initial_lbd = 1.0):
+    dim1 = x0.size()[1]
+    dim3 = x0.size()[2]    
     nquery = 0
     initial_lbd = torch.ones(theta.size()).cuda()
     lbd = initial_lbd
@@ -179,11 +183,12 @@ def initial_fine_grained_binary_search_targeted(model, x0, target, theta, initia
         lambdas[i] = lambdas_t
     lbd_hi, lbd_hi_index = torch.max(lambdas,1)
     lbd_lo = lbd_hi.clone()
-    
+
+ 
     for i in range(lbd.size()[0]):
-        temp_lbd = lambdas[i].unsqueeze(1).unsqueeze(2).expand(num_intervals-1,1,28).unsqueeze(3).expand(num_intervals-1,1,28,28)
-        temp_theta = theta[i].unsqueeze(0).expand(num_intervals-1,1,28,28)
-        temp_x0 = x0[i].unsqueeze(0).expand(num_intervals-1,1,28,28)
+        temp_lbd = lambdas[i].unsqueeze(1).unsqueeze(2).expand(num_intervals-1,dim1,dim3).unsqueeze(3).expand(num_intervals-1,dim1,dim3,dim3)
+        temp_theta = theta[i].unsqueeze(0).expand(num_intervals-1,dim1,dim3,dim3)
+        temp_x0 = x0[i].unsqueeze(0).expand(num_intervals-1,dim1,dim3,dim3)
         predicted = model.predict_batch(temp_x0+temp_lbd*temp_theta)
         nquery += num_intervals-1
         candidate = (predicted == target).nonzero().view(-1)
@@ -197,9 +202,9 @@ def initial_fine_grained_binary_search_targeted(model, x0, target, theta, initia
             lbd_hi[i] = lambdas[i][lbd_hi_index[i]]
         lbd_lo[i] = lambdas[i][lbd_hi_index[i] - 1]
 
-    while torch.max(lbd_hi - lbd_lo) > 1e-6:
+    while torch.max(lbd_hi - lbd_lo) > 1e-5:
         lbd_mid = (lbd_lo + lbd_hi)/2.0
-        temp_lbd_mid = lbd_mid.unsqueeze(1).unsqueeze(2).expand(lbd_mid.size()[0],1,28).unsqueeze(3).expand(lbd_mid.size()[0],1,28,28)
+        temp_lbd_mid = lbd_mid.unsqueeze(1).unsqueeze(2).expand(lbd_mid.size()[0],dim1,dim3).unsqueeze(3).expand(lbd_mid.size()[0],dim1,dim3,dim3)
         predicted = model.predict_batch(x0+temp_lbd_mid*theta)
         nquery += lbd_mid.size()[0]
         
@@ -214,6 +219,9 @@ def initial_fine_grained_binary_search_targeted(model, x0, target, theta, initia
 def fine_grained_binary_search_targeted(model, x0, target, theta, initial_lbd = 1.0):
     nquery = 0
     lbd = initial_lbd
+    dim1 = x0.size()[0]
+    dim3 = x0.size()[2] 
+ 
     while model.predict(x0+lbd*theta) != target:
         lbd *= 1.05
         nquery +=1
@@ -231,10 +239,10 @@ def fine_grained_binary_search_targeted(model, x0, target, theta, initial_lbd = 
     #lambdas = torch.from_numpy(lambdas).type(torch.FloatTensor)
     #print(lambdas[98], lbd)
     #print(model.predict(x0+lambdas[98]*theta))
-    temp_lbd = lambdas.unsqueeze(1).unsqueeze(2).expand(num_intervals-1,1,28).unsqueeze(3).expand(num_intervals-1,1,28,28)
+    temp_lbd = lambdas.unsqueeze(1).unsqueeze(2).expand(num_intervals-1,dim1,dim3).unsqueeze(3).expand(num_intervals-1,dim1,dim3,dim3)
     #print(temp_lbd[98][0][0][0])
-    temp_theta = theta.expand(num_intervals-1,1,28,28)
-    temp_x0 = x0.expand(num_intervals-1,1,28,28)
+    temp_theta = theta.expand(num_intervals-1,dim1,dim3,dim3)
+    temp_x0 = x0.expand(num_intervals-1,dim1,dim3,dim3)
     predicted = model.predict_batch(temp_x0+temp_lbd*temp_theta)
     #print(predicted[98])
     candidate = (predicted == target).nonzero().view(-1)
@@ -246,7 +254,7 @@ def fine_grained_binary_search_targeted(model, x0, target, theta, initial_lbd = 
         lbd_hi_index = torch.min(candidate)
         lbd_hi = lambdas[lbd_hi_index]
     lbd_lo = lambdas[lbd_hi_index - 1]
-    while (lbd_hi - lbd_lo) > 1e-6:
+    while (lbd_hi - lbd_lo) > 1e-5:
         lbd_mid = (lbd_lo + lbd_hi)/2.0
         nquery += 1
         if model.predict(x0+lbd_mid*theta) == target:
@@ -276,6 +284,8 @@ def attack_untargeted(model, train_loader, x0, y0, alpha = 0.2, beta = 0.001, it
     timestart = time.time()
     b_train_size = 1000
     b_best_lbd = float('inf')
+    dim1 = x0.size()[0]
+    dim3 = x0.size()[2]
     for i, (xi, yi) in enumerate(train_loader):
         if i == 1:
             break
@@ -289,7 +299,7 @@ def attack_untargeted(model, train_loader, x0, y0, alpha = 0.2, beta = 0.001, it
         temp_x0 = temp_x0.expand(xi.size()).cuda()
         theta = xi - temp_x0
         initial_lbd = torch.norm(torch.norm(torch.norm(theta,2,1),2,1),2,1)
-        initial_lbd = initial_lbd.unsqueeze(1).unsqueeze(2).expand(xi.size()[0],1,28).unsqueeze(3).expand(xi.size()[0],1,28,28)
+        initial_lbd = initial_lbd.unsqueeze(1).unsqueeze(2).expand(xi.size()[0],dim1,dim3).unsqueeze(3).expand(xi.size()[0],dim1,dim3,dim3)
         theta /= initial_lbd
         lbd, query_count = initial_fine_grained_binary_search(model, temp_x0, y0, theta)
         best_lbd, best_index = torch.min(lbd,0)
@@ -320,7 +330,7 @@ def attack_untargeted(model, train_loader, x0, y0, alpha = 0.2, beta = 0.001, it
         g1, count = fine_grained_binary_search_local(model, x0, y0, ttt, initial_lbd = g2)
         opt_count += count
  
-        if (i+1)%50 == 0:
+        if (i+1)%1 == 0:
             print("Iteration %3d: g(theta + beta*u) = %.4f g(theta) = %.4f distortion %.4f num_queries %d alpha %.5f beta %.5f" % (i+1, g1, g2, g2, opt_count, alpha, beta))
         
         gradient = (g1-g2)/torch.norm(ttt-theta) * u
@@ -369,6 +379,8 @@ def fine_grained_binary_search_local(model, x0, y0, theta, initial_lbd = 1.0):
     return lbd_hi, nquery
 
 def initial_fine_grained_binary_search(model, x0, y0, theta, initial_lbd = 1.0):
+    dim1 = x0.size()[1]
+    dim3 = x0.size()[2] 
     nquery = 0
     initial_lbd = torch.ones(theta.size()).cuda()
     lbd = initial_lbd
@@ -394,11 +406,10 @@ def initial_fine_grained_binary_search(model, x0, y0, theta, initial_lbd = 1.0):
         lambdas[i] = lambdas_t
     lbd_hi, lbd_hi_index = torch.max(lambdas,1)
     lbd_lo = lbd_hi.clone()
-    
     for i in range(lbd.size()[0]):
-        temp_lbd = lambdas[i].unsqueeze(1).unsqueeze(2).expand(num_intervals-1,1,28).unsqueeze(3).expand(num_intervals-1,1,28,28)
-        temp_theta = theta[i].unsqueeze(0).expand(num_intervals-1,1,28,28)
-        temp_x0 = x0[i].unsqueeze(0).expand(num_intervals-1,1,28,28)
+        temp_lbd = lambdas[i].unsqueeze(1).unsqueeze(2).expand(num_intervals-1,dim1,dim3).unsqueeze(3).expand(num_intervals-1,dim1,dim3,dim3)
+        temp_theta = theta[i].unsqueeze(0).expand(num_intervals-1,dim1,dim3,dim3)
+        temp_x0 = x0[i].unsqueeze(0).expand(num_intervals-1,dim1,dim3,dim3)
         predicted = model.predict_batch(temp_x0+temp_lbd*temp_theta)
         nquery += num_intervals-1
         candidate = (predicted!=y0).nonzero().view(-1)
@@ -412,9 +423,9 @@ def initial_fine_grained_binary_search(model, x0, y0, theta, initial_lbd = 1.0):
             lbd_hi[i] = lambdas[i][lbd_hi_index[i]]
         lbd_lo[i] = lambdas[i][lbd_hi_index[i] - 1]
 
-    while torch.max(lbd_hi - lbd_lo) > 1e-6:
+    while torch.max(lbd_hi - lbd_lo) > 1e-5:
         lbd_mid = (lbd_lo + lbd_hi)/2.0
-        temp_lbd_mid = lbd_mid.unsqueeze(1).unsqueeze(2).expand(lbd_mid.size()[0],1,28).unsqueeze(3).expand(lbd_mid.size()[0],1,28,28)
+        temp_lbd_mid = lbd_mid.unsqueeze(1).unsqueeze(2).expand(lbd_mid.size()[0],dim1,dim3).unsqueeze(3).expand(lbd_mid.size()[0],dim1,dim3,dim3)
         predicted = model.predict_batch(x0+temp_lbd_mid*theta)
         nquery += lbd_mid.size()[0]
         
@@ -429,6 +440,8 @@ def initial_fine_grained_binary_search(model, x0, y0, theta, initial_lbd = 1.0):
 def fine_grained_binary_search(model, x0, y0, theta, initial_lbd = 1.0):
     nquery = 0
     lbd = initial_lbd
+    dim1 = x0.size()[0]
+    dim3 = x0.size()[2]
     while model.predict(x0+lbd*theta) == y0:
         lbd *= 1.05
         nquery +=1
@@ -446,10 +459,10 @@ def fine_grained_binary_search(model, x0, y0, theta, initial_lbd = 1.0):
     #lambdas = torch.from_numpy(lambdas).type(torch.FloatTensor)
     #print(lambdas[98], lbd)
     #print(model.predict(x0+lambdas[98]*theta))
-    temp_lbd = lambdas.unsqueeze(1).unsqueeze(2).expand(num_intervals-1,1,28).unsqueeze(3).expand(num_intervals-1,1,28,28)
+    temp_lbd = lambdas.unsqueeze(1).unsqueeze(2).expand(num_intervals-1,dim1,dim3).unsqueeze(3).expand(num_intervals-1,dim1,dim3,dim3)
     #print(temp_lbd[98][0][0][0])
-    temp_theta = theta.expand(num_intervals-1,1,28,28)
-    temp_x0 = x0.expand(num_intervals-1,1,28,28)
+    temp_theta = theta.expand(num_intervals-1,dim1,dim3,dim3)
+    temp_x0 = x0.expand(num_intervals-1,dim1,dim3,dim3)
     predicted = model.predict_batch(temp_x0+temp_lbd*temp_theta)
     #print(predicted[98])
     candidate = (predicted!=y0).nonzero().view(-1)
@@ -461,7 +474,7 @@ def fine_grained_binary_search(model, x0, y0, theta, initial_lbd = 1.0):
         lbd_hi_index = torch.min(candidate)
         lbd_hi = lambdas[lbd_hi_index]
     lbd_lo = lambdas[lbd_hi_index - 1]
-    while (lbd_hi - lbd_lo) > 1e-6:
+    while (lbd_hi - lbd_lo) > 1e-5:
         lbd_mid = (lbd_lo + lbd_hi)/2.0
         nquery += 1
         if model.predict(x0+lbd_mid*theta) !=y0:
@@ -471,8 +484,8 @@ def fine_grained_binary_search(model, x0, y0, theta, initial_lbd = 1.0):
     return lbd_hi, nquery
 
 
-def attack_mnist_single(model, train_loader, image, label, target = None):
-    show_image(image.numpy())
+def attack_single(model, train_loader, image, label, target = None):
+    #show_image(image.numpy())
     print("Original label: ", label)
     print("Predicted label: ", model.predict(image))
     if target == None:
@@ -533,10 +546,130 @@ def attack_mnist():
     print("\n\nAverage distortion on first {} images is {}".format(num_images, distortion_fix_sample/num_images))
     print("Average distortion on random {} images is {}".format(num_images, distortion_random_sample/num_images))
     '''
+def attack_cifar():
+    #train_loader, test_loader, train_dataset, test_dataset = load_mnist_data()
+    #net = MNIST()
+    train_loader, test_loader, train_dataset, test_dataset = load_cifar10_data()
+    net = CIFAR10()
+    if torch.cuda.is_available():
+        net.cuda()
+        net = torch.nn.DataParallel(net, device_ids=[0])
+        #net = torch.nn.DataParallel(net, device_ids=range(torch.cuda.device_count()))
+        
+    #load_model(net, 'models/mnist_gpu.pt')
+    load_model(net, 'models/cifar10_gpu.pt')
+    net.eval()
+
+    model = net.module if torch.cuda.is_available() else net
+
+    num_images = 10
+    
+    print("\n\n\n\n\n Running on {} random images \n\n\n".format(num_images))
+    distortion_random_sample = 0.0
+
+    random.seed(5000)
+    for _ in range(num_images):
+        idx = random.randint(100, len(test_dataset)-1)
+        #idx = 5474
+        image, label = test_dataset[idx]
+        print("\n\n\n\n======== Image %d =========" % idx)
+        targets = list(range(10))
+        targets.pop(label)
+        target = random.choice(targets)
+        #target = 3
+        #target = None   #--> uncomment of untarget
+        distortion_random_sample += attack_single(model, train_loader, image, label, target)
+
+    #print("\n\n\n\n\n Running on first {} images \n\n\n".format(num_images))
+    print("Average distortion on random {} images is {}".format(num_images, distortion_random_sample/num_images))
+    '''
+    distortion_fix_sample = 0.0
+
+    for i, (image, label) in enumerate(test_loader):
+        #targets = list(range(10))
+        #targets.pop(label)
+        #target = random.choice(targets)
+        #target = None   --> uncomment of untarget
+        distortion_fix_sample += attack_mnist_single(model, train_loader, image, label)
+
+    print("\n\nAverage distortion on first {} images is {}".format(num_images, distortion_fix_sample/num_images))
+    print("Average distortion on random {} images is {}".format(num_images, distortion_random_sample/num_images))
+    '''
+def attack_imgnet():
+    '''
+    model_name = 'inceptionresnetv2' # could be fbresnet152 or inceptionresnetv2
+    model = pretrainedmodels.__dict__[model_name](num_classes=1000, pretrained='imagenet')
+    '''
+    #model = torchvision.models.vgg19(pretrained=True)
+    model = IMAGENET('vgg19')
+    
+    #model = model.module if torch.cuda.is_available() else net
+    '''
+    input_size = model.input_size
+    input_space = model.input_space
+    input_range = model.input_range
+    mean = model.mean
+    std = model.std
+    scale = 0.875
+    tfs = []
+    tfs.append(transforms.Resize(int(math.floor(max(input_size)/scale))))
+    tfs.append(transforms.CenterCrop(max(input_size)))
+    tfs.append(transforms.ToTensor())
+    tfs.append(ToSpaceBGR(input_space=='BGR'))
+    tfs.append(ToRange255(max(input_range)==255))
+    tfs.append(transforms.Normalize(mean=mean, std=std))
+    '''
+    normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406],std=[0.229, 0.224, 0.225])
+    tfs = []
+    tfs.append(transforms.Resize(256))
+    tfs.append(transforms.CenterCrop(224))
+    tfs.append(transforms.ToTensor())
+    tfs.append(normalize)
+    tfs = transforms.Compose(tfs)
+    test_dataset = ImagenetTestDataset('/data/test', tfs)
+    #print(test_dataset[0][0])
+    test_loader = torch.utils.data.DataLoader(dataset=test_dataset, batch_size=10, shuffle=False)
+    #for i, (image, label) in enumerate(test_loader):
+    #    output = model_predict(model, image)
+    #    print(output)
+    distortion_random_sample = 0
+    num_images = 10
+    random.seed(6000)
+    for _ in range(num_images):
+        idx = random.randint(100, len(test_dataset)-1)
+        #idx = 3743
+        image, label = test_dataset[idx]
+        print("\n\n\n\n======== Image %d =========" % idx)
+        targets = list(range(1000))
+        targets.pop(label)
+        target = random.choice(targets)
+        #target = 4
+        target = None   #--> uncomment of untarget
+        distortion_random_sample += attack_single(model, test_loader, image, label, target)
+
+    #print("\n\n\n\n\n Running on first {} images \n\n\n".format(num_images))
+    print("Average distortion on random {} images is {}".format(num_images, distortion_random_sample/num_images))
+    '''
+    distortion_fix_sample = 0.0
+
+    for i, (image, label) in enumerate(test_loader):
+        #targets = list(range(10))
+        #targets.pop(label)
+        #target = random.choice(targets)
+        #target = None   --> uncomment of untarget
+        distortion_fix_sample += attack_single(model, train_loader, image, label)
+
+    print("\n\nAverage distortion on first {} images is {}".format(num_images, distortion_fix_sample/num_images))
+    print("Average distortion on random {} images is {}".format(num_images, distortion_random_sample/num_images))
+    '''
+
+
+
 
 if __name__ == '__main__':
     timestart = time.time()
-    attack_mnist()
-    #attack_cifar10()
+    #attack_mnist()
+    #attack_cifar()
+    attack_imgnet()
     timeend = time.time()
     print("\n\nTotal running time: %.4f seconds\n" % (timeend - timestart))
