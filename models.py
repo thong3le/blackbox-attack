@@ -9,8 +9,8 @@ from torch.autograd import Variable
 from torch.utils.data.dataset import Dataset
 import os
 from PIL import Image
-import pretrainedmodels
-import pretrainedmodels.utils as utils
+#import pretrainedmodels
+#import pretrainedmodels.utils as utils
 import torchvision.models as models
 
 # Hyperparameters
