@@ -7,7 +7,7 @@ import torchvision.datasets as dsets
 import torchvision.transforms as transforms
 from torch.autograd import Variable
 import torch.nn.functional as F
-from models import MNIST, CIFAR10, IMAGENET, SimpleMNIST, load_mnist_data, load_cifar10_data, load_model, show_image, ImagenetTestDataset
+from models import MNIST, CIFAR10, IMAGENET, SimpleMNIST, load_mnist_data, load_cifar10_data, imagenettest, load_model, show_image
 
 alpha = 0.2
 beta = 0.001
@@ -88,6 +88,7 @@ def attack_targeted(model, train_loader, x0, y0, target, alpha = 0.1, beta = 0.0
     theta, g2 = best_theta.clone(), g_theta
     print(model.predict(x0+theta*g2))
     opt_count = 0
+    torch.cuda_manual_seed(0)
     for i in range(iterations):
         #alpha = 1e-3
         #beta = 1e-3
@@ -319,6 +320,7 @@ def attack_untargeted(model, train_loader, x0, y0, alpha = 0.2, beta = 0.001, it
     theta, g2 = best_theta.clone(), g_theta
     print(model.predict(x0+theta*g2))
     opt_count = 0
+    torch.cuda.manual_seed(0)
     for i in range(iterations):
         u = torch.randn(theta.size())
         u = u/torch.norm(u)
@@ -518,7 +520,7 @@ def attack_mnist():
     print("\n\n\n\n\n Running on {} random images \n\n\n".format(num_images))
     distortion_random_sample = 0.0
 
-    random.seed(6000)
+    random.seed(0)
     for _ in range(num_images):
         idx = random.randint(100, len(test_dataset)-1)
         #idx = 3743
@@ -567,7 +569,7 @@ def attack_cifar():
     print("\n\n\n\n\n Running on {} random images \n\n\n".format(num_images))
     distortion_random_sample = 0.0
 
-    random.seed(5000)
+    random.seed(0)
     for _ in range(num_images):
         idx = random.randint(100, len(test_dataset)-1)
         #idx = 5474
@@ -618,7 +620,6 @@ def attack_imgnet():
     tfs.append(ToSpaceBGR(input_space=='BGR'))
     tfs.append(ToRange255(max(input_range)==255))
     tfs.append(transforms.Normalize(mean=mean, std=std))
-    '''
     normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406],std=[0.229, 0.224, 0.225])
     tfs = []
     tfs.append(transforms.Resize(256))
@@ -627,14 +628,17 @@ def attack_imgnet():
     tfs.append(normalize)
     tfs = transforms.Compose(tfs)
     test_dataset = ImagenetTestDataset('/data/test', tfs)
+    
     #print(test_dataset[0][0])
     test_loader = torch.utils.data.DataLoader(dataset=test_dataset, batch_size=10, shuffle=False)
     #for i, (image, label) in enumerate(test_loader):
     #    output = model_predict(model, image)
     #    print(output)
+    '''
+    test_loader, test_dataset = imagenettest()
     distortion_random_sample = 0
     num_images = 10
-    random.seed(6000)
+    random.seed(0)
     for _ in range(num_images):
         idx = random.randint(100, len(test_dataset)-1)
         #idx = 3743

@@ -289,16 +289,16 @@ class ImagenetTestDataset(Dataset):
     def __len__(self):
         return len(self.label)
 
-#def imagenettest():
-#    normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]) 
-#    test_dataset = ImagenetTestDataset('/data/test')
+def imagenettest():
+    normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]) 
+    #test_dataset = ImagenetTestDataset('/data/test')
 
-    #test_dataset = ImagenetTestDataset('/data/test', transforms.Compose([transforms.Resize(300), transforms.CenterCrop(255), transforms.ToTensor(), normalize,]))
+    test_dataset = ImagenetTestDataset('/data/test', transforms.Compose([transforms.Resize(256), transforms.CenterCrop(224), transforms.ToTensor(), normalize,]))
 
     # Data Loader (Input Pipeline)
-#    test_loader = torch.utils.data.DataLoader(dataset=test_dataset, batch_size=10, shuffle=True)
+    test_loader = torch.utils.data.DataLoader(dataset=test_dataset, batch_size=10, shuffle=True)
 
-#    return test_dataset
+    return test_loader, test_dataset
 
 
 
