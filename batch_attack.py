@@ -88,7 +88,7 @@ def attack_targeted(model, train_loader, x0, y0, target, alpha = 0.1, beta = 0.0
     theta, g2 = best_theta.clone(), g_theta
     print(model.predict(x0+theta*g2))
     opt_count = 0
-    torch.cuda_manual_seed(0)
+    torch.manual_seed(0)
     for i in range(iterations):
         #alpha = 1e-3
         #beta = 1e-3
@@ -320,7 +320,7 @@ def attack_untargeted(model, train_loader, x0, y0, alpha = 0.2, beta = 0.001, it
     theta, g2 = best_theta.clone(), g_theta
     print(model.predict(x0+theta*g2))
     opt_count = 0
-    torch.cuda.manual_seed(0)
+    torch.manual_seed(0)
     for i in range(iterations):
         u = torch.randn(theta.size())
         u = u/torch.norm(u)
@@ -673,7 +673,7 @@ def attack_imgnet():
 if __name__ == '__main__':
     timestart = time.time()
     #attack_mnist()
-    #attack_cifar()
-    attack_imgnet()
+    attack_cifar()
+    #attack_imgnet()
     timeend = time.time()
     print("\n\nTotal running time: %.4f seconds\n" % (timeend - timestart))
