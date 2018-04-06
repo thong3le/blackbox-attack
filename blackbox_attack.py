@@ -7,10 +7,8 @@ import torchvision.datasets as dsets
 import torchvision.transforms as transforms
 from torch.autograd import Variable
 import torch.nn.functional as F
-from models import MNIST, CIFAR10, SimpleMNIST, load_mnist_data, load_cifar10_data, load_model, show_image
+from models import IMAGENET, MNIST, CIFAR10, load_imagenet_data, load_mnist_data, load_cifar10_data, load_model, show_image
 
-alpha = 0.2
-beta = 0.001
 
 def attack_targeted(model, train_dataset, x0, y0, target, alpha = 0.1, beta = 0.001, iterations = 1000):
     """ Attack the original image and return adversarial example of target t
@@ -290,22 +288,10 @@ def fine_grained_binary_search(model, x0, y0, theta, initial_lbd = 1.0):
             lbd_lo = lbd_mid
     return lbd_hi, nquery
 
-
-def attack_mnist_single(model, train_dataset,image, label, target = None):
-    show_image(image.numpy())
-    print("Original label: ", label)
-    print("Predicted label: ", model.predict(image))
-    if target == None:
-        adversarial = attack_untargeted(model, train_dataset, image, label, alpha = alpha, beta = beta, iterations = 5000)
-    else:
-        print("Targeted attack: %d" % target)
-        adversarial = attack_targeted(model, train_dataset, image, label, target, alpha = alpha, beta = beta, iterations = 5000)
-    show_image(adversarial.numpy())
-    print("Predicted label for adversarial example: ", model.predict(adversarial))
-    return torch.norm(adversarial - image)
-
-def attack_mnist():
+def attack_mnist(alpha=0.2, beta=0.001, isTarget= False, num_attacks= 100):
     train_loader, test_loader, train_dataset, test_dataset = load_mnist_data()
+    dataset = train_dataset
+
     net = MNIST()
     if torch.cuda.is_available():
         net.cuda()
@@ -318,41 +304,39 @@ def attack_mnist():
 
     model = net.module if torch.cuda.is_available() else net
 
-    num_images = 10
+    def single_attack(image, label, target = None):
+        show_image(image.numpy())
+        print("Original label: ", label)
+        print("Predicted label: ", model.predict(image))
+        if target == None:
+            adversarial = attack_untargeted(model, dataset, image, label, alpha = alpha, beta = beta, iterations = 5000)
+        else:
+            print("Targeted attack: %d" % target)
+            adversarial = attack_targeted(model, dataset, image, label, target, alpha = alpha, beta = beta, iterations = 5000)
+        show_image(adversarial.numpy())
+        print("Predicted label for adversarial example: ", model.predict(adversarial))
+        return torch.norm(adversarial - image)
 
-    print("\n\n\n\n\n Running on {} random images \n\n\n".format(num_images))
-    distortion_random_sample = 0.0
+    print("\n\n Running {} attack on {} random  MNIST test images \n\n".format("targetted" if isTarget else "untargetted", num_attacks))
+    total_distortion = 0.0
 
-    for _ in range(num_images):
+    for _ in range(num_attacks):
         idx = random.randint(100, len(test_dataset)-1)
         image, label = test_dataset[idx]
         print("\n\n\n\n======== Image %d =========" % idx)
-        targets = list(range(10))
-        targets.pop(label)
-        target = random.choice(targets)
-        #target = None   --> uncomment of untarget
-        distortion_random_sample += attack_mnist_single(model, train_dataset, image, label, target)
-    
-    print("Average distortion on random {} images is {}".format(num_images, distortion_random_sample/num_images))
+        target = None if not isTarget else random.choice(list(range(label)) + list(range(label+1, 10)))
+        total_distortion += single_attack(image, label, target)
+    print("Average distortion on random {} images is {}".format(num_attacks, total_distortion/num_attacks))
 
-def attack_cifar10_single(model, train_dataset,image, label, target = None):
-    print("Original label: ", label)
-    print("Predicted label: ", model.predict(image))
-    if target == None:
-        adversarial = attack_untargeted(model, train_dataset, image, label, alpha = alpha, beta = beta, iterations = 5000)
-    else:
-        print("Targeted attack: %d" % target)
-        adversarial = attack_targeted(model, train_dataset, image, label, target, alpha = alpha, beta = beta, iterations = 5000)
-    print("Predicted label for adversarial example: ", model.predict(adversarial))
-    return torch.norm(adversarial - image)
 
-def attack_cifar10():
+def attack_cifar10(alpha= 0.2, beta= 0.001, isTarget= False, num_attacks= 100):
     train_loader, test_loader, train_dataset, test_dataset = load_cifar10_data()
+    dataset = train_dataset
+
     net = CIFAR10()
     if torch.cuda.is_available():
         net.cuda()
         net = torch.nn.DataParallel(net, device_ids=[0])
-        #net = torch.nn.DataParallel(net, device_ids=range(torch.cuda.device_count()))
         
     #load_model(net, 'models/cifar10_gpu.pt')
     load_model(net, 'models/cifar10_cpu.pt')
@@ -360,27 +344,67 @@ def attack_cifar10():
 
     model = net.module if torch.cuda.is_available() else net
 
-    num_images = 10
+    def single_attack(image, label, target = None):
+        print("Original label: ", label)
+        print("Predicted label: ", model.predict(image))
+        if target == None:
+            adversarial = attack_untargeted(model, dataset, image, label, alpha = alpha, beta = beta, iterations = 5000)
+        else:
+            print("Targeted attack: %d" % target)
+            adversarial = attack_targeted(model, dataset, image, label, target, alpha = alpha, beta = beta, iterations = 5000)
+        print("Predicted label for adversarial example: ", model.predict(adversarial))
+        return torch.norm(adversarial - image)
 
-    print("\n\n\n\n\n Running on {} random images \n\n\n".format(num_images))
-    distortion_random_sample = 0.0
+    num_attacks = 100
 
-    for _ in range(num_images):
+    print("\n\nRunning {} attack on {} random CIFAR10 test images\n\n".format("targetted" if isTarget else "untargetted", num_attacks))
+    total_distortion = 0.0
+
+    for _ in range(num_attacks):
         idx = random.randint(100, len(test_dataset)-1)
         image, label = test_dataset[idx]
         print("\n\n\n\n======== Image %d =========" % idx)
-        targets = list(range(10))
-        targets.pop(label)
-        target = random.choice(targets)
-        #target = None   --> uncomment of untarget
-        distortion_random_sample += attack_cifar10_single(model, train_dataset, image, label, target)
+        target = None if not isTarget else random.choice(list(range(label)) + list(range(label+1, 10)))
+        total_distortion += single_attack(image, label, target)
     
-    print("Average distortion on random {} images is {}".format(num_images, distortion_random_sample/num_images))
+    print("Average distortion on random {} images is {}".format(num_attacks, total_distortion/num_attacks))
+
+def attack_imagenet(arch='resnet50', alpha=0.2, beta= 0.001, isTarget=False, num_attacks = 100):
+    train_loader, test_loader, train_dataset, test_dataset = load_imagenet_data()
+    dataset = test_dataset
+
+    model = IMAGENET(arch)
+
+    def single_attack(image, label, target = None):
+        print("Original label: ", label)
+        print("Predicted label: ", net.predict(image))
+        if target == None:
+            adversarial = attack_untargeted(model, dataset, image, label, alpha = alpha, beta = beta, iterations = 5000)
+        else:
+            print("Targeted attack: %d" % target)
+            adversarial = attack_targeted(model, dataset, image, label, target, alpha = alpha, beta = beta, iterations = 5000)
+        print("Predicted label for adversarial example: ", model.predict(adversarial))
+        return torch.norm(adversarial - image)
+
+    print("\nRunning {} attack on {} random IMAGENET test images\n".format("targetted" if isTarget else "untargetted", num_attacks))
+    total_distortion = 0.0
+
+    for _ in range(num_attacks):
+        idx = random.randint(100, len(test_dataset)-1)
+        image, label = test_dataset[idx]
+        print("\n\n======== Image %d =========" % idx)
+        target = None if not isTarget else random.choice(list(range(label)) + list(range(label+1, 1000)))
+        total_distortion += attack_single(image, label, target)
+    
+    print("Average distortion on random {} images is {}".format(num_attacks, total_distortion/num_attacks))
 
 if __name__ == '__main__':
     timestart = time.time()
     random.seed(0)
     attack_mnist()
     #attack_cifar10()
+    #attack_imagenet(arch='resnet50')
+    #attack_imagenet(arch='vgg19')
+
     timeend = time.time()
     print("\n\nTotal running time: %.4f seconds\n" % (timeend - timestart))
