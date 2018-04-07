@@ -1,4 +1,4 @@
-import time
+import time, sys
 import random 
 import numpy as np
 import torch 
@@ -94,7 +94,7 @@ def attack_targeted(model, train_loader, x0, y0, target, alpha = 0.1, beta = 0.0
         #beta = 1e-3
         u = torch.randn(theta.size())
         u = u/torch.norm(u)
-        g2, count = fine_grained_binary_search_targeted(model, x0, target, theta, initial_lbd = g2)
+        g2, count = fine_grained_binary_search_local_targeted(model, x0, target, theta, initial_lbd = g2)
         opt_count += count
         ttt = theta+beta * u
         ttt = ttt/torch.norm(ttt)
@@ -102,10 +102,10 @@ def attack_targeted(model, train_loader, x0, y0, target, alpha = 0.1, beta = 0.0
         g1, count = fine_grained_binary_search_local_targeted(model, x0, target, ttt, initial_lbd = g2)
         opt_count += count
         temp_output = model.predict(x0+g2*theta)
-        if (i+1)%50 == 0:
+        if (i+1)%100 == 0:
             print("Iteration %3d: g(theta + beta*u) = %.4f g(theta) = %.4f distortion %.4f num_queries %d alpha %.5f beta %.5f output %d" % (i+1, g1, g2, g2, opt_count, alpha, beta, temp_output))
-        if (i+1)%500 ==0:
-            alpha = alpha*2 
+        #if (i+1)%500 ==0:
+        #    alpha = alpha*2 
 
         gradient = (g1-g2)/torch.norm(ttt-theta) * u
         temp_theta = theta - alpha*gradient
@@ -153,7 +153,7 @@ def fine_grained_binary_search_local_targeted(model, x0, t, theta, initial_lbd =
     while (lbd_hi - lbd_lo) > 1e-5:
         lbd_mid = (lbd_lo + lbd_hi)/2.0
         nquery += 1
-        if model.predict(x0 + lbd_mid*theta) != t:
+        if model.predict(x0 + lbd_mid*theta) == t:
             lbd_hi = lbd_mid
         else:
             lbd_lo = lbd_mid
@@ -330,16 +330,16 @@ def attack_untargeted(model, train_loader, x0, y0, alpha = 0.2, beta = 0.001, it
     for i in range(iterations):
         u = torch.randn(theta.size())
         u = u/torch.norm(u)
-        g2, count = fine_grained_binary_search(model, x0, y0, theta, initial_lbd = g2)
+        g2, count = fine_grained_binary_search_local(model, x0, y0, theta, initial_lbd = g2)
         opt_count += count
         ttt = theta+beta * u
         ttt = ttt/torch.norm(ttt)
         ttt = ttt.type(torch.FloatTensor)
         g1, count = fine_grained_binary_search_local(model, x0, y0, ttt, initial_lbd = g2)
         opt_count += count
- 
-        if (i+1)%1 == 0:
-            print("Iteration %3d: g(theta + beta*u) = %.4f g(theta) = %.4f distortion %.4f num_queries %d alpha %.5f beta %.5f" % (i+1, g1, g2, g2, opt_count, alpha, beta))
+        temp_output = model.predict(x0+g2*theta)
+        if (i+1)%100 == 0:
+            print("Iteration %3d: g(theta + beta*u) = %.4f g(theta) = %.4f distortion %.4f num_queries %d alpha %.5f beta %.5f output %d" % (i+1, g1, g2, g2, opt_count, alpha, beta, temp_output))
         
         gradient = (g1-g2)/torch.norm(ttt-theta) * u
         temp_theta = theta - alpha*gradient
@@ -501,12 +501,12 @@ def attack_single(model, train_loader, image, label, target = None, alpha=0.2):
         adversarial = attack_untargeted(model, train_loader, image, label, alpha = alpha, beta = beta, iterations = 5000)
     else:
         print("Targeted attack: %d" % target)
-        adversarial = attack_targeted(model, train_loader, image, label, target, alpha = 1e-3, beta = beta, iterations = 5000)
+        adversarial = attack_targeted(model, train_loader, image, label, target, alpha = alpha, beta = beta, iterations = 5000)
     show_image(adversarial.numpy())
     print("Predicted label for adversarial example: ", model.predict(adversarial))
     return torch.norm(adversarial - image)
 
-def attack_mnist():
+def attack_mnist(alpha):
     train_loader, test_loader, train_dataset, test_dataset = load_mnist_data()
     net = MNIST()
     #train_loader, test_loader, train_dataset, test_dataset = load_cifar10_data()
@@ -538,7 +538,7 @@ def attack_mnist():
         target = random.choice(targets)
         #target = 4
         #target = None   #--> uncomment of untarget
-        distortion_random_sample += attack_mnist_single(model, train_loader, image, label, target)
+        distortion_random_sample += attack_single(model, train_loader, image, label, target, alpha)
 
     #print("\n\n\n\n\n Running on first {} images \n\n\n".format(num_images))
     print("Average distortion on random {} images is {}".format(num_images, distortion_random_sample/num_images))
@@ -555,7 +555,7 @@ def attack_mnist():
     print("\n\nAverage distortion on first {} images is {}".format(num_images, distortion_fix_sample/num_images))
     print("Average distortion on random {} images is {}".format(num_images, distortion_random_sample/num_images))
     '''
-def attack_cifar():
+def attack_cifar(alpha):
     #train_loader, test_loader, train_dataset, test_dataset = load_mnist_data()
     #net = MNIST()
     train_loader, test_loader, train_dataset, test_dataset = load_cifar10_data()
@@ -587,7 +587,7 @@ def attack_cifar():
         target = random.choice(targets)
         #target = 3
         #target = None   #--> uncomment of untarget
-        distortion_random_sample += attack_single(model, train_loader, image, label, target)
+        distortion_random_sample += attack_single(model, train_loader, image, label, target, alpha)
 
     #print("\n\n\n\n\n Running on first {} images \n\n\n".format(num_images))
     print("Average distortion on random {} images is {}".format(num_images, distortion_random_sample/num_images))
@@ -679,8 +679,9 @@ def attack_imgnet():
 
 if __name__ == '__main__':
     timestart = time.time()
-    #attack_mnist()
-    attack_cifar()
-    #attack_imgnet()
+    alpha = float(sys.argv[1])
+    #attack_mnist(alpha)
+    attack_cifar(alpha)
+    #attack_imgnet(alpha)
     timeend = time.time()
     print("\n\nTotal running time: %.4f seconds\n" % (timeend - timestart))
