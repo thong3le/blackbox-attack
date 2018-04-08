@@ -44,7 +44,7 @@ def attack_targeted(model, train_loader, x0, y0, target, alpha = 0.1, beta = 0.0
     dim3 = x0.size()[2]
     #for index in range(batch_size):
     for i, (xi, yi) in enumerate(train_loader):
-        if i == 2:
+        if i == 1:
             break
         xi,yi=xi.cuda(),yi.cuda()
         #temp_x0, temp_y0 = x0[index], y0[index]
@@ -586,7 +586,7 @@ def attack_cifar(alpha):
         targets.pop(label)
         target = random.choice(targets)
         #target = 3
-        #target = None   #--> uncomment of untarget
+        target = None   #--> uncomment of untarget
         distortion_random_sample += attack_single(model, train_loader, image, label, target, alpha)
 
     #print("\n\n\n\n\n Running on first {} images \n\n\n".format(num_images))
