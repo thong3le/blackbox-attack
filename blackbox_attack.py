@@ -176,9 +176,7 @@ def attack_untargeted(model, train_dataset, x0, y0, alpha = 0.2, beta = 0.001, i
         return x0
 
     num_samples = 1000 
-    best_theta = None
-    best_distortion = float('inf')
-    g_theta = None
+    best_theta, g_theta = None, float('inf')
     query_count = 0
 
     print("Searching for the initial direction on %d samples: " % (num_samples))
@@ -190,22 +188,20 @@ def attack_untargeted(model, train_dataset, x0, y0, alpha = 0.2, beta = 0.001, i
         query_count += 1
         if model.predict(xi) != y0:
             theta = xi - x0
+            initial_lbd = torch.norm(theta)
             theta = theta/torch.norm(theta)
-            lbd, count = fine_grained_binary_search(model, x0, y0, theta)
+            lbd, count = fine_grained_binary_search(model, x0, y0, theta, initial_lbd)
             query_count += count
-            distortion = torch.norm(lbd*theta)
-            if distortion < best_distortion:
+            if lbd < g_theta:
                 best_theta, g_theta = theta, lbd
-                best_distortion = distortion
-                print("--------> Found distortion %.4f and g_theta = %.4f" % (best_distortion, g_theta))
+                print("--------> Found distortion %.4f" % g_theta)
 
     timeend = time.time()
-    print("==========> Found best distortion %.4f and g_theta = %.4f in %.4f seconds using %d queries" % (best_distortion, g_theta, timeend-timestart, query_count))
+    print("==========> Found best distortion %.4f in %.4f seconds using %d queries" % (g_theta, timeend-timestart, query_count))
   
     timestart = time.time()
     g1 = 1.0
-    g2 = g_theta
-    theta = best_theta
+    theta, g2 = best_theta.clone(), g_theta
 
     opt_count = 0
     for i in range(iterations):
@@ -223,11 +219,9 @@ def attack_untargeted(model, train_dataset, x0, y0, alpha = 0.2, beta = 0.001, i
         g2, count = fine_grained_binary_search(model, x0, y0, theta, initial_lbd = g2)
         opt_count += count
 
-    #g2, count = fine_grained_binary_search(model, x0, y0, theta, initial_lbd = g2)
-    distortion = torch.norm(g2*theta)
     target = model.predict(x0 + g2*theta)
     timeend = time.time()
-    print("\nAdversarial Example Found Successfully: distortion %.4f target %d queries %d \nTime: %.4f seconds" % (distortion, target, query_count + opt_count, timeend-timestart))
+    print("\nAdversarial Example Found Successfully: distortion %.4f target %d queries %d \nTime: %.4f seconds" % (g_theta, target, query_count + opt_count, timeend-timestart))
     return x0 + g2*theta
 
 def fine_grained_binary_search_local(model, x0, y0, theta, initial_lbd = 1.0):
@@ -296,10 +290,9 @@ def attack_mnist(alpha=0.2, beta=0.001, isTarget= False, num_attacks= 100):
     if torch.cuda.is_available():
         net.cuda()
         net = torch.nn.DataParallel(net, device_ids=[0])
-        #net = torch.nn.DataParallel(net, device_ids=range(torch.cuda.device_count()))
         
-    #load_model(net, 'models/mnist_gpu.pt')
-    load_model(net, 'models/mnist_cpu.pt')
+    load_model(net, 'models/mnist_gpu.pt')
+    #load_model(net, 'models/mnist_cpu.pt')
     net.eval()
 
     model = net.module if torch.cuda.is_available() else net
@@ -317,7 +310,7 @@ def attack_mnist(alpha=0.2, beta=0.001, isTarget= False, num_attacks= 100):
         print("Predicted label for adversarial example: ", model.predict(adversarial))
         return torch.norm(adversarial - image)
 
-    print("\n\n Running {} attack on {} random  MNIST test images \n\n".format("targetted" if isTarget else "untargetted", num_attacks))
+    print("\n\n Running {} attack on {} random  MNIST test images for alpha= {} beta= {}\n\n".format("targetted" if isTarget else "untargetted", num_attacks, alpha, beta))
     total_distortion = 0.0
 
     for _ in range(num_attacks):
@@ -338,8 +331,8 @@ def attack_cifar10(alpha= 0.2, beta= 0.001, isTarget= False, num_attacks= 100):
         net.cuda()
         net = torch.nn.DataParallel(net, device_ids=[0])
         
-    #load_model(net, 'models/cifar10_gpu.pt')
-    load_model(net, 'models/cifar10_cpu.pt')
+    load_model(net, 'models/cifar10_gpu.pt')
+    #load_model(net, 'models/cifar10_cpu.pt')
     net.eval()
 
     model = net.module if torch.cuda.is_available() else net
@@ -357,7 +350,7 @@ def attack_cifar10(alpha= 0.2, beta= 0.001, isTarget= False, num_attacks= 100):
 
     num_attacks = 100
 
-    print("\n\nRunning {} attack on {} random CIFAR10 test images\n\n".format("targetted" if isTarget else "untargetted", num_attacks))
+    print("\n\nRunning {} attack on {} random CIFAR10 test images for alpha= {} beta= {}\n\n".format("targetted" if isTarget else "untargetted", num_attacks, alpha, beta))
     total_distortion = 0.0
 
     for _ in range(num_attacks):
@@ -375,9 +368,9 @@ def attack_imagenet(arch='resnet50', alpha=0.2, beta= 0.001, isTarget=False, num
 
     model = IMAGENET(arch)
 
-    def single_attack(image, label, target = None):
+    def attack_single(image, label, target = None):
         print("Original label: ", label)
-        print("Predicted label: ", net.predict(image))
+        print("Predicted label: ", model.predict(image))
         if target == None:
             adversarial = attack_untargeted(model, dataset, image, label, alpha = alpha, beta = beta, iterations = 5000)
         else:
@@ -386,7 +379,7 @@ def attack_imagenet(arch='resnet50', alpha=0.2, beta= 0.001, isTarget=False, num
         print("Predicted label for adversarial example: ", model.predict(adversarial))
         return torch.norm(adversarial - image)
 
-    print("\nRunning {} attack on {} random IMAGENET test images\n".format("targetted" if isTarget else "untargetted", num_attacks))
+    print("\nRunning {} attack on {} random IMAGENET test images for alpha= {} beta= {}\n".format("targetted" if isTarget else "untargetted", num_attacks, alpha, beta))
     total_distortion = 0.0
 
     for _ in range(num_attacks):
@@ -401,8 +394,8 @@ def attack_imagenet(arch='resnet50', alpha=0.2, beta= 0.001, isTarget=False, num
 if __name__ == '__main__':
     timestart = time.time()
     random.seed(0)
-    attack_mnist()
-    #attack_cifar10()
+    #attack_mnist()
+    attack_cifar10()
     #attack_imagenet(arch='resnet50')
     #attack_imagenet(arch='vgg19')
 
