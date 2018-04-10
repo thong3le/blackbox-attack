@@ -24,7 +24,7 @@ def attack_targeted(model, train_dataset, x0, y0, target, alpha = 0.1, beta = 0.
 
     # STEP I: find initial direction (theta, g_theta)
 
-    num_samples = 10000 
+    num_samples = 1000
     best_theta, g_theta = None, float('inf')
     query_count = 0
 
@@ -69,26 +69,39 @@ def attack_targeted(model, train_dataset, x0, y0, target, alpha = 0.1, beta = 0.
                 break
             beta *= 0.8
 
+        if beta <= 1e-6:
+            break
+
         if (i+1)%10 == 0:
             print("Iteration %3d: g(theta + beta*u) = %.4f g(theta) = %.4f distortion %.4f num_queries %d alpha %.5f beta %.5f" % (i+1, g1, g2, g2, opt_count, alpha, beta))
             
         gradient = (g1-g2)/torch.norm(ttt-theta) * u
         
         # make sure the step-size is good
-        new_alpha = alpha
-        while new_alpha > 1e-6:
-            new_theta = theta - new_alpha*gradient
-            new_theta = new_theta/torch.norm(new_theta)
-            new_g2, count = fine_grained_binary_search_targeted(model, x0, y0, target, new_theta, initial_lbd = g2)
-            opt_count += count
-            if new_g2 != float('inf'):
-                g2 = new_g2
-                theta = new_theta
-                break
-            new_alpha *= 0.8
+        # new_alpha = alpha
+        # while new_alpha > 1e-6:
+        #     new_theta = theta - new_alpha*gradient
+        #     new_theta = new_theta/torch.norm(new_theta)
+        #     new_g2, count = fine_grained_binary_search_targeted(model, x0, y0, target, new_theta, initial_lbd = g2)
+        #     opt_count += count
+        #     if new_g2 != float('inf'):
+        #         g2 = new_g2
+        #         theta = new_theta
+        #         break
+        #     new_alpha *= 0.8
 
-        if beta <= 1e-6 or new_alpha <= 1e-6:
-            break
+        new_theta = theta - alpha * gradient
+        new_theta = new_theta/torch.norm(new_theta)
+        new_g2, count = fine_grained_binary_search_targeted(model, x0, y0, target, new_theta, initial_lbd = g2)
+        opt_count += count
+
+        if new_g2 > min(g2, g1):
+            if g2 > g1:
+                theta = ttt
+                g2 = g1
+        else:
+            theta = new_theta
+            g2 = new_g2
 
         if g2 < g_theta:
             best_theta, g_theta = theta.clone(), g2
@@ -175,7 +188,7 @@ def attack_untargeted(model, train_dataset, x0, y0, alpha = 0.2, beta = 0.001, i
         print("Fail to classify the image. No need to attack.")
         return x0
 
-    num_samples = 1000 
+    num_samples = 1000
     best_theta, g_theta = None, float('inf')
     query_count = 0
 
@@ -192,6 +205,7 @@ def attack_untargeted(model, train_dataset, x0, y0, alpha = 0.2, beta = 0.001, i
             theta = theta/torch.norm(theta)
             lbd, count = fine_grained_binary_search(model, x0, y0, theta, initial_lbd)
             query_count += count
+            print(i)
             if lbd < g_theta:
                 best_theta, g_theta = theta, lbd
                 print("--------> Found distortion %.4f" % g_theta)
@@ -214,15 +228,27 @@ def attack_untargeted(model, train_dataset, x0, y0, alpha = 0.2, beta = 0.001, i
         if (i+1)%50 == 0:
             print("Iteration %3d: g(theta + beta*u) = %.4f g(theta) = %.4f distortion %.4f num_queries %d" % (i+1, g1, g2, torch.norm(g2*theta), opt_count))
         gradient = (g1-g2)/torch.norm(ttt-theta) * u
-        theta.sub_(alpha*gradient)
-        theta = theta/torch.norm(theta)
-        g2, count = fine_grained_binary_search(model, x0, y0, theta, initial_lbd = g2)
+
+        new_theta = theta - alpha * gradient
+        new_theta = new_theta/torch.norm(new_theta)
+        new_g2, count = fine_grained_binary_search(model, x0, y0, new_theta, initial_lbd = g2)
         opt_count += count
 
-    target = model.predict(x0 + g2*theta)
+        if new_g2 > min(g2, g1):
+            if g2 > g1:
+                theta = ttt
+                g2 = g1
+        else:
+            theta = new_theta
+            g2 = new_g2
+
+        if g2 < g_theta:
+            best_theta, g_theta = theta.clone(), g2
+
+    target = model.predict(x0 + g_theta*best_theta)
     timeend = time.time()
     print("\nAdversarial Example Found Successfully: distortion %.4f target %d queries %d \nTime: %.4f seconds" % (g_theta, target, query_count + opt_count, timeend-timestart))
-    return x0 + g2*theta
+    return x0 + g_theta*best_theta
 
 def fine_grained_binary_search_local(model, x0, y0, theta, initial_lbd = 1.0):
     nquery = 0
@@ -235,6 +261,8 @@ def fine_grained_binary_search_local(model, x0, y0, theta, initial_lbd = 1.0):
         while model.predict(x0+lbd_hi*theta) == y0:
             lbd_hi = lbd_hi*1.01
             nquery += 1
+            if lbd_hi > 100:
+                return float('inf'), nquery
     else:
         lbd_hi = lbd
         lbd_lo = lbd*0.99
@@ -256,8 +284,10 @@ def fine_grained_binary_search(model, x0, y0, theta, initial_lbd = 1.0):
     nquery = 0
     lbd = initial_lbd
     while model.predict(x0 + lbd*theta) == y0:
-        lbd *= 2.0
+        lbd *= 1.05
         nquery += 1
+        if lbd > 100:
+            return float('inf'), nquery
 
     num_intervals = 100
 
@@ -284,6 +314,7 @@ def fine_grained_binary_search(model, x0, y0, theta, initial_lbd = 1.0):
 
 def attack_mnist(alpha=0.2, beta=0.001, isTarget= False, num_attacks= 100):
     train_loader, test_loader, train_dataset, test_dataset = load_mnist_data()
+
     dataset = train_dataset
 
     net = MNIST()
@@ -348,8 +379,6 @@ def attack_cifar10(alpha= 0.2, beta= 0.001, isTarget= False, num_attacks= 100):
         print("Predicted label for adversarial example: ", model.predict(adversarial))
         return torch.norm(adversarial - image)
 
-    num_attacks = 100
-
     print("\n\nRunning {} attack on {} random CIFAR10 test images for alpha= {} beta= {}\n\n".format("targetted" if isTarget else "untargetted", num_attacks, alpha, beta))
     total_distortion = 0.0
 
@@ -394,10 +423,11 @@ def attack_imagenet(arch='resnet50', alpha=0.2, beta= 0.001, isTarget=False, num
 if __name__ == '__main__':
     timestart = time.time()
     random.seed(0)
-    #attack_mnist()
-    attack_cifar10()
-    #attack_imagenet(arch='resnet50')
-    #attack_imagenet(arch='vgg19')
+    
+    #attack_mnist(alpha=0.2, beta=0.001, isTarget= False, num_attacks= 10)
+    attack_cifar10(alpha=0.2, beta=0.001, isTarget= False, num_attacks= 10)
+    #attack_imagenet(arch='resnet50', alpha=0.2, beta=0.001, isTarget= False, num_attacks= 10)
+    #attack_imagenet(arch='vgg19', alpha=0.2, beta=0.001, isTarget= False, num_attacks= 10)
 
     timeend = time.time()
     print("\n\nTotal running time: %.4f seconds\n" % (timeend - timestart))

@@ -3,3 +3,4 @@ __pycache__/
 data/cifar10-py
 data/mnist
 tmp/
+nohup.out
