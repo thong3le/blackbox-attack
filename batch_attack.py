@@ -571,7 +571,7 @@ def attack_cifar(alpha):
 
     model = net.module if torch.cuda.is_available() else net
 
-    num_images = 10
+    num_images = 100
     
     print("\n\n\n\n\n Running on {} random images \n\n\n".format(num_images))
     distortion_random_sample = 0.0
@@ -604,7 +604,7 @@ def attack_cifar(alpha):
     print("\n\nAverage distortion on first {} images is {}".format(num_images, distortion_fix_sample/num_images))
     print("Average distortion on random {} images is {}".format(num_images, distortion_random_sample/num_images))
     '''
-def attack_imgnet():
+def attack_imgnet(alpha):
     '''
     model_name = 'inceptionresnetv2' # could be fbresnet152 or inceptionresnetv2
     model = pretrainedmodels.__dict__[model_name](num_classes=1000, pretrained='imagenet')
@@ -681,7 +681,7 @@ if __name__ == '__main__':
     timestart = time.time()
     alpha = float(sys.argv[1])
     #attack_mnist(alpha)
-    attack_cifar(alpha)
-    #attack_imgnet(alpha)
+    #attack_cifar(alpha)
+    attack_imgnet(alpha)
     timeend = time.time()
     print("\n\nTotal running time: %.4f seconds\n" % (timeend - timestart))
