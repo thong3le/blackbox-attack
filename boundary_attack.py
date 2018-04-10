@@ -12,7 +12,183 @@ from models import MNIST, CIFAR10, IMAGENET, SimpleMNIST, load_mnist_data, load_
 alpha = 0.2
 beta = 0.001
 
+def attack_targeted(model, train_loader, x0, y0, target, alpha = 0.1, beta = 0.001, iterations = 1000, batch_size = 10):
+    """ Attack the original image and return adversarial example of target t
+        model: (pytorch model)
+        train_dataset: set of training data
+        (x0, y0): original image
+        t: target
+    """
+    o_alpha = alpha
+    if (model.predict(x0) != y0):
+        print("Fail to classify the image. No need to attack.")
+        return x0
+    # STEP I: find initial direction (theta, g_theta)
+    ''' 
+    image, label = Variable(x0.cuda()), y0.cuda() 
+    outputs = model(image)
+    _, predicted = torch.max(outputs.data, 1)
+    target = torch.randperm(10)
+    #print(predicted!=y0).nonzero()
+    '''
+    num_samples = 1000 
+    best_theta, g_theta = None, float('inf')
+    query_count = 0
 
+    #print("Searching for the initial direction on %d samples: " % (num_samples))
+    timestart = time.time()
+    #samples = set(random.sample(range(len(train_dataset)), num_samples))
+    b_train_size = 1000
+    b_best_lbd = float('inf')
+    dim1 = x0.size()[0]
+    dim3 = x0.size()[2]
+    #for index in range(batch_size):
+    for i, (xi, yi) in enumerate(train_loader):
+        if i == 1:
+            break
+        xi,yi=xi.cuda(),yi.cuda()
+        #temp_x0, temp_y0 = x0[index], y0[index]
+        temp_x0 = x0 
+        #temp_x0 = temp_x0.expand(100,1,28,28)
+            
+        #b_target = torch.LongTensor([target[index]]).expand(100).cuda()
+        #b_target = torch.LongTensor([target]).expand(b_train_size).cuda()
+        b_index = ( target == yi).nonzero().squeeze()
+        if len(b_index.size()) == 0:
+            continue
+        xi = xi[b_index]
+        #b_target = b_target[b_index]
+        temp_x0 = temp_x0.expand(xi.size()).cuda()
+        theta = xi - temp_x0
+        initial_lbd = torch.norm(torch.norm(torch.norm(theta,2,1),2,1),2,1)
+        initial_lbd = initial_lbd.unsqueeze(1).unsqueeze(2).expand(xi.size()[0],dim1,dim3).unsqueeze(3).expand(xi.size()[0],dim1,dim3,dim3)
+        theta /= initial_lbd
+        lbd, query_count = initial_fine_grained_binary_search_targeted(model, temp_x0, target, theta, initial_lbd)
+        #print(lbd)    
+        best_lbd, best_index = torch.min(lbd,0)
+        #print(best_lbd)
+        best_theta = theta[best_index]
+        if best_lbd[0] < b_best_lbd:
+            
+            #print(model.predict(x0.cuda()+best_lbd*best_theta))
+            b_best_lbd = best_lbd[0]
+            b_best_theta = best_theta.clone()
+            print("--------> Found g() %.4f" %b_best_lbd)
+
+    best_theta, g_theta = b_best_theta.cpu(), b_best_lbd
+     
+    #print(model.predict(x0+g_theta*best_theta))
+    timeend = time.time()
+    print("==========> Found best distortion %.4f in %.4f seconds using %d queries" % (b_best_lbd, timeend-timestart, query_count))
+    timestart = time.time()
+
+    #query_search_each = 200  # limit for each lambda search
+    #iterations = (query_limit - query_search_each)//(2*query_search_each)
+    iterations = 200000
+    g1 = 1.0
+    g2 = g_theta
+    theta = best_theta
+    now_o = g2*theta
+    delta = 0.01
+    epsilon = 0.001
+
+    opt_count = 0
+    success_count = 0
+    n_adjust = 1000
+    torch.manual_seed(0)
+    for i in range(iterations):
+        u = torch.randn(theta.size()).type(torch.FloatTensor)
+        new_o = now_o + u*delta
+        new_o = new_o *( torch.norm(now_o) / torch.norm(new_o))
+        if model.predict(new_o) == target:
+            success_count += 1
+        new_o = new_o - epsilon*(new_o)/torch.norm(new_o)
+        if model.predict(x0+new_o) == target:
+            now_o = new_o
+        """ ## I found adaptive step size is not good....
+        if (i+1)%n_adjust == 0:
+            ratio = float(success_count)/float(n_adjust)
+            print ratio, delta, epsilon
+            if ratio < 0.2:
+                delta = delta / 1.5
+                epsilon = epsilon /1.5
+            elif ratio > 0.5:
+                delta = delta * 1.5
+                epsilon = epsilon * 1.5
+        """
+        if (i+1)%5000 == 0:
+            print("Iteration %3d distortion %.4f query %d" % (i+1, torch.norm(now_o), (i+1)*2))
+
+    distortion = torch.norm(now_o)
+    target = model.predict(now_o)
+    timeend = time.time()
+    print("\nAdversarial Example Found Successfully: distortion %.4f target %d queries %d \nTime: %.4f seconds" % (distortion, target, query_count + iterations, timeend-timestart))
+    return x0+now_o
+
+def initial_fine_grained_binary_search_targeted(model, x0, target, theta, initial_lbd = 1.0):
+    dim1 = x0.size()[1]
+    dim3 = x0.size()[2]    
+    nquery = 0
+    initial_lbd = torch.ones(theta.size()).cuda()
+    lbd = initial_lbd
+    limit = torch.ones(lbd.size()).cuda()
+    predicted = model.predict_batch(x0+ lbd * theta)
+    nquery += 10
+    candidate = (predicted != target).nonzero().view(-1)
+    while len(candidate.size())>0:
+        lbd[candidate] = lbd[candidate].mul(1.05)
+        nquery += candidate.size()[0]
+        limit.resize_(candidate.size())
+        if torch.max(lbd) > 100: 
+            break
+        predicted = model.predict_batch(x0+ lbd * theta)
+        nquery += candidate.size()[0]
+        candidate = (predicted != target).nonzero().view(-1)
+   
+    #lbd = torch.clamp(lbd,0,100)
+    num_intervals = 100
+    
+    lambdas = torch.randn(lbd.size()[0],num_intervals-1).cuda()
+    for i in range(lbd.size()[0]):
+        lambdas_t = np.linspace(0.0, lbd[i][0][0][0], num_intervals)[1:]
+        lambdas_t = torch.from_numpy(lambdas_t).type(torch.FloatTensor)
+        lambdas[i] = lambdas_t
+    lbd_hi, lbd_hi_index = torch.max(lambdas,1)
+    lbd_lo = lbd_hi.clone()
+
+ 
+    for i in range(lbd.size()[0]):
+        temp_lbd = lambdas[i].unsqueeze(1).unsqueeze(2).expand(num_intervals-1,dim1,dim3).unsqueeze(3).expand(num_intervals-1,dim1,dim3,dim3)
+        temp_theta = theta[i].unsqueeze(0).expand(num_intervals-1,dim1,dim3,dim3)
+        temp_x0 = x0[i].unsqueeze(0).expand(num_intervals-1,dim1,dim3,dim3)
+        predicted = model.predict_batch(temp_x0+temp_lbd*temp_theta)
+        candidate = (predicted == target).nonzero().view(-1)
+        nquery += num_intervals-1 - candidate.size()[0]
+        if len(candidate.size())==0:
+            lbd_hi_index[i]=0
+            #print(lbd[i][0],lbd_hi[i])
+            lbd_hi[i] = lbd[i][0][0][0]
+            #return float('inf'), nquery
+        else:
+            lbd_hi_index[i] = torch.min(candidate)
+            lbd_hi[i] = lambdas[i][lbd_hi_index[i]]
+        lbd_lo[i] = lambdas[i][lbd_hi_index[i] - 1]
+
+    while torch.max(lbd_hi - lbd_lo) > 1e-5:
+        lbd_mid = (lbd_lo + lbd_hi)/2.0
+        temp_lbd_mid = lbd_mid.unsqueeze(1).unsqueeze(2).expand(lbd_mid.size()[0],dim1,dim3).unsqueeze(3).expand(lbd_mid.size()[0],dim1,dim3,dim3)
+        predicted = model.predict_batch(x0+temp_lbd_mid*theta)
+        nquery += lbd_mid.size()[0]
+        
+        candidate_y = (predicted == target).nonzero().view(-1)
+        candidate_n = (predicted != target).nonzero().view(-1)
+        if len(candidate_y.size())>0:
+            lbd_hi[candidate_y] = lbd_mid[candidate_y]
+        if len(candidate_n.size())>0:
+            lbd_lo[candidate_n] = lbd_mid[candidate_n]
+    return lbd_hi, nquery
+
+ 
 def attack_untargeted(model, train_loader, x0, y0, alpha = 0.2, beta = 0.001, iterations= 200000):
     """ Attack the original image and return adversarial example
         model: (pytorch model)
@@ -322,7 +498,7 @@ def attack_cifar(alpha):
         targets.pop(label)
         target = random.choice(targets)
         #target = 3
-        target = None   #--> uncomment of untarget
+        #target = None   #--> uncomment of untarget
         distortion_random_sample += attack_single(model, train_loader, image, label, target, alpha)
 
     #print("\n\n\n\n\n Running on first {} images \n\n\n".format(num_images))
