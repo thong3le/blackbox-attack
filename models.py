@@ -232,7 +232,7 @@ def load_mnist_data():
     test_dataset = dsets.MNIST(root='./data/mnist', train=False, transform=transforms.ToTensor())
 
     # Data Loader (Input Pipeline)
-    train_loader = torch.utils.data.DataLoader(dataset=train_dataset, batch_size=1000, shuffle=True)
+    train_loader = torch.utils.data.DataLoader(dataset=train_dataset, batch_size=100, shuffle=False)
     test_loader = torch.utils.data.DataLoader(dataset=test_dataset, batch_size=10, shuffle=False)
 
     return train_loader, test_loader, train_dataset, test_dataset
@@ -247,7 +247,7 @@ def load_cifar10_data():
     test_dataset = dsets.CIFAR10('./data/cifar10-py', download=True, train=False, transform= transforms.ToTensor())
 
     # Data Loader (Input Pipeline)
-    train_loader = torch.utils.data.DataLoader(dataset=train_dataset, batch_size=1000, shuffle=False)
+    train_loader = torch.utils.data.DataLoader(dataset=train_dataset, batch_size=100, shuffle=False)
     test_loader = torch.utils.data.DataLoader(dataset=test_dataset, batch_size=10, shuffle=False)
 
     return train_loader, test_loader, train_dataset, test_dataset
@@ -293,7 +293,7 @@ def imagenettest():
     normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]) 
     #test_dataset = ImagenetTestDataset('/data/test')
 
-    test_dataset = ImagenetTestDataset('/data/test', transforms.Compose([transforms.Resize(256), transforms.CenterCrop(224), transforms.ToTensor(), normalize,]))
+    test_dataset = ImagenetTestDataset('/data3/val', transforms.Compose([transforms.Resize(256), transforms.CenterCrop(224), transforms.ToTensor(), normalize,]))
 
     # Data Loader (Input Pipeline)
     test_loader = torch.utils.data.DataLoader(dataset=test_dataset, batch_size=10, shuffle=True)
