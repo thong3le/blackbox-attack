@@ -205,7 +205,6 @@ def attack_untargeted(model, train_dataset, x0, y0, alpha = 0.2, beta = 0.001, i
             theta = theta/torch.norm(theta)
             lbd, count = fine_grained_binary_search(model, x0, y0, theta, initial_lbd)
             query_count += count
-            print(i)
             if lbd < g_theta:
                 best_theta, g_theta = theta, lbd
                 print("--------> Found distortion %.4f" % g_theta)
