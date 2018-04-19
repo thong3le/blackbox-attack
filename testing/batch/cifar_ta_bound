@@ -1,0 +1,4492 @@
+Files already downloaded and verified
+Files already downloaded and verified
+
+
+
+
+
+ Running on 100 random images 
+
+
+
+
+
+
+
+======== Image 6411 =========
+Original label:  8
+Predicted label:  8
+Targeted attack: 6
+--------> Found g() 10.2083
+==========> Found best distortion 10.2083 in 0.1444 seconds using 1498 queries
+Iteration 5000 distortion 5.9674 query 10000
+Iteration 10000 distortion 3.1814 query 20000
+Iteration 15000 distortion 2.2994 query 30000
+Iteration 20000 distortion 2.0264 query 40000
+Iteration 25000 distortion 1.8824 query 50000
+Iteration 30000 distortion 1.8024 query 60000
+Iteration 35000 distortion 1.7544 query 70000
+Iteration 40000 distortion 1.7204 query 80000
+Iteration 45000 distortion 1.6824 query 90000
+Iteration 50000 distortion 1.6424 query 100000
+Iteration 55000 distortion 1.6254 query 110000
+Iteration 60000 distortion 1.6074 query 120000
+Iteration 65000 distortion 1.6064 query 130000
+Iteration 70000 distortion 1.5984 query 140000
+Iteration 75000 distortion 1.5754 query 150000
+Iteration 80000 distortion 1.5574 query 160000
+Iteration 85000 distortion 1.5454 query 170000
+Iteration 90000 distortion 1.5404 query 180000
+Iteration 95000 distortion 1.5364 query 190000
+Iteration 100000 distortion 1.5344 query 200000
+Iteration 105000 distortion 1.5294 query 210000
+Iteration 110000 distortion 1.5224 query 220000
+Iteration 115000 distortion 1.5064 query 230000
+Iteration 120000 distortion 1.5014 query 240000
+Iteration 125000 distortion 1.4954 query 250000
+Iteration 130000 distortion 1.4944 query 260000
+Iteration 135000 distortion 1.4944 query 270000
+Iteration 140000 distortion 1.4944 query 280000
+Iteration 145000 distortion 1.4944 query 290000
+Iteration 150000 distortion 1.4944 query 300000
+Iteration 155000 distortion 1.4944 query 310000
+Iteration 160000 distortion 1.4934 query 320000
+Iteration 165000 distortion 1.4934 query 330000
+Iteration 170000 distortion 1.4934 query 340000
+Iteration 175000 distortion 1.4934 query 350000
+Iteration 180000 distortion 1.4934 query 360000
+Iteration 185000 distortion 1.4924 query 370000
+Iteration 190000 distortion 1.4894 query 380000
+Iteration 195000 distortion 1.4784 query 390000
+Iteration 200000 distortion 1.4744 query 400000
+
+Adversarial Example Found Successfully: distortion 1.4744 target 3 queries 201498 
+Time: 624.1255 seconds
+Predicted label for adversarial example:  6
+
+
+
+
+======== Image 763 =========
+Original label:  0
+Predicted label:  0
+Targeted attack: 5
+--------> Found g() 10.8849
+==========> Found best distortion 10.8849 in 0.1286 seconds using 1549 queries
+Iteration 5000 distortion 7.3499 query 10000
+Iteration 10000 distortion 4.7389 query 20000
+Iteration 15000 distortion 3.2569 query 30000
+Iteration 20000 distortion 2.5969 query 40000
+Iteration 25000 distortion 2.2749 query 50000
+Iteration 30000 distortion 2.1149 query 60000
+Iteration 35000 distortion 1.9969 query 70000
+Iteration 40000 distortion 1.9169 query 80000
+Iteration 45000 distortion 1.8669 query 90000
+Iteration 50000 distortion 1.8039 query 100000
+Iteration 55000 distortion 1.7669 query 110000
+Iteration 60000 distortion 1.7499 query 120000
+Iteration 65000 distortion 1.7459 query 130000
+Iteration 70000 distortion 1.7189 query 140000
+Iteration 75000 distortion 1.6919 query 150000
+Iteration 80000 distortion 1.6919 query 160000
+Iteration 85000 distortion 1.6909 query 170000
+Iteration 90000 distortion 1.6909 query 180000
+Iteration 95000 distortion 1.6899 query 190000
+Iteration 100000 distortion 1.6889 query 200000
+Iteration 105000 distortion 1.6869 query 210000
+Iteration 110000 distortion 1.6759 query 220000
+Iteration 115000 distortion 1.6639 query 230000
+Iteration 120000 distortion 1.6529 query 240000
+Iteration 125000 distortion 1.6379 query 250000
+Iteration 130000 distortion 1.6319 query 260000
+Iteration 135000 distortion 1.6189 query 270000
+Iteration 140000 distortion 1.6069 query 280000
+Iteration 145000 distortion 1.5989 query 290000
+Iteration 150000 distortion 1.5949 query 300000
+Iteration 155000 distortion 1.5879 query 310000
+Iteration 160000 distortion 1.5839 query 320000
+Iteration 165000 distortion 1.5669 query 330000
+Iteration 170000 distortion 1.5649 query 340000
+Iteration 175000 distortion 1.5639 query 350000
+Iteration 180000 distortion 1.5609 query 360000
+Iteration 185000 distortion 1.5569 query 370000
+Iteration 190000 distortion 1.5459 query 380000
+Iteration 195000 distortion 1.5449 query 390000
+Iteration 200000 distortion 1.5409 query 400000
+
+Adversarial Example Found Successfully: distortion 1.5409 target 3 queries 201549 
+Time: 618.9596 seconds
+Predicted label for adversarial example:  5
+
+
+
+
+======== Image 8476 =========
+Original label:  0
+Predicted label:  3
+Targeted attack: 8
+Fail to classify the image. No need to attack.
+Predicted label for adversarial example:  3
+
+
+
+
+======== Image 6734 =========
+Original label:  8
+Predicted label:  8
+Targeted attack: 4
+--------> Found g() 4.8846
+==========> Found best distortion 4.8846 in 0.1260 seconds using 2087 queries
+Iteration 5000 distortion 1.8436 query 10000
+Iteration 10000 distortion 1.2286 query 20000
+Iteration 15000 distortion 1.1016 query 30000
+Iteration 20000 distortion 1.0706 query 40000
+Iteration 25000 distortion 1.0476 query 50000
+Iteration 30000 distortion 1.0136 query 60000
+Iteration 35000 distortion 1.0006 query 70000
+Iteration 40000 distortion 0.9836 query 80000
+Iteration 45000 distortion 0.9646 query 90000
+Iteration 50000 distortion 0.9536 query 100000
+Iteration 55000 distortion 0.9416 query 110000
+Iteration 60000 distortion 0.9316 query 120000
+Iteration 65000 distortion 0.9256 query 130000
+Iteration 70000 distortion 0.9236 query 140000
+Iteration 75000 distortion 0.9156 query 150000
+Iteration 80000 distortion 0.9096 query 160000
+Iteration 85000 distortion 0.9066 query 170000
+Iteration 90000 distortion 0.9026 query 180000
+Iteration 95000 distortion 0.9006 query 190000
+Iteration 100000 distortion 0.9006 query 200000
+Iteration 105000 distortion 0.8996 query 210000
+Iteration 110000 distortion 0.8986 query 220000
+Iteration 115000 distortion 0.8966 query 230000
+Iteration 120000 distortion 0.8906 query 240000
+Iteration 125000 distortion 0.8906 query 250000
+Iteration 130000 distortion 0.8836 query 260000
+Iteration 135000 distortion 0.8826 query 270000
+Iteration 140000 distortion 0.8816 query 280000
+Iteration 145000 distortion 0.8816 query 290000
+Iteration 150000 distortion 0.8806 query 300000
+Iteration 155000 distortion 0.8796 query 310000
+Iteration 160000 distortion 0.8796 query 320000
+Iteration 165000 distortion 0.8796 query 330000
+Iteration 170000 distortion 0.8756 query 340000
+Iteration 175000 distortion 0.8746 query 350000
+Iteration 180000 distortion 0.8736 query 360000
+Iteration 185000 distortion 0.8736 query 370000
+Iteration 190000 distortion 0.8736 query 380000
+Iteration 195000 distortion 0.8706 query 390000
+Iteration 200000 distortion 0.8686 query 400000
+
+Adversarial Example Found Successfully: distortion 0.8686 target 3 queries 202087 
+Time: 620.0229 seconds
+Predicted label for adversarial example:  4
+
+
+
+
+======== Image 7908 =========
+Original label:  9
+Predicted label:  9
+Targeted attack: 5
+--------> Found g() 3.6488
+==========> Found best distortion 3.6488 in 0.1801 seconds using 1358 queries
+Iteration 5000 distortion 0.6698 query 10000
+Iteration 10000 distortion 0.4698 query 20000
+Iteration 15000 distortion 0.4288 query 30000
+Iteration 20000 distortion 0.4168 query 40000
+Iteration 25000 distortion 0.4058 query 50000
+Iteration 30000 distortion 0.3948 query 60000
+Iteration 35000 distortion 0.3918 query 70000
+Iteration 40000 distortion 0.3858 query 80000
+Iteration 45000 distortion 0.3808 query 90000
+Iteration 50000 distortion 0.3758 query 100000
+Iteration 55000 distortion 0.3738 query 110000
+Iteration 60000 distortion 0.3728 query 120000
+Iteration 65000 distortion 0.3688 query 130000
+Iteration 70000 distortion 0.3668 query 140000
+Iteration 75000 distortion 0.3658 query 150000
+Iteration 80000 distortion 0.3638 query 160000
+Iteration 85000 distortion 0.3628 query 170000
+Iteration 90000 distortion 0.3588 query 180000
+Iteration 95000 distortion 0.3558 query 190000
+Iteration 100000 distortion 0.3548 query 200000
+Iteration 105000 distortion 0.3528 query 210000
+Iteration 110000 distortion 0.3518 query 220000
+Iteration 115000 distortion 0.3508 query 230000
+Iteration 120000 distortion 0.3498 query 240000
+Iteration 125000 distortion 0.3498 query 250000
+Iteration 130000 distortion 0.3478 query 260000
+Iteration 135000 distortion 0.3478 query 270000
+Iteration 140000 distortion 0.3468 query 280000
+Iteration 145000 distortion 0.3468 query 290000
+Iteration 150000 distortion 0.3468 query 300000
+Iteration 155000 distortion 0.3468 query 310000
+Iteration 160000 distortion 0.3468 query 320000
+Iteration 165000 distortion 0.3468 query 330000
+Iteration 170000 distortion 0.3468 query 340000
+Iteration 175000 distortion 0.3468 query 350000
+Iteration 180000 distortion 0.3468 query 360000
+Iteration 185000 distortion 0.3468 query 370000
+Iteration 190000 distortion 0.3468 query 380000
+Iteration 195000 distortion 0.3458 query 390000
+Iteration 200000 distortion 0.3448 query 400000
+
+Adversarial Example Found Successfully: distortion 0.3448 target 3 queries 201358 
+Time: 608.9245 seconds
+Predicted label for adversarial example:  5
+
+
+
+
+======== Image 9658 =========
+Original label:  9
+Predicted label:  9
+Targeted attack: 3
+--------> Found g() 7.1695
+==========> Found best distortion 7.1695 in 0.2226 seconds using 2642 queries
+Iteration 5000 distortion 3.7195 query 10000
+Iteration 10000 distortion 1.9585 query 20000
+Iteration 15000 distortion 1.5325 query 30000
+Iteration 20000 distortion 1.3805 query 40000
+Iteration 25000 distortion 1.3325 query 50000
+Iteration 30000 distortion 1.2815 query 60000
+Iteration 35000 distortion 1.2485 query 70000
+Iteration 40000 distortion 1.2235 query 80000
+Iteration 45000 distortion 1.2065 query 90000
+Iteration 50000 distortion 1.1955 query 100000
+Iteration 55000 distortion 1.1835 query 110000
+Iteration 60000 distortion 1.1745 query 120000
+Iteration 65000 distortion 1.1665 query 130000
+Iteration 70000 distortion 1.1545 query 140000
+Iteration 75000 distortion 1.1475 query 150000
+Iteration 80000 distortion 1.1435 query 160000
+Iteration 85000 distortion 1.1425 query 170000
+Iteration 90000 distortion 1.1395 query 180000
+Iteration 95000 distortion 1.1385 query 190000
+Iteration 100000 distortion 1.1335 query 200000
+Iteration 105000 distortion 1.1305 query 210000
+Iteration 110000 distortion 1.1305 query 220000
+Iteration 115000 distortion 1.1305 query 230000
+Iteration 120000 distortion 1.1305 query 240000
+Iteration 125000 distortion 1.1305 query 250000
+Iteration 130000 distortion 1.1265 query 260000
+Iteration 135000 distortion 1.1235 query 270000
+Iteration 140000 distortion 1.1195 query 280000
+Iteration 145000 distortion 1.1185 query 290000
+Iteration 150000 distortion 1.1175 query 300000
+Iteration 155000 distortion 1.1165 query 310000
+Iteration 160000 distortion 1.1155 query 320000
+Iteration 165000 distortion 1.1145 query 330000
+Iteration 170000 distortion 1.1145 query 340000
+Iteration 175000 distortion 1.1115 query 350000
+Iteration 180000 distortion 1.1075 query 360000
+Iteration 185000 distortion 1.1065 query 370000
+Iteration 190000 distortion 1.1035 query 380000
+Iteration 195000 distortion 1.0995 query 390000
+Iteration 200000 distortion 1.0995 query 400000
+
+Adversarial Example Found Successfully: distortion 1.0995 target 3 queries 202642 
+Time: 526.9858 seconds
+Predicted label for adversarial example:  3
+
+
+
+
+======== Image 8368 =========
+Original label:  6
+Predicted label:  6
+Targeted attack: 2
+--------> Found g() 3.2847
+==========> Found best distortion 3.2847 in 0.1483 seconds using 2356 queries
+Iteration 5000 distortion 1.3207 query 10000
+Iteration 10000 distortion 1.0247 query 20000
+Iteration 15000 distortion 0.9317 query 30000
+Iteration 20000 distortion 0.9017 query 40000
+Iteration 25000 distortion 0.8627 query 50000
+Iteration 30000 distortion 0.8507 query 60000
+Iteration 35000 distortion 0.8377 query 70000
+Iteration 40000 distortion 0.8327 query 80000
+Iteration 45000 distortion 0.8197 query 90000
+Iteration 50000 distortion 0.8187 query 100000
+Iteration 55000 distortion 0.8137 query 110000
+Iteration 60000 distortion 0.8057 query 120000
+Iteration 65000 distortion 0.8017 query 130000
+Iteration 70000 distortion 0.7917 query 140000
+Iteration 75000 distortion 0.7857 query 150000
+Iteration 80000 distortion 0.7827 query 160000
+Iteration 85000 distortion 0.7767 query 170000
+Iteration 90000 distortion 0.7757 query 180000
+Iteration 95000 distortion 0.7727 query 190000
+Iteration 100000 distortion 0.7727 query 200000
+Iteration 105000 distortion 0.7677 query 210000
+Iteration 110000 distortion 0.7667 query 220000
+Iteration 115000 distortion 0.7647 query 230000
+Iteration 120000 distortion 0.7617 query 240000
+Iteration 125000 distortion 0.7597 query 250000
+Iteration 130000 distortion 0.7567 query 260000
+Iteration 135000 distortion 0.7567 query 270000
+Iteration 140000 distortion 0.7567 query 280000
+Iteration 145000 distortion 0.7567 query 290000
+Iteration 150000 distortion 0.7567 query 300000
+Iteration 155000 distortion 0.7567 query 310000
+Iteration 160000 distortion 0.7557 query 320000
+Iteration 165000 distortion 0.7557 query 330000
+Iteration 170000 distortion 0.7557 query 340000
+Iteration 175000 distortion 0.7557 query 350000
+Iteration 180000 distortion 0.7547 query 360000
+Iteration 185000 distortion 0.7547 query 370000
+Iteration 190000 distortion 0.7547 query 380000
+Iteration 195000 distortion 0.7537 query 390000
+Iteration 200000 distortion 0.7537 query 400000
+
+Adversarial Example Found Successfully: distortion 0.7537 target 3 queries 202356 
+Time: 559.7470 seconds
+Predicted label for adversarial example:  2
+
+
+
+
+======== Image 4717 =========
+Original label:  4
+Predicted label:  4
+Targeted attack: 2
+--------> Found g() 4.9142
+==========> Found best distortion 4.9142 in 0.1583 seconds using 2679 queries
+Iteration 5000 distortion 1.9052 query 10000
+Iteration 10000 distortion 1.0272 query 20000
+Iteration 15000 distortion 0.8942 query 30000
+Iteration 20000 distortion 0.8472 query 40000
+Iteration 25000 distortion 0.8252 query 50000
+Iteration 30000 distortion 0.7892 query 60000
+Iteration 35000 distortion 0.7722 query 70000
+Iteration 40000 distortion 0.7682 query 80000
+Iteration 45000 distortion 0.7602 query 90000
+Iteration 50000 distortion 0.7502 query 100000
+Iteration 55000 distortion 0.7442 query 110000
+Iteration 60000 distortion 0.7442 query 120000
+Iteration 65000 distortion 0.7442 query 130000
+Iteration 70000 distortion 0.7432 query 140000
+Iteration 75000 distortion 0.7422 query 150000
+Iteration 80000 distortion 0.7382 query 160000
+Iteration 85000 distortion 0.7332 query 170000
+Iteration 90000 distortion 0.7272 query 180000
+Iteration 95000 distortion 0.7252 query 190000
+Iteration 100000 distortion 0.7242 query 200000
+Iteration 105000 distortion 0.7202 query 210000
+Iteration 110000 distortion 0.7152 query 220000
+Iteration 115000 distortion 0.7142 query 230000
+Iteration 120000 distortion 0.7112 query 240000
+Iteration 125000 distortion 0.7112 query 250000
+Iteration 130000 distortion 0.7092 query 260000
+Iteration 135000 distortion 0.7092 query 270000
+Iteration 140000 distortion 0.7042 query 280000
+Iteration 145000 distortion 0.7002 query 290000
+Iteration 150000 distortion 0.6972 query 300000
+Iteration 155000 distortion 0.6962 query 310000
+Iteration 160000 distortion 0.6942 query 320000
+Iteration 165000 distortion 0.6912 query 330000
+Iteration 170000 distortion 0.6862 query 340000
+Iteration 175000 distortion 0.6862 query 350000
+Iteration 180000 distortion 0.6842 query 360000
+Iteration 185000 distortion 0.6832 query 370000
+Iteration 190000 distortion 0.6812 query 380000
+Iteration 195000 distortion 0.6812 query 390000
+Iteration 200000 distortion 0.6812 query 400000
+
+Adversarial Example Found Successfully: distortion 0.6812 target 3 queries 202679 
+Time: 861.2206 seconds
+Predicted label for adversarial example:  2
+
+
+
+
+======== Image 1653 =========
+Original label:  9
+Predicted label:  9
+Targeted attack: 4
+--------> Found g() 8.4046
+==========> Found best distortion 8.4046 in 0.1674 seconds using 2347 queries
+Iteration 5000 distortion 5.4356 query 10000
+Iteration 10000 distortion 3.3726 query 20000
+Iteration 15000 distortion 2.5256 query 30000
+Iteration 20000 distortion 2.2566 query 40000
+Iteration 25000 distortion 2.1096 query 50000
+Iteration 30000 distortion 1.9966 query 60000
+Iteration 35000 distortion 1.9016 query 70000
+Iteration 40000 distortion 1.8656 query 80000
+Iteration 45000 distortion 1.8276 query 90000
+Iteration 50000 distortion 1.7956 query 100000
+Iteration 55000 distortion 1.7656 query 110000
+Iteration 60000 distortion 1.7496 query 120000
+Iteration 65000 distortion 1.7256 query 130000
+Iteration 70000 distortion 1.7006 query 140000
+Iteration 75000 distortion 1.6906 query 150000
+Iteration 80000 distortion 1.6746 query 160000
+Iteration 85000 distortion 1.6666 query 170000
+Iteration 90000 distortion 1.6586 query 180000
+Iteration 95000 distortion 1.6586 query 190000
+Iteration 100000 distortion 1.6586 query 200000
+Iteration 105000 distortion 1.6586 query 210000
+Iteration 110000 distortion 1.6576 query 220000
+Iteration 115000 distortion 1.6536 query 230000
+Iteration 120000 distortion 1.6456 query 240000
+Iteration 125000 distortion 1.6406 query 250000
+Iteration 130000 distortion 1.6366 query 260000
+Iteration 135000 distortion 1.6346 query 270000
+Iteration 140000 distortion 1.6336 query 280000
+Iteration 145000 distortion 1.6316 query 290000
+Iteration 150000 distortion 1.6236 query 300000
+Iteration 155000 distortion 1.6226 query 310000
+Iteration 160000 distortion 1.6186 query 320000
+Iteration 165000 distortion 1.6086 query 330000
+Iteration 170000 distortion 1.6076 query 340000
+Iteration 175000 distortion 1.6056 query 350000
+Iteration 180000 distortion 1.6006 query 360000
+Iteration 185000 distortion 1.5986 query 370000
+Iteration 190000 distortion 1.5926 query 380000
+Iteration 195000 distortion 1.5926 query 390000
+Iteration 200000 distortion 1.5926 query 400000
+
+Adversarial Example Found Successfully: distortion 1.5926 target 3 queries 202347 
+Time: 1864.2600 seconds
+Predicted label for adversarial example:  4
+
+
+
+
+======== Image 8825 =========
+Original label:  0
+Predicted label:  1
+Targeted attack: 3
+Fail to classify the image. No need to attack.
+Predicted label for adversarial example:  1
+
+
+
+
+======== Image 5181 =========
+Original label:  1
+Predicted label:  1
+Targeted attack: 2
+--------> Found g() 7.2150
+==========> Found best distortion 7.2150 in 0.7559 seconds using 2728 queries
+Iteration 5000 distortion 3.5330 query 10000
+Iteration 10000 distortion 1.7980 query 20000
+Iteration 15000 distortion 1.4920 query 30000
+Iteration 20000 distortion 1.3550 query 40000
+Iteration 25000 distortion 1.2930 query 50000
+Iteration 30000 distortion 1.2580 query 60000
+Iteration 35000 distortion 1.2370 query 70000
+Iteration 40000 distortion 1.2120 query 80000
+Iteration 45000 distortion 1.1860 query 90000
+Iteration 50000 distortion 1.1780 query 100000
+Iteration 55000 distortion 1.1660 query 110000
+Iteration 60000 distortion 1.1590 query 120000
+Iteration 65000 distortion 1.1490 query 130000
+Iteration 70000 distortion 1.1390 query 140000
+Iteration 75000 distortion 1.1370 query 150000
+Iteration 80000 distortion 1.1320 query 160000
+Iteration 85000 distortion 1.1190 query 170000
+Iteration 90000 distortion 1.1170 query 180000
+Iteration 95000 distortion 1.1160 query 190000
+Iteration 100000 distortion 1.1110 query 200000
+Iteration 105000 distortion 1.1080 query 210000
+Iteration 110000 distortion 1.1070 query 220000
+Iteration 115000 distortion 1.1040 query 230000
+Iteration 120000 distortion 1.1040 query 240000
+Iteration 125000 distortion 1.1020 query 250000
+Iteration 130000 distortion 1.1000 query 260000
+Iteration 135000 distortion 1.1000 query 270000
+Iteration 140000 distortion 1.0920 query 280000
+Iteration 145000 distortion 1.0890 query 290000
+Iteration 150000 distortion 1.0860 query 300000
+Iteration 155000 distortion 1.0840 query 310000
+Iteration 160000 distortion 1.0830 query 320000
+Iteration 165000 distortion 1.0830 query 330000
+Iteration 170000 distortion 1.0830 query 340000
+Iteration 175000 distortion 1.0810 query 350000
+Iteration 180000 distortion 1.0810 query 360000
+Iteration 185000 distortion 1.0810 query 370000
+Iteration 190000 distortion 1.0770 query 380000
+Iteration 195000 distortion 1.0740 query 390000
+Iteration 200000 distortion 1.0690 query 400000
+
+Adversarial Example Found Successfully: distortion 1.0690 target 3 queries 202728 
+Time: 2429.7358 seconds
+Predicted label for adversarial example:  2
+
+
+
+
+======== Image 1308 =========
+Original label:  5
+Predicted label:  5
+Targeted attack: 6
+--------> Found g() 2.4486
+==========> Found best distortion 2.4486 in 0.5382 seconds using 1197 queries
+Iteration 5000 distortion 0.6176 query 10000
+Iteration 10000 distortion 0.5666 query 20000
+Iteration 15000 distortion 0.5416 query 30000
+Iteration 20000 distortion 0.5306 query 40000
+Iteration 25000 distortion 0.5246 query 50000
+Iteration 30000 distortion 0.5166 query 60000
+Iteration 35000 distortion 0.5136 query 70000
+Iteration 40000 distortion 0.5116 query 80000
+Iteration 45000 distortion 0.5106 query 90000
+Iteration 50000 distortion 0.5076 query 100000
+Iteration 55000 distortion 0.5056 query 110000
+Iteration 60000 distortion 0.5046 query 120000
+Iteration 65000 distortion 0.5046 query 130000
+Iteration 70000 distortion 0.5006 query 140000
+Iteration 75000 distortion 0.4956 query 150000
+Iteration 80000 distortion 0.4956 query 160000
+Iteration 85000 distortion 0.4906 query 170000
+Iteration 90000 distortion 0.4906 query 180000
+Iteration 95000 distortion 0.4906 query 190000
+Iteration 100000 distortion 0.4906 query 200000
+Iteration 105000 distortion 0.4906 query 210000
+Iteration 110000 distortion 0.4896 query 220000
+Iteration 115000 distortion 0.4866 query 230000
+Iteration 120000 distortion 0.4856 query 240000
+Iteration 125000 distortion 0.4856 query 250000
+Iteration 130000 distortion 0.4846 query 260000
+Iteration 135000 distortion 0.4846 query 270000
+Iteration 140000 distortion 0.4836 query 280000
+Iteration 145000 distortion 0.4816 query 290000
+Iteration 150000 distortion 0.4806 query 300000
+Iteration 155000 distortion 0.4796 query 310000
+Iteration 160000 distortion 0.4776 query 320000
+Iteration 165000 distortion 0.4766 query 330000
+Iteration 170000 distortion 0.4766 query 340000
+Iteration 175000 distortion 0.4736 query 350000
+Iteration 180000 distortion 0.4726 query 360000
+Iteration 185000 distortion 0.4706 query 370000
+Iteration 190000 distortion 0.4696 query 380000
+Iteration 195000 distortion 0.4696 query 390000
+Iteration 200000 distortion 0.4686 query 400000
+
+Adversarial Example Found Successfully: distortion 0.4686 target 3 queries 201197 
+Time: 1917.4877 seconds
+Predicted label for adversarial example:  6
+
+
+
+
+======== Image 7835 =========
+Original label:  0
+Predicted label:  0
+Targeted attack: 9
+--------> Found g() 16.7349
+==========> Found best distortion 16.7349 in 0.6636 seconds using 2859 queries
+Iteration 5000 distortion 12.5259 query 10000
+Iteration 10000 distortion 8.6409 query 20000
+Iteration 15000 distortion 5.8429 query 30000
+Iteration 20000 distortion 4.1199 query 40000
+Iteration 25000 distortion 3.4389 query 50000
+Iteration 30000 distortion 3.0909 query 60000
+Iteration 35000 distortion 2.8639 query 70000
+Iteration 40000 distortion 2.7379 query 80000
+Iteration 45000 distortion 2.6479 query 90000
+Iteration 50000 distortion 2.6009 query 100000
+Iteration 55000 distortion 2.5589 query 110000
+Iteration 60000 distortion 2.5359 query 120000
+Iteration 65000 distortion 2.5039 query 130000
+Iteration 70000 distortion 2.4779 query 140000
+Iteration 75000 distortion 2.4399 query 150000
+Iteration 80000 distortion 2.4309 query 160000
+Iteration 85000 distortion 2.4159 query 170000
+Iteration 90000 distortion 2.3999 query 180000
+Iteration 95000 distortion 2.3879 query 190000
+Iteration 100000 distortion 2.3639 query 200000
+Iteration 105000 distortion 2.3619 query 210000
+Iteration 110000 distortion 2.3409 query 220000
+Iteration 115000 distortion 2.3339 query 230000
+Iteration 120000 distortion 2.3209 query 240000
+Iteration 125000 distortion 2.3139 query 250000
+Iteration 130000 distortion 2.2999 query 260000
+Iteration 135000 distortion 2.2949 query 270000
+Iteration 140000 distortion 2.2809 query 280000
+Iteration 145000 distortion 2.2769 query 290000
+Iteration 150000 distortion 2.2739 query 300000
+Iteration 155000 distortion 2.2729 query 310000
+Iteration 160000 distortion 2.2699 query 320000
+Iteration 165000 distortion 2.2609 query 330000
+Iteration 170000 distortion 2.2569 query 340000
+Iteration 175000 distortion 2.2569 query 350000
+Iteration 180000 distortion 2.2549 query 360000
+Iteration 185000 distortion 2.2549 query 370000
+Iteration 190000 distortion 2.2549 query 380000
+Iteration 195000 distortion 2.2539 query 390000
+Iteration 200000 distortion 2.2529 query 400000
+
+Adversarial Example Found Successfully: distortion 2.2529 target 3 queries 202859 
+Time: 1611.0214 seconds
+Predicted label for adversarial example:  9
+
+
+
+
+======== Image 1749 =========
+Original label:  2
+Predicted label:  2
+Targeted attack: 6
+--------> Found g() 5.4790
+==========> Found best distortion 5.4790 in 0.5644 seconds using 1402 queries
+Iteration 5000 distortion 2.0390 query 10000
+Iteration 10000 distortion 1.2730 query 20000
+Iteration 15000 distortion 1.1110 query 30000
+Iteration 20000 distortion 1.0650 query 40000
+Iteration 25000 distortion 1.0410 query 50000
+Iteration 30000 distortion 1.0170 query 60000
+Iteration 35000 distortion 1.0030 query 70000
+Iteration 40000 distortion 0.9840 query 80000
+Iteration 45000 distortion 0.9830 query 90000
+Iteration 50000 distortion 0.9760 query 100000
+Iteration 55000 distortion 0.9610 query 110000
+Iteration 60000 distortion 0.9580 query 120000
+Iteration 65000 distortion 0.9530 query 130000
+Iteration 70000 distortion 0.9470 query 140000
+Iteration 75000 distortion 0.9380 query 150000
+Iteration 80000 distortion 0.9370 query 160000
+Iteration 85000 distortion 0.9320 query 170000
+Iteration 90000 distortion 0.9240 query 180000
+Iteration 95000 distortion 0.9230 query 190000
+Iteration 100000 distortion 0.9200 query 200000
+Iteration 105000 distortion 0.9180 query 210000
+Iteration 110000 distortion 0.9150 query 220000
+Iteration 115000 distortion 0.9140 query 230000
+Iteration 120000 distortion 0.9120 query 240000
+Iteration 125000 distortion 0.9080 query 250000
+Iteration 130000 distortion 0.9030 query 260000
+Iteration 135000 distortion 0.8980 query 270000
+Iteration 140000 distortion 0.8980 query 280000
+Iteration 145000 distortion 0.8910 query 290000
+Iteration 150000 distortion 0.8860 query 300000
+Iteration 155000 distortion 0.8820 query 310000
+Iteration 160000 distortion 0.8810 query 320000
+Iteration 165000 distortion 0.8800 query 330000
+Iteration 170000 distortion 0.8720 query 340000
+Iteration 175000 distortion 0.8710 query 350000
+Iteration 180000 distortion 0.8700 query 360000
+Iteration 185000 distortion 0.8680 query 370000
+Iteration 190000 distortion 0.8680 query 380000
+Iteration 195000 distortion 0.8680 query 390000
+Iteration 200000 distortion 0.8670 query 400000
+
+Adversarial Example Found Successfully: distortion 0.8670 target 3 queries 201402 
+Time: 1617.9452 seconds
+Predicted label for adversarial example:  6
+
+
+
+
+======== Image 7213 =========
+Original label:  6
+Predicted label:  6
+Targeted attack: 5
+--------> Found g() 5.5355
+==========> Found best distortion 5.5355 in 0.5085 seconds using 1355 queries
+Iteration 5000 distortion 3.1995 query 10000
+Iteration 10000 distortion 1.9465 query 20000
+Iteration 15000 distortion 1.4495 query 30000
+Iteration 20000 distortion 1.2375 query 40000
+Iteration 25000 distortion 1.1275 query 50000
+Iteration 30000 distortion 1.0805 query 60000
+Iteration 35000 distortion 1.0305 query 70000
+Iteration 40000 distortion 1.0025 query 80000
+Iteration 45000 distortion 0.9825 query 90000
+Iteration 50000 distortion 0.9665 query 100000
+Iteration 55000 distortion 0.9505 query 110000
+Iteration 60000 distortion 0.9355 query 120000
+Iteration 65000 distortion 0.9225 query 130000
+Iteration 70000 distortion 0.9165 query 140000
+Iteration 75000 distortion 0.9135 query 150000
+Iteration 80000 distortion 0.9095 query 160000
+Iteration 85000 distortion 0.9065 query 170000
+Iteration 90000 distortion 0.9055 query 180000
+Iteration 95000 distortion 0.8995 query 190000
+Iteration 100000 distortion 0.8995 query 200000
+Iteration 105000 distortion 0.8995 query 210000
+Iteration 110000 distortion 0.8995 query 220000
+Iteration 115000 distortion 0.8975 query 230000
+Iteration 120000 distortion 0.8935 query 240000
+Iteration 125000 distortion 0.8875 query 250000
+Iteration 130000 distortion 0.8845 query 260000
+Iteration 135000 distortion 0.8775 query 270000
+Iteration 140000 distortion 0.8775 query 280000
+Iteration 145000 distortion 0.8775 query 290000
+Iteration 150000 distortion 0.8735 query 300000
+Iteration 155000 distortion 0.8695 query 310000
+Iteration 160000 distortion 0.8645 query 320000
+Iteration 165000 distortion 0.8615 query 330000
+Iteration 170000 distortion 0.8595 query 340000
+Iteration 175000 distortion 0.8535 query 350000
+Iteration 180000 distortion 0.8465 query 360000
+Iteration 185000 distortion 0.8435 query 370000
+Iteration 190000 distortion 0.8415 query 380000
+Iteration 195000 distortion 0.8365 query 390000
+Iteration 200000 distortion 0.8335 query 400000
+
+Adversarial Example Found Successfully: distortion 0.8335 target 3 queries 201355 
+Time: 1604.5600 seconds
+Predicted label for adversarial example:  5
+
+
+
+
+======== Image 3450 =========
+Original label:  9
+Predicted label:  1
+Targeted attack: 8
+Fail to classify the image. No need to attack.
+Predicted label for adversarial example:  1
+
+
+
+
+======== Image 7915 =========
+Original label:  3
+Predicted label:  3
+Targeted attack: 8
+--------> Found g() 6.7665
+==========> Found best distortion 6.7665 in 0.3961 seconds using 790 queries
+Iteration 5000 distortion 3.4385 query 10000
+Iteration 10000 distortion 2.2775 query 20000
+Iteration 15000 distortion 1.9075 query 30000
+Iteration 20000 distortion 1.7465 query 40000
+Iteration 25000 distortion 1.6705 query 50000
+Iteration 30000 distortion 1.6275 query 60000
+Iteration 35000 distortion 1.6065 query 70000
+Iteration 40000 distortion 1.5815 query 80000
+Iteration 45000 distortion 1.5535 query 90000
+Iteration 50000 distortion 1.5345 query 100000
+Iteration 55000 distortion 1.5195 query 110000
+Iteration 60000 distortion 1.4995 query 120000
+Iteration 65000 distortion 1.4955 query 130000
+Iteration 70000 distortion 1.4785 query 140000
+Iteration 75000 distortion 1.4715 query 150000
+Iteration 80000 distortion 1.4625 query 160000
+Iteration 85000 distortion 1.4485 query 170000
+Iteration 90000 distortion 1.4415 query 180000
+Iteration 95000 distortion 1.4305 query 190000
+Iteration 100000 distortion 1.4215 query 200000
+Iteration 105000 distortion 1.4175 query 210000
+Iteration 110000 distortion 1.4145 query 220000
+Iteration 115000 distortion 1.4145 query 230000
+Iteration 120000 distortion 1.4145 query 240000
+Iteration 125000 distortion 1.4145 query 250000
+Iteration 130000 distortion 1.4095 query 260000
+Iteration 135000 distortion 1.4065 query 270000
+Iteration 140000 distortion 1.4015 query 280000
+Iteration 145000 distortion 1.3955 query 290000
+Iteration 150000 distortion 1.3955 query 300000
+Iteration 155000 distortion 1.3915 query 310000
+Iteration 160000 distortion 1.3895 query 320000
+Iteration 165000 distortion 1.3835 query 330000
+Iteration 170000 distortion 1.3825 query 340000
+Iteration 175000 distortion 1.3825 query 350000
+Iteration 180000 distortion 1.3825 query 360000
+Iteration 185000 distortion 1.3765 query 370000
+Iteration 190000 distortion 1.3745 query 380000
+Iteration 195000 distortion 1.3745 query 390000
+Iteration 200000 distortion 1.3725 query 400000
+
+Adversarial Example Found Successfully: distortion 1.3725 target 3 queries 200790 
+Time: 1606.1779 seconds
+Predicted label for adversarial example:  8
+
+
+
+
+======== Image 8641 =========
+Original label:  7
+Predicted label:  7
+Targeted attack: 4
+--------> Found g() 2.9593
+==========> Found best distortion 2.9593 in 0.5225 seconds using 1992 queries
+Iteration 5000 distortion 0.6473 query 10000
+Iteration 10000 distortion 0.5213 query 20000
+Iteration 15000 distortion 0.4873 query 30000
+Iteration 20000 distortion 0.4643 query 40000
+Iteration 25000 distortion 0.4593 query 50000
+Iteration 30000 distortion 0.4523 query 60000
+Iteration 35000 distortion 0.4473 query 70000
+Iteration 40000 distortion 0.4373 query 80000
+Iteration 45000 distortion 0.4353 query 90000
+Iteration 50000 distortion 0.4303 query 100000
+Iteration 55000 distortion 0.4283 query 110000
+Iteration 60000 distortion 0.4273 query 120000
+Iteration 65000 distortion 0.4273 query 130000
+Iteration 70000 distortion 0.4233 query 140000
+Iteration 75000 distortion 0.4233 query 150000
+Iteration 80000 distortion 0.4233 query 160000
+Iteration 85000 distortion 0.4203 query 170000
+Iteration 90000 distortion 0.4183 query 180000
+Iteration 95000 distortion 0.4153 query 190000
+Iteration 100000 distortion 0.4133 query 200000
+Iteration 105000 distortion 0.4133 query 210000
+Iteration 110000 distortion 0.4103 query 220000
+Iteration 115000 distortion 0.4093 query 230000
+Iteration 120000 distortion 0.4083 query 240000
+Iteration 125000 distortion 0.4083 query 250000
+Iteration 130000 distortion 0.4083 query 260000
+Iteration 135000 distortion 0.4083 query 270000
+Iteration 140000 distortion 0.4083 query 280000
+Iteration 145000 distortion 0.4073 query 290000
+Iteration 150000 distortion 0.4073 query 300000
+Iteration 155000 distortion 0.4073 query 310000
+Iteration 160000 distortion 0.4073 query 320000
+Iteration 165000 distortion 0.4073 query 330000
+Iteration 170000 distortion 0.4063 query 340000
+Iteration 175000 distortion 0.4053 query 350000
+Iteration 180000 distortion 0.4043 query 360000
+Iteration 185000 distortion 0.4023 query 370000
+Iteration 190000 distortion 0.4003 query 380000
+Iteration 195000 distortion 0.4003 query 390000
+Iteration 200000 distortion 0.4003 query 400000
+
+Adversarial Example Found Successfully: distortion 0.4003 target 3 queries 201992 
+Time: 1602.3164 seconds
+Predicted label for adversarial example:  4
+
+
+
+
+======== Image 1120 =========
+Original label:  5
+Predicted label:  5
+Targeted attack: 9
+--------> Found g() 7.0118
+==========> Found best distortion 7.0118 in 0.2359 seconds using 2486 queries
+Iteration 5000 distortion 3.7478 query 10000
+Iteration 10000 distortion 2.3408 query 20000
+Iteration 15000 distortion 1.9858 query 30000
+Iteration 20000 distortion 1.7678 query 40000
+Iteration 25000 distortion 1.6678 query 50000
+Iteration 30000 distortion 1.6158 query 60000
+Iteration 35000 distortion 1.5818 query 70000
+Iteration 40000 distortion 1.5548 query 80000
+Iteration 45000 distortion 1.5298 query 90000
+Iteration 50000 distortion 1.5078 query 100000
+Iteration 55000 distortion 1.4998 query 110000
+Iteration 60000 distortion 1.4788 query 120000
+Iteration 65000 distortion 1.4768 query 130000
+Iteration 70000 distortion 1.4698 query 140000
+Iteration 75000 distortion 1.4648 query 150000
+Iteration 80000 distortion 1.4548 query 160000
+Iteration 85000 distortion 1.4518 query 170000
+Iteration 90000 distortion 1.4518 query 180000
+Iteration 95000 distortion 1.4478 query 190000
+Iteration 100000 distortion 1.4428 query 200000
+Iteration 105000 distortion 1.4338 query 210000
+Iteration 110000 distortion 1.4258 query 220000
+Iteration 115000 distortion 1.4148 query 230000
+Iteration 120000 distortion 1.4038 query 240000
+Iteration 125000 distortion 1.4028 query 250000
+Iteration 130000 distortion 1.4028 query 260000
+Iteration 135000 distortion 1.4018 query 270000
+Iteration 140000 distortion 1.3988 query 280000
+Iteration 145000 distortion 1.3968 query 290000
+Iteration 150000 distortion 1.3958 query 300000
+Iteration 155000 distortion 1.3848 query 310000
+Iteration 160000 distortion 1.3818 query 320000
+Iteration 165000 distortion 1.3808 query 330000
+Iteration 170000 distortion 1.3768 query 340000
+Iteration 175000 distortion 1.3718 query 350000
+Iteration 180000 distortion 1.3718 query 360000
+Iteration 185000 distortion 1.3598 query 370000
+Iteration 190000 distortion 1.3578 query 380000
+Iteration 195000 distortion 1.3538 query 390000
+Iteration 200000 distortion 1.3518 query 400000
+
+Adversarial Example Found Successfully: distortion 1.3518 target 3 queries 202486 
+Time: 1607.4895 seconds
+Predicted label for adversarial example:  9
+
+
+
+
+======== Image 330 =========
+Original label:  1
+Predicted label:  1
+Targeted attack: 2
+--------> Found g() 7.6606
+==========> Found best distortion 7.6606 in 0.6512 seconds using 2800 queries
+Iteration 5000 distortion 4.3336 query 10000
+Iteration 10000 distortion 2.7066 query 20000
+Iteration 15000 distortion 2.2656 query 30000
+Iteration 20000 distortion 2.1026 query 40000
+Iteration 25000 distortion 2.0186 query 50000
+Iteration 30000 distortion 1.9146 query 60000
+Iteration 35000 distortion 1.8646 query 70000
+Iteration 40000 distortion 1.8256 query 80000
+Iteration 45000 distortion 1.7966 query 90000
+Iteration 50000 distortion 1.7646 query 100000
+Iteration 55000 distortion 1.7456 query 110000
+Iteration 60000 distortion 1.7336 query 120000
+Iteration 65000 distortion 1.7116 query 130000
+Iteration 70000 distortion 1.7006 query 140000
+Iteration 75000 distortion 1.6866 query 150000
+Iteration 80000 distortion 1.6816 query 160000
+Iteration 85000 distortion 1.6816 query 170000
+Iteration 90000 distortion 1.6766 query 180000
+Iteration 95000 distortion 1.6746 query 190000
+Iteration 100000 distortion 1.6706 query 200000
+Iteration 105000 distortion 1.6666 query 210000
+Iteration 110000 distortion 1.6656 query 220000
+Iteration 115000 distortion 1.6576 query 230000
+Iteration 120000 distortion 1.6466 query 240000
+Iteration 125000 distortion 1.6396 query 250000
+Iteration 130000 distortion 1.6366 query 260000
+Iteration 135000 distortion 1.6296 query 270000
+Iteration 140000 distortion 1.6246 query 280000
+Iteration 145000 distortion 1.6176 query 290000
+Iteration 150000 distortion 1.6126 query 300000
+Iteration 155000 distortion 1.6076 query 310000
+Iteration 160000 distortion 1.6036 query 320000
+Iteration 165000 distortion 1.6016 query 330000
+Iteration 170000 distortion 1.5956 query 340000
+Iteration 175000 distortion 1.5896 query 350000
+Iteration 180000 distortion 1.5876 query 360000
+Iteration 185000 distortion 1.5856 query 370000
+Iteration 190000 distortion 1.5846 query 380000
+Iteration 195000 distortion 1.5836 query 390000
+Iteration 200000 distortion 1.5806 query 400000
+
+Adversarial Example Found Successfully: distortion 1.5806 target 3 queries 202800 
+Time: 1555.2036 seconds
+Predicted label for adversarial example:  2
+
+
+
+
+======== Image 6634 =========
+Original label:  4
+Predicted label:  4
+Targeted attack: 0
+--------> Found g() 9.0640
+==========> Found best distortion 9.0640 in 0.1682 seconds using 1333 queries
+Iteration 5000 distortion 6.3320 query 10000
+Iteration 10000 distortion 4.1670 query 20000
+Iteration 15000 distortion 2.9260 query 30000
+Iteration 20000 distortion 2.2750 query 40000
+Iteration 25000 distortion 1.9680 query 50000
+Iteration 30000 distortion 1.7940 query 60000
+Iteration 35000 distortion 1.6940 query 70000
+Iteration 40000 distortion 1.6390 query 80000
+Iteration 45000 distortion 1.6140 query 90000
+Iteration 50000 distortion 1.5820 query 100000
+Iteration 55000 distortion 1.5480 query 110000
+Iteration 60000 distortion 1.5220 query 120000
+Iteration 65000 distortion 1.4990 query 130000
+Iteration 70000 distortion 1.4850 query 140000
+Iteration 75000 distortion 1.4700 query 150000
+Iteration 80000 distortion 1.4580 query 160000
+Iteration 85000 distortion 1.4370 query 170000
+Iteration 90000 distortion 1.4270 query 180000
+Iteration 95000 distortion 1.4240 query 190000
+Iteration 100000 distortion 1.4190 query 200000
+Iteration 105000 distortion 1.4080 query 210000
+Iteration 110000 distortion 1.3960 query 220000
+Iteration 115000 distortion 1.3830 query 230000
+Iteration 120000 distortion 1.3720 query 240000
+Iteration 125000 distortion 1.3600 query 250000
+Iteration 130000 distortion 1.3570 query 260000
+Iteration 135000 distortion 1.3530 query 270000
+Iteration 140000 distortion 1.3480 query 280000
+Iteration 145000 distortion 1.3370 query 290000
+Iteration 150000 distortion 1.3310 query 300000
+Iteration 155000 distortion 1.3250 query 310000
+Iteration 160000 distortion 1.3210 query 320000
+Iteration 165000 distortion 1.3180 query 330000
+Iteration 170000 distortion 1.3140 query 340000
+Iteration 175000 distortion 1.3140 query 350000
+Iteration 180000 distortion 1.3130 query 360000
+Iteration 185000 distortion 1.3130 query 370000
+Iteration 190000 distortion 1.3090 query 380000
+Iteration 195000 distortion 1.3080 query 390000
+Iteration 200000 distortion 1.3030 query 400000
+
+Adversarial Example Found Successfully: distortion 1.3030 target 3 queries 201333 
+Time: 1561.8691 seconds
+Predicted label for adversarial example:  0
+
+
+
+
+======== Image 8186 =========
+Original label:  8
+Predicted label:  8
+Targeted attack: 5
+--------> Found g() 8.2943
+==========> Found best distortion 8.2943 in 0.4803 seconds using 1489 queries
+Iteration 5000 distortion 5.0923 query 10000
+Iteration 10000 distortion 3.2413 query 20000
+Iteration 15000 distortion 2.5583 query 30000
+Iteration 20000 distortion 2.2983 query 40000
+Iteration 25000 distortion 2.1593 query 50000
+Iteration 30000 distortion 2.0413 query 60000
+Iteration 35000 distortion 1.9383 query 70000
+Iteration 40000 distortion 1.8503 query 80000
+Iteration 45000 distortion 1.8193 query 90000
+Iteration 50000 distortion 1.8143 query 100000
+Iteration 55000 distortion 1.7773 query 110000
+Iteration 60000 distortion 1.7373 query 120000
+Iteration 65000 distortion 1.7233 query 130000
+Iteration 70000 distortion 1.7183 query 140000
+Iteration 75000 distortion 1.7173 query 150000
+Iteration 80000 distortion 1.7103 query 160000
+Iteration 85000 distortion 1.7053 query 170000
+Iteration 90000 distortion 1.6913 query 180000
+Iteration 95000 distortion 1.6833 query 190000
+Iteration 100000 distortion 1.6723 query 200000
+Iteration 105000 distortion 1.6683 query 210000
+Iteration 110000 distortion 1.6583 query 220000
+Iteration 115000 distortion 1.6533 query 230000
+Iteration 120000 distortion 1.6413 query 240000
+Iteration 125000 distortion 1.6343 query 250000
+Iteration 130000 distortion 1.6343 query 260000
+Iteration 135000 distortion 1.6253 query 270000
+Iteration 140000 distortion 1.6193 query 280000
+Iteration 145000 distortion 1.6103 query 290000
+Iteration 150000 distortion 1.6073 query 300000
+Iteration 155000 distortion 1.6073 query 310000
+Iteration 160000 distortion 1.6053 query 320000
+Iteration 165000 distortion 1.6013 query 330000
+Iteration 170000 distortion 1.5973 query 340000
+Iteration 175000 distortion 1.5913 query 350000
+Iteration 180000 distortion 1.5813 query 360000
+Iteration 185000 distortion 1.5743 query 370000
+Iteration 190000 distortion 1.5733 query 380000
+Iteration 195000 distortion 1.5713 query 390000
+Iteration 200000 distortion 1.5663 query 400000
+
+Adversarial Example Found Successfully: distortion 1.5663 target 3 queries 201489 
+Time: 1567.7144 seconds
+Predicted label for adversarial example:  5
+
+
+
+
+======== Image 4096 =========
+Original label:  8
+Predicted label:  8
+Targeted attack: 5
+--------> Found g() 6.3421
+==========> Found best distortion 6.3421 in 0.3125 seconds using 1408 queries
+Iteration 5000 distortion 3.7461 query 10000
+Iteration 10000 distortion 2.4381 query 20000
+Iteration 15000 distortion 1.9501 query 30000
+Iteration 20000 distortion 1.7431 query 40000
+Iteration 25000 distortion 1.6251 query 50000
+Iteration 30000 distortion 1.5651 query 60000
+Iteration 35000 distortion 1.4971 query 70000
+Iteration 40000 distortion 1.4661 query 80000
+Iteration 45000 distortion 1.4171 query 90000
+Iteration 50000 distortion 1.3891 query 100000
+Iteration 55000 distortion 1.3621 query 110000
+Iteration 60000 distortion 1.3331 query 120000
+Iteration 65000 distortion 1.3161 query 130000
+Iteration 70000 distortion 1.3011 query 140000
+Iteration 75000 distortion 1.2841 query 150000
+Iteration 80000 distortion 1.2741 query 160000
+Iteration 85000 distortion 1.2611 query 170000
+Iteration 90000 distortion 1.2541 query 180000
+Iteration 95000 distortion 1.2421 query 190000
+Iteration 100000 distortion 1.2391 query 200000
+Iteration 105000 distortion 1.2361 query 210000
+Iteration 110000 distortion 1.2271 query 220000
+Iteration 115000 distortion 1.2221 query 230000
+Iteration 120000 distortion 1.2191 query 240000
+Iteration 125000 distortion 1.2181 query 250000
+Iteration 130000 distortion 1.2161 query 260000
+Iteration 135000 distortion 1.2161 query 270000
+Iteration 140000 distortion 1.2151 query 280000
+Iteration 145000 distortion 1.2081 query 290000
+Iteration 150000 distortion 1.2021 query 300000
+Iteration 155000 distortion 1.2011 query 310000
+Iteration 160000 distortion 1.1991 query 320000
+Iteration 165000 distortion 1.1961 query 330000
+Iteration 170000 distortion 1.1941 query 340000
+Iteration 175000 distortion 1.1891 query 350000
+Iteration 180000 distortion 1.1821 query 360000
+Iteration 185000 distortion 1.1821 query 370000
+Iteration 190000 distortion 1.1811 query 380000
+Iteration 195000 distortion 1.1811 query 390000
+Iteration 200000 distortion 1.1791 query 400000
+
+Adversarial Example Found Successfully: distortion 1.1791 target 3 queries 201408 
+Time: 1576.8336 seconds
+Predicted label for adversarial example:  5
+
+
+
+
+======== Image 1131 =========
+Original label:  1
+Predicted label:  9
+Targeted attack: 4
+Fail to classify the image. No need to attack.
+Predicted label for adversarial example:  9
+
+
+
+
+======== Image 9398 =========
+Original label:  8
+Predicted label:  8
+Targeted attack: 3
+--------> Found g() 7.3341
+==========> Found best distortion 7.3341 in 0.4953 seconds using 2683 queries
+Iteration 5000 distortion 3.6581 query 10000
+Iteration 10000 distortion 1.7511 query 20000
+Iteration 15000 distortion 1.3371 query 30000
+Iteration 20000 distortion 1.1961 query 40000
+Iteration 25000 distortion 1.1291 query 50000
+Iteration 30000 distortion 1.0771 query 60000
+Iteration 35000 distortion 1.0431 query 70000
+Iteration 40000 distortion 1.0231 query 80000
+Iteration 45000 distortion 1.0051 query 90000
+Iteration 50000 distortion 0.9931 query 100000
+Iteration 55000 distortion 0.9781 query 110000
+Iteration 60000 distortion 0.9721 query 120000
+Iteration 65000 distortion 0.9711 query 130000
+Iteration 70000 distortion 0.9621 query 140000
+Iteration 75000 distortion 0.9581 query 150000
+Iteration 80000 distortion 0.9511 query 160000
+Iteration 85000 distortion 0.9471 query 170000
+Iteration 90000 distortion 0.9431 query 180000
+Iteration 95000 distortion 0.9331 query 190000
+Iteration 100000 distortion 0.9271 query 200000
+Iteration 105000 distortion 0.9251 query 210000
+Iteration 110000 distortion 0.9221 query 220000
+Iteration 115000 distortion 0.9211 query 230000
+Iteration 120000 distortion 0.9211 query 240000
+Iteration 125000 distortion 0.9171 query 250000
+Iteration 130000 distortion 0.9141 query 260000
+Iteration 135000 distortion 0.9141 query 270000
+Iteration 140000 distortion 0.9141 query 280000
+Iteration 145000 distortion 0.9141 query 290000
+Iteration 150000 distortion 0.9101 query 300000
+Iteration 155000 distortion 0.9061 query 310000
+Iteration 160000 distortion 0.9031 query 320000
+Iteration 165000 distortion 0.8981 query 330000
+Iteration 170000 distortion 0.8971 query 340000
+Iteration 175000 distortion 0.8971 query 350000
+Iteration 180000 distortion 0.8951 query 360000
+Iteration 185000 distortion 0.8941 query 370000
+Iteration 190000 distortion 0.8921 query 380000
+Iteration 195000 distortion 0.8921 query 390000
+Iteration 200000 distortion 0.8921 query 400000
+
+Adversarial Example Found Successfully: distortion 0.8921 target 3 queries 202683 
+Time: 1565.0109 seconds
+Predicted label for adversarial example:  3
+
+
+
+
+======== Image 4009 =========
+Original label:  2
+Predicted label:  2
+Targeted attack: 3
+--------> Found g() 5.6250
+==========> Found best distortion 5.6250 in 0.4832 seconds using 2666 queries
+Iteration 5000 distortion 2.8270 query 10000
+Iteration 10000 distortion 1.6760 query 20000
+Iteration 15000 distortion 1.2860 query 30000
+Iteration 20000 distortion 1.1500 query 40000
+Iteration 25000 distortion 1.0900 query 50000
+Iteration 30000 distortion 1.0540 query 60000
+Iteration 35000 distortion 1.0370 query 70000
+Iteration 40000 distortion 1.0160 query 80000
+Iteration 45000 distortion 0.9910 query 90000
+Iteration 50000 distortion 0.9810 query 100000
+Iteration 55000 distortion 0.9710 query 110000
+Iteration 60000 distortion 0.9670 query 120000
+Iteration 65000 distortion 0.9480 query 130000
+Iteration 70000 distortion 0.9360 query 140000
+Iteration 75000 distortion 0.9270 query 150000
+Iteration 80000 distortion 0.9250 query 160000
+Iteration 85000 distortion 0.9240 query 170000
+Iteration 90000 distortion 0.9240 query 180000
+Iteration 95000 distortion 0.9160 query 190000
+Iteration 100000 distortion 0.9140 query 200000
+Iteration 105000 distortion 0.9130 query 210000
+Iteration 110000 distortion 0.9100 query 220000
+Iteration 115000 distortion 0.9010 query 230000
+Iteration 120000 distortion 0.8970 query 240000
+Iteration 125000 distortion 0.8940 query 250000
+Iteration 130000 distortion 0.8840 query 260000
+Iteration 135000 distortion 0.8840 query 270000
+Iteration 140000 distortion 0.8820 query 280000
+Iteration 145000 distortion 0.8790 query 290000
+Iteration 150000 distortion 0.8730 query 300000
+Iteration 155000 distortion 0.8720 query 310000
+Iteration 160000 distortion 0.8720 query 320000
+Iteration 165000 distortion 0.8710 query 330000
+Iteration 170000 distortion 0.8660 query 340000
+Iteration 175000 distortion 0.8640 query 350000
+Iteration 180000 distortion 0.8600 query 360000
+Iteration 185000 distortion 0.8590 query 370000
+Iteration 190000 distortion 0.8590 query 380000
+Iteration 195000 distortion 0.8580 query 390000
+Iteration 200000 distortion 0.8520 query 400000
+
+Adversarial Example Found Successfully: distortion 0.8520 target 3 queries 202666 
+Time: 1572.2159 seconds
+Predicted label for adversarial example:  3
+
+
+
+
+======== Image 8996 =========
+Original label:  3
+Predicted label:  7
+Targeted attack: 8
+Fail to classify the image. No need to attack.
+Predicted label for adversarial example:  7
+
+
+
+
+======== Image 1594 =========
+Original label:  3
+Predicted label:  5
+Targeted attack: 1
+Fail to classify the image. No need to attack.
+Predicted label for adversarial example:  5
+
+
+
+
+======== Image 5343 =========
+Original label:  3
+Predicted label:  3
+Targeted attack: 9
+--------> Found g() 7.2201
+==========> Found best distortion 7.2201 in 0.5981 seconds using 2552 queries
+Iteration 5000 distortion 3.6801 query 10000
+Iteration 10000 distortion 1.9991 query 20000
+Iteration 15000 distortion 1.5791 query 30000
+Iteration 20000 distortion 1.4561 query 40000
+Iteration 25000 distortion 1.3691 query 50000
+Iteration 30000 distortion 1.3251 query 60000
+Iteration 35000 distortion 1.2961 query 70000
+Iteration 40000 distortion 1.2831 query 80000
+Iteration 45000 distortion 1.2591 query 90000
+Iteration 50000 distortion 1.2511 query 100000
+Iteration 55000 distortion 1.2391 query 110000
+Iteration 60000 distortion 1.2281 query 120000
+Iteration 65000 distortion 1.2201 query 130000
+Iteration 70000 distortion 1.2081 query 140000
+Iteration 75000 distortion 1.1951 query 150000
+Iteration 80000 distortion 1.1771 query 160000
+Iteration 85000 distortion 1.1671 query 170000
+Iteration 90000 distortion 1.1551 query 180000
+Iteration 95000 distortion 1.1471 query 190000
+Iteration 100000 distortion 1.1431 query 200000
+Iteration 105000 distortion 1.1371 query 210000
+Iteration 110000 distortion 1.1321 query 220000
+Iteration 115000 distortion 1.1291 query 230000
+Iteration 120000 distortion 1.1261 query 240000
+Iteration 125000 distortion 1.1231 query 250000
+Iteration 130000 distortion 1.1181 query 260000
+Iteration 135000 distortion 1.1171 query 270000
+Iteration 140000 distortion 1.1131 query 280000
+Iteration 145000 distortion 1.1101 query 290000
+Iteration 150000 distortion 1.1081 query 300000
+Iteration 155000 distortion 1.1061 query 310000
+Iteration 160000 distortion 1.1061 query 320000
+Iteration 165000 distortion 1.1051 query 330000
+Iteration 170000 distortion 1.1031 query 340000
+Iteration 175000 distortion 1.1021 query 350000
+Iteration 180000 distortion 1.1021 query 360000
+Iteration 185000 distortion 1.1001 query 370000
+Iteration 190000 distortion 1.0991 query 380000
+Iteration 195000 distortion 1.0991 query 390000
+Iteration 200000 distortion 1.0971 query 400000
+
+Adversarial Example Found Successfully: distortion 1.0971 target 3 queries 202552 
+Time: 1571.6045 seconds
+Predicted label for adversarial example:  9
+
+
+
+
+======== Image 8116 =========
+Original label:  9
+Predicted label:  9
+Targeted attack: 1
+--------> Found g() 6.6468
+==========> Found best distortion 6.6468 in 0.6550 seconds using 3424 queries
+Iteration 5000 distortion 3.1808 query 10000
+Iteration 10000 distortion 1.5088 query 20000
+Iteration 15000 distortion 1.2538 query 30000
+Iteration 20000 distortion 1.1268 query 40000
+Iteration 25000 distortion 1.0738 query 50000
+Iteration 30000 distortion 1.0398 query 60000
+Iteration 35000 distortion 1.0268 query 70000
+Iteration 40000 distortion 1.0148 query 80000
+Iteration 45000 distortion 1.0038 query 90000
+Iteration 50000 distortion 0.9888 query 100000
+Iteration 55000 distortion 0.9758 query 110000
+Iteration 60000 distortion 0.9598 query 120000
+Iteration 65000 distortion 0.9508 query 130000
+Iteration 70000 distortion 0.9478 query 140000
+Iteration 75000 distortion 0.9468 query 150000
+Iteration 80000 distortion 0.9398 query 160000
+Iteration 85000 distortion 0.9298 query 170000
+Iteration 90000 distortion 0.9278 query 180000
+Iteration 95000 distortion 0.9258 query 190000
+Iteration 100000 distortion 0.9258 query 200000
+Iteration 105000 distortion 0.9248 query 210000
+Iteration 110000 distortion 0.9228 query 220000
+Iteration 115000 distortion 0.9218 query 230000
+Iteration 120000 distortion 0.9168 query 240000
+Iteration 125000 distortion 0.9128 query 250000
+Iteration 130000 distortion 0.9118 query 260000
+Iteration 135000 distortion 0.9098 query 270000
+Iteration 140000 distortion 0.9088 query 280000
+Iteration 145000 distortion 0.9078 query 290000
+Iteration 150000 distortion 0.9048 query 300000
+Iteration 155000 distortion 0.9038 query 310000
+Iteration 160000 distortion 0.9038 query 320000
+Iteration 165000 distortion 0.9028 query 330000
+Iteration 170000 distortion 0.9028 query 340000
+Iteration 175000 distortion 0.8998 query 350000
+Iteration 180000 distortion 0.8978 query 360000
+Iteration 185000 distortion 0.8978 query 370000
+Iteration 190000 distortion 0.8968 query 380000
+Iteration 195000 distortion 0.8938 query 390000
+Iteration 200000 distortion 0.8898 query 400000
+
+Adversarial Example Found Successfully: distortion 0.8898 target 3 queries 203424 
+Time: 1572.1498 seconds
+Predicted label for adversarial example:  1
+
+
+
+
+======== Image 5038 =========
+Original label:  4
+Predicted label:  4
+Targeted attack: 9
+--------> Found g() 5.8300
+==========> Found best distortion 5.8300 in 0.3258 seconds using 2464 queries
+Iteration 5000 distortion 2.5300 query 10000
+Iteration 10000 distortion 1.3540 query 20000
+Iteration 15000 distortion 1.1160 query 30000
+Iteration 20000 distortion 1.0260 query 40000
+Iteration 25000 distortion 0.9940 query 50000
+Iteration 30000 distortion 0.9800 query 60000
+Iteration 35000 distortion 0.9500 query 70000
+Iteration 40000 distortion 0.9340 query 80000
+Iteration 45000 distortion 0.9180 query 90000
+Iteration 50000 distortion 0.9040 query 100000
+Iteration 55000 distortion 0.8980 query 110000
+Iteration 60000 distortion 0.8920 query 120000
+Iteration 65000 distortion 0.8910 query 130000
+Iteration 70000 distortion 0.8830 query 140000
+Iteration 75000 distortion 0.8830 query 150000
+Iteration 80000 distortion 0.8830 query 160000
+Iteration 85000 distortion 0.8810 query 170000
+Iteration 90000 distortion 0.8760 query 180000
+Iteration 95000 distortion 0.8730 query 190000
+Iteration 100000 distortion 0.8720 query 200000
+Iteration 105000 distortion 0.8670 query 210000
+Iteration 110000 distortion 0.8650 query 220000
+Iteration 115000 distortion 0.8620 query 230000
+Iteration 120000 distortion 0.8560 query 240000
+Iteration 125000 distortion 0.8540 query 250000
+Iteration 130000 distortion 0.8540 query 260000
+Iteration 135000 distortion 0.8500 query 270000
+Iteration 140000 distortion 0.8480 query 280000
+Iteration 145000 distortion 0.8450 query 290000
+Iteration 150000 distortion 0.8420 query 300000
+Iteration 155000 distortion 0.8410 query 310000
+Iteration 160000 distortion 0.8410 query 320000
+Iteration 165000 distortion 0.8390 query 330000
+Iteration 170000 distortion 0.8370 query 340000
+Iteration 175000 distortion 0.8360 query 350000
+Iteration 180000 distortion 0.8330 query 360000
+Iteration 185000 distortion 0.8290 query 370000
+Iteration 190000 distortion 0.8270 query 380000
+Iteration 195000 distortion 0.8260 query 390000
+Iteration 200000 distortion 0.8200 query 400000
+
+Adversarial Example Found Successfully: distortion 0.8200 target 3 queries 202464 
+Time: 1523.5121 seconds
+Predicted label for adversarial example:  9
+
+
+
+
+======== Image 4869 =========
+Original label:  8
+Predicted label:  8
+Targeted attack: 1
+--------> Found g() 6.8456
+==========> Found best distortion 6.8456 in 0.5082 seconds using 3357 queries
+Iteration 5000 distortion 3.8266 query 10000
+Iteration 10000 distortion 2.0306 query 20000
+Iteration 15000 distortion 1.3906 query 30000
+Iteration 20000 distortion 1.1976 query 40000
+Iteration 25000 distortion 1.1216 query 50000
+Iteration 30000 distortion 1.0706 query 60000
+Iteration 35000 distortion 1.0336 query 70000
+Iteration 40000 distortion 1.0126 query 80000
+Iteration 45000 distortion 0.9986 query 90000
+Iteration 50000 distortion 0.9776 query 100000
+Iteration 55000 distortion 0.9636 query 110000
+Iteration 60000 distortion 0.9546 query 120000
+Iteration 65000 distortion 0.9456 query 130000
+Iteration 70000 distortion 0.9416 query 140000
+Iteration 75000 distortion 0.9296 query 150000
+Iteration 80000 distortion 0.9236 query 160000
+Iteration 85000 distortion 0.9106 query 170000
+Iteration 90000 distortion 0.9106 query 180000
+Iteration 95000 distortion 0.9066 query 190000
+Iteration 100000 distortion 0.9026 query 200000
+Iteration 105000 distortion 0.8996 query 210000
+Iteration 110000 distortion 0.8956 query 220000
+Iteration 115000 distortion 0.8876 query 230000
+Iteration 120000 distortion 0.8826 query 240000
+Iteration 125000 distortion 0.8816 query 250000
+Iteration 130000 distortion 0.8806 query 260000
+Iteration 135000 distortion 0.8776 query 270000
+Iteration 140000 distortion 0.8766 query 280000
+Iteration 145000 distortion 0.8736 query 290000
+Iteration 150000 distortion 0.8686 query 300000
+Iteration 155000 distortion 0.8666 query 310000
+Iteration 160000 distortion 0.8656 query 320000
+Iteration 165000 distortion 0.8656 query 330000
+Iteration 170000 distortion 0.8646 query 340000
+Iteration 175000 distortion 0.8616 query 350000
+Iteration 180000 distortion 0.8596 query 360000
+Iteration 185000 distortion 0.8596 query 370000
+Iteration 190000 distortion 0.8576 query 380000
+Iteration 195000 distortion 0.8516 query 390000
+Iteration 200000 distortion 0.8496 query 400000
+
+Adversarial Example Found Successfully: distortion 0.8496 target 3 queries 203357 
+Time: 1528.6077 seconds
+Predicted label for adversarial example:  1
+
+
+
+
+======== Image 9069 =========
+Original label:  9
+Predicted label:  9
+Targeted attack: 5
+--------> Found g() 9.6097
+==========> Found best distortion 9.6097 in 0.4220 seconds using 1497 queries
+Iteration 5000 distortion 6.0357 query 10000
+Iteration 10000 distortion 3.4587 query 20000
+Iteration 15000 distortion 2.2237 query 30000
+Iteration 20000 distortion 1.8257 query 40000
+Iteration 25000 distortion 1.6667 query 50000
+Iteration 30000 distortion 1.5797 query 60000
+Iteration 35000 distortion 1.5237 query 70000
+Iteration 40000 distortion 1.4847 query 80000
+Iteration 45000 distortion 1.4337 query 90000
+Iteration 50000 distortion 1.4127 query 100000
+Iteration 55000 distortion 1.3867 query 110000
+Iteration 60000 distortion 1.3747 query 120000
+Iteration 65000 distortion 1.3537 query 130000
+Iteration 70000 distortion 1.3487 query 140000
+Iteration 75000 distortion 1.3317 query 150000
+Iteration 80000 distortion 1.3257 query 160000
+Iteration 85000 distortion 1.3177 query 170000
+Iteration 90000 distortion 1.3167 query 180000
+Iteration 95000 distortion 1.3127 query 190000
+Iteration 100000 distortion 1.3127 query 200000
+Iteration 105000 distortion 1.3127 query 210000
+Iteration 110000 distortion 1.3127 query 220000
+Iteration 115000 distortion 1.3107 query 230000
+Iteration 120000 distortion 1.3077 query 240000
+Iteration 125000 distortion 1.3037 query 250000
+Iteration 130000 distortion 1.2927 query 260000
+Iteration 135000 distortion 1.2867 query 270000
+Iteration 140000 distortion 1.2857 query 280000
+Iteration 145000 distortion 1.2817 query 290000
+Iteration 150000 distortion 1.2797 query 300000
+Iteration 155000 distortion 1.2747 query 310000
+Iteration 160000 distortion 1.2667 query 320000
+Iteration 165000 distortion 1.2657 query 330000
+Iteration 170000 distortion 1.2637 query 340000
+Iteration 175000 distortion 1.2627 query 350000
+Iteration 180000 distortion 1.2547 query 360000
+Iteration 185000 distortion 1.2467 query 370000
+Iteration 190000 distortion 1.2447 query 380000
+Iteration 195000 distortion 1.2407 query 390000
+Iteration 200000 distortion 1.2377 query 400000
+
+Adversarial Example Found Successfully: distortion 1.2377 target 3 queries 201497 
+Time: 1528.3081 seconds
+Predicted label for adversarial example:  5
+
+
+
+
+======== Image 8952 =========
+Original label:  3
+Predicted label:  3
+Targeted attack: 4
+--------> Found g() 5.1141
+==========> Found best distortion 5.1141 in 0.4500 seconds using 2126 queries
+Iteration 5000 distortion 1.5791 query 10000
+Iteration 10000 distortion 0.9021 query 20000
+Iteration 15000 distortion 0.8231 query 30000
+Iteration 20000 distortion 0.7821 query 40000
+Iteration 25000 distortion 0.7571 query 50000
+Iteration 30000 distortion 0.7441 query 60000
+Iteration 35000 distortion 0.7301 query 70000
+Iteration 40000 distortion 0.7221 query 80000
+Iteration 45000 distortion 0.7131 query 90000
+Iteration 50000 distortion 0.7101 query 100000
+Iteration 55000 distortion 0.7081 query 110000
+Iteration 60000 distortion 0.7061 query 120000
+Iteration 65000 distortion 0.7041 query 130000
+Iteration 70000 distortion 0.7041 query 140000
+Iteration 75000 distortion 0.7001 query 150000
+Iteration 80000 distortion 0.6961 query 160000
+Iteration 85000 distortion 0.6931 query 170000
+Iteration 90000 distortion 0.6861 query 180000
+Iteration 95000 distortion 0.6841 query 190000
+Iteration 100000 distortion 0.6811 query 200000
+Iteration 105000 distortion 0.6811 query 210000
+Iteration 110000 distortion 0.6801 query 220000
+Iteration 115000 distortion 0.6791 query 230000
+Iteration 120000 distortion 0.6791 query 240000
+Iteration 125000 distortion 0.6791 query 250000
+Iteration 130000 distortion 0.6781 query 260000
+Iteration 135000 distortion 0.6771 query 270000
+Iteration 140000 distortion 0.6741 query 280000
+Iteration 145000 distortion 0.6721 query 290000
+Iteration 150000 distortion 0.6721 query 300000
+Iteration 155000 distortion 0.6711 query 310000
+Iteration 160000 distortion 0.6691 query 320000
+Iteration 165000 distortion 0.6641 query 330000
+Iteration 170000 distortion 0.6631 query 340000
+Iteration 175000 distortion 0.6601 query 350000
+Iteration 180000 distortion 0.6581 query 360000
+Iteration 185000 distortion 0.6581 query 370000
+Iteration 190000 distortion 0.6541 query 380000
+Iteration 195000 distortion 0.6541 query 390000
+Iteration 200000 distortion 0.6541 query 400000
+
+Adversarial Example Found Successfully: distortion 0.6541 target 3 queries 202126 
+Time: 1525.4214 seconds
+Predicted label for adversarial example:  4
+
+
+
+
+======== Image 9982 =========
+Original label:  2
+Predicted label:  6
+Targeted attack: 9
+Fail to classify the image. No need to attack.
+Predicted label for adversarial example:  6
+
+
+
+
+======== Image 9727 =========
+Original label:  6
+Predicted label:  2
+Targeted attack: 4
+Fail to classify the image. No need to attack.
+Predicted label for adversarial example:  2
+
+
+
+
+======== Image 7390 =========
+Original label:  6
+Predicted label:  6
+Targeted attack: 1
+--------> Found g() 6.4975
+==========> Found best distortion 6.4975 in 0.4718 seconds using 3333 queries
+Iteration 5000 distortion 3.1025 query 10000
+Iteration 10000 distortion 1.5115 query 20000
+Iteration 15000 distortion 1.1095 query 30000
+Iteration 20000 distortion 1.0125 query 40000
+Iteration 25000 distortion 0.9585 query 50000
+Iteration 30000 distortion 0.9355 query 60000
+Iteration 35000 distortion 0.9205 query 70000
+Iteration 40000 distortion 0.9085 query 80000
+Iteration 45000 distortion 0.9065 query 90000
+Iteration 50000 distortion 0.8955 query 100000
+Iteration 55000 distortion 0.8875 query 110000
+Iteration 60000 distortion 0.8815 query 120000
+Iteration 65000 distortion 0.8765 query 130000
+Iteration 70000 distortion 0.8725 query 140000
+Iteration 75000 distortion 0.8695 query 150000
+Iteration 80000 distortion 0.8635 query 160000
+Iteration 85000 distortion 0.8625 query 170000
+Iteration 90000 distortion 0.8615 query 180000
+Iteration 95000 distortion 0.8605 query 190000
+Iteration 100000 distortion 0.8545 query 200000
+Iteration 105000 distortion 0.8495 query 210000
+Iteration 110000 distortion 0.8445 query 220000
+Iteration 115000 distortion 0.8445 query 230000
+Iteration 120000 distortion 0.8415 query 240000
+Iteration 125000 distortion 0.8405 query 250000
+Iteration 130000 distortion 0.8355 query 260000
+Iteration 135000 distortion 0.8345 query 270000
+Iteration 140000 distortion 0.8225 query 280000
+Iteration 145000 distortion 0.8175 query 290000
+Iteration 150000 distortion 0.8155 query 300000
+Iteration 155000 distortion 0.8145 query 310000
+Iteration 160000 distortion 0.8135 query 320000
+Iteration 165000 distortion 0.8125 query 330000
+Iteration 170000 distortion 0.8115 query 340000
+Iteration 175000 distortion 0.8085 query 350000
+Iteration 180000 distortion 0.8045 query 360000
+Iteration 185000 distortion 0.8045 query 370000
+Iteration 190000 distortion 0.8025 query 380000
+Iteration 195000 distortion 0.8015 query 390000
+Iteration 200000 distortion 0.8015 query 400000
+
+Adversarial Example Found Successfully: distortion 0.8015 target 3 queries 203333 
+Time: 1528.1855 seconds
+Predicted label for adversarial example:  1
+
+
+
+
+======== Image 9869 =========
+Original label:  7
+Predicted label:  7
+Targeted attack: 6
+--------> Found g() 6.6333
+==========> Found best distortion 6.6333 in 0.4432 seconds using 1391 queries
+Iteration 5000 distortion 2.8533 query 10000
+Iteration 10000 distortion 1.6343 query 20000
+Iteration 15000 distortion 1.3993 query 30000
+Iteration 20000 distortion 1.2943 query 40000
+Iteration 25000 distortion 1.2393 query 50000
+Iteration 30000 distortion 1.2123 query 60000
+Iteration 35000 distortion 1.1933 query 70000
+Iteration 40000 distortion 1.1733 query 80000
+Iteration 45000 distortion 1.1613 query 90000
+Iteration 50000 distortion 1.1473 query 100000
+Iteration 55000 distortion 1.1393 query 110000
+Iteration 60000 distortion 1.1343 query 120000
+Iteration 65000 distortion 1.1313 query 130000
+Iteration 70000 distortion 1.1213 query 140000
+Iteration 75000 distortion 1.1153 query 150000
+Iteration 80000 distortion 1.1043 query 160000
+Iteration 85000 distortion 1.1003 query 170000
+Iteration 90000 distortion 1.0893 query 180000
+Iteration 95000 distortion 1.0853 query 190000
+Iteration 100000 distortion 1.0843 query 200000
+Iteration 105000 distortion 1.0823 query 210000
+Iteration 110000 distortion 1.0793 query 220000
+Iteration 115000 distortion 1.0773 query 230000
+Iteration 120000 distortion 1.0743 query 240000
+Iteration 125000 distortion 1.0693 query 250000
+Iteration 130000 distortion 1.0573 query 260000
+Iteration 135000 distortion 1.0543 query 270000
+Iteration 140000 distortion 1.0543 query 280000
+Iteration 145000 distortion 1.0533 query 290000
+Iteration 150000 distortion 1.0533 query 300000
+Iteration 155000 distortion 1.0533 query 310000
+Iteration 160000 distortion 1.0533 query 320000
+Iteration 165000 distortion 1.0533 query 330000
+Iteration 170000 distortion 1.0533 query 340000
+Iteration 175000 distortion 1.0513 query 350000
+Iteration 180000 distortion 1.0503 query 360000
+Iteration 185000 distortion 1.0453 query 370000
+Iteration 190000 distortion 1.0443 query 380000
+Iteration 195000 distortion 1.0403 query 390000
+Iteration 200000 distortion 1.0393 query 400000
+
+Adversarial Example Found Successfully: distortion 1.0393 target 3 queries 201391 
+Time: 1524.5021 seconds
+Predicted label for adversarial example:  6
+
+
+
+
+======== Image 5294 =========
+Original label:  8
+Predicted label:  8
+Targeted attack: 3
+--------> Found g() 6.1160
+==========> Found best distortion 6.1160 in 0.5481 seconds using 2709 queries
+Iteration 5000 distortion 2.9230 query 10000
+Iteration 10000 distortion 1.5980 query 20000
+Iteration 15000 distortion 1.3110 query 30000
+Iteration 20000 distortion 1.1930 query 40000
+Iteration 25000 distortion 1.1520 query 50000
+Iteration 30000 distortion 1.0960 query 60000
+Iteration 35000 distortion 1.0780 query 70000
+Iteration 40000 distortion 1.0740 query 80000
+Iteration 45000 distortion 1.0620 query 90000
+Iteration 50000 distortion 1.0550 query 100000
+Iteration 55000 distortion 1.0470 query 110000
+Iteration 60000 distortion 1.0450 query 120000
+Iteration 65000 distortion 1.0360 query 130000
+Iteration 70000 distortion 1.0240 query 140000
+Iteration 75000 distortion 1.0090 query 150000
+Iteration 80000 distortion 1.0070 query 160000
+Iteration 85000 distortion 0.9990 query 170000
+Iteration 90000 distortion 0.9890 query 180000
+Iteration 95000 distortion 0.9860 query 190000
+Iteration 100000 distortion 0.9780 query 200000
+Iteration 105000 distortion 0.9740 query 210000
+Iteration 110000 distortion 0.9680 query 220000
+Iteration 115000 distortion 0.9630 query 230000
+Iteration 120000 distortion 0.9610 query 240000
+Iteration 125000 distortion 0.9610 query 250000
+Iteration 130000 distortion 0.9590 query 260000
+Iteration 135000 distortion 0.9550 query 270000
+Iteration 140000 distortion 0.9520 query 280000
+Iteration 145000 distortion 0.9500 query 290000
+Iteration 150000 distortion 0.9470 query 300000
+Iteration 155000 distortion 0.9370 query 310000
+Iteration 160000 distortion 0.9330 query 320000
+Iteration 165000 distortion 0.9290 query 330000
+Iteration 170000 distortion 0.9270 query 340000
+Iteration 175000 distortion 0.9260 query 350000
+Iteration 180000 distortion 0.9240 query 360000
+Iteration 185000 distortion 0.9220 query 370000
+Iteration 190000 distortion 0.9210 query 380000
+Iteration 195000 distortion 0.9210 query 390000
+Iteration 200000 distortion 0.9200 query 400000
+
+Adversarial Example Found Successfully: distortion 0.9200 target 3 queries 202709 
+Time: 1520.2657 seconds
+Predicted label for adversarial example:  3
+
+
+
+
+======== Image 4856 =========
+Original label:  7
+Predicted label:  7
+Targeted attack: 2
+--------> Found g() 8.2681
+==========> Found best distortion 8.2681 in 0.5008 seconds using 2815 queries
+Iteration 5000 distortion 4.7911 query 10000
+Iteration 10000 distortion 2.9431 query 20000
+Iteration 15000 distortion 2.3131 query 30000
+Iteration 20000 distortion 2.0991 query 40000
+Iteration 25000 distortion 1.9741 query 50000
+Iteration 30000 distortion 1.8951 query 60000
+Iteration 35000 distortion 1.8431 query 70000
+Iteration 40000 distortion 1.8121 query 80000
+Iteration 45000 distortion 1.7931 query 90000
+Iteration 50000 distortion 1.7621 query 100000
+Iteration 55000 distortion 1.7391 query 110000
+Iteration 60000 distortion 1.7151 query 120000
+Iteration 65000 distortion 1.7031 query 130000
+Iteration 70000 distortion 1.6941 query 140000
+Iteration 75000 distortion 1.6871 query 150000
+Iteration 80000 distortion 1.6761 query 160000
+Iteration 85000 distortion 1.6721 query 170000
+Iteration 90000 distortion 1.6691 query 180000
+Iteration 95000 distortion 1.6661 query 190000
+Iteration 100000 distortion 1.6611 query 200000
+Iteration 105000 distortion 1.6471 query 210000
+Iteration 110000 distortion 1.6401 query 220000
+Iteration 115000 distortion 1.6321 query 230000
+Iteration 120000 distortion 1.6221 query 240000
+Iteration 125000 distortion 1.6131 query 250000
+Iteration 130000 distortion 1.6061 query 260000
+Iteration 135000 distortion 1.6001 query 270000
+Iteration 140000 distortion 1.5951 query 280000
+Iteration 145000 distortion 1.5931 query 290000
+Iteration 150000 distortion 1.5921 query 300000
+Iteration 155000 distortion 1.5861 query 310000
+Iteration 160000 distortion 1.5861 query 320000
+Iteration 165000 distortion 1.5861 query 330000
+Iteration 170000 distortion 1.5811 query 340000
+Iteration 175000 distortion 1.5771 query 350000
+Iteration 180000 distortion 1.5721 query 360000
+Iteration 185000 distortion 1.5641 query 370000
+Iteration 190000 distortion 1.5621 query 380000
+Iteration 195000 distortion 1.5611 query 390000
+Iteration 200000 distortion 1.5581 query 400000
+
+Adversarial Example Found Successfully: distortion 1.5581 target 0 queries 202815 
+Time: 1534.7011 seconds
+Predicted label for adversarial example:  2
+
+
+
+
+======== Image 3202 =========
+Original label:  5
+Predicted label:  5
+Targeted attack: 2
+--------> Found g() 6.2091
+==========> Found best distortion 6.2091 in 0.5945 seconds using 2681 queries
+Iteration 5000 distortion 2.7311 query 10000
+Iteration 10000 distortion 1.5501 query 20000
+Iteration 15000 distortion 1.3511 query 30000
+Iteration 20000 distortion 1.2451 query 40000
+Iteration 25000 distortion 1.1831 query 50000
+Iteration 30000 distortion 1.1541 query 60000
+Iteration 35000 distortion 1.1421 query 70000
+Iteration 40000 distortion 1.1231 query 80000
+Iteration 45000 distortion 1.1111 query 90000
+Iteration 50000 distortion 1.0941 query 100000
+Iteration 55000 distortion 1.0931 query 110000
+Iteration 60000 distortion 1.0751 query 120000
+Iteration 65000 distortion 1.0711 query 130000
+Iteration 70000 distortion 1.0581 query 140000
+Iteration 75000 distortion 1.0521 query 150000
+Iteration 80000 distortion 1.0431 query 160000
+Iteration 85000 distortion 1.0391 query 170000
+Iteration 90000 distortion 1.0351 query 180000
+Iteration 95000 distortion 1.0271 query 190000
+Iteration 100000 distortion 1.0261 query 200000
+Iteration 105000 distortion 1.0221 query 210000
+Iteration 110000 distortion 1.0171 query 220000
+Iteration 115000 distortion 1.0141 query 230000
+Iteration 120000 distortion 1.0091 query 240000
+Iteration 125000 distortion 1.0061 query 250000
+Iteration 130000 distortion 1.0041 query 260000
+Iteration 135000 distortion 1.0001 query 270000
+Iteration 140000 distortion 0.9991 query 280000
+Iteration 145000 distortion 0.9991 query 290000
+Iteration 150000 distortion 0.9981 query 300000
+Iteration 155000 distortion 0.9981 query 310000
+Iteration 160000 distortion 0.9921 query 320000
+Iteration 165000 distortion 0.9921 query 330000
+Iteration 170000 distortion 0.9891 query 340000
+Iteration 175000 distortion 0.9891 query 350000
+Iteration 180000 distortion 0.9871 query 360000
+Iteration 185000 distortion 0.9871 query 370000
+Iteration 190000 distortion 0.9861 query 380000
+Iteration 195000 distortion 0.9851 query 390000
+Iteration 200000 distortion 0.9851 query 400000
+
+Adversarial Example Found Successfully: distortion 0.9851 target 3 queries 202681 
+Time: 1527.4712 seconds
+Predicted label for adversarial example:  2
+
+
+
+
+======== Image 640 =========
+Original label:  5
+Predicted label:  5
+Targeted attack: 4
+--------> Found g() 5.7770
+==========> Found best distortion 5.7770 in 0.2736 seconds using 2173 queries
+Iteration 5000 distortion 2.7170 query 10000
+Iteration 10000 distortion 1.6200 query 20000
+Iteration 15000 distortion 1.4000 query 30000
+Iteration 20000 distortion 1.2550 query 40000
+Iteration 25000 distortion 1.1860 query 50000
+Iteration 30000 distortion 1.1450 query 60000
+Iteration 35000 distortion 1.1230 query 70000
+Iteration 40000 distortion 1.1050 query 80000
+Iteration 45000 distortion 1.0830 query 90000
+Iteration 50000 distortion 1.0680 query 100000
+Iteration 55000 distortion 1.0500 query 110000
+Iteration 60000 distortion 1.0460 query 120000
+Iteration 65000 distortion 1.0390 query 130000
+Iteration 70000 distortion 1.0390 query 140000
+Iteration 75000 distortion 1.0310 query 150000
+Iteration 80000 distortion 1.0250 query 160000
+Iteration 85000 distortion 1.0220 query 170000
+Iteration 90000 distortion 1.0140 query 180000
+Iteration 95000 distortion 1.0040 query 190000
+Iteration 100000 distortion 0.9980 query 200000
+Iteration 105000 distortion 0.9900 query 210000
+Iteration 110000 distortion 0.9890 query 220000
+Iteration 115000 distortion 0.9840 query 230000
+Iteration 120000 distortion 0.9810 query 240000
+Iteration 125000 distortion 0.9780 query 250000
+Iteration 130000 distortion 0.9740 query 260000
+Iteration 135000 distortion 0.9690 query 270000
+Iteration 140000 distortion 0.9670 query 280000
+Iteration 145000 distortion 0.9630 query 290000
+Iteration 150000 distortion 0.9630 query 300000
+Iteration 155000 distortion 0.9630 query 310000
+Iteration 160000 distortion 0.9630 query 320000
+Iteration 165000 distortion 0.9630 query 330000
+Iteration 170000 distortion 0.9630 query 340000
+Iteration 175000 distortion 0.9630 query 350000
+Iteration 180000 distortion 0.9620 query 360000
+Iteration 185000 distortion 0.9620 query 370000
+Iteration 190000 distortion 0.9620 query 380000
+Iteration 195000 distortion 0.9620 query 390000
+Iteration 200000 distortion 0.9600 query 400000
+
+Adversarial Example Found Successfully: distortion 0.9600 target 3 queries 202173 
+Time: 1535.5628 seconds
+Predicted label for adversarial example:  4
+
+
+
+
+======== Image 7907 =========
+Original label:  6
+Predicted label:  6
+Targeted attack: 1
+--------> Found g() 5.7500
+==========> Found best distortion 5.7500 in 0.5764 seconds using 3187 queries
+Iteration 5000 distortion 3.5820 query 10000
+Iteration 10000 distortion 2.5100 query 20000
+Iteration 15000 distortion 1.9330 query 30000
+Iteration 20000 distortion 1.7260 query 40000
+Iteration 25000 distortion 1.5220 query 50000
+Iteration 30000 distortion 1.4420 query 60000
+Iteration 35000 distortion 1.3890 query 70000
+Iteration 40000 distortion 1.3720 query 80000
+Iteration 45000 distortion 1.3430 query 90000
+Iteration 50000 distortion 1.3070 query 100000
+Iteration 55000 distortion 1.2960 query 110000
+Iteration 60000 distortion 1.2680 query 120000
+Iteration 65000 distortion 1.2450 query 130000
+Iteration 70000 distortion 1.2270 query 140000
+Iteration 75000 distortion 1.2220 query 150000
+Iteration 80000 distortion 1.2100 query 160000
+Iteration 85000 distortion 1.2040 query 170000
+Iteration 90000 distortion 1.1910 query 180000
+Iteration 95000 distortion 1.1840 query 190000
+Iteration 100000 distortion 1.1710 query 200000
+Iteration 105000 distortion 1.1640 query 210000
+Iteration 110000 distortion 1.1570 query 220000
+Iteration 115000 distortion 1.1530 query 230000
+Iteration 120000 distortion 1.1460 query 240000
+Iteration 125000 distortion 1.1430 query 250000
+Iteration 130000 distortion 1.1390 query 260000
+Iteration 135000 distortion 1.1300 query 270000
+Iteration 140000 distortion 1.1200 query 280000
+Iteration 145000 distortion 1.1130 query 290000
+Iteration 150000 distortion 1.1040 query 300000
+Iteration 155000 distortion 1.1040 query 310000
+Iteration 160000 distortion 1.0950 query 320000
+Iteration 165000 distortion 1.0940 query 330000
+Iteration 170000 distortion 1.0880 query 340000
+Iteration 175000 distortion 1.0860 query 350000
+Iteration 180000 distortion 1.0860 query 360000
+Iteration 185000 distortion 1.0860 query 370000
+Iteration 190000 distortion 1.0860 query 380000
+Iteration 195000 distortion 1.0840 query 390000
+Iteration 200000 distortion 1.0810 query 400000
+
+Adversarial Example Found Successfully: distortion 1.0810 target 3 queries 203187 
+Time: 1524.3695 seconds
+Predicted label for adversarial example:  1
+
+
+
+
+======== Image 1571 =========
+Original label:  5
+Predicted label:  5
+Targeted attack: 2
+--------> Found g() 5.0925
+==========> Found best distortion 5.0925 in 0.5843 seconds using 2654 queries
+Iteration 5000 distortion 2.0505 query 10000
+Iteration 10000 distortion 1.3895 query 20000
+Iteration 15000 distortion 1.2465 query 30000
+Iteration 20000 distortion 1.1665 query 40000
+Iteration 25000 distortion 1.1265 query 50000
+Iteration 30000 distortion 1.1005 query 60000
+Iteration 35000 distortion 1.0835 query 70000
+Iteration 40000 distortion 1.0795 query 80000
+Iteration 45000 distortion 1.0675 query 90000
+Iteration 50000 distortion 1.0545 query 100000
+Iteration 55000 distortion 1.0515 query 110000
+Iteration 60000 distortion 1.0505 query 120000
+Iteration 65000 distortion 1.0455 query 130000
+Iteration 70000 distortion 1.0415 query 140000
+Iteration 75000 distortion 1.0345 query 150000
+Iteration 80000 distortion 1.0285 query 160000
+Iteration 85000 distortion 1.0215 query 170000
+Iteration 90000 distortion 1.0115 query 180000
+Iteration 95000 distortion 1.0035 query 190000
+Iteration 100000 distortion 0.9995 query 200000
+Iteration 105000 distortion 0.9945 query 210000
+Iteration 110000 distortion 0.9865 query 220000
+Iteration 115000 distortion 0.9865 query 230000
+Iteration 120000 distortion 0.9815 query 240000
+Iteration 125000 distortion 0.9795 query 250000
+Iteration 130000 distortion 0.9765 query 260000
+Iteration 135000 distortion 0.9745 query 270000
+Iteration 140000 distortion 0.9735 query 280000
+Iteration 145000 distortion 0.9735 query 290000
+Iteration 150000 distortion 0.9725 query 300000
+Iteration 155000 distortion 0.9715 query 310000
+Iteration 160000 distortion 0.9625 query 320000
+Iteration 165000 distortion 0.9605 query 330000
+Iteration 170000 distortion 0.9575 query 340000
+Iteration 175000 distortion 0.9555 query 350000
+Iteration 180000 distortion 0.9545 query 360000
+Iteration 185000 distortion 0.9535 query 370000
+Iteration 190000 distortion 0.9515 query 380000
+Iteration 195000 distortion 0.9505 query 390000
+Iteration 200000 distortion 0.9505 query 400000
+
+Adversarial Example Found Successfully: distortion 0.9505 target 3 queries 202654 
+Time: 1514.4090 seconds
+Predicted label for adversarial example:  2
+
+
+
+
+======== Image 2550 =========
+Original label:  4
+Predicted label:  4
+Targeted attack: 0
+--------> Found g() 9.1233
+==========> Found best distortion 9.1233 in 0.4524 seconds using 1332 queries
+Iteration 5000 distortion 6.6543 query 10000
+Iteration 10000 distortion 4.5953 query 20000
+Iteration 15000 distortion 3.3203 query 30000
+Iteration 20000 distortion 2.5373 query 40000
+Iteration 25000 distortion 2.0743 query 50000
+Iteration 30000 distortion 1.8663 query 60000
+Iteration 35000 distortion 1.7323 query 70000
+Iteration 40000 distortion 1.6363 query 80000
+Iteration 45000 distortion 1.5913 query 90000
+Iteration 50000 distortion 1.5473 query 100000
+Iteration 55000 distortion 1.4993 query 110000
+Iteration 60000 distortion 1.4793 query 120000
+Iteration 65000 distortion 1.4643 query 130000
+Iteration 70000 distortion 1.4423 query 140000
+Iteration 75000 distortion 1.4353 query 150000
+Iteration 80000 distortion 1.4263 query 160000
+Iteration 85000 distortion 1.4233 query 170000
+Iteration 90000 distortion 1.4173 query 180000
+Iteration 95000 distortion 1.4123 query 190000
+Iteration 100000 distortion 1.3993 query 200000
+Iteration 105000 distortion 1.3733 query 210000
+Iteration 110000 distortion 1.3623 query 220000
+Iteration 115000 distortion 1.3453 query 230000
+Iteration 120000 distortion 1.3403 query 240000
+Iteration 125000 distortion 1.3353 query 250000
+Iteration 130000 distortion 1.3263 query 260000
+Iteration 135000 distortion 1.3113 query 270000
+Iteration 140000 distortion 1.3093 query 280000
+Iteration 145000 distortion 1.3043 query 290000
+Iteration 150000 distortion 1.2973 query 300000
+Iteration 155000 distortion 1.2893 query 310000
+Iteration 160000 distortion 1.2863 query 320000
+Iteration 165000 distortion 1.2813 query 330000
+Iteration 170000 distortion 1.2653 query 340000
+Iteration 175000 distortion 1.2623 query 350000
+Iteration 180000 distortion 1.2523 query 360000
+Iteration 185000 distortion 1.2513 query 370000
+Iteration 190000 distortion 1.2463 query 380000
+Iteration 195000 distortion 1.2443 query 390000
+Iteration 200000 distortion 1.2413 query 400000
+
+Adversarial Example Found Successfully: distortion 1.2413 target 3 queries 201332 
+Time: 1528.5208 seconds
+Predicted label for adversarial example:  0
+
+
+
+
+======== Image 1414 =========
+Original label:  1
+Predicted label:  1
+Targeted attack: 9
+--------> Found g() 6.5547
+==========> Found best distortion 6.5547 in 0.4266 seconds using 2468 queries
+Iteration 5000 distortion 3.4027 query 10000
+Iteration 10000 distortion 2.1387 query 20000
+Iteration 15000 distortion 1.7337 query 30000
+Iteration 20000 distortion 1.6157 query 40000
+Iteration 25000 distortion 1.5427 query 50000
+Iteration 30000 distortion 1.4967 query 60000
+Iteration 35000 distortion 1.4657 query 70000
+Iteration 40000 distortion 1.4417 query 80000
+Iteration 45000 distortion 1.4237 query 90000
+Iteration 50000 distortion 1.4117 query 100000
+Iteration 55000 distortion 1.4007 query 110000
+Iteration 60000 distortion 1.3877 query 120000
+Iteration 65000 distortion 1.3757 query 130000
+Iteration 70000 distortion 1.3667 query 140000
+Iteration 75000 distortion 1.3547 query 150000
+Iteration 80000 distortion 1.3497 query 160000
+Iteration 85000 distortion 1.3437 query 170000
+Iteration 90000 distortion 1.3397 query 180000
+Iteration 95000 distortion 1.3317 query 190000
+Iteration 100000 distortion 1.3227 query 200000
+Iteration 105000 distortion 1.3107 query 210000
+Iteration 110000 distortion 1.3077 query 220000
+Iteration 115000 distortion 1.3057 query 230000
+Iteration 120000 distortion 1.3007 query 240000
+Iteration 125000 distortion 1.2987 query 250000
+Iteration 130000 distortion 1.2937 query 260000
+Iteration 135000 distortion 1.2897 query 270000
+Iteration 140000 distortion 1.2877 query 280000
+Iteration 145000 distortion 1.2857 query 290000
+Iteration 150000 distortion 1.2807 query 300000
+Iteration 155000 distortion 1.2707 query 310000
+Iteration 160000 distortion 1.2677 query 320000
+Iteration 165000 distortion 1.2657 query 330000
+Iteration 170000 distortion 1.2587 query 340000
+Iteration 175000 distortion 1.2567 query 350000
+Iteration 180000 distortion 1.2487 query 360000
+Iteration 185000 distortion 1.2477 query 370000
+Iteration 190000 distortion 1.2467 query 380000
+Iteration 195000 distortion 1.2467 query 390000
+Iteration 200000 distortion 1.2457 query 400000
+
+Adversarial Example Found Successfully: distortion 1.2457 target 3 queries 202468 
+Time: 1532.4332 seconds
+Predicted label for adversarial example:  9
+
+
+
+
+======== Image 6510 =========
+Original label:  4
+Predicted label:  4
+Targeted attack: 9
+--------> Found g() 7.9804
+==========> Found best distortion 7.9804 in 0.5809 seconds using 2620 queries
+Iteration 5000 distortion 4.1814 query 10000
+Iteration 10000 distortion 1.9574 query 20000
+Iteration 15000 distortion 1.4274 query 30000
+Iteration 20000 distortion 1.3004 query 40000
+Iteration 25000 distortion 1.2134 query 50000
+Iteration 30000 distortion 1.1704 query 60000
+Iteration 35000 distortion 1.1264 query 70000
+Iteration 40000 distortion 1.0924 query 80000
+Iteration 45000 distortion 1.0784 query 90000
+Iteration 50000 distortion 1.0664 query 100000
+Iteration 55000 distortion 1.0614 query 110000
+Iteration 60000 distortion 1.0574 query 120000
+Iteration 65000 distortion 1.0534 query 130000
+Iteration 70000 distortion 1.0534 query 140000
+Iteration 75000 distortion 1.0464 query 150000
+Iteration 80000 distortion 1.0374 query 160000
+Iteration 85000 distortion 1.0354 query 170000
+Iteration 90000 distortion 1.0334 query 180000
+Iteration 95000 distortion 1.0324 query 190000
+Iteration 100000 distortion 1.0314 query 200000
+Iteration 105000 distortion 1.0304 query 210000
+Iteration 110000 distortion 1.0294 query 220000
+Iteration 115000 distortion 1.0254 query 230000
+Iteration 120000 distortion 1.0234 query 240000
+Iteration 125000 distortion 1.0104 query 250000
+Iteration 130000 distortion 1.0064 query 260000
+Iteration 135000 distortion 1.0054 query 270000
+Iteration 140000 distortion 1.0054 query 280000
+Iteration 145000 distortion 1.0054 query 290000
+Iteration 150000 distortion 0.9994 query 300000
+Iteration 155000 distortion 0.9904 query 310000
+Iteration 160000 distortion 0.9874 query 320000
+Iteration 165000 distortion 0.9844 query 330000
+Iteration 170000 distortion 0.9834 query 340000
+Iteration 175000 distortion 0.9834 query 350000
+Iteration 180000 distortion 0.9834 query 360000
+Iteration 185000 distortion 0.9834 query 370000
+Iteration 190000 distortion 0.9834 query 380000
+Iteration 195000 distortion 0.9834 query 390000
+Iteration 200000 distortion 0.9834 query 400000
+
+Adversarial Example Found Successfully: distortion 0.9834 target 3 queries 202620 
+Time: 953.2402 seconds
+Predicted label for adversarial example:  9
+
+
+
+
+======== Image 4615 =========
+Original label:  5
+Predicted label:  2
+Targeted attack: 9
+Fail to classify the image. No need to attack.
+Predicted label for adversarial example:  2
+
+
+
+
+======== Image 3958 =========
+Original label:  9
+Predicted label:  9
+Targeted attack: 3
+--------> Found g() 11.8753
+==========> Found best distortion 11.8753 in 0.1465 seconds using 2926 queries
+Iteration 5000 distortion 8.2793 query 10000
+Iteration 10000 distortion 5.1653 query 20000
+Iteration 15000 distortion 3.1943 query 30000
+Iteration 20000 distortion 2.2723 query 40000
+Iteration 25000 distortion 1.8873 query 50000
+Iteration 30000 distortion 1.7183 query 60000
+Iteration 35000 distortion 1.6153 query 70000
+Iteration 40000 distortion 1.5403 query 80000
+Iteration 45000 distortion 1.4913 query 90000
+Iteration 50000 distortion 1.4743 query 100000
+Iteration 55000 distortion 1.4483 query 110000
+Iteration 60000 distortion 1.4203 query 120000
+Iteration 65000 distortion 1.4073 query 130000
+Iteration 70000 distortion 1.3973 query 140000
+Iteration 75000 distortion 1.3833 query 150000
+Iteration 80000 distortion 1.3823 query 160000
+Iteration 85000 distortion 1.3783 query 170000
+Iteration 90000 distortion 1.3713 query 180000
+Iteration 95000 distortion 1.3563 query 190000
+Iteration 100000 distortion 1.3533 query 200000
+Iteration 105000 distortion 1.3403 query 210000
+Iteration 110000 distortion 1.3253 query 220000
+Iteration 115000 distortion 1.3183 query 230000
+Iteration 120000 distortion 1.3123 query 240000
+Iteration 125000 distortion 1.3093 query 250000
+Iteration 130000 distortion 1.3003 query 260000
+Iteration 135000 distortion 1.2933 query 270000
+Iteration 140000 distortion 1.2913 query 280000
+Iteration 145000 distortion 1.2903 query 290000
+Iteration 150000 distortion 1.2903 query 300000
+Iteration 155000 distortion 1.2883 query 310000
+Iteration 160000 distortion 1.2823 query 320000
+Iteration 165000 distortion 1.2793 query 330000
+Iteration 170000 distortion 1.2753 query 340000
+Iteration 175000 distortion 1.2723 query 350000
+Iteration 180000 distortion 1.2703 query 360000
+Iteration 185000 distortion 1.2693 query 370000
+Iteration 190000 distortion 1.2653 query 380000
+Iteration 195000 distortion 1.2653 query 390000
+Iteration 200000 distortion 1.2653 query 400000
+
+Adversarial Example Found Successfully: distortion 1.2653 target 3 queries 202926 
+Time: 406.6633 seconds
+Predicted label for adversarial example:  3
+
+
+
+
+======== Image 9763 =========
+Original label:  1
+Predicted label:  1
+Targeted attack: 7
+--------> Found g() 9.2047
+==========> Found best distortion 9.2047 in 0.1359 seconds using 2377 queries
+Iteration 5000 distortion 5.9377 query 10000
+Iteration 10000 distortion 3.8267 query 20000
+Iteration 15000 distortion 2.8087 query 30000
+Iteration 20000 distortion 2.4197 query 40000
+Iteration 25000 distortion 2.2207 query 50000
+Iteration 30000 distortion 2.0527 query 60000
+Iteration 35000 distortion 2.0187 query 70000
+Iteration 40000 distortion 1.9357 query 80000
+Iteration 45000 distortion 1.8637 query 90000
+Iteration 50000 distortion 1.8207 query 100000
+Iteration 55000 distortion 1.7957 query 110000
+Iteration 60000 distortion 1.7637 query 120000
+Iteration 65000 distortion 1.7437 query 130000
+Iteration 70000 distortion 1.7267 query 140000
+Iteration 75000 distortion 1.7267 query 150000
+Iteration 80000 distortion 1.7237 query 160000
+Iteration 85000 distortion 1.7037 query 170000
+Iteration 90000 distortion 1.6967 query 180000
+Iteration 95000 distortion 1.6887 query 190000
+Iteration 100000 distortion 1.6857 query 200000
+Iteration 105000 distortion 1.6827 query 210000
+Iteration 110000 distortion 1.6777 query 220000
+Iteration 115000 distortion 1.6727 query 230000
+Iteration 120000 distortion 1.6647 query 240000
+Iteration 125000 distortion 1.6567 query 250000
+Iteration 130000 distortion 1.6567 query 260000
+Iteration 135000 distortion 1.6527 query 270000
+Iteration 140000 distortion 1.6447 query 280000
+Iteration 145000 distortion 1.6397 query 290000
+Iteration 150000 distortion 1.6337 query 300000
+Iteration 155000 distortion 1.6317 query 310000
+Iteration 160000 distortion 1.6287 query 320000
+Iteration 165000 distortion 1.6267 query 330000
+Iteration 170000 distortion 1.6257 query 340000
+Iteration 175000 distortion 1.6217 query 350000
+Iteration 180000 distortion 1.6197 query 360000
+Iteration 185000 distortion 1.6167 query 370000
+Iteration 190000 distortion 1.6127 query 380000
+Iteration 195000 distortion 1.6107 query 390000
+Iteration 200000 distortion 1.6087 query 400000
+
+Adversarial Example Found Successfully: distortion 1.6087 target 3 queries 202377 
+Time: 404.3321 seconds
+Predicted label for adversarial example:  7
+
+
+
+
+======== Image 9597 =========
+Original label:  4
+Predicted label:  4
+Targeted attack: 5
+--------> Found g() 5.3154
+==========> Found best distortion 5.3154 in 0.1132 seconds using 1475 queries
+Iteration 5000 distortion 2.2034 query 10000
+Iteration 10000 distortion 1.1774 query 20000
+Iteration 15000 distortion 1.0464 query 30000
+Iteration 20000 distortion 0.9644 query 40000
+Iteration 25000 distortion 0.9084 query 50000
+Iteration 30000 distortion 0.8914 query 60000
+Iteration 35000 distortion 0.8784 query 70000
+Iteration 40000 distortion 0.8734 query 80000
+Iteration 45000 distortion 0.8684 query 90000
+Iteration 50000 distortion 0.8544 query 100000
+Iteration 55000 distortion 0.8504 query 110000
+Iteration 60000 distortion 0.8404 query 120000
+Iteration 65000 distortion 0.8334 query 130000
+Iteration 70000 distortion 0.8244 query 140000
+Iteration 75000 distortion 0.8234 query 150000
+Iteration 80000 distortion 0.8214 query 160000
+Iteration 85000 distortion 0.8214 query 170000
+Iteration 90000 distortion 0.8114 query 180000
+Iteration 95000 distortion 0.8084 query 190000
+Iteration 100000 distortion 0.8064 query 200000
+Iteration 105000 distortion 0.7974 query 210000
+Iteration 110000 distortion 0.7924 query 220000
+Iteration 115000 distortion 0.7884 query 230000
+Iteration 120000 distortion 0.7854 query 240000
+Iteration 125000 distortion 0.7834 query 250000
+Iteration 130000 distortion 0.7814 query 260000
+Iteration 135000 distortion 0.7794 query 270000
+Iteration 140000 distortion 0.7764 query 280000
+Iteration 145000 distortion 0.7744 query 290000
+Iteration 150000 distortion 0.7724 query 300000
+Iteration 155000 distortion 0.7694 query 310000
+Iteration 160000 distortion 0.7674 query 320000
+Iteration 165000 distortion 0.7654 query 330000
+Iteration 170000 distortion 0.7654 query 340000
+Iteration 175000 distortion 0.7654 query 350000
+Iteration 180000 distortion 0.7644 query 360000
+Iteration 185000 distortion 0.7614 query 370000
+Iteration 190000 distortion 0.7584 query 380000
+Iteration 195000 distortion 0.7584 query 390000
+Iteration 200000 distortion 0.7564 query 400000
+
+Adversarial Example Found Successfully: distortion 0.7564 target 3 queries 201475 
+Time: 404.8224 seconds
+Predicted label for adversarial example:  5
+
+
+
+
+======== Image 7482 =========
+Original label:  4
+Predicted label:  4
+Targeted attack: 8
+--------> Found g() 10.1171
+==========> Found best distortion 10.1171 in 0.0990 seconds using 847 queries
+Iteration 5000 distortion 5.8761 query 10000
+Iteration 10000 distortion 2.6661 query 20000
+Iteration 15000 distortion 1.6441 query 30000
+Iteration 20000 distortion 1.3611 query 40000
+Iteration 25000 distortion 1.2671 query 50000
+Iteration 30000 distortion 1.2271 query 60000
+Iteration 35000 distortion 1.1871 query 70000
+Iteration 40000 distortion 1.1621 query 80000
+Iteration 45000 distortion 1.1451 query 90000
+Iteration 50000 distortion 1.1321 query 100000
+Iteration 55000 distortion 1.1111 query 110000
+Iteration 60000 distortion 1.0911 query 120000
+Iteration 65000 distortion 1.0861 query 130000
+Iteration 70000 distortion 1.0771 query 140000
+Iteration 75000 distortion 1.0751 query 150000
+Iteration 80000 distortion 1.0651 query 160000
+Iteration 85000 distortion 1.0581 query 170000
+Iteration 90000 distortion 1.0491 query 180000
+Iteration 95000 distortion 1.0451 query 190000
+Iteration 100000 distortion 1.0401 query 200000
+Iteration 105000 distortion 1.0391 query 210000
+Iteration 110000 distortion 1.0361 query 220000
+Iteration 115000 distortion 1.0341 query 230000
+Iteration 120000 distortion 1.0331 query 240000
+Iteration 125000 distortion 1.0301 query 250000
+Iteration 130000 distortion 1.0301 query 260000
+Iteration 135000 distortion 1.0301 query 270000
+Iteration 140000 distortion 1.0291 query 280000
+Iteration 145000 distortion 1.0291 query 290000
+Iteration 150000 distortion 1.0291 query 300000
+Iteration 155000 distortion 1.0291 query 310000
+Iteration 160000 distortion 1.0291 query 320000
+Iteration 165000 distortion 1.0271 query 330000
+Iteration 170000 distortion 1.0261 query 340000
+Iteration 175000 distortion 1.0261 query 350000
+Iteration 180000 distortion 1.0261 query 360000
+Iteration 185000 distortion 1.0261 query 370000
+Iteration 190000 distortion 1.0191 query 380000
+Iteration 195000 distortion 1.0191 query 390000
+Iteration 200000 distortion 1.0161 query 400000
+
+Adversarial Example Found Successfully: distortion 1.0161 target 3 queries 200847 
+Time: 404.8521 seconds
+Predicted label for adversarial example:  8
+
+
+
+
+======== Image 5955 =========
+Original label:  5
+Predicted label:  5
+Targeted attack: 1
+--------> Found g() 5.5210
+==========> Found best distortion 5.5210 in 0.1459 seconds using 3201 queries
+Iteration 5000 distortion 3.4010 query 10000
+Iteration 10000 distortion 2.0760 query 20000
+Iteration 15000 distortion 1.5230 query 30000
+Iteration 20000 distortion 1.2980 query 40000
+Iteration 25000 distortion 1.1880 query 50000
+Iteration 30000 distortion 1.1010 query 60000
+Iteration 35000 distortion 1.0780 query 70000
+Iteration 40000 distortion 1.0530 query 80000
+Iteration 45000 distortion 1.0110 query 90000
+Iteration 50000 distortion 0.9880 query 100000
+Iteration 55000 distortion 0.9780 query 110000
+Iteration 60000 distortion 0.9610 query 120000
+Iteration 65000 distortion 0.9500 query 130000
+Iteration 70000 distortion 0.9420 query 140000
+Iteration 75000 distortion 0.9350 query 150000
+Iteration 80000 distortion 0.9290 query 160000
+Iteration 85000 distortion 0.9240 query 170000
+Iteration 90000 distortion 0.9220 query 180000
+Iteration 95000 distortion 0.9200 query 190000
+Iteration 100000 distortion 0.9150 query 200000
+Iteration 105000 distortion 0.9080 query 210000
+Iteration 110000 distortion 0.9080 query 220000
+Iteration 115000 distortion 0.9000 query 230000
+Iteration 120000 distortion 0.8920 query 240000
+Iteration 125000 distortion 0.8860 query 250000
+Iteration 130000 distortion 0.8860 query 260000
+Iteration 135000 distortion 0.8790 query 270000
+Iteration 140000 distortion 0.8720 query 280000
+Iteration 145000 distortion 0.8660 query 290000
+Iteration 150000 distortion 0.8640 query 300000
+Iteration 155000 distortion 0.8640 query 310000
+Iteration 160000 distortion 0.8600 query 320000
+Iteration 165000 distortion 0.8570 query 330000
+Iteration 170000 distortion 0.8540 query 340000
+Iteration 175000 distortion 0.8540 query 350000
+Iteration 180000 distortion 0.8540 query 360000
+Iteration 185000 distortion 0.8500 query 370000
+Iteration 190000 distortion 0.8480 query 380000
+Iteration 195000 distortion 0.8460 query 390000
+Iteration 200000 distortion 0.8400 query 400000
+
+Adversarial Example Found Successfully: distortion 0.8400 target 3 queries 203201 
+Time: 466.2036 seconds
+Predicted label for adversarial example:  1
+
+
+
+
+======== Image 5413 =========
+Original label:  3
+Predicted label:  3
+Targeted attack: 1
+--------> Found g() 8.5235
+==========> Found best distortion 8.5235 in 0.1654 seconds using 3421 queries
+Iteration 5000 distortion 5.2555 query 10000
+Iteration 10000 distortion 2.9965 query 20000
+Iteration 15000 distortion 2.1915 query 30000
+Iteration 20000 distortion 1.8465 query 40000
+Iteration 25000 distortion 1.7365 query 50000
+Iteration 30000 distortion 1.6375 query 60000
+Iteration 35000 distortion 1.6015 query 70000
+Iteration 40000 distortion 1.5775 query 80000
+Iteration 45000 distortion 1.5375 query 90000
+Iteration 50000 distortion 1.5235 query 100000
+Iteration 55000 distortion 1.5055 query 110000
+Iteration 60000 distortion 1.4955 query 120000
+Iteration 65000 distortion 1.4835 query 130000
+Iteration 70000 distortion 1.4785 query 140000
+Iteration 75000 distortion 1.4635 query 150000
+Iteration 80000 distortion 1.4475 query 160000
+Iteration 85000 distortion 1.4435 query 170000
+Iteration 90000 distortion 1.4385 query 180000
+Iteration 95000 distortion 1.4255 query 190000
+Iteration 100000 distortion 1.4195 query 200000
+Iteration 105000 distortion 1.4095 query 210000
+Iteration 110000 distortion 1.4055 query 220000
+Iteration 115000 distortion 1.4005 query 230000
+Iteration 120000 distortion 1.3885 query 240000
+Iteration 125000 distortion 1.3785 query 250000
+Iteration 130000 distortion 1.3755 query 260000
+Iteration 135000 distortion 1.3695 query 270000
+Iteration 140000 distortion 1.3695 query 280000
+Iteration 145000 distortion 1.3665 query 290000
+Iteration 150000 distortion 1.3625 query 300000
+Iteration 155000 distortion 1.3555 query 310000
+Iteration 160000 distortion 1.3485 query 320000
+Iteration 165000 distortion 1.3435 query 330000
+Iteration 170000 distortion 1.3395 query 340000
+Iteration 175000 distortion 1.3385 query 350000
+Iteration 180000 distortion 1.3355 query 360000
+Iteration 185000 distortion 1.3345 query 370000
+Iteration 190000 distortion 1.3325 query 380000
+Iteration 195000 distortion 1.3295 query 390000
+Iteration 200000 distortion 1.3255 query 400000
+
+Adversarial Example Found Successfully: distortion 1.3255 target 4 queries 203421 
+Time: 472.0312 seconds
+Predicted label for adversarial example:  1
+
+
+
+
+======== Image 8069 =========
+Original label:  4
+Predicted label:  5
+Targeted attack: 6
+Fail to classify the image. No need to attack.
+Predicted label for adversarial example:  5
+
+
+
+
+======== Image 3219 =========
+Original label:  0
+Predicted label:  2
+Targeted attack: 4
+Fail to classify the image. No need to attack.
+Predicted label for adversarial example:  2
+
+
+
+
+======== Image 365 =========
+Original label:  4
+Predicted label:  4
+Targeted attack: 5
+--------> Found g() 13.0177
+==========> Found best distortion 13.0177 in 0.1405 seconds using 1608 queries
+Iteration 5000 distortion 9.3017 query 10000
+Iteration 10000 distortion 5.5467 query 20000
+Iteration 15000 distortion 2.5367 query 30000
+Iteration 20000 distortion 1.2527 query 40000
+Iteration 25000 distortion 1.0007 query 50000
+Iteration 30000 distortion 0.8847 query 60000
+Iteration 35000 distortion 0.8227 query 70000
+Iteration 40000 distortion 0.7917 query 80000
+Iteration 45000 distortion 0.7757 query 90000
+Iteration 50000 distortion 0.7597 query 100000
+Iteration 55000 distortion 0.7447 query 110000
+Iteration 60000 distortion 0.7257 query 120000
+Iteration 65000 distortion 0.7227 query 130000
+Iteration 70000 distortion 0.7187 query 140000
+Iteration 75000 distortion 0.7127 query 150000
+Iteration 80000 distortion 0.7067 query 160000
+Iteration 85000 distortion 0.7057 query 170000
+Iteration 90000 distortion 0.7007 query 180000
+Iteration 95000 distortion 0.6997 query 190000
+Iteration 100000 distortion 0.6957 query 200000
+Iteration 105000 distortion 0.6927 query 210000
+Iteration 110000 distortion 0.6897 query 220000
+Iteration 115000 distortion 0.6867 query 230000
+Iteration 120000 distortion 0.6837 query 240000
+Iteration 125000 distortion 0.6827 query 250000
+Iteration 130000 distortion 0.6807 query 260000
+Iteration 135000 distortion 0.6807 query 270000
+Iteration 140000 distortion 0.6787 query 280000
+Iteration 145000 distortion 0.6757 query 290000
+Iteration 150000 distortion 0.6757 query 300000
+Iteration 155000 distortion 0.6757 query 310000
+Iteration 160000 distortion 0.6757 query 320000
+Iteration 165000 distortion 0.6747 query 330000
+Iteration 170000 distortion 0.6737 query 340000
+Iteration 175000 distortion 0.6687 query 350000
+Iteration 180000 distortion 0.6657 query 360000
+Iteration 185000 distortion 0.6657 query 370000
+Iteration 190000 distortion 0.6657 query 380000
+Iteration 195000 distortion 0.6627 query 390000
+Iteration 200000 distortion 0.6597 query 400000
+
+Adversarial Example Found Successfully: distortion 0.6597 target 3 queries 201608 
+Time: 436.8490 seconds
+Predicted label for adversarial example:  5
+
+
+
+
+======== Image 2019 =========
+Original label:  9
+Predicted label:  9
+Targeted attack: 3
+--------> Found g() 11.1713
+==========> Found best distortion 11.1713 in 0.1450 seconds using 2862 queries
+Iteration 5000 distortion 7.1653 query 10000
+Iteration 10000 distortion 3.9073 query 20000
+Iteration 15000 distortion 2.2483 query 30000
+Iteration 20000 distortion 1.7733 query 40000
+Iteration 25000 distortion 1.5983 query 50000
+Iteration 30000 distortion 1.5143 query 60000
+Iteration 35000 distortion 1.4903 query 70000
+Iteration 40000 distortion 1.4833 query 80000
+Iteration 45000 distortion 1.4493 query 90000
+Iteration 50000 distortion 1.4253 query 100000
+Iteration 55000 distortion 1.4083 query 110000
+Iteration 60000 distortion 1.3903 query 120000
+Iteration 65000 distortion 1.3703 query 130000
+Iteration 70000 distortion 1.3623 query 140000
+Iteration 75000 distortion 1.3483 query 150000
+Iteration 80000 distortion 1.3263 query 160000
+Iteration 85000 distortion 1.3103 query 170000
+Iteration 90000 distortion 1.3013 query 180000
+Iteration 95000 distortion 1.2953 query 190000
+Iteration 100000 distortion 1.2783 query 200000
+Iteration 105000 distortion 1.2603 query 210000
+Iteration 110000 distortion 1.2553 query 220000
+Iteration 115000 distortion 1.2433 query 230000
+Iteration 120000 distortion 1.2423 query 240000
+Iteration 125000 distortion 1.2383 query 250000
+Iteration 130000 distortion 1.2303 query 260000
+Iteration 135000 distortion 1.2273 query 270000
+Iteration 140000 distortion 1.2263 query 280000
+Iteration 145000 distortion 1.2263 query 290000
+Iteration 150000 distortion 1.2263 query 300000
+Iteration 155000 distortion 1.2253 query 310000
+Iteration 160000 distortion 1.2253 query 320000
+Iteration 165000 distortion 1.2253 query 330000
+Iteration 170000 distortion 1.2243 query 340000
+Iteration 175000 distortion 1.2213 query 350000
+Iteration 180000 distortion 1.2203 query 360000
+Iteration 185000 distortion 1.2183 query 370000
+Iteration 190000 distortion 1.2163 query 380000
+Iteration 195000 distortion 1.2103 query 390000
+Iteration 200000 distortion 1.2093 query 400000
+
+Adversarial Example Found Successfully: distortion 1.2093 target 3 queries 202862 
+Time: 404.9026 seconds
+Predicted label for adversarial example:  3
+
+
+
+
+======== Image 6195 =========
+Original label:  1
+Predicted label:  1
+Targeted attack: 3
+--------> Found g() 7.4615
+==========> Found best distortion 7.4615 in 0.1408 seconds using 2725 queries
+Iteration 5000 distortion 4.4545 query 10000
+Iteration 10000 distortion 2.2355 query 20000
+Iteration 15000 distortion 1.4315 query 30000
+Iteration 20000 distortion 1.1505 query 40000
+Iteration 25000 distortion 1.0495 query 50000
+Iteration 30000 distortion 1.0005 query 60000
+Iteration 35000 distortion 0.9585 query 70000
+Iteration 40000 distortion 0.9335 query 80000
+Iteration 45000 distortion 0.9185 query 90000
+Iteration 50000 distortion 0.9015 query 100000
+Iteration 55000 distortion 0.8865 query 110000
+Iteration 60000 distortion 0.8865 query 120000
+Iteration 65000 distortion 0.8825 query 130000
+Iteration 70000 distortion 0.8745 query 140000
+Iteration 75000 distortion 0.8615 query 150000
+Iteration 80000 distortion 0.8515 query 160000
+Iteration 85000 distortion 0.8465 query 170000
+Iteration 90000 distortion 0.8375 query 180000
+Iteration 95000 distortion 0.8345 query 190000
+Iteration 100000 distortion 0.8295 query 200000
+Iteration 105000 distortion 0.8255 query 210000
+Iteration 110000 distortion 0.8195 query 220000
+Iteration 115000 distortion 0.8185 query 230000
+Iteration 120000 distortion 0.8165 query 240000
+Iteration 125000 distortion 0.8145 query 250000
+Iteration 130000 distortion 0.8135 query 260000
+Iteration 135000 distortion 0.8115 query 270000
+Iteration 140000 distortion 0.8095 query 280000
+Iteration 145000 distortion 0.8085 query 290000
+Iteration 150000 distortion 0.8005 query 300000
+Iteration 155000 distortion 0.7995 query 310000
+Iteration 160000 distortion 0.7965 query 320000
+Iteration 165000 distortion 0.7965 query 330000
+Iteration 170000 distortion 0.7955 query 340000
+Iteration 175000 distortion 0.7945 query 350000
+Iteration 180000 distortion 0.7945 query 360000
+Iteration 185000 distortion 0.7925 query 370000
+Iteration 190000 distortion 0.7925 query 380000
+Iteration 195000 distortion 0.7905 query 390000
+Iteration 200000 distortion 0.7895 query 400000
+
+Adversarial Example Found Successfully: distortion 0.7895 target 3 queries 202725 
+Time: 405.7595 seconds
+Predicted label for adversarial example:  3
+
+
+
+
+======== Image 5548 =========
+Original label:  8
+Predicted label:  0
+Targeted attack: 6
+Fail to classify the image. No need to attack.
+Predicted label for adversarial example:  0
+
+
+
+
+======== Image 1118 =========
+Original label:  4
+Predicted label:  7
+Targeted attack: 1
+Fail to classify the image. No need to attack.
+Predicted label for adversarial example:  7
+
+
+
+
+======== Image 2497 =========
+Original label:  9
+Predicted label:  0
+Targeted attack: 3
+Fail to classify the image. No need to attack.
+Predicted label for adversarial example:  0
+
+
+
+
+======== Image 841 =========
+Original label:  0
+Predicted label:  0
+Targeted attack: 9
+--------> Found g() 2.8630
+==========> Found best distortion 2.8630 in 0.1278 seconds using 2228 queries
+Iteration 5000 distortion 1.4860 query 10000
+Iteration 10000 distortion 1.1230 query 20000
+Iteration 15000 distortion 0.9960 query 30000
+Iteration 20000 distortion 0.9320 query 40000
+Iteration 25000 distortion 0.9020 query 50000
+Iteration 30000 distortion 0.8640 query 60000
+Iteration 35000 distortion 0.8420 query 70000
+Iteration 40000 distortion 0.8190 query 80000
+Iteration 45000 distortion 0.8010 query 90000
+Iteration 50000 distortion 0.7940 query 100000
+Iteration 55000 distortion 0.7810 query 110000
+Iteration 60000 distortion 0.7690 query 120000
+Iteration 65000 distortion 0.7650 query 130000
+Iteration 70000 distortion 0.7640 query 140000
+Iteration 75000 distortion 0.7590 query 150000
+Iteration 80000 distortion 0.7530 query 160000
+Iteration 85000 distortion 0.7460 query 170000
+Iteration 90000 distortion 0.7410 query 180000
+Iteration 95000 distortion 0.7360 query 190000
+Iteration 100000 distortion 0.7290 query 200000
+Iteration 105000 distortion 0.7270 query 210000
+Iteration 110000 distortion 0.7240 query 220000
+Iteration 115000 distortion 0.7180 query 230000
+Iteration 120000 distortion 0.7140 query 240000
+Iteration 125000 distortion 0.7120 query 250000
+Iteration 130000 distortion 0.7090 query 260000
+Iteration 135000 distortion 0.7060 query 270000
+Iteration 140000 distortion 0.7050 query 280000
+Iteration 145000 distortion 0.7020 query 290000
+Iteration 150000 distortion 0.7020 query 300000
+Iteration 155000 distortion 0.7020 query 310000
+Iteration 160000 distortion 0.7020 query 320000
+Iteration 165000 distortion 0.7020 query 330000
+Iteration 170000 distortion 0.7020 query 340000
+Iteration 175000 distortion 0.7010 query 350000
+Iteration 180000 distortion 0.7010 query 360000
+Iteration 185000 distortion 0.7010 query 370000
+Iteration 190000 distortion 0.6980 query 380000
+Iteration 195000 distortion 0.6930 query 390000
+Iteration 200000 distortion 0.6900 query 400000
+
+Adversarial Example Found Successfully: distortion 0.6900 target 3 queries 202228 
+Time: 403.4231 seconds
+Predicted label for adversarial example:  9
+
+
+
+
+======== Image 9965 =========
+Original label:  2
+Predicted label:  2
+Targeted attack: 1
+--------> Found g() 5.8645
+==========> Found best distortion 5.8645 in 0.1521 seconds using 3286 queries
+Iteration 5000 distortion 3.1695 query 10000
+Iteration 10000 distortion 1.6655 query 20000
+Iteration 15000 distortion 1.3185 query 30000
+Iteration 20000 distortion 1.2175 query 40000
+Iteration 25000 distortion 1.1535 query 50000
+Iteration 30000 distortion 1.1235 query 60000
+Iteration 35000 distortion 1.1005 query 70000
+Iteration 40000 distortion 1.0885 query 80000
+Iteration 45000 distortion 1.0615 query 90000
+Iteration 50000 distortion 1.0475 query 100000
+Iteration 55000 distortion 1.0395 query 110000
+Iteration 60000 distortion 1.0255 query 120000
+Iteration 65000 distortion 1.0165 query 130000
+Iteration 70000 distortion 1.0115 query 140000
+Iteration 75000 distortion 1.0005 query 150000
+Iteration 80000 distortion 0.9945 query 160000
+Iteration 85000 distortion 0.9885 query 170000
+Iteration 90000 distortion 0.9845 query 180000
+Iteration 95000 distortion 0.9815 query 190000
+Iteration 100000 distortion 0.9775 query 200000
+Iteration 105000 distortion 0.9725 query 210000
+Iteration 110000 distortion 0.9665 query 220000
+Iteration 115000 distortion 0.9645 query 230000
+Iteration 120000 distortion 0.9625 query 240000
+Iteration 125000 distortion 0.9615 query 250000
+Iteration 130000 distortion 0.9615 query 260000
+Iteration 135000 distortion 0.9615 query 270000
+Iteration 140000 distortion 0.9615 query 280000
+Iteration 145000 distortion 0.9545 query 290000
+Iteration 150000 distortion 0.9525 query 300000
+Iteration 155000 distortion 0.9485 query 310000
+Iteration 160000 distortion 0.9465 query 320000
+Iteration 165000 distortion 0.9465 query 330000
+Iteration 170000 distortion 0.9435 query 340000
+Iteration 175000 distortion 0.9425 query 350000
+Iteration 180000 distortion 0.9415 query 360000
+Iteration 185000 distortion 0.9405 query 370000
+Iteration 190000 distortion 0.9395 query 380000
+Iteration 195000 distortion 0.9385 query 390000
+Iteration 200000 distortion 0.9375 query 400000
+
+Adversarial Example Found Successfully: distortion 0.9375 target 3 queries 203286 
+Time: 406.3657 seconds
+Predicted label for adversarial example:  1
+
+
+
+
+======== Image 537 =========
+Original label:  2
+Predicted label:  2
+Targeted attack: 1
+--------> Found g() 5.1208
+==========> Found best distortion 5.1208 in 0.1469 seconds using 3097 queries
+Iteration 5000 distortion 3.2628 query 10000
+Iteration 10000 distortion 2.3868 query 20000
+Iteration 15000 distortion 1.9698 query 30000
+Iteration 20000 distortion 1.7688 query 40000
+Iteration 25000 distortion 1.6328 query 50000
+Iteration 30000 distortion 1.5708 query 60000
+Iteration 35000 distortion 1.5008 query 70000
+Iteration 40000 distortion 1.4608 query 80000
+Iteration 45000 distortion 1.4158 query 90000
+Iteration 50000 distortion 1.3898 query 100000
+Iteration 55000 distortion 1.3708 query 110000
+Iteration 60000 distortion 1.3498 query 120000
+Iteration 65000 distortion 1.3338 query 130000
+Iteration 70000 distortion 1.3138 query 140000
+Iteration 75000 distortion 1.3128 query 150000
+Iteration 80000 distortion 1.3048 query 160000
+Iteration 85000 distortion 1.2918 query 170000
+Iteration 90000 distortion 1.2818 query 180000
+Iteration 95000 distortion 1.2748 query 190000
+Iteration 100000 distortion 1.2738 query 200000
+Iteration 105000 distortion 1.2678 query 210000
+Iteration 110000 distortion 1.2608 query 220000
+Iteration 115000 distortion 1.2538 query 230000
+Iteration 120000 distortion 1.2528 query 240000
+Iteration 125000 distortion 1.2528 query 250000
+Iteration 130000 distortion 1.2528 query 260000
+Iteration 135000 distortion 1.2528 query 270000
+Iteration 140000 distortion 1.2528 query 280000
+Iteration 145000 distortion 1.2508 query 290000
+Iteration 150000 distortion 1.2428 query 300000
+Iteration 155000 distortion 1.2328 query 310000
+Iteration 160000 distortion 1.2298 query 320000
+Iteration 165000 distortion 1.2288 query 330000
+Iteration 170000 distortion 1.2248 query 340000
+Iteration 175000 distortion 1.2198 query 350000
+Iteration 180000 distortion 1.2188 query 360000
+Iteration 185000 distortion 1.2188 query 370000
+Iteration 190000 distortion 1.2188 query 380000
+Iteration 195000 distortion 1.2188 query 390000
+Iteration 200000 distortion 1.2158 query 400000
+
+Adversarial Example Found Successfully: distortion 1.2158 target 3 queries 203097 
+Time: 406.2169 seconds
+Predicted label for adversarial example:  1
+
+
+
+
+======== Image 3188 =========
+Original label:  4
+Predicted label:  4
+Targeted attack: 1
+--------> Found g() 9.8594
+==========> Found best distortion 9.8594 in 0.1536 seconds using 3495 queries
+Iteration 5000 distortion 6.1934 query 10000
+Iteration 10000 distortion 3.4364 query 20000
+Iteration 15000 distortion 2.1494 query 30000
+Iteration 20000 distortion 1.7524 query 40000
+Iteration 25000 distortion 1.5884 query 50000
+Iteration 30000 distortion 1.5214 query 60000
+Iteration 35000 distortion 1.4474 query 70000
+Iteration 40000 distortion 1.4034 query 80000
+Iteration 45000 distortion 1.3674 query 90000
+Iteration 50000 distortion 1.3384 query 100000
+Iteration 55000 distortion 1.3114 query 110000
+Iteration 60000 distortion 1.2964 query 120000
+Iteration 65000 distortion 1.2874 query 130000
+Iteration 70000 distortion 1.2804 query 140000
+Iteration 75000 distortion 1.2624 query 150000
+Iteration 80000 distortion 1.2534 query 160000
+Iteration 85000 distortion 1.2444 query 170000
+Iteration 90000 distortion 1.2444 query 180000
+Iteration 95000 distortion 1.2374 query 190000
+Iteration 100000 distortion 1.2304 query 200000
+Iteration 105000 distortion 1.2284 query 210000
+Iteration 110000 distortion 1.2284 query 220000
+Iteration 115000 distortion 1.2124 query 230000
+Iteration 120000 distortion 1.2044 query 240000
+Iteration 125000 distortion 1.2014 query 250000
+Iteration 130000 distortion 1.1964 query 260000
+Iteration 135000 distortion 1.1954 query 270000
+Iteration 140000 distortion 1.1884 query 280000
+Iteration 145000 distortion 1.1814 query 290000
+Iteration 150000 distortion 1.1794 query 300000
+Iteration 155000 distortion 1.1784 query 310000
+Iteration 160000 distortion 1.1764 query 320000
+Iteration 165000 distortion 1.1724 query 330000
+Iteration 170000 distortion 1.1664 query 340000
+Iteration 175000 distortion 1.1654 query 350000
+Iteration 180000 distortion 1.1644 query 360000
+Iteration 185000 distortion 1.1584 query 370000
+Iteration 190000 distortion 1.1584 query 380000
+Iteration 195000 distortion 1.1524 query 390000
+Iteration 200000 distortion 1.1524 query 400000
+
+Adversarial Example Found Successfully: distortion 1.1524 target 3 queries 203495 
+Time: 405.1470 seconds
+Predicted label for adversarial example:  1
+
+
+
+
+======== Image 6509 =========
+Original label:  9
+Predicted label:  9
+Targeted attack: 1
+--------> Found g() 6.2979
+==========> Found best distortion 6.2979 in 0.1546 seconds using 3261 queries
+Iteration 5000 distortion 2.3099 query 10000
+Iteration 10000 distortion 1.3029 query 20000
+Iteration 15000 distortion 1.1499 query 30000
+Iteration 20000 distortion 1.0729 query 40000
+Iteration 25000 distortion 1.0209 query 50000
+Iteration 30000 distortion 1.0009 query 60000
+Iteration 35000 distortion 0.9899 query 70000
+Iteration 40000 distortion 0.9769 query 80000
+Iteration 45000 distortion 0.9699 query 90000
+Iteration 50000 distortion 0.9639 query 100000
+Iteration 55000 distortion 0.9589 query 110000
+Iteration 60000 distortion 0.9569 query 120000
+Iteration 65000 distortion 0.9499 query 130000
+Iteration 70000 distortion 0.9409 query 140000
+Iteration 75000 distortion 0.9339 query 150000
+Iteration 80000 distortion 0.9319 query 160000
+Iteration 85000 distortion 0.9229 query 170000
+Iteration 90000 distortion 0.9209 query 180000
+Iteration 95000 distortion 0.9189 query 190000
+Iteration 100000 distortion 0.9189 query 200000
+Iteration 105000 distortion 0.9119 query 210000
+Iteration 110000 distortion 0.9089 query 220000
+Iteration 115000 distortion 0.9069 query 230000
+Iteration 120000 distortion 0.9019 query 240000
+Iteration 125000 distortion 0.9009 query 250000
+Iteration 130000 distortion 0.8969 query 260000
+Iteration 135000 distortion 0.8939 query 270000
+Iteration 140000 distortion 0.8919 query 280000
+Iteration 145000 distortion 0.8919 query 290000
+Iteration 150000 distortion 0.8889 query 300000
+Iteration 155000 distortion 0.8889 query 310000
+Iteration 160000 distortion 0.8869 query 320000
+Iteration 165000 distortion 0.8849 query 330000
+Iteration 170000 distortion 0.8839 query 340000
+Iteration 175000 distortion 0.8839 query 350000
+Iteration 180000 distortion 0.8829 query 360000
+Iteration 185000 distortion 0.8809 query 370000
+Iteration 190000 distortion 0.8759 query 380000
+Iteration 195000 distortion 0.8759 query 390000
+Iteration 200000 distortion 0.8729 query 400000
+
+Adversarial Example Found Successfully: distortion 0.8729 target 3 queries 203261 
+Time: 405.6729 seconds
+Predicted label for adversarial example:  1
+
+
+
+
+======== Image 6164 =========
+Original label:  7
+Predicted label:  2
+Targeted attack: 1
+Fail to classify the image. No need to attack.
+Predicted label for adversarial example:  2
+
+
+
+
+======== Image 696 =========
+Original label:  8
+Predicted label:  8
+Targeted attack: 0
+--------> Found g() 7.5655
+==========> Found best distortion 7.5655 in 0.1092 seconds using 1256 queries
+Iteration 5000 distortion 4.5795 query 10000
+Iteration 10000 distortion 2.1745 query 20000
+Iteration 15000 distortion 1.3325 query 30000
+Iteration 20000 distortion 1.1265 query 40000
+Iteration 25000 distortion 1.0525 query 50000
+Iteration 30000 distortion 0.9975 query 60000
+Iteration 35000 distortion 0.9685 query 70000
+Iteration 40000 distortion 0.9455 query 80000
+Iteration 45000 distortion 0.9255 query 90000
+Iteration 50000 distortion 0.9235 query 100000
+Iteration 55000 distortion 0.9115 query 110000
+Iteration 60000 distortion 0.9015 query 120000
+Iteration 65000 distortion 0.8865 query 130000
+Iteration 70000 distortion 0.8745 query 140000
+Iteration 75000 distortion 0.8715 query 150000
+Iteration 80000 distortion 0.8665 query 160000
+Iteration 85000 distortion 0.8495 query 170000
+Iteration 90000 distortion 0.8465 query 180000
+Iteration 95000 distortion 0.8445 query 190000
+Iteration 100000 distortion 0.8435 query 200000
+Iteration 105000 distortion 0.8415 query 210000
+Iteration 110000 distortion 0.8375 query 220000
+Iteration 115000 distortion 0.8325 query 230000
+Iteration 120000 distortion 0.8315 query 240000
+Iteration 125000 distortion 0.8315 query 250000
+Iteration 130000 distortion 0.8315 query 260000
+Iteration 135000 distortion 0.8295 query 270000
+Iteration 140000 distortion 0.8285 query 280000
+Iteration 145000 distortion 0.8285 query 290000
+Iteration 150000 distortion 0.8265 query 300000
+Iteration 155000 distortion 0.8215 query 310000
+Iteration 160000 distortion 0.8165 query 320000
+Iteration 165000 distortion 0.8155 query 330000
+Iteration 170000 distortion 0.8145 query 340000
+Iteration 175000 distortion 0.8115 query 350000
+Iteration 180000 distortion 0.8095 query 360000
+Iteration 185000 distortion 0.8065 query 370000
+Iteration 190000 distortion 0.8055 query 380000
+Iteration 195000 distortion 0.8055 query 390000
+Iteration 200000 distortion 0.8005 query 400000
+
+Adversarial Example Found Successfully: distortion 0.8005 target 3 queries 201256 
+Time: 403.6783 seconds
+Predicted label for adversarial example:  0
+
+
+
+
+======== Image 3288 =========
+Original label:  9
+Predicted label:  9
+Targeted attack: 2
+--------> Found g() 6.5839
+==========> Found best distortion 6.5839 in 0.1431 seconds using 2713 queries
+Iteration 5000 distortion 3.0449 query 10000
+Iteration 10000 distortion 1.8359 query 20000
+Iteration 15000 distortion 1.6419 query 30000
+Iteration 20000 distortion 1.5279 query 40000
+Iteration 25000 distortion 1.4569 query 50000
+Iteration 30000 distortion 1.4289 query 60000
+Iteration 35000 distortion 1.4059 query 70000
+Iteration 40000 distortion 1.3699 query 80000
+Iteration 45000 distortion 1.3529 query 90000
+Iteration 50000 distortion 1.3469 query 100000
+Iteration 55000 distortion 1.3399 query 110000
+Iteration 60000 distortion 1.3319 query 120000
+Iteration 65000 distortion 1.3269 query 130000
+Iteration 70000 distortion 1.3209 query 140000
+Iteration 75000 distortion 1.3139 query 150000
+Iteration 80000 distortion 1.3049 query 160000
+Iteration 85000 distortion 1.2959 query 170000
+Iteration 90000 distortion 1.2889 query 180000
+Iteration 95000 distortion 1.2879 query 190000
+Iteration 100000 distortion 1.2829 query 200000
+Iteration 105000 distortion 1.2819 query 210000
+Iteration 110000 distortion 1.2789 query 220000
+Iteration 115000 distortion 1.2759 query 230000
+Iteration 120000 distortion 1.2719 query 240000
+Iteration 125000 distortion 1.2659 query 250000
+Iteration 130000 distortion 1.2649 query 260000
+Iteration 135000 distortion 1.2639 query 270000
+Iteration 140000 distortion 1.2609 query 280000
+Iteration 145000 distortion 1.2599 query 290000
+Iteration 150000 distortion 1.2599 query 300000
+Iteration 155000 distortion 1.2589 query 310000
+Iteration 160000 distortion 1.2519 query 320000
+Iteration 165000 distortion 1.2509 query 330000
+Iteration 170000 distortion 1.2509 query 340000
+Iteration 175000 distortion 1.2509 query 350000
+Iteration 180000 distortion 1.2509 query 360000
+Iteration 185000 distortion 1.2509 query 370000
+Iteration 190000 distortion 1.2499 query 380000
+Iteration 195000 distortion 1.2499 query 390000
+Iteration 200000 distortion 1.2469 query 400000
+
+Adversarial Example Found Successfully: distortion 1.2469 target 3 queries 202713 
+Time: 404.2655 seconds
+Predicted label for adversarial example:  2
+
+
+
+
+======== Image 2129 =========
+Original label:  9
+Predicted label:  9
+Targeted attack: 7
+--------> Found g() 5.1938
+==========> Found best distortion 5.1938 in 0.1390 seconds using 2370 queries
+Iteration 5000 distortion 3.6968 query 10000
+Iteration 10000 distortion 2.3388 query 20000
+Iteration 15000 distortion 1.5108 query 30000
+Iteration 20000 distortion 1.1658 query 40000
+Iteration 25000 distortion 1.0198 query 50000
+Iteration 30000 distortion 0.9298 query 60000
+Iteration 35000 distortion 0.8788 query 70000
+Iteration 40000 distortion 0.8548 query 80000
+Iteration 45000 distortion 0.8358 query 90000
+Iteration 50000 distortion 0.8228 query 100000
+Iteration 55000 distortion 0.8078 query 110000
+Iteration 60000 distortion 0.7918 query 120000
+Iteration 65000 distortion 0.7788 query 130000
+Iteration 70000 distortion 0.7778 query 140000
+Iteration 75000 distortion 0.7748 query 150000
+Iteration 80000 distortion 0.7708 query 160000
+Iteration 85000 distortion 0.7708 query 170000
+Iteration 90000 distortion 0.7658 query 180000
+Iteration 95000 distortion 0.7608 query 190000
+Iteration 100000 distortion 0.7548 query 200000
+Iteration 105000 distortion 0.7528 query 210000
+Iteration 110000 distortion 0.7518 query 220000
+Iteration 115000 distortion 0.7488 query 230000
+Iteration 120000 distortion 0.7458 query 240000
+Iteration 125000 distortion 0.7448 query 250000
+Iteration 130000 distortion 0.7438 query 260000
+Iteration 135000 distortion 0.7398 query 270000
+Iteration 140000 distortion 0.7338 query 280000
+Iteration 145000 distortion 0.7318 query 290000
+Iteration 150000 distortion 0.7308 query 300000
+Iteration 155000 distortion 0.7228 query 310000
+Iteration 160000 distortion 0.7208 query 320000
+Iteration 165000 distortion 0.7198 query 330000
+Iteration 170000 distortion 0.7198 query 340000
+Iteration 175000 distortion 0.7178 query 350000
+Iteration 180000 distortion 0.7178 query 360000
+Iteration 185000 distortion 0.7158 query 370000
+Iteration 190000 distortion 0.7138 query 380000
+Iteration 195000 distortion 0.7108 query 390000
+Iteration 200000 distortion 0.7088 query 400000
+
+Adversarial Example Found Successfully: distortion 0.7088 target 3 queries 202370 
+Time: 403.8136 seconds
+Predicted label for adversarial example:  7
+
+
+
+
+======== Image 3550 =========
+Original label:  0
+Predicted label:  4
+Targeted attack: 1
+Fail to classify the image. No need to attack.
+Predicted label for adversarial example:  4
+
+
+
+
+======== Image 473 =========
+Original label:  0
+Predicted label:  0
+Targeted attack: 9
+--------> Found g() 4.5975
+==========> Found best distortion 4.5975 in 0.1425 seconds using 2348 queries
+Iteration 5000 distortion 2.1075 query 10000
+Iteration 10000 distortion 1.0495 query 20000
+Iteration 15000 distortion 0.7655 query 30000
+Iteration 20000 distortion 0.6735 query 40000
+Iteration 25000 distortion 0.6285 query 50000
+Iteration 30000 distortion 0.6065 query 60000
+Iteration 35000 distortion 0.5845 query 70000
+Iteration 40000 distortion 0.5645 query 80000
+Iteration 45000 distortion 0.5485 query 90000
+Iteration 50000 distortion 0.5435 query 100000
+Iteration 55000 distortion 0.5365 query 110000
+Iteration 60000 distortion 0.5295 query 120000
+Iteration 65000 distortion 0.5275 query 130000
+Iteration 70000 distortion 0.5235 query 140000
+Iteration 75000 distortion 0.5205 query 150000
+Iteration 80000 distortion 0.5165 query 160000
+Iteration 85000 distortion 0.5125 query 170000
+Iteration 90000 distortion 0.5115 query 180000
+Iteration 95000 distortion 0.5095 query 190000
+Iteration 100000 distortion 0.5085 query 200000
+Iteration 105000 distortion 0.5045 query 210000
+Iteration 110000 distortion 0.5045 query 220000
+Iteration 115000 distortion 0.5035 query 230000
+Iteration 120000 distortion 0.5035 query 240000
+Iteration 125000 distortion 0.5035 query 250000
+Iteration 130000 distortion 0.5005 query 260000
+Iteration 135000 distortion 0.4965 query 270000
+Iteration 140000 distortion 0.4915 query 280000
+Iteration 145000 distortion 0.4905 query 290000
+Iteration 150000 distortion 0.4905 query 300000
+Iteration 155000 distortion 0.4905 query 310000
+Iteration 160000 distortion 0.4905 query 320000
+Iteration 165000 distortion 0.4905 query 330000
+Iteration 170000 distortion 0.4865 query 340000
+Iteration 175000 distortion 0.4825 query 350000
+Iteration 180000 distortion 0.4825 query 360000
+Iteration 185000 distortion 0.4825 query 370000
+Iteration 190000 distortion 0.4775 query 380000
+Iteration 195000 distortion 0.4775 query 390000
+Iteration 200000 distortion 0.4775 query 400000
+
+Adversarial Example Found Successfully: distortion 0.4775 target 3 queries 202348 
+Time: 469.5923 seconds
+Predicted label for adversarial example:  9
+
+
+
+
+======== Image 7073 =========
+Original label:  9
+Predicted label:  9
+Targeted attack: 1
+--------> Found g() 9.4441
+==========> Found best distortion 9.4441 in 0.1624 seconds using 3457 queries
+Iteration 5000 distortion 5.1281 query 10000
+Iteration 10000 distortion 1.9001 query 20000
+Iteration 15000 distortion 1.1861 query 30000
+Iteration 20000 distortion 1.0531 query 40000
+Iteration 25000 distortion 0.9931 query 50000
+Iteration 30000 distortion 0.9641 query 60000
+Iteration 35000 distortion 0.9471 query 70000
+Iteration 40000 distortion 0.9341 query 80000
+Iteration 45000 distortion 0.9191 query 90000
+Iteration 50000 distortion 0.9081 query 100000
+Iteration 55000 distortion 0.8961 query 110000
+Iteration 60000 distortion 0.8961 query 120000
+Iteration 65000 distortion 0.8961 query 130000
+Iteration 70000 distortion 0.8911 query 140000
+Iteration 75000 distortion 0.8811 query 150000
+Iteration 80000 distortion 0.8731 query 160000
+Iteration 85000 distortion 0.8671 query 170000
+Iteration 90000 distortion 0.8661 query 180000
+Iteration 95000 distortion 0.8661 query 190000
+Iteration 100000 distortion 0.8631 query 200000
+Iteration 105000 distortion 0.8631 query 210000
+Iteration 110000 distortion 0.8621 query 220000
+Iteration 115000 distortion 0.8611 query 230000
+Iteration 120000 distortion 0.8591 query 240000
+Iteration 125000 distortion 0.8591 query 250000
+Iteration 130000 distortion 0.8591 query 260000
+Iteration 135000 distortion 0.8581 query 270000
+Iteration 140000 distortion 0.8581 query 280000
+Iteration 145000 distortion 0.8581 query 290000
+Iteration 150000 distortion 0.8571 query 300000
+Iteration 155000 distortion 0.8541 query 310000
+Iteration 160000 distortion 0.8531 query 320000
+Iteration 165000 distortion 0.8491 query 330000
+Iteration 170000 distortion 0.8471 query 340000
+Iteration 175000 distortion 0.8461 query 350000
+Iteration 180000 distortion 0.8451 query 360000
+Iteration 185000 distortion 0.8441 query 370000
+Iteration 190000 distortion 0.8441 query 380000
+Iteration 195000 distortion 0.8431 query 390000
+Iteration 200000 distortion 0.8411 query 400000
+
+Adversarial Example Found Successfully: distortion 0.8411 target 3 queries 203457 
+Time: 469.3786 seconds
+Predicted label for adversarial example:  1
+
+
+
+
+======== Image 4358 =========
+Original label:  5
+Predicted label:  5
+Targeted attack: 1
+--------> Found g() 9.8985
+==========> Found best distortion 9.8985 in 0.1636 seconds using 3511 queries
+Iteration 5000 distortion 6.2795 query 10000
+Iteration 10000 distortion 3.8685 query 20000
+Iteration 15000 distortion 2.5095 query 30000
+Iteration 20000 distortion 2.0655 query 40000
+Iteration 25000 distortion 1.8675 query 50000
+Iteration 30000 distortion 1.7625 query 60000
+Iteration 35000 distortion 1.7035 query 70000
+Iteration 40000 distortion 1.6585 query 80000
+Iteration 45000 distortion 1.6275 query 90000
+Iteration 50000 distortion 1.6065 query 100000
+Iteration 55000 distortion 1.5815 query 110000
+Iteration 60000 distortion 1.5575 query 120000
+Iteration 65000 distortion 1.5385 query 130000
+Iteration 70000 distortion 1.5315 query 140000
+Iteration 75000 distortion 1.5185 query 150000
+Iteration 80000 distortion 1.5005 query 160000
+Iteration 85000 distortion 1.4875 query 170000
+Iteration 90000 distortion 1.4815 query 180000
+Iteration 95000 distortion 1.4755 query 190000
+Iteration 100000 distortion 1.4755 query 200000
+Iteration 105000 distortion 1.4695 query 210000
+Iteration 110000 distortion 1.4655 query 220000
+Iteration 115000 distortion 1.4545 query 230000
+Iteration 120000 distortion 1.4445 query 240000
+Iteration 125000 distortion 1.4435 query 250000
+Iteration 130000 distortion 1.4385 query 260000
+Iteration 135000 distortion 1.4385 query 270000
+Iteration 140000 distortion 1.4365 query 280000
+Iteration 145000 distortion 1.4265 query 290000
+Iteration 150000 distortion 1.4165 query 300000
+Iteration 155000 distortion 1.4145 query 310000
+Iteration 160000 distortion 1.4115 query 320000
+Iteration 165000 distortion 1.4025 query 330000
+Iteration 170000 distortion 1.4025 query 340000
+Iteration 175000 distortion 1.3975 query 350000
+Iteration 180000 distortion 1.3935 query 360000
+Iteration 185000 distortion 1.3895 query 370000
+Iteration 190000 distortion 1.3855 query 380000
+Iteration 195000 distortion 1.3835 query 390000
+Iteration 200000 distortion 1.3815 query 400000
+
+Adversarial Example Found Successfully: distortion 1.3815 target 3 queries 203511 
+Time: 470.6871 seconds
+Predicted label for adversarial example:  1
+
+
+
+
+======== Image 3718 =========
+Original label:  8
+Predicted label:  8
+Targeted attack: 1
+--------> Found g() 3.2818
+==========> Found best distortion 3.2818 in 0.1544 seconds using 2907 queries
+Iteration 5000 distortion 2.5138 query 10000
+Iteration 10000 distortion 2.0418 query 20000
+Iteration 15000 distortion 1.7328 query 30000
+Iteration 20000 distortion 1.5388 query 40000
+Iteration 25000 distortion 1.4148 query 50000
+Iteration 30000 distortion 1.3318 query 60000
+Iteration 35000 distortion 1.3088 query 70000
+Iteration 40000 distortion 1.2688 query 80000
+Iteration 45000 distortion 1.2518 query 90000
+Iteration 50000 distortion 1.2178 query 100000
+Iteration 55000 distortion 1.1798 query 110000
+Iteration 60000 distortion 1.1508 query 120000
+Iteration 65000 distortion 1.1238 query 130000
+Iteration 70000 distortion 1.1098 query 140000
+Iteration 75000 distortion 1.0928 query 150000
+Iteration 80000 distortion 1.0878 query 160000
+Iteration 85000 distortion 1.0618 query 170000
+Iteration 90000 distortion 1.0588 query 180000
+Iteration 95000 distortion 1.0518 query 190000
+Iteration 100000 distortion 1.0418 query 200000
+Iteration 105000 distortion 1.0398 query 210000
+Iteration 110000 distortion 1.0318 query 220000
+Iteration 115000 distortion 1.0238 query 230000
+Iteration 120000 distortion 1.0168 query 240000
+Iteration 125000 distortion 1.0128 query 250000
+Iteration 130000 distortion 1.0118 query 260000
+Iteration 135000 distortion 1.0118 query 270000
+Iteration 140000 distortion 1.0108 query 280000
+Iteration 145000 distortion 1.0108 query 290000
+Iteration 150000 distortion 1.0088 query 300000
+Iteration 155000 distortion 1.0018 query 310000
+Iteration 160000 distortion 0.9988 query 320000
+Iteration 165000 distortion 0.9988 query 330000
+Iteration 170000 distortion 0.9948 query 340000
+Iteration 175000 distortion 0.9928 query 350000
+Iteration 180000 distortion 0.9928 query 360000
+Iteration 185000 distortion 0.9868 query 370000
+Iteration 190000 distortion 0.9838 query 380000
+Iteration 195000 distortion 0.9828 query 390000
+Iteration 200000 distortion 0.9828 query 400000
+
+Adversarial Example Found Successfully: distortion 0.9828 target 3 queries 202907 
+Time: 469.9188 seconds
+Predicted label for adversarial example:  1
+
+
+
+
+======== Image 5032 =========
+Original label:  2
+Predicted label:  2
+Targeted attack: 6
+--------> Found g() 8.1379
+==========> Found best distortion 8.1379 in 0.1294 seconds using 1493 queries
+Iteration 5000 distortion 4.1269 query 10000
+Iteration 10000 distortion 2.1039 query 20000
+Iteration 15000 distortion 1.6439 query 30000
+Iteration 20000 distortion 1.5219 query 40000
+Iteration 25000 distortion 1.4369 query 50000
+Iteration 30000 distortion 1.3839 query 60000
+Iteration 35000 distortion 1.3549 query 70000
+Iteration 40000 distortion 1.3299 query 80000
+Iteration 45000 distortion 1.3099 query 90000
+Iteration 50000 distortion 1.3009 query 100000
+Iteration 55000 distortion 1.2899 query 110000
+Iteration 60000 distortion 1.2769 query 120000
+Iteration 65000 distortion 1.2649 query 130000
+Iteration 70000 distortion 1.2579 query 140000
+Iteration 75000 distortion 1.2559 query 150000
+Iteration 80000 distortion 1.2519 query 160000
+Iteration 85000 distortion 1.2459 query 170000
+Iteration 90000 distortion 1.2299 query 180000
+Iteration 95000 distortion 1.2219 query 190000
+Iteration 100000 distortion 1.2169 query 200000
+Iteration 105000 distortion 1.2119 query 210000
+Iteration 110000 distortion 1.2039 query 220000
+Iteration 115000 distortion 1.1999 query 230000
+Iteration 120000 distortion 1.1949 query 240000
+Iteration 125000 distortion 1.1899 query 250000
+Iteration 130000 distortion 1.1889 query 260000
+Iteration 135000 distortion 1.1839 query 270000
+Iteration 140000 distortion 1.1769 query 280000
+Iteration 145000 distortion 1.1749 query 290000
+Iteration 150000 distortion 1.1739 query 300000
+Iteration 155000 distortion 1.1729 query 310000
+Iteration 160000 distortion 1.1719 query 320000
+Iteration 165000 distortion 1.1679 query 330000
+Iteration 170000 distortion 1.1639 query 340000
+Iteration 175000 distortion 1.1589 query 350000
+Iteration 180000 distortion 1.1579 query 360000
+Iteration 185000 distortion 1.1579 query 370000
+Iteration 190000 distortion 1.1579 query 380000
+Iteration 195000 distortion 1.1579 query 390000
+Iteration 200000 distortion 1.1569 query 400000
+
+Adversarial Example Found Successfully: distortion 1.1569 target 3 queries 201493 
+Time: 470.0758 seconds
+Predicted label for adversarial example:  6
+
+
+
+
+======== Image 7244 =========
+Original label:  5
+Predicted label:  5
+Targeted attack: 2
+--------> Found g() 9.2705
+==========> Found best distortion 9.2705 in 0.1524 seconds using 2806 queries
+Iteration 5000 distortion 5.4565 query 10000
+Iteration 10000 distortion 2.5675 query 20000
+Iteration 15000 distortion 1.7115 query 30000
+Iteration 20000 distortion 1.5025 query 40000
+Iteration 25000 distortion 1.4135 query 50000
+Iteration 30000 distortion 1.3715 query 60000
+Iteration 35000 distortion 1.3345 query 70000
+Iteration 40000 distortion 1.2935 query 80000
+Iteration 45000 distortion 1.2735 query 90000
+Iteration 50000 distortion 1.2595 query 100000
+Iteration 55000 distortion 1.2435 query 110000
+Iteration 60000 distortion 1.2345 query 120000
+Iteration 65000 distortion 1.2325 query 130000
+Iteration 70000 distortion 1.2275 query 140000
+Iteration 75000 distortion 1.2175 query 150000
+Iteration 80000 distortion 1.2175 query 160000
+Iteration 85000 distortion 1.2165 query 170000
+Iteration 90000 distortion 1.2105 query 180000
+Iteration 95000 distortion 1.2095 query 190000
+Iteration 100000 distortion 1.2045 query 200000
+Iteration 105000 distortion 1.1975 query 210000
+Iteration 110000 distortion 1.1905 query 220000
+Iteration 115000 distortion 1.1865 query 230000
+Iteration 120000 distortion 1.1845 query 240000
+Iteration 125000 distortion 1.1815 query 250000
+Iteration 130000 distortion 1.1775 query 260000
+Iteration 135000 distortion 1.1705 query 270000
+Iteration 140000 distortion 1.1595 query 280000
+Iteration 145000 distortion 1.1535 query 290000
+Iteration 150000 distortion 1.1445 query 300000
+Iteration 155000 distortion 1.1365 query 310000
+Iteration 160000 distortion 1.1365 query 320000
+Iteration 165000 distortion 1.1315 query 330000
+Iteration 170000 distortion 1.1315 query 340000
+Iteration 175000 distortion 1.1305 query 350000
+Iteration 180000 distortion 1.1305 query 360000
+Iteration 185000 distortion 1.1305 query 370000
+Iteration 190000 distortion 1.1305 query 380000
+Iteration 195000 distortion 1.1305 query 390000
+Iteration 200000 distortion 1.1295 query 400000
+
+Adversarial Example Found Successfully: distortion 1.1295 target 3 queries 202806 
+Time: 469.5684 seconds
+Predicted label for adversarial example:  2
+
+
+
+
+======== Image 1100 =========
+Original label:  7
+Predicted label:  7
+Targeted attack: 9
+--------> Found g() 5.2001
+==========> Found best distortion 5.2001 in 0.1527 seconds using 2509 queries
+Iteration 5000 distortion 1.9881 query 10000
+Iteration 10000 distortion 0.9511 query 20000
+Iteration 15000 distortion 0.8031 query 30000
+Iteration 20000 distortion 0.7661 query 40000
+Iteration 25000 distortion 0.7401 query 50000
+Iteration 30000 distortion 0.7221 query 60000
+Iteration 35000 distortion 0.7131 query 70000
+Iteration 40000 distortion 0.7091 query 80000
+Iteration 45000 distortion 0.7021 query 90000
+Iteration 50000 distortion 0.6941 query 100000
+Iteration 55000 distortion 0.6891 query 110000
+Iteration 60000 distortion 0.6861 query 120000
+Iteration 65000 distortion 0.6851 query 130000
+Iteration 70000 distortion 0.6811 query 140000
+Iteration 75000 distortion 0.6761 query 150000
+Iteration 80000 distortion 0.6751 query 160000
+Iteration 85000 distortion 0.6721 query 170000
+Iteration 90000 distortion 0.6701 query 180000
+Iteration 95000 distortion 0.6671 query 190000
+Iteration 100000 distortion 0.6631 query 200000
+Iteration 105000 distortion 0.6621 query 210000
+Iteration 110000 distortion 0.6601 query 220000
+Iteration 115000 distortion 0.6601 query 230000
+Iteration 120000 distortion 0.6571 query 240000
+Iteration 125000 distortion 0.6541 query 250000
+Iteration 130000 distortion 0.6541 query 260000
+Iteration 135000 distortion 0.6521 query 270000
+Iteration 140000 distortion 0.6521 query 280000
+Iteration 145000 distortion 0.6521 query 290000
+Iteration 150000 distortion 0.6521 query 300000
+Iteration 155000 distortion 0.6521 query 310000
+Iteration 160000 distortion 0.6521 query 320000
+Iteration 165000 distortion 0.6481 query 330000
+Iteration 170000 distortion 0.6451 query 340000
+Iteration 175000 distortion 0.6451 query 350000
+Iteration 180000 distortion 0.6431 query 360000
+Iteration 185000 distortion 0.6401 query 370000
+Iteration 190000 distortion 0.6371 query 380000
+Iteration 195000 distortion 0.6371 query 390000
+Iteration 200000 distortion 0.6341 query 400000
+
+Adversarial Example Found Successfully: distortion 0.6341 target 3 queries 202509 
+Time: 469.6790 seconds
+Predicted label for adversarial example:  9
+
+
+
+
+======== Image 7753 =========
+Original label:  9
+Predicted label:  9
+Targeted attack: 0
+--------> Found g() 10.1026
+==========> Found best distortion 10.1026 in 0.1299 seconds using 1320 queries
+Iteration 5000 distortion 6.6506 query 10000
+Iteration 10000 distortion 4.0126 query 20000
+Iteration 15000 distortion 2.5556 query 30000
+Iteration 20000 distortion 1.9956 query 40000
+Iteration 25000 distortion 1.7286 query 50000
+Iteration 30000 distortion 1.6296 query 60000
+Iteration 35000 distortion 1.5896 query 70000
+Iteration 40000 distortion 1.5586 query 80000
+Iteration 45000 distortion 1.4986 query 90000
+Iteration 50000 distortion 1.4626 query 100000
+Iteration 55000 distortion 1.4386 query 110000
+Iteration 60000 distortion 1.4206 query 120000
+Iteration 65000 distortion 1.4006 query 130000
+Iteration 70000 distortion 1.3826 query 140000
+Iteration 75000 distortion 1.3666 query 150000
+Iteration 80000 distortion 1.3566 query 160000
+Iteration 85000 distortion 1.3506 query 170000
+Iteration 90000 distortion 1.3436 query 180000
+Iteration 95000 distortion 1.3416 query 190000
+Iteration 100000 distortion 1.3246 query 200000
+Iteration 105000 distortion 1.3136 query 210000
+Iteration 110000 distortion 1.3046 query 220000
+Iteration 115000 distortion 1.2966 query 230000
+Iteration 120000 distortion 1.2916 query 240000
+Iteration 125000 distortion 1.2856 query 250000
+Iteration 130000 distortion 1.2786 query 260000
+Iteration 135000 distortion 1.2766 query 270000
+Iteration 140000 distortion 1.2746 query 280000
+Iteration 145000 distortion 1.2746 query 290000
+Iteration 150000 distortion 1.2716 query 300000
+Iteration 155000 distortion 1.2676 query 310000
+Iteration 160000 distortion 1.2606 query 320000
+Iteration 165000 distortion 1.2556 query 330000
+Iteration 170000 distortion 1.2516 query 340000
+Iteration 175000 distortion 1.2506 query 350000
+Iteration 180000 distortion 1.2466 query 360000
+Iteration 185000 distortion 1.2446 query 370000
+Iteration 190000 distortion 1.2426 query 380000
+Iteration 195000 distortion 1.2406 query 390000
+Iteration 200000 distortion 1.2386 query 400000
+
+Adversarial Example Found Successfully: distortion 1.2386 target 3 queries 201320 
+Time: 470.8966 seconds
+Predicted label for adversarial example:  0
+
+
+
+
+======== Image 9872 =========
+Original label:  0
+Predicted label:  0
+Targeted attack: 2
+--------> Found g() 7.6361
+==========> Found best distortion 7.6361 in 0.1599 seconds using 2774 queries
+Iteration 5000 distortion 3.7571 query 10000
+Iteration 10000 distortion 1.8641 query 20000
+Iteration 15000 distortion 1.5261 query 30000
+Iteration 20000 distortion 1.4081 query 40000
+Iteration 25000 distortion 1.3431 query 50000
+Iteration 30000 distortion 1.3051 query 60000
+Iteration 35000 distortion 1.2811 query 70000
+Iteration 40000 distortion 1.2661 query 80000
+Iteration 45000 distortion 1.2541 query 90000
+Iteration 50000 distortion 1.2471 query 100000
+Iteration 55000 distortion 1.2431 query 110000
+Iteration 60000 distortion 1.2381 query 120000
+Iteration 65000 distortion 1.2361 query 130000
+Iteration 70000 distortion 1.2351 query 140000
+Iteration 75000 distortion 1.2291 query 150000
+Iteration 80000 distortion 1.2121 query 160000
+Iteration 85000 distortion 1.2041 query 170000
+Iteration 90000 distortion 1.2001 query 180000
+Iteration 95000 distortion 1.1981 query 190000
+Iteration 100000 distortion 1.1931 query 200000
+Iteration 105000 distortion 1.1881 query 210000
+Iteration 110000 distortion 1.1881 query 220000
+Iteration 115000 distortion 1.1821 query 230000
+Iteration 120000 distortion 1.1821 query 240000
+Iteration 125000 distortion 1.1821 query 250000
+Iteration 130000 distortion 1.1781 query 260000
+Iteration 135000 distortion 1.1681 query 270000
+Iteration 140000 distortion 1.1601 query 280000
+Iteration 145000 distortion 1.1581 query 290000
+Iteration 150000 distortion 1.1571 query 300000
+Iteration 155000 distortion 1.1571 query 310000
+Iteration 160000 distortion 1.1561 query 320000
+Iteration 165000 distortion 1.1531 query 330000
+Iteration 170000 distortion 1.1521 query 340000
+Iteration 175000 distortion 1.1521 query 350000
+Iteration 180000 distortion 1.1511 query 360000
+Iteration 185000 distortion 1.1511 query 370000
+Iteration 190000 distortion 1.1481 query 380000
+Iteration 195000 distortion 1.1431 query 390000
+Iteration 200000 distortion 1.1421 query 400000
+
+Adversarial Example Found Successfully: distortion 1.1421 target 3 queries 202774 
+Time: 469.4296 seconds
+Predicted label for adversarial example:  2
+
+
+
+
+======== Image 6510 =========
+Original label:  4
+Predicted label:  4
+Targeted attack: 3
+--------> Found g() 11.8932
+==========> Found best distortion 11.8932 in 0.1581 seconds using 2999 queries
+Iteration 5000 distortion 7.6762 query 10000
+Iteration 10000 distortion 4.3192 query 20000
+Iteration 15000 distortion 2.1942 query 30000
+Iteration 20000 distortion 1.5282 query 40000
+Iteration 25000 distortion 1.3532 query 50000
+Iteration 30000 distortion 1.3112 query 60000
+Iteration 35000 distortion 1.2622 query 70000
+Iteration 40000 distortion 1.2352 query 80000
+Iteration 45000 distortion 1.2082 query 90000
+Iteration 50000 distortion 1.1962 query 100000
+Iteration 55000 distortion 1.1892 query 110000
+Iteration 60000 distortion 1.1692 query 120000
+Iteration 65000 distortion 1.1622 query 130000
+Iteration 70000 distortion 1.1502 query 140000
+Iteration 75000 distortion 1.1312 query 150000
+Iteration 80000 distortion 1.1262 query 160000
+Iteration 85000 distortion 1.1222 query 170000
+Iteration 90000 distortion 1.1182 query 180000
+Iteration 95000 distortion 1.1112 query 190000
+Iteration 100000 distortion 1.1062 query 200000
+Iteration 105000 distortion 1.1032 query 210000
+Iteration 110000 distortion 1.0972 query 220000
+Iteration 115000 distortion 1.0912 query 230000
+Iteration 120000 distortion 1.0872 query 240000
+Iteration 125000 distortion 1.0802 query 250000
+Iteration 130000 distortion 1.0742 query 260000
+Iteration 135000 distortion 1.0722 query 270000
+Iteration 140000 distortion 1.0702 query 280000
+Iteration 145000 distortion 1.0702 query 290000
+Iteration 150000 distortion 1.0702 query 300000
+Iteration 155000 distortion 1.0702 query 310000
+Iteration 160000 distortion 1.0672 query 320000
+Iteration 165000 distortion 1.0652 query 330000
+Iteration 170000 distortion 1.0632 query 340000
+Iteration 175000 distortion 1.0572 query 350000
+Iteration 180000 distortion 1.0542 query 360000
+Iteration 185000 distortion 1.0542 query 370000
+Iteration 190000 distortion 1.0542 query 380000
+Iteration 195000 distortion 1.0542 query 390000
+Iteration 200000 distortion 1.0512 query 400000
+
+Adversarial Example Found Successfully: distortion 1.0512 target 3 queries 202999 
+Time: 469.2929 seconds
+Predicted label for adversarial example:  3
+
+
+
+
+======== Image 4362 =========
+Original label:  4
+Predicted label:  4
+Targeted attack: 6
+--------> Found g() 6.6191
+==========> Found best distortion 6.6191 in 0.1250 seconds using 1433 queries
+Iteration 5000 distortion 2.7431 query 10000
+Iteration 10000 distortion 1.6701 query 20000
+Iteration 15000 distortion 1.4541 query 30000
+Iteration 20000 distortion 1.3591 query 40000
+Iteration 25000 distortion 1.3081 query 50000
+Iteration 30000 distortion 1.2691 query 60000
+Iteration 35000 distortion 1.2551 query 70000
+Iteration 40000 distortion 1.2381 query 80000
+Iteration 45000 distortion 1.2141 query 90000
+Iteration 50000 distortion 1.1991 query 100000
+Iteration 55000 distortion 1.1881 query 110000
+Iteration 60000 distortion 1.1661 query 120000
+Iteration 65000 distortion 1.1651 query 130000
+Iteration 70000 distortion 1.1521 query 140000
+Iteration 75000 distortion 1.1441 query 150000
+Iteration 80000 distortion 1.1371 query 160000
+Iteration 85000 distortion 1.1331 query 170000
+Iteration 90000 distortion 1.1291 query 180000
+Iteration 95000 distortion 1.1271 query 190000
+Iteration 100000 distortion 1.1251 query 200000
+Iteration 105000 distortion 1.1241 query 210000
+Iteration 110000 distortion 1.1181 query 220000
+Iteration 115000 distortion 1.1131 query 230000
+Iteration 120000 distortion 1.1101 query 240000
+Iteration 125000 distortion 1.1061 query 250000
+Iteration 130000 distortion 1.1021 query 260000
+Iteration 135000 distortion 1.0991 query 270000
+Iteration 140000 distortion 1.0981 query 280000
+Iteration 145000 distortion 1.0981 query 290000
+Iteration 150000 distortion 1.0961 query 300000
+Iteration 155000 distortion 1.0961 query 310000
+Iteration 160000 distortion 1.0941 query 320000
+Iteration 165000 distortion 1.0901 query 330000
+Iteration 170000 distortion 1.0871 query 340000
+Iteration 175000 distortion 1.0871 query 350000
+Iteration 180000 distortion 1.0861 query 360000
+Iteration 185000 distortion 1.0851 query 370000
+Iteration 190000 distortion 1.0801 query 380000
+Iteration 195000 distortion 1.0751 query 390000
+Iteration 200000 distortion 1.0741 query 400000
+
+Adversarial Example Found Successfully: distortion 1.0741 target 3 queries 201433 
+Time: 468.7554 seconds
+Predicted label for adversarial example:  6
+
+
+
+
+======== Image 7804 =========
+Original label:  5
+Predicted label:  5
+Targeted attack: 2
+--------> Found g() 3.5966
+==========> Found best distortion 3.5966 in 0.1438 seconds using 2506 queries
+Iteration 5000 distortion 0.9406 query 10000
+Iteration 10000 distortion 0.8276 query 20000
+Iteration 15000 distortion 0.7966 query 30000
+Iteration 20000 distortion 0.7656 query 40000
+Iteration 25000 distortion 0.7546 query 50000
+Iteration 30000 distortion 0.7446 query 60000
+Iteration 35000 distortion 0.7296 query 70000
+Iteration 40000 distortion 0.7216 query 80000
+Iteration 45000 distortion 0.7156 query 90000
+Iteration 50000 distortion 0.7086 query 100000
+Iteration 55000 distortion 0.7046 query 110000
+Iteration 60000 distortion 0.6956 query 120000
+Iteration 65000 distortion 0.6906 query 130000
+Iteration 70000 distortion 0.6886 query 140000
+Iteration 75000 distortion 0.6866 query 150000
+Iteration 80000 distortion 0.6836 query 160000
+Iteration 85000 distortion 0.6806 query 170000
+Iteration 90000 distortion 0.6736 query 180000
+Iteration 95000 distortion 0.6706 query 190000
+Iteration 100000 distortion 0.6686 query 200000
+Iteration 105000 distortion 0.6676 query 210000
+Iteration 110000 distortion 0.6666 query 220000
+Iteration 115000 distortion 0.6656 query 230000
+Iteration 120000 distortion 0.6656 query 240000
+Iteration 125000 distortion 0.6636 query 250000
+Iteration 130000 distortion 0.6636 query 260000
+Iteration 135000 distortion 0.6636 query 270000
+Iteration 140000 distortion 0.6626 query 280000
+Iteration 145000 distortion 0.6626 query 290000
+Iteration 150000 distortion 0.6626 query 300000
+Iteration 155000 distortion 0.6626 query 310000
+Iteration 160000 distortion 0.6616 query 320000
+Iteration 165000 distortion 0.6616 query 330000
+Iteration 170000 distortion 0.6616 query 340000
+Iteration 175000 distortion 0.6616 query 350000
+Iteration 180000 distortion 0.6616 query 360000
+Iteration 185000 distortion 0.6616 query 370000
+Iteration 190000 distortion 0.6616 query 380000
+Iteration 195000 distortion 0.6616 query 390000
+Iteration 200000 distortion 0.6606 query 400000
+
+Adversarial Example Found Successfully: distortion 0.6606 target 3 queries 202506 
+Time: 469.1281 seconds
+Predicted label for adversarial example:  2
+
+
+
+
+======== Image 3432 =========
+Original label:  5
+Predicted label:  5
+Targeted attack: 0
+--------> Found g() 6.7344
+==========> Found best distortion 6.7344 in 0.1245 seconds using 1292 queries
+Iteration 5000 distortion 4.9025 query 10000
+Iteration 10000 distortion 3.6935 query 20000
+Iteration 15000 distortion 2.8604 query 30000
+Iteration 20000 distortion 2.4374 query 40000
+Iteration 25000 distortion 2.2834 query 50000
+Iteration 30000 distortion 2.1484 query 60000
+Iteration 35000 distortion 2.0284 query 70000
+Iteration 40000 distortion 1.9274 query 80000
+Iteration 45000 distortion 1.8674 query 90000
+Iteration 50000 distortion 1.8174 query 100000
+Iteration 55000 distortion 1.7824 query 110000
+Iteration 60000 distortion 1.7644 query 120000
+Iteration 65000 distortion 1.7484 query 130000
+Iteration 70000 distortion 1.7314 query 140000
+Iteration 75000 distortion 1.7104 query 150000
+Iteration 80000 distortion 1.6844 query 160000
+Iteration 85000 distortion 1.6774 query 170000
+Iteration 90000 distortion 1.6684 query 180000
+Iteration 95000 distortion 1.6564 query 190000
+Iteration 100000 distortion 1.6504 query 200000
+Iteration 105000 distortion 1.6444 query 210000
+Iteration 110000 distortion 1.6304 query 220000
+Iteration 115000 distortion 1.6274 query 230000
+Iteration 120000 distortion 1.6194 query 240000
+Iteration 125000 distortion 1.6134 query 250000
+Iteration 130000 distortion 1.6124 query 260000
+Iteration 135000 distortion 1.6094 query 270000
+Iteration 140000 distortion 1.6004 query 280000
+Iteration 145000 distortion 1.5904 query 290000
+Iteration 150000 distortion 1.5744 query 300000
+Iteration 155000 distortion 1.5744 query 310000
+Iteration 160000 distortion 1.5704 query 320000
+Iteration 165000 distortion 1.5534 query 330000
+Iteration 170000 distortion 1.5504 query 340000
+Iteration 175000 distortion 1.5474 query 350000
+Iteration 180000 distortion 1.5444 query 360000
+Iteration 185000 distortion 1.5364 query 370000
+Iteration 190000 distortion 1.5324 query 380000
+Iteration 195000 distortion 1.5324 query 390000
+Iteration 200000 distortion 1.5314 query 400000
+
+Adversarial Example Found Successfully: distortion 1.5314 target 3 queries 201292 
+Time: 469.9179 seconds
+Predicted label for adversarial example:  0
+
+
+
+
+======== Image 2692 =========
+Original label:  8
+Predicted label:  8
+Targeted attack: 2
+--------> Found g() 8.7841
+==========> Found best distortion 8.7841 in 0.1569 seconds using 2795 queries
+Iteration 5000 distortion 4.7511 query 10000
+Iteration 10000 distortion 1.9131 query 20000
+Iteration 15000 distortion 1.4021 query 30000
+Iteration 20000 distortion 1.2861 query 40000
+Iteration 25000 distortion 1.2331 query 50000
+Iteration 30000 distortion 1.1971 query 60000
+Iteration 35000 distortion 1.1751 query 70000
+Iteration 40000 distortion 1.1521 query 80000
+Iteration 45000 distortion 1.1321 query 90000
+Iteration 50000 distortion 1.1151 query 100000
+Iteration 55000 distortion 1.1081 query 110000
+Iteration 60000 distortion 1.1011 query 120000
+Iteration 65000 distortion 1.0891 query 130000
+Iteration 70000 distortion 1.0851 query 140000
+Iteration 75000 distortion 1.0801 query 150000
+Iteration 80000 distortion 1.0701 query 160000
+Iteration 85000 distortion 1.0681 query 170000
+Iteration 90000 distortion 1.0671 query 180000
+Iteration 95000 distortion 1.0631 query 190000
+Iteration 100000 distortion 1.0631 query 200000
+Iteration 105000 distortion 1.0611 query 210000
+Iteration 110000 distortion 1.0581 query 220000
+Iteration 115000 distortion 1.0551 query 230000
+Iteration 120000 distortion 1.0551 query 240000
+Iteration 125000 distortion 1.0541 query 250000
+Iteration 130000 distortion 1.0521 query 260000
+Iteration 135000 distortion 1.0511 query 270000
+Iteration 140000 distortion 1.0501 query 280000
+Iteration 145000 distortion 1.0461 query 290000
+Iteration 150000 distortion 1.0461 query 300000
+Iteration 155000 distortion 1.0431 query 310000
+Iteration 160000 distortion 1.0391 query 320000
+Iteration 165000 distortion 1.0331 query 330000
+Iteration 170000 distortion 1.0311 query 340000
+Iteration 175000 distortion 1.0311 query 350000
+Iteration 180000 distortion 1.0311 query 360000
+Iteration 185000 distortion 1.0311 query 370000
+Iteration 190000 distortion 1.0291 query 380000
+Iteration 195000 distortion 1.0281 query 390000
+Iteration 200000 distortion 1.0281 query 400000
+
+Adversarial Example Found Successfully: distortion 1.0281 target 3 queries 202795 
+Time: 410.4117 seconds
+Predicted label for adversarial example:  2
+
+
+
+
+======== Image 5708 =========
+Original label:  2
+Predicted label:  7
+Targeted attack: 9
+Fail to classify the image. No need to attack.
+Predicted label for adversarial example:  7
+
+
+
+
+======== Image 4207 =========
+Original label:  1
+Predicted label:  1
+Targeted attack: 2
+--------> Found g() 10.4495
+==========> Found best distortion 10.4495 in 0.1436 seconds using 2842 queries
+Iteration 5000 distortion 6.9715 query 10000
+Iteration 10000 distortion 4.3465 query 20000
+Iteration 15000 distortion 2.9855 query 30000
+Iteration 20000 distortion 2.5565 query 40000
+Iteration 25000 distortion 2.3575 query 50000
+Iteration 30000 distortion 2.2625 query 60000
+Iteration 35000 distortion 2.1655 query 70000
+Iteration 40000 distortion 2.0995 query 80000
+Iteration 45000 distortion 2.0625 query 90000
+Iteration 50000 distortion 2.0225 query 100000
+Iteration 55000 distortion 2.0005 query 110000
+Iteration 60000 distortion 1.9755 query 120000
+Iteration 65000 distortion 1.9665 query 130000
+Iteration 70000 distortion 1.9545 query 140000
+Iteration 75000 distortion 1.9445 query 150000
+Iteration 80000 distortion 1.9275 query 160000
+Iteration 85000 distortion 1.9175 query 170000
+Iteration 90000 distortion 1.9085 query 180000
+Iteration 95000 distortion 1.9025 query 190000
+Iteration 100000 distortion 1.8955 query 200000
+Iteration 105000 distortion 1.8805 query 210000
+Iteration 110000 distortion 1.8735 query 220000
+Iteration 115000 distortion 1.8625 query 230000
+Iteration 120000 distortion 1.8565 query 240000
+Iteration 125000 distortion 1.8515 query 250000
+Iteration 130000 distortion 1.8445 query 260000
+Iteration 135000 distortion 1.8435 query 270000
+Iteration 140000 distortion 1.8325 query 280000
+Iteration 145000 distortion 1.8275 query 290000
+Iteration 150000 distortion 1.8175 query 300000
+Iteration 155000 distortion 1.8135 query 310000
+Iteration 160000 distortion 1.8085 query 320000
+Iteration 165000 distortion 1.8085 query 330000
+Iteration 170000 distortion 1.8045 query 340000
+Iteration 175000 distortion 1.8025 query 350000
+Iteration 180000 distortion 1.8005 query 360000
+Iteration 185000 distortion 1.7965 query 370000
+Iteration 190000 distortion 1.7915 query 380000
+Iteration 195000 distortion 1.7835 query 390000
+Iteration 200000 distortion 1.7765 query 400000
+
+Adversarial Example Found Successfully: distortion 1.7765 target 3 queries 202842 
+Time: 409.5091 seconds
+Predicted label for adversarial example:  2
+
+
+
+
+======== Image 9877 =========
+Original label:  6
+Predicted label:  1
+Targeted attack: 8
+Fail to classify the image. No need to attack.
+Predicted label for adversarial example:  1
+
+
+
+
+======== Image 2964 =========
+Original label:  0
+Predicted label:  0
+Targeted attack: 1
+--------> Found g() 6.9600
+==========> Found best distortion 6.9600 in 0.1604 seconds using 3445 queries
+Iteration 5000 distortion 4.1760 query 10000
+Iteration 10000 distortion 2.8160 query 20000
+Iteration 15000 distortion 2.3100 query 30000
+Iteration 20000 distortion 2.0420 query 40000
+Iteration 25000 distortion 1.9530 query 50000
+Iteration 30000 distortion 1.8340 query 60000
+Iteration 35000 distortion 1.7700 query 70000
+Iteration 40000 distortion 1.7390 query 80000
+Iteration 45000 distortion 1.7010 query 90000
+Iteration 50000 distortion 1.6690 query 100000
+Iteration 55000 distortion 1.6410 query 110000
+Iteration 60000 distortion 1.6250 query 120000
+Iteration 65000 distortion 1.6070 query 130000
+Iteration 70000 distortion 1.6030 query 140000
+Iteration 75000 distortion 1.5970 query 150000
+Iteration 80000 distortion 1.5880 query 160000
+Iteration 85000 distortion 1.5660 query 170000
+Iteration 90000 distortion 1.5520 query 180000
+Iteration 95000 distortion 1.5460 query 190000
+Iteration 100000 distortion 1.5460 query 200000
+Iteration 105000 distortion 1.5450 query 210000
+Iteration 110000 distortion 1.5440 query 220000
+Iteration 115000 distortion 1.5230 query 230000
+Iteration 120000 distortion 1.5140 query 240000
+Iteration 125000 distortion 1.5040 query 250000
+Iteration 130000 distortion 1.5000 query 260000
+Iteration 135000 distortion 1.4990 query 270000
+Iteration 140000 distortion 1.4990 query 280000
+Iteration 145000 distortion 1.4930 query 290000
+Iteration 150000 distortion 1.4920 query 300000
+Iteration 155000 distortion 1.4890 query 310000
+Iteration 160000 distortion 1.4820 query 320000
+Iteration 165000 distortion 1.4700 query 330000
+Iteration 170000 distortion 1.4650 query 340000
+Iteration 175000 distortion 1.4580 query 350000
+Iteration 180000 distortion 1.4510 query 360000
+Iteration 185000 distortion 1.4450 query 370000
+Iteration 190000 distortion 1.4450 query 380000
+Iteration 195000 distortion 1.4410 query 390000
+Iteration 200000 distortion 1.4380 query 400000
+
+Adversarial Example Found Successfully: distortion 1.4380 target 3 queries 203445 
+Time: 417.1585 seconds
+Predicted label for adversarial example:  1
+
+
+
+
+======== Image 7827 =========
+Original label:  3
+Predicted label:  5
+Targeted attack: 7
+Fail to classify the image. No need to attack.
+Predicted label for adversarial example:  5
+
+
+
+
+======== Image 9424 =========
+Original label:  2
+Predicted label:  2
+Targeted attack: 9
+--------> Found g() 7.1651
+==========> Found best distortion 7.1651 in 0.1389 seconds using 2628 queries
+Iteration 5000 distortion 4.4321 query 10000
+Iteration 10000 distortion 3.0691 query 20000
+Iteration 15000 distortion 2.4891 query 30000
+Iteration 20000 distortion 2.2141 query 40000
+Iteration 25000 distortion 2.0491 query 50000
+Iteration 30000 distortion 1.9531 query 60000
+Iteration 35000 distortion 1.9231 query 70000
+Iteration 40000 distortion 1.8801 query 80000
+Iteration 45000 distortion 1.8521 query 90000
+Iteration 50000 distortion 1.8411 query 100000
+Iteration 55000 distortion 1.8141 query 110000
+Iteration 60000 distortion 1.7831 query 120000
+Iteration 65000 distortion 1.7651 query 130000
+Iteration 70000 distortion 1.7421 query 140000
+Iteration 75000 distortion 1.7421 query 150000
+Iteration 80000 distortion 1.7371 query 160000
+Iteration 85000 distortion 1.7321 query 170000
+Iteration 90000 distortion 1.7131 query 180000
+Iteration 95000 distortion 1.6931 query 190000
+Iteration 100000 distortion 1.6781 query 200000
+Iteration 105000 distortion 1.6741 query 210000
+Iteration 110000 distortion 1.6601 query 220000
+Iteration 115000 distortion 1.6401 query 230000
+Iteration 120000 distortion 1.6321 query 240000
+Iteration 125000 distortion 1.6221 query 250000
+Iteration 130000 distortion 1.6211 query 260000
+Iteration 135000 distortion 1.6021 query 270000
+Iteration 140000 distortion 1.5921 query 280000
+Iteration 145000 distortion 1.5811 query 290000
+Iteration 150000 distortion 1.5801 query 300000
+Iteration 155000 distortion 1.5671 query 310000
+Iteration 160000 distortion 1.5601 query 320000
+Iteration 165000 distortion 1.5561 query 330000
+Iteration 170000 distortion 1.5521 query 340000
+Iteration 175000 distortion 1.5521 query 350000
+Iteration 180000 distortion 1.5501 query 360000
+Iteration 185000 distortion 1.5481 query 370000
+Iteration 190000 distortion 1.5441 query 380000
+Iteration 195000 distortion 1.5401 query 390000
+Iteration 200000 distortion 1.5381 query 400000
+
+Adversarial Example Found Successfully: distortion 1.5381 target 3 queries 202628 
+Time: 407.2019 seconds
+Predicted label for adversarial example:  9
+
+
+
+
+======== Image 5202 =========
+Original label:  9
+Predicted label:  9
+Targeted attack: 5
+--------> Found g() 8.9601
+==========> Found best distortion 8.9601 in 0.1200 seconds using 1525 queries
+Iteration 5000 distortion 6.0560 query 10000
+Iteration 10000 distortion 3.7670 query 20000
+Iteration 15000 distortion 2.5490 query 30000
+Iteration 20000 distortion 2.0950 query 40000
+Iteration 25000 distortion 1.9690 query 50000
+Iteration 30000 distortion 1.8580 query 60000
+Iteration 35000 distortion 1.7660 query 70000
+Iteration 40000 distortion 1.7070 query 80000
+Iteration 45000 distortion 1.6610 query 90000
+Iteration 50000 distortion 1.6420 query 100000
+Iteration 55000 distortion 1.6080 query 110000
+Iteration 60000 distortion 1.5930 query 120000
+Iteration 65000 distortion 1.5600 query 130000
+Iteration 70000 distortion 1.5530 query 140000
+Iteration 75000 distortion 1.5450 query 150000
+Iteration 80000 distortion 1.5320 query 160000
+Iteration 85000 distortion 1.5240 query 170000
+Iteration 90000 distortion 1.5200 query 180000
+Iteration 95000 distortion 1.5010 query 190000
+Iteration 100000 distortion 1.4950 query 200000
+Iteration 105000 distortion 1.4950 query 210000
+Iteration 110000 distortion 1.4950 query 220000
+Iteration 115000 distortion 1.4870 query 230000
+Iteration 120000 distortion 1.4850 query 240000
+Iteration 125000 distortion 1.4790 query 250000
+Iteration 130000 distortion 1.4760 query 260000
+Iteration 135000 distortion 1.4700 query 270000
+Iteration 140000 distortion 1.4610 query 280000
+Iteration 145000 distortion 1.4550 query 290000
+Iteration 150000 distortion 1.4470 query 300000
+Iteration 155000 distortion 1.4400 query 310000
+Iteration 160000 distortion 1.4370 query 320000
+Iteration 165000 distortion 1.4330 query 330000
+Iteration 170000 distortion 1.4320 query 340000
+Iteration 175000 distortion 1.4320 query 350000
+Iteration 180000 distortion 1.4260 query 360000
+Iteration 185000 distortion 1.4220 query 370000
+Iteration 190000 distortion 1.4220 query 380000
+Iteration 195000 distortion 1.4180 query 390000
+Iteration 200000 distortion 1.4180 query 400000
+
+Adversarial Example Found Successfully: distortion 1.4180 target 3 queries 201525 
+Time: 425.7683 seconds
+Predicted label for adversarial example:  5
+
+
+
+
+======== Image 6467 =========
+Original label:  3
+Predicted label:  3
+Targeted attack: 5
+--------> Found g() 7.2753
+==========> Found best distortion 7.2753 in 0.1313 seconds using 1500 queries
+Iteration 5000 distortion 3.8683 query 10000
+Iteration 10000 distortion 1.5963 query 20000
+Iteration 15000 distortion 1.0543 query 30000
+Iteration 20000 distortion 0.9343 query 40000
+Iteration 25000 distortion 0.8753 query 50000
+Iteration 30000 distortion 0.8493 query 60000
+Iteration 35000 distortion 0.8223 query 70000
+Iteration 40000 distortion 0.8003 query 80000
+Iteration 45000 distortion 0.7873 query 90000
+Iteration 50000 distortion 0.7783 query 100000
+Iteration 55000 distortion 0.7733 query 110000
+Iteration 60000 distortion 0.7673 query 120000
+Iteration 65000 distortion 0.7613 query 130000
+Iteration 70000 distortion 0.7603 query 140000
+Iteration 75000 distortion 0.7553 query 150000
+Iteration 80000 distortion 0.7523 query 160000
+Iteration 85000 distortion 0.7483 query 170000
+Iteration 90000 distortion 0.7443 query 180000
+Iteration 95000 distortion 0.7393 query 190000
+Iteration 100000 distortion 0.7333 query 200000
+Iteration 105000 distortion 0.7333 query 210000
+Iteration 110000 distortion 0.7313 query 220000
+Iteration 115000 distortion 0.7273 query 230000
+Iteration 120000 distortion 0.7263 query 240000
+Iteration 125000 distortion 0.7223 query 250000
+Iteration 130000 distortion 0.7193 query 260000
+Iteration 135000 distortion 0.7153 query 270000
+Iteration 140000 distortion 0.7083 query 280000
+Iteration 145000 distortion 0.7043 query 290000
+Iteration 150000 distortion 0.7033 query 300000
+Iteration 155000 distortion 0.7033 query 310000
+Iteration 160000 distortion 0.7033 query 320000
+Iteration 165000 distortion 0.7033 query 330000
+Iteration 170000 distortion 0.7023 query 340000
+Iteration 175000 distortion 0.7013 query 350000
+Iteration 180000 distortion 0.7013 query 360000
+Iteration 185000 distortion 0.7013 query 370000
+Iteration 190000 distortion 0.7013 query 380000
+Iteration 195000 distortion 0.7013 query 390000
+Iteration 200000 distortion 0.7003 query 400000
+
+Adversarial Example Found Successfully: distortion 0.7003 target 3 queries 201500 
+Time: 457.9881 seconds
+Predicted label for adversarial example:  5
+
+
+
+
+======== Image 2613 =========
+Original label:  6
+Predicted label:  4
+Targeted attack: 9
+Fail to classify the image. No need to attack.
+Predicted label for adversarial example:  4
+
+
+
+
+======== Image 303 =========
+Original label:  2
+Predicted label:  2
+Targeted attack: 8
+--------> Found g() 5.7229
+==========> Found best distortion 5.7229 in 0.1089 seconds using 810 queries
+Iteration 5000 distortion 2.2979 query 10000
+Iteration 10000 distortion 1.2719 query 20000
+Iteration 15000 distortion 1.0449 query 30000
+Iteration 20000 distortion 0.9759 query 40000
+Iteration 25000 distortion 0.9349 query 50000
+Iteration 30000 distortion 0.9019 query 60000
+Iteration 35000 distortion 0.8909 query 70000
+Iteration 40000 distortion 0.8859 query 80000
+Iteration 45000 distortion 0.8779 query 90000
+Iteration 50000 distortion 0.8749 query 100000
+Iteration 55000 distortion 0.8659 query 110000
+Iteration 60000 distortion 0.8619 query 120000
+Iteration 65000 distortion 0.8569 query 130000
+Iteration 70000 distortion 0.8499 query 140000
+Iteration 75000 distortion 0.8409 query 150000
+Iteration 80000 distortion 0.8409 query 160000
+Iteration 85000 distortion 0.8389 query 170000
+Iteration 90000 distortion 0.8369 query 180000
+Iteration 95000 distortion 0.8239 query 190000
+Iteration 100000 distortion 0.8199 query 200000
+Iteration 105000 distortion 0.8179 query 210000
+Iteration 110000 distortion 0.8169 query 220000
+Iteration 115000 distortion 0.8159 query 230000
+Iteration 120000 distortion 0.8139 query 240000
+Iteration 125000 distortion 0.8139 query 250000
+Iteration 130000 distortion 0.8119 query 260000
+Iteration 135000 distortion 0.8109 query 270000
+Iteration 140000 distortion 0.8109 query 280000
+Iteration 145000 distortion 0.8099 query 290000
+Iteration 150000 distortion 0.8079 query 300000
+Iteration 155000 distortion 0.8069 query 310000
+Iteration 160000 distortion 0.8059 query 320000
+Iteration 165000 distortion 0.8029 query 330000
+Iteration 170000 distortion 0.7989 query 340000
+Iteration 175000 distortion 0.7959 query 350000
+Iteration 180000 distortion 0.7919 query 360000
+Iteration 185000 distortion 0.7859 query 370000
+Iteration 190000 distortion 0.7839 query 380000
+Iteration 195000 distortion 0.7829 query 390000
+Iteration 200000 distortion 0.7829 query 400000
+
+Adversarial Example Found Successfully: distortion 0.7829 target 3 queries 200810 
+Time: 445.4613 seconds
+Predicted label for adversarial example:  8
+
+
+
+
+======== Image 1395 =========
+Original label:  3
+Predicted label:  6
+Targeted attack: 6
+Fail to classify the image. No need to attack.
+Predicted label for adversarial example:  6
+
+
+
+
+======== Image 848 =========
+Original label:  2
+Predicted label:  2
+Targeted attack: 9
+--------> Found g() 4.9023
+==========> Found best distortion 4.9023 in 0.1287 seconds using 2377 queries
+Iteration 5000 distortion 2.8273 query 10000
+Iteration 10000 distortion 2.0973 query 20000
+Iteration 15000 distortion 1.7843 query 30000
+Iteration 20000 distortion 1.6433 query 40000
+Iteration 25000 distortion 1.5613 query 50000
+Iteration 30000 distortion 1.4823 query 60000
+Iteration 35000 distortion 1.4293 query 70000
+Iteration 40000 distortion 1.3833 query 80000
+Iteration 45000 distortion 1.3593 query 90000
+Iteration 50000 distortion 1.3403 query 100000
+Iteration 55000 distortion 1.3293 query 110000
+Iteration 60000 distortion 1.3203 query 120000
+Iteration 65000 distortion 1.3033 query 130000
+Iteration 70000 distortion 1.2973 query 140000
+Iteration 75000 distortion 1.2803 query 150000
+Iteration 80000 distortion 1.2613 query 160000
+Iteration 85000 distortion 1.2533 query 170000
+Iteration 90000 distortion 1.2483 query 180000
+Iteration 95000 distortion 1.2473 query 190000
+Iteration 100000 distortion 1.2373 query 200000
+Iteration 105000 distortion 1.2253 query 210000
+Iteration 110000 distortion 1.2253 query 220000
+Iteration 115000 distortion 1.2223 query 230000
+Iteration 120000 distortion 1.2173 query 240000
+Iteration 125000 distortion 1.2153 query 250000
+Iteration 130000 distortion 1.2143 query 260000
+Iteration 135000 distortion 1.2123 query 270000
+Iteration 140000 distortion 1.2043 query 280000
+Iteration 145000 distortion 1.1943 query 290000
+Iteration 150000 distortion 1.1933 query 300000
+Iteration 155000 distortion 1.1913 query 310000
+Iteration 160000 distortion 1.1913 query 320000
+Iteration 165000 distortion 1.1883 query 330000
+Iteration 170000 distortion 1.1853 query 340000
+Iteration 175000 distortion 1.1763 query 350000
+Iteration 180000 distortion 1.1693 query 360000
+Iteration 185000 distortion 1.1663 query 370000
+Iteration 190000 distortion 1.1653 query 380000
+Iteration 195000 distortion 1.1653 query 390000
+Iteration 200000 distortion 1.1653 query 400000
+
+Adversarial Example Found Successfully: distortion 1.1653 target 3 queries 202377 
+Time: 460.8502 seconds
+Predicted label for adversarial example:  9
+
+
+
+
+======== Image 4701 =========
+Original label:  0
+Predicted label:  0
+Targeted attack: 3
+--------> Found g() 12.3812
+==========> Found best distortion 12.3812 in 0.1495 seconds using 3000 queries
+Iteration 5000 distortion 8.2992 query 10000
+Iteration 10000 distortion 5.0332 query 20000
+Iteration 15000 distortion 2.9012 query 30000
+Iteration 20000 distortion 2.1552 query 40000
+Iteration 25000 distortion 1.8882 query 50000
+Iteration 30000 distortion 1.7242 query 60000
+Iteration 35000 distortion 1.6592 query 70000
+Iteration 40000 distortion 1.6212 query 80000
+Iteration 45000 distortion 1.5812 query 90000
+Iteration 50000 distortion 1.5292 query 100000
+Iteration 55000 distortion 1.5162 query 110000
+Iteration 60000 distortion 1.5092 query 120000
+Iteration 65000 distortion 1.5072 query 130000
+Iteration 70000 distortion 1.5042 query 140000
+Iteration 75000 distortion 1.4832 query 150000
+Iteration 80000 distortion 1.4722 query 160000
+Iteration 85000 distortion 1.4612 query 170000
+Iteration 90000 distortion 1.4512 query 180000
+Iteration 95000 distortion 1.4422 query 190000
+Iteration 100000 distortion 1.4392 query 200000
+Iteration 105000 distortion 1.4362 query 210000
+Iteration 110000 distortion 1.4352 query 220000
+Iteration 115000 distortion 1.4222 query 230000
+Iteration 120000 distortion 1.4222 query 240000
+Iteration 125000 distortion 1.4202 query 250000
+Iteration 130000 distortion 1.4202 query 260000
+Iteration 135000 distortion 1.4192 query 270000
+Iteration 140000 distortion 1.4142 query 280000
+Iteration 145000 distortion 1.4032 query 290000
+Iteration 150000 distortion 1.3962 query 300000
+Iteration 155000 distortion 1.3812 query 310000
+Iteration 160000 distortion 1.3772 query 320000
+Iteration 165000 distortion 1.3762 query 330000
+Iteration 170000 distortion 1.3752 query 340000
+Iteration 175000 distortion 1.3752 query 350000
+Iteration 180000 distortion 1.3662 query 360000
+Iteration 185000 distortion 1.3632 query 370000
+Iteration 190000 distortion 1.3552 query 380000
+Iteration 195000 distortion 1.3532 query 390000
+Iteration 200000 distortion 1.3532 query 400000
+
+Adversarial Example Found Successfully: distortion 1.3532 target 3 queries 203000 
+Time: 457.5433 seconds
+Predicted label for adversarial example:  3
+
+
+
+
+======== Image 4034 =========
+Original label:  2
+Predicted label:  2
+Targeted attack: 8
+--------> Found g() 5.1744
+==========> Found best distortion 5.1744 in 0.1043 seconds using 797 queries
+Iteration 5000 distortion 3.0174 query 10000
+Iteration 10000 distortion 2.1574 query 20000
+Iteration 15000 distortion 1.8364 query 30000
+Iteration 20000 distortion 1.6934 query 40000
+Iteration 25000 distortion 1.6244 query 50000
+Iteration 30000 distortion 1.5804 query 60000
+Iteration 35000 distortion 1.5414 query 70000
+Iteration 40000 distortion 1.5054 query 80000
+Iteration 45000 distortion 1.4774 query 90000
+Iteration 50000 distortion 1.4554 query 100000
+Iteration 55000 distortion 1.4414 query 110000
+Iteration 60000 distortion 1.4324 query 120000
+Iteration 65000 distortion 1.4174 query 130000
+Iteration 70000 distortion 1.4094 query 140000
+Iteration 75000 distortion 1.4024 query 150000
+Iteration 80000 distortion 1.3904 query 160000
+Iteration 85000 distortion 1.3854 query 170000
+Iteration 90000 distortion 1.3834 query 180000
+Iteration 95000 distortion 1.3784 query 190000
+Iteration 100000 distortion 1.3774 query 200000
+Iteration 105000 distortion 1.3734 query 210000
+Iteration 110000 distortion 1.3644 query 220000
+Iteration 115000 distortion 1.3604 query 230000
+Iteration 120000 distortion 1.3584 query 240000
+Iteration 125000 distortion 1.3574 query 250000
+Iteration 130000 distortion 1.3504 query 260000
+Iteration 135000 distortion 1.3484 query 270000
+Iteration 140000 distortion 1.3464 query 280000
+Iteration 145000 distortion 1.3404 query 290000
+Iteration 150000 distortion 1.3394 query 300000
+Iteration 155000 distortion 1.3384 query 310000
+Iteration 160000 distortion 1.3354 query 320000
+Iteration 165000 distortion 1.3294 query 330000
+Iteration 170000 distortion 1.3284 query 340000
+Iteration 175000 distortion 1.3274 query 350000
+Iteration 180000 distortion 1.3264 query 360000
+Iteration 185000 distortion 1.3264 query 370000
+Iteration 190000 distortion 1.3264 query 380000
+Iteration 195000 distortion 1.3264 query 390000
+Iteration 200000 distortion 1.3264 query 400000
+
+Adversarial Example Found Successfully: distortion 1.3264 target 3 queries 200797 
+Time: 452.6866 seconds
+Predicted label for adversarial example:  8
+Average distortion on random 100 images is 0.8458248836752955
+
+
+Total running time: 72677.4613 seconds
+

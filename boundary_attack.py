@@ -137,7 +137,6 @@ def initial_fine_grained_binary_search_targeted(model, x0, target, theta, initia
     candidate = (predicted != target).nonzero().view(-1)
     while len(candidate.size())>0:
         lbd[candidate] = lbd[candidate].mul(1.05)
-        nquery += candidate.size()[0]
         limit.resize_(candidate.size())
         if torch.max(lbd) > 100: 
             break
@@ -325,7 +324,6 @@ def initial_fine_grained_binary_search(model, x0, y0, theta, initial_lbd = 1.0):
     candidate = (predicted == y0).nonzero().view(-1)
     while len(candidate.size())>0:
         lbd[candidate] = lbd[candidate].mul(1.05)
-        nquery += candidate.size()[0]
         limit.resize_(candidate.size())
         if torch.max(lbd) > 100: 
             break

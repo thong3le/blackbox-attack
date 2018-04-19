@@ -10,7 +10,14 @@ import torch.nn.functional as F
 from models import MNIST, CIFAR10, IMAGENET, SimpleMNIST, load_mnist_data, load_cifar10_data, imagenettest, load_model, show_image
 
 alpha = 0.2
-beta = 0.001
+beta = 0.01
+def count_neg_ratio(num_array):
+    #print(num_array)
+    count =0
+    for i in num_array:
+        if i<0:
+            count+=1
+    return count/len(num_array)
 
 def attack_targeted(model, train_loader, x0, y0, target, alpha = 0.1, beta = 0.001, iterations = 1000, batch_size = 10):
     """ Attack the original image and return adversarial example of target t
@@ -19,7 +26,8 @@ def attack_targeted(model, train_loader, x0, y0, target, alpha = 0.1, beta = 0.0
         (x0, y0): original image
         t: target
     """
-    o_alpha = alpha
+    array_beta = []
+    o_alpha = 0.1
     if (model.predict(x0) != y0):
         print("Fail to classify the image. No need to attack.")
         return x0
@@ -89,26 +97,45 @@ def attack_targeted(model, train_loader, x0, y0, target, alpha = 0.1, beta = 0.0
     print(model.predict(x0+theta*g2))
     opt_count = 0
     torch.manual_seed(0)
+    inner_size = 1
     for i in range(iterations):
         #alpha = 1e-3
         #beta = 1e-3
-        u = torch.randn(theta.size())
-        u = u/torch.norm(u)
-        g2, count = fine_grained_binary_search_local_targeted(model, x0, target, theta, initial_lbd = g2)
-        opt_count += count
-        ttt = theta+beta * u
-        ttt = ttt/torch.norm(ttt)
-        ttt = ttt.type(torch.FloatTensor)
-        g1, count = fine_grained_binary_search_local_targeted(model, x0, target, ttt, initial_lbd = g2)
-        opt_count += count
-        temp_output = model.predict(x0+g2*theta)
+        #if i+1==1000:
+        #    inner_size = 1
+        #    alpha = alpha*2
+        avg_gradient = torch.zeros(theta.size())
+        for j in range(inner_size):
+            if (i+1)%100==0:
+                beta_ratio = count_neg_ratio(array_beta)
+                #print(beta_ratio)
+                if beta_ratio<0.25:
+                    beta *= 0.8
+                elif beta_ratio>0.4:
+                    beta *= 1.2
+                array_beta = []
+            u = torch.randn(theta.size())
+            u = u/torch.norm(u)
+            g2, count = fine_grained_binary_search_local_targeted(model, x0, target, theta, initial_lbd = g2)
+            opt_count += count
+            ttt = theta+beta * u
+            ttt = ttt/torch.norm(ttt)
+            ttt = ttt.type(torch.FloatTensor)
+            g1, count = fine_grained_binary_search_local_targeted(model, x0, target, ttt, initial_lbd = g2)
+            opt_count += count
+            temp_output = model.predict(x0+g2*theta)
+            #if (j+1)%1 == 0:
+            #    print("Iteration %3d: g(theta + beta*u) = %.4f g(theta) = %.4f distortion %.4f num_queries %d alpha %.5f beta %.5f output %d" % (i+1, g1, g2, g2, opt_count, alpha, beta, temp_output))
+            #if (i+1)%500 ==0:
+            #    alpha = alpha*1.2 
+
+            array_beta.append(g1-g2)
+            gradient = (g1-g2)/torch.norm(ttt-theta) * u
+            avg_gradient += gradient
         if (i+1)%100 == 0:
             print("Iteration %3d: g(theta + beta*u) = %.4f g(theta) = %.4f distortion %.4f num_queries %d alpha %.5f beta %.5f output %d" % (i+1, g1, g2, g2, opt_count, alpha, beta, temp_output))
-        #if (i+1)%500 ==0:
-        #    alpha = alpha*2 
-
-        gradient = (g1-g2)/torch.norm(ttt-theta) * u
-        temp_theta = theta - alpha*gradient
+        avg_gradient /= inner_size 
+        temp_theta = theta - alpha*avg_gradient
         temp_theta /= torch.norm(temp_theta)
         g3, count = fine_grained_binary_search_local_targeted(model, x0, target, temp_theta, initial_lbd = g2)
         if g3 > g1:
@@ -117,9 +144,9 @@ def attack_targeted(model, train_loader, x0, y0, target, alpha = 0.1, beta = 0.0
             #print(fine_grained_binary_search_targeted(model, x0, target, ttt, initial_lbd = g2))
         else:
             if g3>g2:
-                theta.sub_(o_alpha*gradient)
+                theta.sub_(o_alpha*avg_gradient)
             else:
-                theta.sub_(alpha*gradient)
+                theta.sub_(alpha*avg_gradient)
             theta /= torch.norm(theta)
 
     g2, count = fine_grained_binary_search_local_targeted(model, x0, target, theta, initial_lbd = g2)
@@ -171,7 +198,6 @@ def initial_fine_grained_binary_search_targeted(model, x0, target, theta, initia
     candidate = (predicted != target).nonzero().view(-1)
     while len(candidate.size())>0:
         lbd[candidate] = lbd[candidate].mul(1.05)
-        nquery += candidate.size()[0]
         limit.resize_(candidate.size())
         if torch.max(lbd) > 100: 
             break
@@ -278,7 +304,8 @@ def attack_untargeted(model, train_loader, x0, y0, alpha = 0.2, beta = 0.001, it
         train_dataset: set of training data
         (x0, y0): original image
     """
-
+    array_alpha = []
+    array_beta = []
     if (model.predict(x0) != y0):
         print("Fail to classify the image. No need to attack.")
         return x0
@@ -326,8 +353,26 @@ def attack_untargeted(model, train_loader, x0, y0, alpha = 0.2, beta = 0.001, it
     theta, g2 = best_theta.clone(), g_theta
     print(model.predict(x0+theta*g2))
     opt_count = 0
+    o_g2 = 0
     torch.manual_seed(0)
     for i in range(iterations):
+        if (i+1)%100==0:
+            beta_ratio = count_neg_ratio(array_beta)
+            #print(beta_ratio)
+            if beta_ratio<0.25:
+                beta *= 0.8
+            elif beta_ratio>0.4:
+                beta *= 1.2
+                alpha *= 1.2
+            array_beta = []
+            '''
+            alpha_ratio = count_neg_ratio(array_alpha)
+            print(alpha_ratio)
+            if alpha_ratio<0.8:
+                alpha *= 0.8
+            elif alpha_ratio>0.85:
+                alpha *= 1.2
+            '''
         u = torch.randn(theta.size())
         u = u/torch.norm(u)
         g2, count = fine_grained_binary_search_local(model, x0, y0, theta, initial_lbd = g2)
@@ -340,11 +385,12 @@ def attack_untargeted(model, train_loader, x0, y0, alpha = 0.2, beta = 0.001, it
         temp_output = model.predict(x0+g2*theta)
         if (i+1)%100 == 0:
             print("Iteration %3d: g(theta + beta*u) = %.4f g(theta) = %.4f distortion %.4f num_queries %d alpha %.5f beta %.5f output %d" % (i+1, g1, g2, g2, opt_count, alpha, beta, temp_output))
-        
+        array_beta.append(g1-g2) 
         gradient = (g1-g2)/torch.norm(ttt-theta) * u
         temp_theta = theta - alpha*gradient
         temp_theta /= torch.norm(temp_theta)
         g3, count = fine_grained_binary_search_local(model, x0, y0, temp_theta, initial_lbd = g2)
+        array_alpha.append(g2-o_g2)
         if g3 > g1:
             #print("aa")
             theta = ttt
@@ -352,7 +398,7 @@ def attack_untargeted(model, train_loader, x0, y0, alpha = 0.2, beta = 0.001, it
         else:
             theta.sub_(alpha*gradient)
             theta /= torch.norm(theta)
-
+        o_g2 = g2
    
     g2, count = fine_grained_binary_search_local(model, x0, y0, theta, initial_lbd = g2)
     out_target = model.predict(x0 + g2*theta)  # should be the target
@@ -537,7 +583,7 @@ def attack_mnist(alpha):
         targets.pop(label)
         target = random.choice(targets)
         #target = 4
-        #target = None   #--> uncomment of untarget
+        target = None   #--> uncomment of untarget
         distortion_random_sample += attack_single(model, train_loader, image, label, target, alpha)
 
     #print("\n\n\n\n\n Running on first {} images \n\n\n".format(num_images))
@@ -681,7 +727,7 @@ if __name__ == '__main__':
     timestart = time.time()
     alpha = float(sys.argv[1])
     #attack_mnist(alpha)
-    #attack_cifar(alpha)
-    attack_imgnet(alpha)
+    attack_cifar(alpha)
+    #attack_imgnet(alpha)
     timeend = time.time()
     print("\n\nTotal running time: %.4f seconds\n" % (timeend - timestart))
