@@ -10,7 +10,7 @@ import torch.nn.functional as F
 from models import MNIST, CIFAR10, IMAGENET, SimpleMNIST, load_mnist_data, load_cifar10_data, imagenettest, load_model, show_image
 
 alpha = 0.2
-beta = 0.01
+beta = 0.005
 def count_neg_ratio(num_array):
     #print(num_array)
     count =0
@@ -19,6 +19,15 @@ def count_neg_ratio(num_array):
             count+=1
     return count/len(num_array)
 
+def blended_attack(model,x0,y0):
+    for _ in range(10):
+        random_noise = torch.randn(x0.size())
+        epsilons = np.linspace(0, 1, num=1000 + 1)[1:]
+        for epsilon in epsilons:
+            perturbed = (1 - epsilon) * x0 + epsilon * random_noise
+            if model.predict(perturbed) != y0:
+                return perturbed
+
 def attack_targeted(model, train_loader, x0, y0, target, alpha = 0.1, beta = 0.001, iterations = 1000, batch_size = 10):
     """ Attack the original image and return adversarial example of target t
         model: (pytorch model)
@@ -26,13 +35,14 @@ def attack_targeted(model, train_loader, x0, y0, target, alpha = 0.1, beta = 0.0
         (x0, y0): original image
         t: target
     """
+    
     array_beta = []
     o_alpha = 0.1
     if (model.predict(x0) != y0):
         print("Fail to classify the image. No need to attack.")
         return x0
     # STEP I: find initial direction (theta, g_theta)
-    ''' 
+     
     image, label = Variable(x0.cuda()), y0.cuda() 
     outputs = model(image)
     _, predicted = torch.max(outputs.data, 1)
@@ -46,6 +56,7 @@ def attack_targeted(model, train_loader, x0, y0, target, alpha = 0.1, beta = 0.0
     #print("Searching for the initial direction on %d samples: " % (num_samples))
     timestart = time.time()
     #samples = set(random.sample(range(len(train_dataset)), num_samples))
+    '''
     b_train_size = 1000
     b_best_lbd = float('inf')
     dim1 = x0.size()[0]
@@ -88,13 +99,13 @@ def attack_targeted(model, train_loader, x0, y0, target, alpha = 0.1, beta = 0.0
     #print(model.predict(x0+g_theta*best_theta))
     timeend = time.time()
     print("==========> Found best distortion %.4f in %.4f seconds using %d queries" % (b_best_lbd, timeend-timestart, query_count))
-
+    
 
     # STEP II: seach for optimal
     timestart = time.time()
     g1 = 1.0
-    theta, g2 = best_theta.clone(), g_theta
-    print(model.predict(x0+theta*g2))
+    #theta, g2 = best_theta.clone(), g_theta
+   #print(model.predict(x0+theta*g2))
     opt_count = 0
     torch.manual_seed(0)
     inner_size = 1
@@ -304,6 +315,7 @@ def attack_untargeted(model, train_loader, x0, y0, alpha = 0.2, beta = 0.001, it
         train_dataset: set of training data
         (x0, y0): original image
     """
+    o_alpha = alpha
     array_alpha = []
     array_beta = []
     if (model.predict(x0) != y0):
@@ -315,6 +327,7 @@ def attack_untargeted(model, train_loader, x0, y0, alpha = 0.2, beta = 0.001, it
     best_distortion = float('inf')
     g_theta = None
     query_count = 0
+    
     timestart = time.time()
     b_train_size = 1000
     b_best_lbd = float('inf')
@@ -346,58 +359,153 @@ def attack_untargeted(model, train_loader, x0, y0, alpha = 0.2, beta = 0.001, it
     best_theta, g_theta = b_best_theta.cpu(), b_best_lbd
     timeend = time.time()
     print("==========> Found best distortion %.4f in %.4f seconds using %d queries" % (b_best_lbd, timeend-timestart, query_count))
-
+    
     # STEP II: seach for optimal
     timestart = time.time()
+    '''
+    #initial = blended_attack(model,x0,y0)
+    initiial = 
+    theta = initial - x0    
+    g2 = torch.norm(theta)
+    theta /= g2
+    '''
     g1 = 1.0
     theta, g2 = best_theta.clone(), g_theta
     print(model.predict(x0+theta*g2))
     opt_count = 0
     o_g2 = 0
     torch.manual_seed(0)
+    inner_size = 1
+    per_step = 100
     for i in range(iterations):
-        if (i+1)%100==0:
-            beta_ratio = count_neg_ratio(array_beta)
-            #print(beta_ratio)
-            if beta_ratio<0.25:
-                beta *= 0.8
-            elif beta_ratio>0.4:
-                beta *= 1.2
-                alpha *= 1.2
-            array_beta = []
-            '''
-            alpha_ratio = count_neg_ratio(array_alpha)
-            print(alpha_ratio)
-            if alpha_ratio<0.8:
-                alpha *= 0.8
-            elif alpha_ratio>0.85:
-                alpha *= 1.2
-            '''
-        u = torch.randn(theta.size())
-        u = u/torch.norm(u)
-        g2, count = fine_grained_binary_search_local(model, x0, y0, theta, initial_lbd = g2)
-        opt_count += count
-        ttt = theta+beta * u
-        ttt = ttt/torch.norm(ttt)
-        ttt = ttt.type(torch.FloatTensor)
-        g1, count = fine_grained_binary_search_local(model, x0, y0, ttt, initial_lbd = g2)
-        opt_count += count
-        temp_output = model.predict(x0+g2*theta)
-        if (i+1)%100 == 0:
-            print("Iteration %3d: g(theta + beta*u) = %.4f g(theta) = %.4f distortion %.4f num_queries %d alpha %.5f beta %.5f output %d" % (i+1, g1, g2, g2, opt_count, alpha, beta, temp_output))
-        array_beta.append(g1-g2) 
-        gradient = (g1-g2)/torch.norm(ttt-theta) * u
-        temp_theta = theta - alpha*gradient
-        temp_theta /= torch.norm(temp_theta)
-        g3, count = fine_grained_binary_search_local(model, x0, y0, temp_theta, initial_lbd = g2)
-        array_alpha.append(g2-o_g2)
-        if g3 > g1:
-            #print("aa")
-            theta = ttt
-            #print(fine_grained_binary_search_targeted(model, x0, y0, ttt, initial_lbd = g2))
+        if (i+1)<=150:
+            gradient = torch.zeros(theta.size())
+            q = 20
+            min_g1 = float('inf')
+            for _ in range(q):
+                u = torch.randn(theta.size()).type(torch.FloatTensor)
+                u = u/torch.norm(u)
+                ttt = theta+beta * u
+                ttt = ttt/torch.norm(ttt)
+                g1, count = fine_grained_binary_search_local(model, x0, y0, ttt, initial_lbd = g2)
+                opt_count += count
+                gradient += (g1-g2)/beta * u
+                if g1 < min_g1:
+                    min_g1 = g1
+                    min_ttt = ttt
+            gradient = 1.0/q * gradient
+
+            if (i+1)%50 == 0:
+                print("Iteration %3d: g(theta + beta*u) = %.4f g(theta) = %.4f distortion %.4f num_queries %d" % (i+1, g1, g2, torch.norm(g2*theta), opt_count))
+
+            min_theta = theta
+            min_g2 = g2
+            new_alpha = alpha
+
+            for t in range(10):
+                new_theta = theta - new_alpha * gradient
+                new_theta = new_theta/torch.norm(new_theta)
+                new_g2, count = fine_grained_binary_search_local(model, x0, y0, new_theta, initial_lbd = min_g2)
+                opt_count += count
+                new_alpha = new_alpha * 1.1
+                if new_g2 < min_g2:
+                    min_theta = new_theta 
+                    min_g2 = new_g2
+                else:
+                    #print("Increase ", t)
+                    break
+
+            if min_g2 >= g2:
+                new_alpha = alpha
+                for t in range(10):
+                    new_alpha = new_alpha * 0.9
+                    new_theta = theta - new_alpha * gradient
+                    new_theta = new_theta/torch.norm(new_theta)
+                    new_g2, count = fine_grained_binary_search_local(model, x0, y0, new_theta, initial_lbd = min_g2)
+                    opt_count += count
+                    if new_g2 < min_g2:
+                        min_theta = new_theta 
+                        min_g2 = new_g2
+                        #print("Decrease ", t)
+                        break
+                #print(i, min_g2, g2)
+            alpha = new_alpha
+            #print(alpha)
+            if min_g2 <= min_g1:
+                theta, g2 = min_theta, min_g2
+            else:
+                theta, g2 = min_ttt, min_g1
+
+            if g2 < g_theta:
+                best_theta, g_theta = theta.clone(), g2
+            
+            if alpha < 1e-4:
+                break
+
         else:
-            theta.sub_(alpha*gradient)
-            theta /= torch.norm(theta)
+            if (i+1) == 151:
+                print(alpha)
+                alpha = o_alpha
+                #alpha /= q
+            if (i+2)%100==0:
+                ''' 
+                beta_ratio = count_neg_ratio(array_beta)
+                #print(beta_ratio)
+                if beta_ratio<0.25:
+                    beta *= 0.8
+                elif beta_ratio>0.4:
+                    beta *= 1.2
+                    #alpha *= 1.2
+                '''
+                #print(array_alpha)
+                alpha_ratio = count_neg_ratio(array_alpha)
+                beta_ratio = count_neg_ratio(array_beta)
+                print(alpha_ratio, beta_ratio)
+                if beta_ratio==0:
+                    beta /= 2
+                if alpha_ratio == 0:
+                    #inner_size = 10 
+                    break 
+                if alpha_ratio<0.1:
+                    alpha *= 0.8
+                    #beta == 0.001
+                elif alpha_ratio>0.8:
+                    alpha *= 1.25
+                
+                array_alpha= []
+                array_beta = []
+                
+            #if (i+1)==3000:
+            #    beta = 0.01
+            avg_grad = torch.zeros(theta.size())
+            for _ in range(inner_size): 
+                u = torch.randn(theta.size())
+                u = u/torch.norm(u)
+                g2, count = fine_grained_binary_search_local(model, x0, y0, theta, initial_lbd = g2)
+                opt_count += count
+                ttt = theta+beta * u
+                ttt = ttt/torch.norm(ttt)
+                g1, count = fine_grained_binary_search_local(model, x0, y0, ttt, initial_lbd = g2)
+                opt_count += count
+                temp_output = model.predict(x0+g2*theta)
+                array_beta.append(g1-g2) 
+                #gradient = (g1-g2)/torch.norm(ttt-theta) * u
+                gradient = (g1-g2)/beta * u
+                avg_grad += gradient
+            if (i+1)%per_step == 0:
+                print("Iteration %3d: g(theta + beta*u) = %.4f g(theta) = %.4f distortion %.4f num_queries %d alpha %.5f beta %.5f output %d" % (i+1, g1, g2, g2, opt_count, alpha, beta, temp_output))
+            gradient = avg_grad/inner_size
+            temp_theta = theta - alpha*gradient
+            temp_theta /= torch.norm(temp_theta)
+            g3, count = fine_grained_binary_search_local(model, x0, y0, temp_theta, initial_lbd = g2)
+            array_alpha.append(g3-g2)
+            if g3 > g1:
+                #print("aa")
+                theta = ttt
+                #print(fine_grained_binary_search_targeted(model, x0, y0, ttt, initial_lbd = g2))
+            else:
+                theta.sub_(alpha*gradient)
+                theta /= torch.norm(theta)
         o_g2 = g2
    
     g2, count = fine_grained_binary_search_local(model, x0, y0, theta, initial_lbd = g2)
@@ -416,6 +524,8 @@ def fine_grained_binary_search_local(model, x0, y0, theta, initial_lbd = 1.0):
         while model.predict(x0+lbd_hi*theta) == y0:
             lbd_hi = lbd_hi*1.01
             nquery += 1
+            if lbd_hi >20:
+                return float('inf'), nquery
     else:
         lbd_hi = lbd
         lbd_lo = lbd*0.99
@@ -544,7 +654,7 @@ def attack_single(model, train_loader, image, label, target = None, alpha=0.2):
     print("Original label: ", label)
     print("Predicted label: ", model.predict(image))
     if target == None:
-        adversarial = attack_untargeted(model, train_loader, image, label, alpha = alpha, beta = beta, iterations = 5000)
+        adversarial = attack_untargeted(model, train_loader, image, label, alpha = alpha, beta = beta, iterations = 20000)
     else:
         print("Targeted attack: %d" % target)
         adversarial = attack_targeted(model, train_loader, image, label, target, alpha = alpha, beta = beta, iterations = 5000)
@@ -617,15 +727,18 @@ def attack_cifar(alpha):
 
     model = net.module if torch.cuda.is_available() else net
 
-    num_images = 100
+    num_images = 10
     
     print("\n\n\n\n\n Running on {} random images \n\n\n".format(num_images))
     distortion_random_sample = 0.0
-
+    idx_a = [6411, 4360, 7753, 7413, 684, 3343, 6785, 7079, 2263]
+    #idx_a = [4360]
     random.seed(0)
-    for _ in range(num_images):
-        idx = random.randint(100, len(test_dataset)-1)
+    #for _ in range(num_images):
+    for idx in idx_a:
+        #idx = random.randint(100, len(test_dataset)-1)
         #idx = 5474
+
         image, label = test_dataset[idx]
         print("\n\n\n\n======== Image %d =========" % idx)
         targets = list(range(10))
@@ -699,7 +812,7 @@ def attack_imgnet(alpha):
         print("\n\n\n\n======== Image %d =========" % idx)
         targets = list(range(1000))
         targets.pop(label)
-        target = random.choice(targets)
+        #target = random.choice(targets)
         #target = 4
         target = None   #--> uncomment of untarget
         distortion_random_sample += attack_single(model, test_loader, image, label, target, 0.2)
