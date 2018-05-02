@@ -188,7 +188,7 @@ def attack_untargeted(model, train_dataset, x0, y0, alpha = 0.2, beta = 0.001, i
         print("Fail to classify the image. No need to attack.")
         return x0
 
-    num_samples = 1000
+    num_samples = 10
     best_theta, g_theta = None, float('inf')
     query_count = 0
 
@@ -218,31 +218,62 @@ def attack_untargeted(model, train_dataset, x0, y0, alpha = 0.2, beta = 0.001, i
 
     opt_count = 0
     for i in range(iterations):
-        u = torch.randn(theta.size()).type(torch.FloatTensor)
-        u = u/torch.norm(u)
-        ttt = theta+beta * u
-        ttt = ttt/torch.norm(ttt)
-        g1, count = fine_grained_binary_search_local(model, x0, y0, ttt, initial_lbd = g2)
-        opt_count += count
+        gradient = torch.zeros(theta.size())
+        q = 20
+        min_g1 = float('inf')
+        for _ in range(q):
+            u = torch.randn(theta.size()).type(torch.FloatTensor)
+            u = u/torch.norm(u)
+            ttt = theta+beta * u
+            ttt = ttt/torch.norm(ttt)
+            g1, count = fine_grained_binary_search_local(model, x0, y0, ttt, initial_lbd = g2)
+            opt_count += count
+            gradient += (g1-g2)/beta * u
+            if g1 < min_g1:
+                min_g1 = g1
+                min_ttt = ttt
+        gradient = 1.0/q * gradient
+
         if (i+1)%50 == 0:
             print("Iteration %3d: g(theta + beta*u) = %.4f g(theta) = %.4f distortion %.4f num_queries %d" % (i+1, g1, g2, torch.norm(g2*theta), opt_count))
-        gradient = (g1-g2)/torch.norm(ttt-theta) * u
 
-        new_theta = theta - alpha * gradient
-        new_theta = new_theta/torch.norm(new_theta)
-        new_g2, count = fine_grained_binary_search(model, x0, y0, new_theta, initial_lbd = g2)
-        opt_count += count
+        min_theta = theta
+        min_g2 = g2
+    
+        for _ in range(10):
+            new_theta = theta - alpha * gradient
+            new_theta = new_theta/torch.norm(new_theta)
+            new_g2, count = fine_grained_binary_search_local(model, x0, y0, new_theta, initial_lbd = min_g2)
+            opt_count += count
+            alpha = alpha * 1.5
+            if new_g2 < min_g2:
+                min_theta = new_theta 
+                min_g2 = new_g2
+            else:
+                break
 
-        if new_g2 > min(g2, g1):
-            if g2 > g1:
-                theta = ttt
-                g2 = g1
+        if min_g2 >= g2:
+            for _ in range(10):
+                alpha = alpha * 0.7
+                new_theta = theta - alpha * gradient
+                new_theta = new_theta/torch.norm(new_theta)
+                new_g2, count = fine_grained_binary_search_local(model, x0, y0, new_theta, initial_lbd = min_g2)
+                opt_count += count
+                if new_g2 < min_g2:
+                    min_theta = new_theta 
+                    min_g2 = new_g2
+                    break
+
+        if min_g2 <= min_g1:
+            theta, g2 = min_theta, min_g2
         else:
-            theta = new_theta
-            g2 = new_g2
+            theta, g2 = min_ttt, min_g1
 
         if g2 < g_theta:
             best_theta, g_theta = theta.clone(), g2
+        
+        if alpha < 1e-4:
+            break
 
     target = model.predict(x0 + g_theta*best_theta)
     timeend = time.time()
@@ -255,22 +286,22 @@ def fine_grained_binary_search_local(model, x0, y0, theta, initial_lbd = 1.0):
    
     if model.predict(x0+lbd*theta) == y0:
         lbd_lo = lbd
-        lbd_hi = lbd*1.01
+        lbd_hi = lbd*1.05
         nquery += 1
         while model.predict(x0+lbd_hi*theta) == y0:
-            lbd_hi = lbd_hi*1.01
+            lbd_hi = lbd_hi*1.05
             nquery += 1
             if lbd_hi > 100:
                 return float('inf'), nquery
     else:
         lbd_hi = lbd
-        lbd_lo = lbd*0.99
+        lbd_lo = lbd*0.95
         nquery += 1
         while model.predict(x0+lbd_lo*theta) != y0 :
-            lbd_lo = lbd_lo*0.99
+            lbd_lo = lbd_lo*0.95
             nquery += 1
 
-    while (lbd_hi - lbd_lo) > 1e-8:
+    while (lbd_hi - lbd_lo) > 1e-5:
         lbd_mid = (lbd_lo + lbd_hi)/2.0
         nquery += 1
         if model.predict(x0 + lbd_mid*theta) != y0:
@@ -332,10 +363,10 @@ def attack_mnist(alpha=0.2, beta=0.001, isTarget= False, num_attacks= 100):
         print("Original label: ", label)
         print("Predicted label: ", model.predict(image))
         if target == None:
-            adversarial = attack_untargeted(model, dataset, image, label, alpha = alpha, beta = beta, iterations = 5000)
+            adversarial = attack_untargeted(model, dataset, image, label, alpha = alpha, beta = beta, iterations = 1000)
         else:
             print("Targeted attack: %d" % target)
-            adversarial = attack_targeted(model, dataset, image, label, target, alpha = alpha, beta = beta, iterations = 5000)
+            adversarial = attack_targeted(model, dataset, image, label, target, alpha = alpha, beta = beta, iterations = 1000)
         show_image(adversarial.numpy())
         print("Predicted label for adversarial example: ", model.predict(adversarial))
         return torch.norm(adversarial - image)
@@ -355,7 +386,7 @@ def attack_mnist(alpha=0.2, beta=0.001, isTarget= False, num_attacks= 100):
 def attack_cifar10(alpha= 0.2, beta= 0.001, isTarget= False, num_attacks= 100):
     train_loader, test_loader, train_dataset, test_dataset = load_cifar10_data()
     dataset = train_dataset
-
+    print("Length of test_set: ", len(test_dataset))
     net = CIFAR10()
     if torch.cuda.is_available():
         net.cuda()
@@ -371,18 +402,21 @@ def attack_cifar10(alpha= 0.2, beta= 0.001, isTarget= False, num_attacks= 100):
         print("Original label: ", label)
         print("Predicted label: ", model.predict(image))
         if target == None:
-            adversarial = attack_untargeted(model, dataset, image, label, alpha = alpha, beta = beta, iterations = 5000)
+            adversarial = attack_untargeted(model, dataset, image, label, alpha = alpha, beta = beta, iterations = 1500)
         else:
             print("Targeted attack: %d" % target)
-            adversarial = attack_targeted(model, dataset, image, label, target, alpha = alpha, beta = beta, iterations = 5000)
+            adversarial = attack_targeted(model, dataset, image, label, target, alpha = alpha, beta = beta, iterations = 1500)
         print("Predicted label for adversarial example: ", model.predict(adversarial))
         return torch.norm(adversarial - image)
 
     print("\n\nRunning {} attack on {} random CIFAR10 test images for alpha= {} beta= {}\n\n".format("targetted" if isTarget else "untargetted", num_attacks, alpha, beta))
     total_distortion = 0.0
 
-    for _ in range(num_attacks):
-        idx = random.randint(100, len(test_dataset)-1)
+    #samples = [6411, 4360, 7753, 7413, 684, 3343, 6785, 7079,2263]
+    samples =  [6311, 6890, 663, 4242, 8376, 7961, 6634, 4969, 7808, 5866, 9558, 3578, 8268, 2281, 4617, 2289, 1553, 4104, 8725, 9861, 2407, 5081, 1618, 1208, 5409, 7735, 9171, 1649, 5796,7113, 5180, 3350, 9052, 7815, 7253, 8541, 4267, 1020, 8989, 230, 1528, 6534, 18, 8086, 5458, 3996, 5328, 1031, 3130, 9298, 3632, 3909, 2334, 8896, 7339, 1494, 1318, 5243, 8322, 8016, 1786, 4938, 9031, 4769, 2044, 8969, 5451, 8852, 3329, 9882, 8965, 9627, 4712, 7290, 1501, 9769, 6306, 5194, 9431, 3966, 4756, 3012, 3102, 3059, 540, 4260, 7807, 1131, 1471, 2133, 2450, 633, 1314, 8857, 6410, 8594, 4515, 8549, 3858, 3525]
+    #for _ in range(num_attacks):
+    for idx in samples:
+        #idx = random.randint(100, len(test_dataset)-1)
         image, label = test_dataset[idx]
         print("\n\n\n\n======== Image %d =========" % idx)
         target = None if not isTarget else random.choice(list(range(label)) + list(range(label+1, 10)))
@@ -393,6 +427,7 @@ def attack_cifar10(alpha= 0.2, beta= 0.001, isTarget= False, num_attacks= 100):
 def attack_imagenet(arch='resnet50', alpha=0.2, beta= 0.001, isTarget=False, num_attacks = 100):
     train_loader, test_loader, train_dataset, test_dataset = load_imagenet_data()
     dataset = test_dataset
+    print("Length of test_set: ", len(test_dataset))
 
     model = IMAGENET(arch)
 
@@ -400,14 +435,14 @@ def attack_imagenet(arch='resnet50', alpha=0.2, beta= 0.001, isTarget=False, num
         print("Original label: ", label)
         print("Predicted label: ", model.predict(image))
         if target == None:
-            adversarial = attack_untargeted(model, dataset, image, label, alpha = alpha, beta = beta, iterations = 5000)
+            adversarial = attack_untargeted(model, dataset, image, label, alpha = alpha, beta = beta, iterations = 1500)
         else:
             print("Targeted attack: %d" % target)
-            adversarial = attack_targeted(model, dataset, image, label, target, alpha = alpha, beta = beta, iterations = 5000)
+            adversarial = attack_targeted(model, dataset, image, label, target, alpha = alpha, beta = beta, iterations = 1500)
         print("Predicted label for adversarial example: ", model.predict(adversarial))
         return torch.norm(adversarial - image)
 
-    print("\nRunning {} attack on {} random IMAGENET test images for alpha= {} beta= {}\n".format("targetted" if isTarget else "untargetted", num_attacks, alpha, beta))
+    print("\nRunning {} attack on {} random IMAGENET test images for alpha= {} beta= {} using {}\n".format("targetted" if isTarget else "untargetted", num_attacks, alpha, beta, arch))
     total_distortion = 0.0
 
     for _ in range(num_attacks):
@@ -423,10 +458,10 @@ if __name__ == '__main__':
     timestart = time.time()
     random.seed(0)
     
-    #attack_mnist(alpha=0.2, beta=0.001, isTarget= False, num_attacks= 10)
-    attack_cifar10(alpha=0.2, beta=0.001, isTarget= False, num_attacks= 10)
-    #attack_imagenet(arch='resnet50', alpha=0.2, beta=0.001, isTarget= False, num_attacks= 10)
-    #attack_imagenet(arch='vgg19', alpha=0.2, beta=0.001, isTarget= False, num_attacks= 10)
+    #attack_mnist(alpha=2, beta=0.001, isTarget= False, num_attacks= 10)
+    attack_cifar10(alpha=5, beta=0.005, isTarget= False)
+    #attack_imagenet(arch='resnet50', alpha=0.05, beta=0.001, isTarget= False)
+    #attack_imagenet(arch='vgg19', alpha=0.05, beta=0.001, isTarget= False, num_attacks= 10)
 
     timeend = time.time()
     print("\n\nTotal running time: %.4f seconds\n" % (timeend - timestart))
