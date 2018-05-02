@@ -283,7 +283,7 @@ def attack_untargeted(model, train_loader, x0, y0, alpha = 0.2, beta = 0.001, it
         print("Fail to classify the image. No need to attack.")
         return x0
 
-    num_samples = 1000 
+    #num_samples = 100 
     best_theta = None
     best_distortion = float('inf')
     g_theta = None
@@ -398,7 +398,6 @@ def initial_fine_grained_binary_search(model, x0, y0, theta, initial_lbd = 1.0):
     candidate = (predicted == y0).nonzero().view(-1)
     while len(candidate.size())>0:
         lbd[candidate] = lbd[candidate].mul(1.05)
-        nquery += candidate.size()[0]
         limit.resize_(candidate.size())
         if torch.max(lbd) > 100: 
             break
