@@ -323,8 +323,10 @@ class BoundaryAttack(Attack):
 
         generation_args = None
 
+        
+        message = 'distortion {:4f} num_query {:d} output {:d}'.format(norm(a.image-a.original_image), a._total_prediction_calls, np.argmax(a.predictions(a.image)[0]))
         # log starting point
-        self.log_step(0, distance)
+        self.log_step(0, distance, message=message)
 
         initial_convergence_steps = 100
         convergence_steps = initial_convergence_steps
@@ -333,13 +335,14 @@ class BoundaryAttack(Attack):
         for step in range(1, iterations + 1):
             t_step = time.time()
 
+            message = 'distortion {:4f} num_query {:d} output {:d}'.format(norm(a.image-a.original_image), a._total_prediction_calls, np.argmax(a.predictions(a.image)[0]))
             # ===========================================================
             # Check converges
             # ===========================================================
 
             check_strict = convergence_steps == initial_convergence_steps
             if self.has_converged(check_strict):
-                self.log_step(step - 1, distance, always=True)
+                self.log_step(step - 1, distance, message=message, always=True)
                 if resetted:
                     self.printv(
                         'Looks like attack has converged after {} steps,'
@@ -357,7 +360,7 @@ class BoundaryAttack(Attack):
                     self.source_step = 1e-2
             elif (convergence_steps <
                     initial_convergence_steps):  # pragma: no cover
-                self.log_step(step - 1, distance, always=True)
+                self.log_step(step - 1, distance, meassage=message, always=True)
                 warnings.warn('Attack has not converged!')
                 convergence_steps = initial_convergence_steps
                 resetted = False
@@ -489,8 +492,6 @@ class BoundaryAttack(Attack):
                         current_batch_size - 1] += t
                     self.stats_spherical_prediction_calls[
                         current_batch_size - 1] += 1
-                    #self.stats_spherical_prediction_calls[
-                    #    current_batch_size - 1] += len(spherical_candidates.astype(external_dtype))
 
                     indices = []
                     for j in range(current_batch_size):
@@ -517,9 +518,6 @@ class BoundaryAttack(Attack):
                         strict=False)
                     t = time.time() - t
                     # TODO: use t
-                    #self.stats_spherical_prediction_calls[
-                    #    current_batch_size - 1] += len(spherical_candidates.astype(external_dtype))
-
 
                     assert batch_is_adversarial.shape == (len(indices),)
 
@@ -567,7 +565,9 @@ class BoundaryAttack(Attack):
             # Handle the new adversarial
             # ===========================================================
 
-            message = ''
+            #message = ''
+            
+            message = 'distortion {:4f} num_query {:d} output {:d}'.format(norm(a.image-a.original_image), a._total_prediction_calls, np.argmax(a.predictions(a.image)[0]))
             if new_perturbed is not None:
                 if not new_distance < distance:
                     # assert not is_best  # consistency with adversarial object
@@ -580,9 +580,8 @@ class BoundaryAttack(Attack):
                     # step can be better and adv (numerical issues)
                     abs_improvement = distance.value - new_distance.value
                     rel_improvement = abs_improvement / distance.value
-                    message = 'd. reduced by {:.2f}% ({:.4e})'.format(
-                        rel_improvement * 100, abs_improvement)
-
+                    #message = 'd. reduced by {:.2f}% ({:.4e}) distortion {:.4f} num_query {:d}'.format(rel_improvement * 100, abs_improvement, norm(a.image-a.original_image), a._total_prediction_calls)
+                    message = 'distortion {:4f} num_query {:d} output {:d}'.format(norm(a.image-a.original_image), a._total_prediction_calls, np.argmax(a.predictions(a.image)[0]))
                     # update the variables
                     perturbed = new_perturbed
                     distance = new_distance
@@ -678,13 +677,15 @@ class BoundaryAttack(Attack):
     def log_step(self, step, distance, message='', always=False):
         if not always and step % self.log_every_n_steps != 0:
             return
+        print('Step {}: {}'.format(step,message))
+        '''
         print('Step {}: {:.5e}, stepsizes = {:.1e}/{:.1e}: {}'.format(
             step,
             distance.value,
             self.spherical_step,
             self.source_step,
             message))
-
+        '''
     @staticmethod
     def prepare_generate_candidates(original, perturbed):
         unnormalized_source_direction = original - perturbed
@@ -937,9 +938,7 @@ class BoundaryAttack(Attack):
                 t = time.time() - t
 
                 self.stats_prediction_duration[batch_size - 1] += t
-                #self.stats_prediction_calls[batch_size - 1] += 1
-                self.stats_prediction_calls[batch_size - 1] += len(batch.astype(external_dtype))
-
+                self.stats_prediction_calls[batch_size - 1] += 1
 
                 t = time.time()
                 _, _ = a.batch_predictions(
@@ -949,8 +948,7 @@ class BoundaryAttack(Attack):
                 self.stats_spherical_prediction_duration[batch_size - 1] \
                     += t
                 self.stats_spherical_prediction_calls[batch_size - 1] += 1
-                #self.stats_spherical_prediction_calls[batch_size - 1] += len(batch.astype(external_dtype))
-    
+
     def log_time(self):
         t_total = time.time() - self.t_initial
 
@@ -974,8 +972,6 @@ class BoundaryAttack(Attack):
             rel_hyper * 100, self.stats_hyperparameter_update_duration))
         self.printv('   {:2.1f}% for the rest ({:.5f})'.format(
             rel_remaining * 100, rel_remaining * t_total))
-        count_all = self.stats_prediction_calls.sum() + self.stats_spherical_prediction_calls.sum()
-        self.printv('%d' % (count_all))
 
     def init_batch_size_tuning(self, tune_batch_size):
         if not tune_batch_size:
