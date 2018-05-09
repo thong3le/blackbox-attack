@@ -1,0 +1,1932 @@
+6311
+run with verbose=True to see details
+Step 0: distortion 5.341593 num_query 271 output 6
+Step 1000: distortion 0.028541 num_query 30630 output 8 (took 0.01599 seconds)
+Step 2000: distortion 0.021183 num_query 59100 output 8 (took 0.01418 seconds)
+Step 3000: distortion 0.019275 num_query 87620 output 8 (took 0.01757 seconds)
+Step 4000: distortion 0.018556 num_query 116221 output 3 (took 0.01661 seconds)
+Checkpoint Step 5000: distortion 0.018243 num_query 144854 output 8 (took 0.01783 seconds)
+Step 6000: distortion 0.018101 num_query 173353 output 8 (took 0.01372 seconds)
+Step 6480: distortion 0.018098 num_query 186544 output 3
+Step 6600: distortion 0.018098 num_query 190309 output 3
+Step 6610: distortion 0.018098 num_query 190669 output 3
+Step 6620: distortion 0.018098 num_query 191024 output 3
+Step 6630: distortion 0.018098 num_query 191378 output 3
+Step 6640: distortion 0.018098 num_query 191736 output 3
+Step 6650: distortion 0.018098 num_query 192080 output 3
+Step 6660: distortion 0.018098 num_query 192425 output 3
+Step 6670: distortion 0.018098 num_query 192774 output 3
+Step 6680: distortion 0.018098 num_query 193126 output 3
+Step 6690: distortion 0.018098 num_query 193468 output 3
+Norm L2 and queries of image 6311 is 0.01809755153954029 and 193756
+3
+6890
+run with verbose=True to see details
+Step 0: distortion 4.001381 num_query 207 output 6
+Step 1000: distortion 0.228912 num_query 31178 output 6 (took 0.01420 seconds)
+Step 2000: distortion 0.172779 num_query 59681 output 6 (took 0.01620 seconds)
+Step 3000: distortion 0.157232 num_query 88293 output 6 (took 0.01761 seconds)
+Step 4000: distortion 0.151183 num_query 115469 output 6 (took 0.01564 seconds)
+Checkpoint Step 5000: distortion 0.148443 num_query 141680 output 6 (took 0.01859 seconds)
+Step 6000: distortion 0.146891 num_query 165353 output 6 (took 0.01833 seconds)
+Step 7000: distortion 0.146150 num_query 193909 output 6 (took 0.01667 seconds)
+Step 8000: distortion 0.145841 num_query 222419 output 6 (took 0.01934 seconds)
+Step 9000: distortion 0.145733 num_query 250683 output 6 (took 0.01453 seconds)
+Step 9050: distortion 0.145733 num_query 252043 output 6
+Step 9160: distortion 0.145733 num_query 255118 output 5
+Step 9170: distortion 0.145733 num_query 255413 output 6
+Step 9180: distortion 0.145733 num_query 255758 output 5
+Step 9190: distortion 0.145733 num_query 256105 output 5
+Step 9200: distortion 0.145733 num_query 256469 output 6
+Step 9210: distortion 0.145733 num_query 256827 output 5
+Step 9220: distortion 0.145733 num_query 257160 output 5
+Step 9230: distortion 0.145733 num_query 257516 output 6
+Step 9240: distortion 0.145733 num_query 257880 output 6
+Step 9250: distortion 0.145733 num_query 258251 output 6
+Norm L2 and queries of image 6890 is 0.14573325216770172 and 258359
+6
+663
+run with verbose=True to see details
+Step 0: distortion 21.669197 num_query 975 output 9
+Step 1000: distortion 0.197703 num_query 30760 output 2 (took 0.01712 seconds)
+Step 2000: distortion 0.134002 num_query 57253 output 2 (took 0.01641 seconds)
+Step 3000: distortion 0.117152 num_query 85293 output 2 (took 0.01801 seconds)
+Step 4000: distortion 0.109570 num_query 113904 output 2 (took 0.01803 seconds)
+Checkpoint Step 5000: distortion 0.106511 num_query 142538 output 2 (took 0.02056 seconds)
+Step 6000: distortion 0.104995 num_query 171133 output 2 (took 0.01845 seconds)
+Step 7000: distortion 0.104248 num_query 199767 output 2 (took 0.01603 seconds)
+Step 8000: distortion 0.103668 num_query 228362 output 2 (took 0.01469 seconds)
+Step 9000: distortion 0.103389 num_query 256770 output 2 (took 0.01747 seconds)
+Step 9620: distortion 0.103335 num_query 274234 output 2
+Step 9740: distortion 0.103335 num_query 277781 output 6
+Step 9750: distortion 0.103335 num_query 278077 output 6
+Step 9760: distortion 0.103335 num_query 278358 output 6
+Step 9770: distortion 0.103335 num_query 278661 output 6
+Step 9780: distortion 0.103335 num_query 279003 output 2
+Step 9790: distortion 0.103335 num_query 279356 output 6
+Step 9800: distortion 0.103335 num_query 279666 output 6
+Step 9810: distortion 0.103335 num_query 279982 output 6
+Step 9820: distortion 0.103335 num_query 280299 output 6
+Step 9830: distortion 0.103335 num_query 280640 output 6
+Norm L2 and queries of image 663 is 0.10333501547574997 and 280670
+6
+4242
+run with verbose=True to see details
+Step 0: distortion 4.667810 num_query 208 output 6
+Step 1000: distortion 0.231712 num_query 28902 output 6 (took 0.01802 seconds)
+Step 2000: distortion 0.160333 num_query 56739 output 6 (took 0.01591 seconds)
+Step 3000: distortion 0.140839 num_query 84556 output 6 (took 0.01682 seconds)
+Step 4000: distortion 0.133589 num_query 112378 output 6 (took 0.01653 seconds)
+Checkpoint Step 5000: distortion 0.130567 num_query 140171 output 6 (took 0.01634 seconds)
+Step 6000: distortion 0.128819 num_query 167947 output 6 (took 0.01681 seconds)
+Step 7000: distortion 0.127941 num_query 195758 output 6 (took 0.01847 seconds)
+Step 8000: distortion 0.127484 num_query 223556 output 6 (took 0.01990 seconds)
+Step 9000: distortion 0.127303 num_query 251327 output 6 (took 0.01680 seconds)
+Step 9870: distortion 0.127236 num_query 275303 output 6
+Step 9990: distortion 0.127236 num_query 278589 output 6
+Step 10000: distortion 0.127236 num_query 278885 output 6 (took 0.02090 seconds)
+Norm L2 and queries of image 4242 is 0.1272364854812622 and 278886
+6
+8376
+run with verbose=True to see details
+Step 0: distortion 3.144675 num_query 134 output 4
+Step 1000: distortion 0.054303 num_query 29994 output 5 (took 0.01794 seconds)
+Step 2000: distortion 0.041512 num_query 58632 output 5 (took 0.01659 seconds)
+Step 3000: distortion 0.038023 num_query 87267 output 5 (took 0.01718 seconds)
+Step 4000: distortion 0.036708 num_query 115905 output 5 (took 0.01744 seconds)
+Checkpoint Step 5000: distortion 0.036072 num_query 144545 output 5 (took 0.01693 seconds)
+Step 6000: distortion 0.035818 num_query 173237 output 5 (took 0.01654 seconds)
+Step 6910: distortion 0.035772 num_query 198818 output 7
+Step 7000: distortion 0.035772 num_query 201279 output 5 (took 0.01417 seconds)
+Step 7020: distortion 0.035772 num_query 201855 output 5
+Step 7030: distortion 0.035772 num_query 202176 output 5
+Step 7040: distortion 0.035772 num_query 202492 output 5
+Step 7050: distortion 0.035772 num_query 202858 output 5
+Step 7060: distortion 0.035772 num_query 203213 output 5
+Step 7070: distortion 0.035772 num_query 203570 output 5
+Step 7080: distortion 0.035772 num_query 203921 output 5
+Step 7090: distortion 0.035772 num_query 204274 output 5
+Step 7100: distortion 0.035772 num_query 204615 output 5
+Step 7110: distortion 0.035772 num_query 204960 output 5
+Norm L2 and queries of image 8376 is 0.0357719287276268 and 205202
+5
+7961
+run with verbose=True to see details
+Step 0: distortion 5.373829 num_query 255 output 6
+Step 1000: distortion 0.019493 num_query 30915 output 5 (took 0.01615 seconds)
+Step 2000: distortion 0.013916 num_query 59513 output 5 (took 0.01531 seconds)
+Step 3000: distortion 0.012650 num_query 88177 output 5 (took 0.01642 seconds)
+Step 4000: distortion 0.012141 num_query 116800 output 5 (took 0.01544 seconds)
+Checkpoint Step 5000: distortion 0.011928 num_query 145477 output 5 (took 0.01731 seconds)
+Step 6000: distortion 0.011844 num_query 173797 output 3 (took 0.01180 seconds)
+Step 6260: distortion 0.011844 num_query 180821 output 3
+Step 6370: distortion 0.011844 num_query 183852 output 5
+Step 6380: distortion 0.011844 num_query 184154 output 5
+Step 6390: distortion 0.011844 num_query 184467 output 5
+Step 6400: distortion 0.011844 num_query 184809 output 5
+Step 6410: distortion 0.011844 num_query 185149 output 5
+Step 6420: distortion 0.011844 num_query 185487 output 5
+Step 6430: distortion 0.011844 num_query 185834 output 5
+Step 6440: distortion 0.011844 num_query 186173 output 5
+Step 6450: distortion 0.011844 num_query 186518 output 5
+Step 6460: distortion 0.011844 num_query 186874 output 5
+Norm L2 and queries of image 7961 is 0.01184393372386694 and 187124
+5
+6634
+run with verbose=True to see details
+Step 0: distortion 15.031831 num_query 661 output 6
+Step 1000: distortion 0.518427 num_query 30217 output 3 (took 0.01620 seconds)
+Step 2000: distortion 0.302015 num_query 58029 output 3 (took 0.01788 seconds)
+Step 3000: distortion 0.263310 num_query 85901 output 3 (took 0.01654 seconds)
+Step 4000: distortion 0.245585 num_query 113724 output 3 (took 0.01659 seconds)
+Checkpoint Step 5000: distortion 0.237275 num_query 141523 output 3 (took 0.01699 seconds)
+Step 6000: distortion 0.232588 num_query 169320 output 3 (took 0.01699 seconds)
+Step 7000: distortion 0.230752 num_query 197158 output 3 (took 0.01672 seconds)
+Step 8000: distortion 0.229287 num_query 224931 output 4 (took 0.01575 seconds)
+Step 9000: distortion 0.228508 num_query 252741 output 3 (took 0.01549 seconds)
+Step 10000: distortion 0.228108 num_query 280541 output 3 (took 0.01530 seconds)
+Norm L2 and queries of image 6634 is 0.22810815274715424 and 280542
+3
+4969
+run with verbose=True to see details
+Step 0: distortion 4.119101 num_query 185 output 6
+Step 1000: distortion 0.276272 num_query 26944 output 5 (took 0.01934 seconds)
+Step 2000: distortion 0.199888 num_query 55030 output 5 (took 0.01523 seconds)
+Step 3000: distortion 0.179753 num_query 83615 output 5 (took 0.01682 seconds)
+Step 4000: distortion 0.171432 num_query 112240 output 5 (took 0.01597 seconds)
+Checkpoint Step 5000: distortion 0.167158 num_query 140978 output 5 (took 0.01510 seconds)
+Step 6000: distortion 0.164780 num_query 169579 output 5 (took 0.01678 seconds)
+Step 7000: distortion 0.163574 num_query 198220 output 5 (took 0.01963 seconds)
+Step 8000: distortion 0.162958 num_query 226877 output 5 (took 0.01704 seconds)
+Step 9000: distortion 0.162633 num_query 255432 output 5 (took 0.01642 seconds)
+Step 10000: distortion 0.162483 num_query 283986 output 1 (took 0.01640 seconds)
+Norm L2 and queries of image 4969 is 0.16248340904712677 and 283987
+1
+7808
+run with verbose=True to see details
+Step 0: distortion 3.363376 num_query 169 output 4
+Step 1000: distortion 0.369613 num_query 25738 output 4 (took 0.01649 seconds)
+Step 2000: distortion 0.272588 num_query 54314 output 4 (took 0.01592 seconds)
+Step 3000: distortion 0.246260 num_query 82958 output 4 (took 0.01713 seconds)
+Step 4000: distortion 0.234867 num_query 111564 output 4 (took 0.01672 seconds)
+Checkpoint Step 5000: distortion 0.229355 num_query 140184 output 4 (took 0.01597 seconds)
+Step 6000: distortion 0.226488 num_query 168749 output 4 (took 0.01822 seconds)
+Step 7000: distortion 0.225130 num_query 197325 output 4 (took 0.01674 seconds)
+Step 8000: distortion 0.224490 num_query 225897 output 4 (took 0.01638 seconds)
+Step 9000: distortion 0.224125 num_query 254400 output 4 (took 0.01571 seconds)
+Step 10000: distortion 0.223981 num_query 282940 output 8 (took 0.01540 seconds)
+Norm L2 and queries of image 7808 is 0.22398099303245544 and 282941
+8
+5866
+run with verbose=True to see details
+Step 0: distortion 6.739948 num_query 356 output 2
+Step 1000: distortion 0.313104 num_query 28555 output 2 (took 0.01591 seconds)
+Step 2000: distortion 0.219712 num_query 53374 output 2 (took 0.01329 seconds)
+Step 3000: distortion 0.195628 num_query 81942 output 2 (took 0.01435 seconds)
+Step 4000: distortion 0.185938 num_query 110544 output 2 (took 0.01704 seconds)
+Checkpoint Step 5000: distortion 0.181524 num_query 139205 output 2 (took 0.01413 seconds)
+Step 6000: distortion 0.179733 num_query 167865 output 2 (took 0.01794 seconds)
+Step 7000: distortion 0.178488 num_query 196453 output 2 (took 0.01501 seconds)
+Step 8000: distortion 0.177965 num_query 224947 output 2 (took 0.01813 seconds)
+Step 9000: distortion 0.177662 num_query 253619 output 2 (took 0.01466 seconds)
+Step 10000: distortion 0.177507 num_query 282101 output 2 (took 0.01480 seconds)
+Norm L2 and queries of image 5866 is 0.1775071769952774 and 282102
+2
+9558
+run with verbose=True to see details
+Step 0: distortion 5.030173 num_query 267 output 8
+Step 1000: distortion 0.282751 num_query 30364 output 8 (took 0.01532 seconds)
+Step 2000: distortion 0.197947 num_query 58980 output 8 (took 0.01671 seconds)
+Step 3000: distortion 0.176085 num_query 87563 output 8 (took 0.01594 seconds)
+Step 4000: distortion 0.167206 num_query 116179 output 8 (took 0.01779 seconds)
+Checkpoint Step 5000: distortion 0.163422 num_query 144862 output 8 (took 0.02263 seconds)
+Step 6000: distortion 0.161143 num_query 173463 output 8 (took 0.01958 seconds)
+Step 7000: distortion 0.159500 num_query 202121 output 8 (took 0.02035 seconds)
+Step 8000: distortion 0.158805 num_query 230739 output 8 (took 0.01744 seconds)
+Step 9000: distortion 0.158494 num_query 259173 output 8 (took 0.01413 seconds)
+Step 9210: distortion 0.158492 num_query 264940 output 8
+Step 9320: distortion 0.158492 num_query 267967 output 0
+Step 9330: distortion 0.158491 num_query 268299 output 8
+Step 9340: distortion 0.158491 num_query 268659 output 8
+Step 9350: distortion 0.158491 num_query 269033 output 8
+Step 9360: distortion 0.158491 num_query 269380 output 8
+Step 9370: distortion 0.158491 num_query 269748 output 8
+Step 9380: distortion 0.158491 num_query 270143 output 8
+Step 9390: distortion 0.158491 num_query 270496 output 8
+Step 9400: distortion 0.158491 num_query 270810 output 8
+Step 9410: distortion 0.158491 num_query 271158 output 8
+Norm L2 and queries of image 9558 is 0.15849147737026215 and 271461
+8
+3578
+run with verbose=True to see details
+Step 0: distortion 3.455285 num_query 172 output 4
+Step 1000: distortion 0.151179 num_query 31213 output 4 (took 0.01799 seconds)
+Step 2000: distortion 0.115905 num_query 59754 output 4 (took 0.01744 seconds)
+Step 3000: distortion 0.106514 num_query 88342 output 4 (took 0.01595 seconds)
+Step 4000: distortion 0.102602 num_query 117026 output 4 (took 0.01475 seconds)
+Checkpoint Step 5000: distortion 0.100726 num_query 145591 output 4 (took 0.01791 seconds)
+Step 6000: distortion 0.099863 num_query 174158 output 4 (took 0.01734 seconds)
+Step 7000: distortion 0.099412 num_query 202771 output 4 (took 0.01399 seconds)
+Step 8000: distortion 0.099229 num_query 231371 output 4 (took 0.01493 seconds)
+Step 8390: distortion 0.099216 num_query 242202 output 7
+Step 8510: distortion 0.099216 num_query 245450 output 7
+Step 8520: distortion 0.099216 num_query 245743 output 7
+Step 8530: distortion 0.099216 num_query 246098 output 7
+Step 8540: distortion 0.099216 num_query 246453 output 7
+Step 8550: distortion 0.099216 num_query 246813 output 7
+Step 8560: distortion 0.099216 num_query 247192 output 7
+Step 8570: distortion 0.099216 num_query 247559 output 7
+Step 8580: distortion 0.099216 num_query 247912 output 7
+Step 8590: distortion 0.099216 num_query 248267 output 7
+Step 8600: distortion 0.099216 num_query 248626 output 7
+Norm L2 and queries of image 3578 is 0.09921594709157944 and 248661
+7
+8268
+run with verbose=True to see details
+Step 0: distortion 1.194872 num_query 68 output 3
+Step 1000: distortion 0.054335 num_query 30420 output 3 (took 0.01496 seconds)
+Step 2000: distortion 0.041211 num_query 59050 output 3 (took 0.01749 seconds)
+Step 3000: distortion 0.037413 num_query 87659 output 3 (took 0.02294 seconds)
+Step 4000: distortion 0.035990 num_query 116269 output 3 (took 0.01986 seconds)
+Checkpoint Step 5000: distortion 0.035334 num_query 144843 output 3 (took 0.01619 seconds)
+Step 6000: distortion 0.035039 num_query 173481 output 3 (took 0.02018 seconds)
+Step 7000: distortion 0.034895 num_query 201932 output 3 (took 0.01662 seconds)
+Step 7560: distortion 0.034877 num_query 217486 output 5
+Step 7670: distortion 0.034877 num_query 220600 output 5
+Step 7680: distortion 0.034877 num_query 220980 output 3
+Step 7690: distortion 0.034877 num_query 221342 output 3
+Step 7700: distortion 0.034877 num_query 221703 output 3
+Step 7710: distortion 0.034877 num_query 221989 output 5
+Step 7720: distortion 0.034877 num_query 222385 output 5
+Step 7730: distortion 0.034877 num_query 222740 output 5
+Step 7740: distortion 0.034877 num_query 223101 output 5
+Step 7750: distortion 0.034877 num_query 223473 output 5
+Step 7760: distortion 0.034877 num_query 223811 output 5
+Norm L2 and queries of image 8268 is 0.03487730398774147 and 223871
+5
+2281
+run with verbose=True to see details
+Step 0: distortion 5.257363 num_query 255 output 4
+Step 1000: distortion 0.389651 num_query 28171 output 7 (took 0.01652 seconds)
+Step 2000: distortion 0.214740 num_query 56745 output 7 (took 0.01671 seconds)
+Step 3000: distortion 0.180537 num_query 85368 output 7 (took 0.01724 seconds)
+Step 4000: distortion 0.167402 num_query 113946 output 7 (took 0.01596 seconds)
+Checkpoint Step 5000: distortion 0.161449 num_query 142601 output 7 (took 0.01547 seconds)
+Step 6000: distortion 0.157653 num_query 171357 output 7 (took 0.01525 seconds)
+Step 7000: distortion 0.155386 num_query 199974 output 7 (took 0.01636 seconds)
+Step 8000: distortion 0.154086 num_query 228565 output 7 (took 0.01544 seconds)
+Step 9000: distortion 0.153352 num_query 257167 output 7 (took 0.02043 seconds)
+Step 10000: distortion 0.153105 num_query 285743 output 7 (took 0.01611 seconds)
+Norm L2 and queries of image 2281 is 0.1531049758195877 and 285744
+7
+4617
+Norm L2 and queries of image 4617 is 0.0 and 1
+5
+2289
+run with verbose=True to see details
+/home/cmhcbb/blackbox-attack/foolbox/attacks/base.py:93: UserWarning: Not running the attack because the original input is already misclassified and the adversarial thus has a distance of 0.
+  warnings.warn('Not running the attack because the original input'
+Step 0: distortion 4.502901 num_query 198 output 6
+Step 1000: distortion 0.499535 num_query 28003 output 6 (took 0.01626 seconds)
+Step 2000: distortion 0.380853 num_query 51847 output 6 (took 0.01538 seconds)
+Step 3000: distortion 0.339243 num_query 79617 output 6 (took 0.01824 seconds)
+Step 4000: distortion 0.323138 num_query 107490 output 6 (took 0.01644 seconds)
+Checkpoint Step 5000: distortion 0.315373 num_query 135337 output 6 (took 0.01693 seconds)
+Step 6000: distortion 0.311808 num_query 163101 output 6 (took 0.01513 seconds)
+Step 7000: distortion 0.309767 num_query 190968 output 6 (took 0.01752 seconds)
+Step 8000: distortion 0.308926 num_query 218747 output 6 (took 0.01640 seconds)
+Step 9000: distortion 0.308677 num_query 246563 output 6 (took 0.01586 seconds)
+Step 10000: distortion 0.308552 num_query 274426 output 6 (took 0.01391 seconds)
+Norm L2 and queries of image 2289 is 0.308551549911499 and 274427
+6
+1553
+run with verbose=True to see details
+Step 0: distortion 3.962511 num_query 211 output 2
+Step 1000: distortion 0.189177 num_query 30117 output 2 (took 0.01631 seconds)
+Step 2000: distortion 0.135727 num_query 58731 output 2 (took 0.01821 seconds)
+Step 3000: distortion 0.121543 num_query 87253 output 2 (took 0.01838 seconds)
+Step 4000: distortion 0.115510 num_query 115834 output 2 (took 0.01679 seconds)
+Checkpoint Step 5000: distortion 0.113131 num_query 144452 output 2 (took 0.01912 seconds)
+Step 6000: distortion 0.111844 num_query 173153 output 2 (took 0.01927 seconds)
+Step 7000: distortion 0.111214 num_query 201761 output 2 (took 0.01600 seconds)
+Step 8000: distortion 0.110918 num_query 230277 output 2 (took 0.01533 seconds)
+Step 9000: distortion 0.110762 num_query 258886 output 2 (took 0.01758 seconds)
+Step 10000: distortion 0.110689 num_query 287452 output 4 (took 0.01594 seconds)
+Norm L2 and queries of image 1553 is 0.11068902909755707 and 287453
+4
+4104
+run with verbose=True to see details
+Step 0: distortion 3.906205 num_query 163 output 2
+Step 1000: distortion 0.180965 num_query 30237 output 2 (took 0.01638 seconds)
+Step 2000: distortion 0.130587 num_query 58847 output 2 (took 0.01780 seconds)
+Step 3000: distortion 0.116773 num_query 87524 output 2 (took 0.01681 seconds)
+Step 4000: distortion 0.111632 num_query 116171 output 2 (took 0.01755 seconds)
+Checkpoint Step 5000: distortion 0.109213 num_query 144747 output 2 (took 0.01732 seconds)
+Step 6000: distortion 0.108048 num_query 173276 output 2 (took 0.01674 seconds)
+Step 7000: distortion 0.107418 num_query 201807 output 2 (took 0.01795 seconds)
+Step 8000: distortion 0.107146 num_query 230334 output 2 (took 0.01541 seconds)
+Step 8850: distortion 0.107093 num_query 254183 output 2
+Step 8960: distortion 0.107093 num_query 257207 output 2
+Step 8970: distortion 0.107093 num_query 257511 output 2
+Step 8980: distortion 0.107093 num_query 257846 output 2
+Step 8990: distortion 0.107093 num_query 258211 output 2
+Step 9000: distortion 0.107093 num_query 258539 output 2 (took 0.01581 seconds)
+Step 9000: distortion 0.107093 num_query 258540 output 2
+Step 9010: distortion 0.107093 num_query 258890 output 2
+Step 9020: distortion 0.107093 num_query 259245 output 2
+Step 9030: distortion 0.107093 num_query 259578 output 2
+Step 9040: distortion 0.107093 num_query 259955 output 2
+Step 9050: distortion 0.107093 num_query 260318 output 2
+Norm L2 and queries of image 4104 is 0.10709325969219208 and 260569
+2
+8725
+run with verbose=True to see details
+Step 0: distortion 4.544459 num_query 230 output 2
+Step 1000: distortion 0.371812 num_query 31603 output 4 (took 0.01643 seconds)
+Step 2000: distortion 0.256456 num_query 60126 output 4 (took 0.01552 seconds)
+Step 3000: distortion 0.227685 num_query 88777 output 4 (took 0.01788 seconds)
+Step 4000: distortion 0.215433 num_query 117359 output 4 (took 0.01656 seconds)
+Checkpoint Step 5000: distortion 0.209955 num_query 145947 output 4 (took 0.01618 seconds)
+Step 6000: distortion 0.207253 num_query 174491 output 4 (took 0.01742 seconds)
+Step 7000: distortion 0.205447 num_query 203097 output 4 (took 0.01670 seconds)
+Step 8000: distortion 0.204369 num_query 231781 output 4 (took 0.01579 seconds)
+Step 9000: distortion 0.203793 num_query 260372 output 4 (took 0.01506 seconds)
+Step 10000: distortion 0.203501 num_query 288934 output 4 (took 0.01661 seconds)
+Norm L2 and queries of image 8725 is 0.20350083708763123 and 288935
+4
+9861
+run with verbose=True to see details
+Step 0: distortion 18.373417 num_query 972 output 9
+Step 1000: distortion 0.426942 num_query 30573 output 3 (took 0.01413 seconds)
+Step 2000: distortion 0.291564 num_query 58993 output 3 (took 0.01548 seconds)
+Step 3000: distortion 0.256921 num_query 87619 output 3 (took 0.01376 seconds)
+Step 4000: distortion 0.242001 num_query 116259 output 3 (took 0.01728 seconds)
+Checkpoint Step 5000: distortion 0.235886 num_query 144949 output 3 (took 0.01938 seconds)
+Step 6000: distortion 0.232747 num_query 173457 output 3 (took 0.01764 seconds)
+Step 7000: distortion 0.230886 num_query 202113 output 3 (took 0.01588 seconds)
+Step 8000: distortion 0.229928 num_query 230779 output 3 (took 0.01582 seconds)
+Step 9000: distortion 0.229493 num_query 259358 output 3 (took 0.01421 seconds)
+Step 10000: distortion 0.229220 num_query 288003 output 3 (took 0.01711 seconds)
+Norm L2 and queries of image 9861 is 0.22921954095363617 and 288004
+3
+2407
+run with verbose=True to see details
+Step 0: distortion 1.100991 num_query 59 output 8
+Step 1000: distortion 0.077673 num_query 28228 output 8 (took 0.01504 seconds)
+Step 2000: distortion 0.057727 num_query 56854 output 8 (took 0.02123 seconds)
+Step 3000: distortion 0.052439 num_query 85452 output 8 (took 0.01552 seconds)
+Step 4000: distortion 0.050419 num_query 113938 output 8 (took 0.01485 seconds)
+Checkpoint Step 5000: distortion 0.049419 num_query 142510 output 8 (took 0.01911 seconds)
+Step 6000: distortion 0.048930 num_query 171137 output 8 (took 0.01375 seconds)
+Step 7000: distortion 0.048687 num_query 199769 output 8 (took 0.01599 seconds)
+Step 8000: distortion 0.048544 num_query 228501 output 8 (took 0.01464 seconds)
+Step 9000: distortion 0.048415 num_query 257081 output 8 (took 0.01776 seconds)
+Step 9960: distortion 0.048368 num_query 284224 output 8
+Step 10000: distortion 0.048368 num_query 285363 output 8 (took 0.01485 seconds)
+Norm L2 and queries of image 2407 is 0.04836823046207428 and 285364
+8
+5081
+run with verbose=True to see details
+Step 0: distortion 7.437757 num_query 325 output 6
+Step 1000: distortion 0.247767 num_query 31021 output 6 (took 0.01736 seconds)
+Step 2000: distortion 0.182093 num_query 59291 output 6 (took 0.01796 seconds)
+Step 3000: distortion 0.165189 num_query 85318 output 6 (took 0.01650 seconds)
+Step 4000: distortion 0.158135 num_query 113925 output 6 (took 0.01639 seconds)
+Checkpoint Step 5000: distortion 0.155148 num_query 142653 output 6 (took 0.01815 seconds)
+Step 6000: distortion 0.153544 num_query 171251 output 6 (took 0.01519 seconds)
+Step 7000: distortion 0.152708 num_query 199830 output 6 (took 0.01689 seconds)
+Step 8000: distortion 0.152300 num_query 228486 output 6 (took 0.01623 seconds)
+Step 9000: distortion 0.152054 num_query 257098 output 6 (took 0.01575 seconds)
+Step 9840: distortion 0.151987 num_query 280911 output 5
+Step 9950: distortion 0.151987 num_query 283936 output 6
+Step 9960: distortion 0.151987 num_query 284252 output 5
+Step 9970: distortion 0.151987 num_query 284574 output 5
+Step 9980: distortion 0.151987 num_query 284881 output 6
+Step 9990: distortion 0.151987 num_query 285228 output 6
+Step 10000: distortion 0.151987 num_query 285586 output 5 (took 0.01534 seconds)
+Norm L2 and queries of image 5081 is 0.1519874632358551 and 285587
+5
+1618
+run with verbose=True to see details
+Step 0: distortion 0.886972 num_query 47 output 4
+Step 1000: distortion 0.028205 num_query 30340 output 4 (took 0.01562 seconds)
+Step 2000: distortion 0.020946 num_query 58943 output 4 (took 0.01703 seconds)
+Step 3000: distortion 0.018970 num_query 87479 output 7 (took 0.01669 seconds)
+Step 4000: distortion 0.018195 num_query 116014 output 4 (took 0.01762 seconds)
+Checkpoint Step 5000: distortion 0.017877 num_query 144683 output 4 (took 0.01378 seconds)
+Step 6000: distortion 0.017750 num_query 173270 output 4 (took 0.01655 seconds)
+Step 6820: distortion 0.017720 num_query 196203 output 7
+Step 6930: distortion 0.017720 num_query 199353 output 7
+Step 6940: distortion 0.017720 num_query 199688 output 7
+Step 6950: distortion 0.017720 num_query 200021 output 7
+Step 6960: distortion 0.017720 num_query 200353 output 7
+Step 6970: distortion 0.017720 num_query 200694 output 7
+Step 6980: distortion 0.017720 num_query 201022 output 7
+Step 6990: distortion 0.017720 num_query 201354 output 7
+Step 7000: distortion 0.017720 num_query 201698 output 7 (took 0.01772 seconds)
+Step 7000: distortion 0.017720 num_query 201699 output 7
+Step 7010: distortion 0.017720 num_query 202036 output 7
+Step 7020: distortion 0.017720 num_query 202378 output 7
+Norm L2 and queries of image 1618 is 0.017720017582178116 and 202643
+7
+1208
+run with verbose=True to see details
+Step 0: distortion 4.611701 num_query 262 output 2
+Step 1000: distortion 0.048186 num_query 29705 output 8 (took 0.01588 seconds)
+Step 2000: distortion 0.033621 num_query 58296 output 8 (took 0.01466 seconds)
+Step 3000: distortion 0.030130 num_query 86991 output 8 (took 0.01810 seconds)
+Step 4000: distortion 0.028849 num_query 115274 output 8 (took 0.01657 seconds)
+Checkpoint Step 5000: distortion 0.028256 num_query 143049 output 8 (took 0.01944 seconds)
+Step 6000: distortion 0.027990 num_query 171486 output 8 (took 0.01863 seconds)
+Step 7000: distortion 0.027909 num_query 199538 output 8 (took 0.01373 seconds)
+Step 7060: distortion 0.027909 num_query 201159 output 8
+Step 7170: distortion 0.027909 num_query 204261 output 8
+Step 7180: distortion 0.027909 num_query 204581 output 8
+Step 7190: distortion 0.027909 num_query 204895 output 8
+Step 7200: distortion 0.027909 num_query 205233 output 8
+Step 7210: distortion 0.027909 num_query 205601 output 8
+Step 7220: distortion 0.027909 num_query 205945 output 8
+Step 7230: distortion 0.027909 num_query 206292 output 8
+Step 7240: distortion 0.027909 num_query 206678 output 8
+Step 7250: distortion 0.027909 num_query 207038 output 8
+Step 7260: distortion 0.027909 num_query 207401 output 8
+Norm L2 and queries of image 1208 is 0.02790863625705242 and 207587
+8
+5409
+run with verbose=True to see details
+Step 0: distortion 6.858041 num_query 296 output 6
+Step 1000: distortion 0.451301 num_query 27795 output 6 (took 0.01875 seconds)
+Step 2000: distortion 0.325577 num_query 56450 output 6 (took 0.01778 seconds)
+Step 3000: distortion 0.293416 num_query 78614 output 6 (took 0.01787 seconds)
+Step 4000: distortion 0.279340 num_query 107381 output 6 (took 0.01460 seconds)
+Checkpoint Step 5000: distortion 0.271864 num_query 135999 output 6 (took 0.01438 seconds)
+Step 6000: distortion 0.267881 num_query 164589 output 6 (took 0.02025 seconds)
+Step 7000: distortion 0.265941 num_query 193117 output 6 (took 0.02085 seconds)
+Step 8000: distortion 0.264992 num_query 221769 output 6 (took 0.01756 seconds)
+Step 9000: distortion 0.264430 num_query 250384 output 6 (took 0.01620 seconds)
+Step 10000: distortion 0.264143 num_query 279023 output 6 (took 0.01590 seconds)
+Norm L2 and queries of image 5409 is 0.26414257287979126 and 279024
+6
+7735
+run with verbose=True to see details
+Step 0: distortion 4.702401 num_query 190 output 2
+Step 1000: distortion 0.072035 num_query 29193 output 3 (took 0.01689 seconds)
+Step 2000: distortion 0.053086 num_query 57917 output 3 (took 0.01743 seconds)
+Step 3000: distortion 0.047617 num_query 86426 output 3 (took 0.01642 seconds)
+Step 4000: distortion 0.045679 num_query 115069 output 3 (took 0.01613 seconds)
+Checkpoint Step 5000: distortion 0.044702 num_query 143728 output 3 (took 0.01693 seconds)
+Step 6000: distortion 0.044252 num_query 172334 output 3 (took 0.01651 seconds)
+Step 7000: distortion 0.044062 num_query 200948 output 3 (took 0.01539 seconds)
+Step 8000: distortion 0.043970 num_query 229509 output 3 (took 0.01388 seconds)
+Step 8190: distortion 0.043970 num_query 234672 output 4
+Step 8300: distortion 0.043970 num_query 237731 output 3
+Step 8310: distortion 0.043970 num_query 238070 output 3
+Step 8320: distortion 0.043970 num_query 238432 output 3
+Step 8330: distortion 0.043970 num_query 238785 output 3
+Step 8340: distortion 0.043970 num_query 239145 output 3
+Step 8350: distortion 0.043970 num_query 239505 output 3
+Step 8360: distortion 0.043970 num_query 239856 output 3
+Step 8370: distortion 0.043970 num_query 240203 output 3
+Step 8380: distortion 0.043970 num_query 240556 output 3
+Step 8390: distortion 0.043970 num_query 240913 output 3
+Norm L2 and queries of image 7735 is 0.04397018998861313 and 241023
+3
+9171
+run with verbose=True to see details
+Step 0: distortion 7.344642 num_query 367 output 6
+Step 1000: distortion 0.300340 num_query 31084 output 6 (took 0.01586 seconds)
+Step 2000: distortion 0.217532 num_query 59691 output 6 (took 0.01810 seconds)
+Step 3000: distortion 0.191414 num_query 88334 output 6 (took 0.01465 seconds)
+Step 4000: distortion 0.180535 num_query 116992 output 6 (took 0.01683 seconds)
+Checkpoint Step 5000: distortion 0.175398 num_query 145622 output 6 (took 0.01857 seconds)
+Step 6000: distortion 0.172752 num_query 174287 output 6 (took 0.01768 seconds)
+Step 7000: distortion 0.171407 num_query 202915 output 6 (took 0.01490 seconds)
+Step 8000: distortion 0.170687 num_query 231467 output 6 (took 0.01764 seconds)
+Step 9000: distortion 0.170459 num_query 259996 output 2 (took 0.01516 seconds)
+Step 10000: distortion 0.170363 num_query 288707 output 6 (took 0.01693 seconds)
+Norm L2 and queries of image 9171 is 0.1703631430864334 and 288708
+6
+1649
+run with verbose=True to see details
+Step 0: distortion 2.580808 num_query 113 output 2
+Step 1000: distortion 0.025195 num_query 29102 output 2 (took 0.01693 seconds)
+Step 2000: distortion 0.018902 num_query 57663 output 2 (took 0.01959 seconds)
+Step 3000: distortion 0.017313 num_query 86196 output 2 (took 0.01601 seconds)
+Step 4000: distortion 0.016646 num_query 113486 output 2 (took 0.01688 seconds)
+Checkpoint Step 5000: distortion 0.016377 num_query 136548 output 2 (took 0.01854 seconds)
+Step 6000: distortion 0.016269 num_query 159810 output 2 (took 0.01378 seconds)
+Step 6840: distortion 0.016242 num_query 183282 output 2
+Step 6960: distortion 0.016242 num_query 186562 output 2
+Step 6970: distortion 0.016242 num_query 186845 output 2
+Step 6980: distortion 0.016242 num_query 187120 output 2
+Step 6990: distortion 0.016242 num_query 187390 output 2
+Step 7000: distortion 0.016242 num_query 187659 output 2 (took 0.01317 seconds)
+Step 7000: distortion 0.016242 num_query 187660 output 2
+Step 7010: distortion 0.016242 num_query 187930 output 2
+Step 7020: distortion 0.016242 num_query 188200 output 2
+Step 7030: distortion 0.016242 num_query 188470 output 2
+Step 7040: distortion 0.016242 num_query 188740 output 2
+Step 7050: distortion 0.016242 num_query 189010 output 2
+Norm L2 and queries of image 1649 is 0.01624203659594059 and 189038
+2
+5796
+run with verbose=True to see details
+Step 0: distortion 3.484266 num_query 178 output 6
+Step 1000: distortion 0.149657 num_query 30837 output 3 (took 0.01383 seconds)
+Step 2000: distortion 0.111375 num_query 59477 output 3 (took 0.01488 seconds)
+Step 3000: distortion 0.100194 num_query 88135 output 3 (took 0.01725 seconds)
+Step 4000: distortion 0.096171 num_query 116828 output 3 (took 0.01726 seconds)
+Checkpoint Step 5000: distortion 0.094151 num_query 145463 output 3 (took 0.01559 seconds)
+Step 6000: distortion 0.093133 num_query 174075 output 3 (took 0.01557 seconds)
+Step 7000: distortion 0.092656 num_query 202641 output 3 (took 0.01656 seconds)
+Step 8000: distortion 0.092441 num_query 231143 output 3 (took 0.01520 seconds)
+Step 8410: distortion 0.092426 num_query 242599 output 3
+Step 8520: distortion 0.092426 num_query 245716 output 5
+Step 8530: distortion 0.092426 num_query 246086 output 5
+Step 8540: distortion 0.092426 num_query 246417 output 5
+Step 8550: distortion 0.092426 num_query 246774 output 5
+Step 8560: distortion 0.092426 num_query 247105 output 5
+Step 8570: distortion 0.092426 num_query 247464 output 5
+Step 8580: distortion 0.092426 num_query 247828 output 5
+Step 8590: distortion 0.092426 num_query 248196 output 5
+Step 8600: distortion 0.092426 num_query 248563 output 5
+Step 8610: distortion 0.092426 num_query 248935 output 5
+Norm L2 and queries of image 5796 is 0.09242618083953857 and 249149
+5
+7113
+run with verbose=True to see details
+Step 0: distortion 4.798220 num_query 246 output 8
+Step 1000: distortion 0.404733 num_query 30983 output 8 (took 0.01784 seconds)
+Step 2000: distortion 0.302723 num_query 59609 output 8 (took 0.01900 seconds)
+Step 3000: distortion 0.272047 num_query 88316 output 8 (took 0.01391 seconds)
+Step 4000: distortion 0.260371 num_query 116992 output 8 (took 0.01381 seconds)
+Checkpoint Step 5000: distortion 0.254566 num_query 145693 output 8 (took 0.02017 seconds)
+Step 6000: distortion 0.251449 num_query 174335 output 8 (took 0.01685 seconds)
+Step 7000: distortion 0.249509 num_query 203027 output 8 (took 0.01690 seconds)
+Step 8000: distortion 0.248544 num_query 231675 output 8 (took 0.01787 seconds)
+Step 9000: distortion 0.248144 num_query 260259 output 8 (took 0.01612 seconds)
+Step 10000: distortion 0.247869 num_query 288972 output 8 (took 0.01789 seconds)
+Norm L2 and queries of image 7113 is 0.2478685826063156 and 288973
+8
+5180
+run with verbose=True to see details
+Step 0: distortion 6.032441 num_query 309 output 2
+Step 1000: distortion 0.123750 num_query 29312 output 7 (took 0.01554 seconds)
+Step 2000: distortion 0.090921 num_query 57942 output 7 (took 0.01667 seconds)
+Step 3000: distortion 0.082056 num_query 86578 output 7 (took 0.01637 seconds)
+Step 4000: distortion 0.078404 num_query 115154 output 7 (took 0.01881 seconds)
+Checkpoint Step 5000: distortion 0.076333 num_query 143826 output 7 (took 0.01807 seconds)
+Step 6000: distortion 0.074914 num_query 172462 output 7 (took 0.01824 seconds)
+Step 7000: distortion 0.073955 num_query 201056 output 7 (took 0.01500 seconds)
+Step 8000: distortion 0.073474 num_query 229603 output 7 (took 0.01868 seconds)
+Step 9000: distortion 0.073244 num_query 258318 output 9 (took 0.01633 seconds)
+Step 9730: distortion 0.073193 num_query 278846 output 9
+Step 9850: distortion 0.073193 num_query 282462 output 7
+Step 9860: distortion 0.073193 num_query 282783 output 7
+Step 9870: distortion 0.073193 num_query 283119 output 7
+Step 9880: distortion 0.073193 num_query 283439 output 9
+Step 9890: distortion 0.073193 num_query 283761 output 9
+Step 9900: distortion 0.073193 num_query 284137 output 9
+Step 9910: distortion 0.073193 num_query 284485 output 9
+Step 9920: distortion 0.073193 num_query 284803 output 9
+Step 9930: distortion 0.073193 num_query 285176 output 9
+Step 9940: distortion 0.073193 num_query 285554 output 9
+Norm L2 and queries of image 5180 is 0.07319341599941254 and 285592
+9
+3350
+run with verbose=True to see details
+Step 0: distortion 9.354938 num_query 485 output 6
+Step 1000: distortion 0.230533 num_query 30265 output 0 (took 0.01517 seconds)
+Step 2000: distortion 0.164620 num_query 58840 output 0 (took 0.01707 seconds)
+Step 3000: distortion 0.147117 num_query 87539 output 0 (took 0.01592 seconds)
+Step 4000: distortion 0.139886 num_query 116148 output 0 (took 0.02110 seconds)
+Checkpoint Step 5000: distortion 0.136553 num_query 144682 output 0 (took 0.01743 seconds)
+Step 6000: distortion 0.135037 num_query 173259 output 0 (took 0.01701 seconds)
+Step 7000: distortion 0.134255 num_query 201799 output 0 (took 0.01649 seconds)
+Step 8000: distortion 0.133907 num_query 230402 output 0 (took 0.01781 seconds)
+Step 9000: distortion 0.133735 num_query 258919 output 0 (took 0.01419 seconds)
+Step 9400: distortion 0.133722 num_query 270070 output 8
+Step 9510: distortion 0.133722 num_query 273182 output 8
+Step 9520: distortion 0.133722 num_query 273478 output 0
+Step 9530: distortion 0.133722 num_query 273828 output 0
+Step 9540: distortion 0.133722 num_query 274184 output 0
+Step 9550: distortion 0.133722 num_query 274516 output 0
+Step 9560: distortion 0.133722 num_query 274877 output 8
+Step 9570: distortion 0.133722 num_query 275238 output 8
+Step 9580: distortion 0.133722 num_query 275584 output 8
+Step 9590: distortion 0.133722 num_query 275915 output 8
+Step 9600: distortion 0.133722 num_query 276243 output 8
+Norm L2 and queries of image 3350 is 0.13372237980365753 and 276314
+8
+9052
+run with verbose=True to see details
+Step 0: distortion 3.810462 num_query 133 output 8
+Step 1000: distortion 0.295822 num_query 31295 output 8 (took 0.01827 seconds)
+Step 2000: distortion 0.220772 num_query 59899 output 8 (took 0.01672 seconds)
+Step 3000: distortion 0.191816 num_query 88469 output 8 (took 0.01602 seconds)
+Step 4000: distortion 0.182189 num_query 117076 output 8 (took 0.01792 seconds)
+Checkpoint Step 5000: distortion 0.176490 num_query 145665 output 8 (took 0.01363 seconds)
+Step 6000: distortion 0.173648 num_query 174139 output 8 (took 0.01629 seconds)
+Step 7000: distortion 0.172437 num_query 202766 output 8 (took 0.01695 seconds)
+Step 8000: distortion 0.171896 num_query 231442 output 8 (took 0.01706 seconds)
+Step 9000: distortion 0.171382 num_query 260139 output 8 (took 0.01806 seconds)
+Step 10000: distortion 0.171164 num_query 288578 output 8 (took 0.01394 seconds)
+Norm L2 and queries of image 9052 is 0.17116433382034302 and 288579
+8
+7815
+Norm L2 and queries of image 7815 is 0.0 and 1
+8
+7253
+run with verbose=True to see details
+/home/cmhcbb/blackbox-attack/foolbox/attacks/base.py:93: UserWarning: Not running the attack because the original input is already misclassified and the adversarial thus has a distance of 0.
+  warnings.warn('Not running the attack because the original input'
+Step 0: distortion 7.770732 num_query 446 output 6
+Step 1000: distortion 0.174946 num_query 28430 output 2 (took 0.01755 seconds)
+Step 2000: distortion 0.115330 num_query 57033 output 2 (took 0.01664 seconds)
+Step 3000: distortion 0.101574 num_query 85742 output 2 (took 0.01769 seconds)
+Step 4000: distortion 0.096021 num_query 114470 output 2 (took 0.01626 seconds)
+Checkpoint Step 5000: distortion 0.093343 num_query 143174 output 2 (took 0.01471 seconds)
+Step 6000: distortion 0.092079 num_query 171815 output 2 (took 0.01702 seconds)
+Step 7000: distortion 0.091413 num_query 200509 output 2 (took 0.01644 seconds)
+Step 8000: distortion 0.091012 num_query 229161 output 2 (took 0.01524 seconds)
+Step 9000: distortion 0.090856 num_query 257933 output 2 (took 0.01650 seconds)
+Step 10000: distortion 0.090724 num_query 286503 output 2 (took 0.01633 seconds)
+Norm L2 and queries of image 7253 is 0.09072421491146088 and 286504
+2
+8541
+run with verbose=True to see details
+Step 0: distortion 3.947543 num_query 208 output 6
+Step 1000: distortion 0.679987 num_query 30985 output 6 (took 0.01632 seconds)
+Step 2000: distortion 0.490992 num_query 59582 output 6 (took 0.01564 seconds)
+Step 3000: distortion 0.437309 num_query 88227 output 6 (took 0.01831 seconds)
+Step 4000: distortion 0.414626 num_query 116840 output 6 (took 0.01615 seconds)
+Checkpoint Step 5000: distortion 0.403004 num_query 145496 output 6 (took 0.01464 seconds)
+Step 6000: distortion 0.396675 num_query 174150 output 6 (took 0.02012 seconds)
+Step 7000: distortion 0.392981 num_query 202732 output 6 (took 0.01770 seconds)
+Step 8000: distortion 0.390839 num_query 231289 output 6 (took 0.01585 seconds)
+Step 9000: distortion 0.389882 num_query 259908 output 6 (took 0.01546 seconds)
+Step 10000: distortion 0.389441 num_query 288485 output 6 (took 0.02082 seconds)
+Norm L2 and queries of image 8541 is 0.38944095373153687 and 288486
+6
+4267
+run with verbose=True to see details
+Step 0: distortion 2.790784 num_query 119 output 4
+Step 1000: distortion 0.041849 num_query 27818 output 5 (took 0.01677 seconds)
+Step 2000: distortion 0.030973 num_query 54866 output 5 (took 0.01863 seconds)
+Step 3000: distortion 0.028407 num_query 83543 output 5 (took 0.02073 seconds)
+Step 4000: distortion 0.027412 num_query 112118 output 5 (took 0.01747 seconds)
+Checkpoint Step 5000: distortion 0.027013 num_query 140684 output 5 (took 0.01781 seconds)
+Step 6000: distortion 0.026825 num_query 169286 output 5 (took 0.01851 seconds)
+Step 7000: distortion 0.026759 num_query 197457 output 5 (took 0.01243 seconds)
+Step 7030: distortion 0.026759 num_query 198268 output 5
+Step 7150: distortion 0.026759 num_query 201567 output 5
+Step 7160: distortion 0.026759 num_query 201926 output 5
+Step 7170: distortion 0.026759 num_query 202291 output 5
+Step 7180: distortion 0.026759 num_query 202633 output 5
+Step 7190: distortion 0.026759 num_query 203002 output 5
+Step 7200: distortion 0.026759 num_query 203376 output 5
+Step 7210: distortion 0.026759 num_query 203747 output 5
+Step 7220: distortion 0.026759 num_query 204115 output 5
+Step 7230: distortion 0.026759 num_query 204494 output 5
+Step 7240: distortion 0.026759 num_query 204864 output 5
+Norm L2 and queries of image 4267 is 0.026759419590234756 and 204902
+5
+1020
+run with verbose=True to see details
+Step 0: distortion 4.917346 num_query 239 output 6
+Step 1000: distortion 0.502393 num_query 31219 output 2 (took 0.01985 seconds)
+Step 2000: distortion 0.371241 num_query 58943 output 2 (took 0.01905 seconds)
+Step 3000: distortion 0.333203 num_query 87639 output 2 (took 0.01693 seconds)
+Step 4000: distortion 0.317575 num_query 116298 output 2 (took 0.01439 seconds)
+Checkpoint Step 5000: distortion 0.310462 num_query 144887 output 2 (took 0.01860 seconds)
+Step 6000: distortion 0.306793 num_query 173545 output 2 (took 0.01751 seconds)
+Step 7000: distortion 0.304779 num_query 202174 output 2 (took 0.01760 seconds)
+Step 8000: distortion 0.303501 num_query 230835 output 2 (took 0.01672 seconds)
+Step 9000: distortion 0.302721 num_query 259482 output 2 (took 0.01733 seconds)
+Step 10000: distortion 0.302372 num_query 288017 output 2 (took 0.01418 seconds)
+Norm L2 and queries of image 1020 is 0.30237194895744324 and 288018
+2
+8989
+run with verbose=True to see details
+Step 0: distortion 2.722814 num_query 143 output 6
+Step 1000: distortion 0.218227 num_query 30788 output 6 (took 0.01660 seconds)
+Step 2000: distortion 0.156193 num_query 59327 output 6 (took 0.01682 seconds)
+Step 3000: distortion 0.138288 num_query 87908 output 6 (took 0.01501 seconds)
+Step 4000: distortion 0.132106 num_query 116645 output 6 (took 0.01788 seconds)
+Checkpoint Step 5000: distortion 0.129085 num_query 145223 output 6 (took 0.01764 seconds)
+Step 6000: distortion 0.127662 num_query 173933 output 6 (took 0.02036 seconds)
+Step 7000: distortion 0.126945 num_query 202551 output 6 (took 0.01568 seconds)
+Step 8000: distortion 0.126525 num_query 231086 output 6 (took 0.01787 seconds)
+Step 9000: distortion 0.126310 num_query 259663 output 4 (took 0.01741 seconds)
+Step 10000: distortion 0.126222 num_query 288170 output 6 (took 0.01855 seconds)
+Norm L2 and queries of image 8989 is 0.1262216418981552 and 288171
+6
+230
+run with verbose=True to see details
+Step 0: distortion 8.868156 num_query 368 output 6
+Step 1000: distortion 0.193207 num_query 29837 output 3 (took 0.01545 seconds)
+Step 2000: distortion 0.138656 num_query 54528 output 3 (took 0.01890 seconds)
+Step 3000: distortion 0.124302 num_query 83198 output 3 (took 0.01767 seconds)
+Step 4000: distortion 0.118688 num_query 111850 output 3 (took 0.01563 seconds)
+Checkpoint Step 5000: distortion 0.116017 num_query 140542 output 3 (took 0.01733 seconds)
+Step 6000: distortion 0.114995 num_query 169209 output 3 (took 0.01649 seconds)
+Step 7000: distortion 0.114320 num_query 197796 output 3 (took 0.01701 seconds)
+Step 8000: distortion 0.113968 num_query 226313 output 3 (took 0.01840 seconds)
+Step 8950: distortion 0.113849 num_query 253317 output 5
+Step 9000: distortion 0.113849 num_query 254668 output 3 (took 0.01409 seconds)
+Step 9070: distortion 0.113849 num_query 256579 output 3
+Step 9080: distortion 0.113849 num_query 256874 output 3
+Step 9090: distortion 0.113849 num_query 257237 output 3
+Step 9100: distortion 0.113849 num_query 257607 output 3
+Step 9110: distortion 0.113849 num_query 257975 output 3
+Step 9120: distortion 0.113849 num_query 258360 output 3
+Step 9130: distortion 0.113849 num_query 258683 output 3
+Step 9140: distortion 0.113849 num_query 259021 output 3
+Step 9150: distortion 0.113849 num_query 259402 output 3
+Step 9160: distortion 0.113849 num_query 259764 output 3
+Norm L2 and queries of image 230 is 0.11384869366884232 and 259800
+3
+1528
+run with verbose=True to see details
+Step 0: distortion 3.997811 num_query 160 output 6
+Step 1000: distortion 0.348103 num_query 31019 output 6 (took 0.01731 seconds)
+Step 2000: distortion 0.260575 num_query 59647 output 6 (took 0.01888 seconds)
+Step 3000: distortion 0.232923 num_query 88302 output 6 (took 0.01565 seconds)
+Step 4000: distortion 0.221637 num_query 116971 output 6 (took 0.01530 seconds)
+Checkpoint Step 5000: distortion 0.216800 num_query 145632 output 6 (took 0.01581 seconds)
+Step 6000: distortion 0.213677 num_query 174208 output 6 (took 0.01774 seconds)
+Step 7000: distortion 0.212071 num_query 202788 output 6 (took 0.01707 seconds)
+Step 8000: distortion 0.211294 num_query 231440 output 6 (took 0.01648 seconds)
+Step 9000: distortion 0.210752 num_query 260050 output 6 (took 0.01683 seconds)
+Step 10000: distortion 0.210302 num_query 288566 output 6 (took 0.01561 seconds)
+Norm L2 and queries of image 1528 is 0.21030211448669434 and 288567
+6
+6534
+run with verbose=True to see details
+Step 0: distortion 4.966551 num_query 253 output 2
+Step 1000: distortion 0.525764 num_query 30773 output 2 (took 0.01959 seconds)
+Step 2000: distortion 0.368917 num_query 58564 output 2 (took 0.01671 seconds)
+Step 3000: distortion 0.329341 num_query 86447 output 2 (took 0.01849 seconds)
+Step 4000: distortion 0.311002 num_query 114217 output 2 (took 0.01725 seconds)
+Checkpoint Step 5000: distortion 0.303212 num_query 142116 output 2 (took 0.01782 seconds)
+Step 6000: distortion 0.299142 num_query 169944 output 2 (took 0.01654 seconds)
+Step 7000: distortion 0.297182 num_query 197764 output 2 (took 0.01528 seconds)
+Step 8000: distortion 0.296213 num_query 225610 output 2 (took 0.01946 seconds)
+Step 9000: distortion 0.295751 num_query 253480 output 2 (took 0.01835 seconds)
+Step 10000: distortion 0.295315 num_query 281286 output 2 (took 0.01706 seconds)
+Norm L2 and queries of image 6534 is 0.2953149676322937 and 281287
+2
+18
+run with verbose=True to see details
+Step 0: distortion 17.254755 num_query 677 output 9
+Step 1000: distortion 0.491927 num_query 31273 output 9 (took 0.01491 seconds)
+Step 2000: distortion 0.339248 num_query 59763 output 9 (took 0.01635 seconds)
+Step 3000: distortion 0.303608 num_query 88394 output 9 (took 0.01560 seconds)
+Step 4000: distortion 0.288686 num_query 117047 output 9 (took 0.01679 seconds)
+Checkpoint Step 5000: distortion 0.281878 num_query 145686 output 9 (took 0.01608 seconds)
+Step 6000: distortion 0.277896 num_query 174353 output 9 (took 0.01739 seconds)
+Step 7000: distortion 0.275938 num_query 202745 output 9 (took 0.01707 seconds)
+Step 8000: distortion 0.274891 num_query 231388 output 9 (took 0.01562 seconds)
+Step 9000: distortion 0.274164 num_query 259994 output 9 (took 0.01680 seconds)
+Step 10000: distortion 0.273287 num_query 288723 output 9 (took 0.01515 seconds)
+Norm L2 and queries of image 18 is 0.27328717708587646 and 288724
+9
+8086
+run with verbose=True to see details
+Step 0: distortion 0.468518 num_query 29 output 6
+Step 1000: distortion 0.013677 num_query 29422 output 6 (took 0.01590 seconds)
+Step 2000: distortion 0.010364 num_query 57985 output 6 (took 0.01682 seconds)
+Step 3000: distortion 0.009518 num_query 86617 output 6 (took 0.01648 seconds)
+Step 4000: distortion 0.009217 num_query 115156 output 6 (took 0.01613 seconds)
+Checkpoint Step 5000: distortion 0.009082 num_query 143764 output 6 (took 0.01586 seconds)
+Step 5850: distortion 0.009049 num_query 167443 output 6
+Step 5970: distortion 0.009049 num_query 170948 output 6
+Step 5980: distortion 0.009049 num_query 171299 output 6
+Step 5990: distortion 0.009049 num_query 171639 output 6
+Step 6000: distortion 0.009049 num_query 171989 output 6 (took 0.01482 seconds)
+Step 6000: distortion 0.009049 num_query 171990 output 6
+Step 6010: distortion 0.009049 num_query 172327 output 6
+Step 6020: distortion 0.009049 num_query 172669 output 6
+Step 6030: distortion 0.009049 num_query 173020 output 6
+Step 6040: distortion 0.009049 num_query 173370 output 6
+Step 6050: distortion 0.009049 num_query 173711 output 6
+Step 6060: distortion 0.009049 num_query 174042 output 6
+Norm L2 and queries of image 8086 is 0.009048758074641228 and 174079
+6
+5458
+Norm L2 and queries of image 5458 is 0.0 and 1
+6
+3996
+run with verbose=True to see details
+/home/cmhcbb/blackbox-attack/foolbox/attacks/base.py:93: UserWarning: Not running the attack because the original input is already misclassified and the adversarial thus has a distance of 0.
+  warnings.warn('Not running the attack because the original input'
+Step 0: distortion 9.150063 num_query 467 output 2
+Step 1000: distortion 0.146844 num_query 31188 output 2 (took 0.01511 seconds)
+Step 2000: distortion 0.108143 num_query 59675 output 2 (took 0.01549 seconds)
+Step 3000: distortion 0.097908 num_query 88335 output 2 (took 0.01565 seconds)
+Step 4000: distortion 0.093674 num_query 113155 output 2 (took 0.01614 seconds)
+Checkpoint Step 5000: distortion 0.091781 num_query 137974 output 2 (took 0.01800 seconds)
+Step 6000: distortion 0.090857 num_query 163593 output 2 (took 0.01935 seconds)
+Step 7000: distortion 0.090459 num_query 192152 output 6 (took 0.01940 seconds)
+Step 7980: distortion 0.090367 num_query 219652 output 6
+Step 8000: distortion 0.090367 num_query 220192 output 6 (took 0.01342 seconds)
+Step 8100: distortion 0.090367 num_query 222956 output 2
+Step 8110: distortion 0.090367 num_query 223289 output 2
+Step 8120: distortion 0.090367 num_query 223605 output 2
+Step 8130: distortion 0.090367 num_query 223929 output 2
+Step 8140: distortion 0.090367 num_query 224296 output 2
+Step 8150: distortion 0.090367 num_query 224658 output 2
+Step 8160: distortion 0.090367 num_query 225006 output 2
+Step 8170: distortion 0.090367 num_query 225388 output 2
+Step 8180: distortion 0.090367 num_query 225773 output 2
+Step 8190: distortion 0.090367 num_query 226172 output 2
+Norm L2 and queries of image 3996 is 0.09036718308925629 and 226216
+2
+5328
+Norm L2 and queries of image 5328 is 0.0 and 1
+3
+1031
+run with verbose=True to see details
+Step 0: distortion 1.474623 num_query 63 output 5
+/home/cmhcbb/blackbox-attack/foolbox/attacks/base.py:93: UserWarning: Not running the attack because the original input is already misclassified and the adversarial thus has a distance of 0.
+  warnings.warn('Not running the attack because the original input'
+Step 1000: distortion 0.026788 num_query 29062 output 5 (took 0.01552 seconds)
+Step 2000: distortion 0.020030 num_query 55242 output 5 (took 0.01937 seconds)
+Step 3000: distortion 0.018241 num_query 81349 output 5 (took 0.01491 seconds)
+Step 4000: distortion 0.017541 num_query 110024 output 5 (took 0.02132 seconds)
+Checkpoint Step 5000: distortion 0.017249 num_query 138042 output 5 (took 0.01696 seconds)
+Step 6000: distortion 0.017146 num_query 166411 output 3 (took 0.01465 seconds)
+Step 6290: distortion 0.017145 num_query 174334 output 5
+Step 6390: distortion 0.017145 num_query 177215 output 5
+Step 6400: distortion 0.017145 num_query 177535 output 3
+Step 6410: distortion 0.017145 num_query 177835 output 3
+Step 6420: distortion 0.017145 num_query 178166 output 3
+Step 6430: distortion 0.017145 num_query 178544 output 3
+Step 6440: distortion 0.017145 num_query 178923 output 3
+Step 6450: distortion 0.017145 num_query 179275 output 3
+Step 6460: distortion 0.017145 num_query 179669 output 3
+Step 6470: distortion 0.017145 num_query 180053 output 3
+Step 6480: distortion 0.017145 num_query 180430 output 3
+Norm L2 and queries of image 1031 is 0.017145102843642235 and 180691
+3
+3130
+run with verbose=True to see details
+Step 0: distortion 6.651113 num_query 315 output 6
+Step 1000: distortion 0.789912 num_query 31130 output 6 (took 0.01467 seconds)
+Step 2000: distortion 0.524147 num_query 59771 output 6 (took 0.01903 seconds)
+Step 3000: distortion 0.456409 num_query 88399 output 6 (took 0.01538 seconds)
+Step 4000: distortion 0.428499 num_query 117082 output 6 (took 0.01633 seconds)
+Checkpoint Step 5000: distortion 0.412985 num_query 145784 output 6 (took 0.01757 seconds)
+Step 6000: distortion 0.404225 num_query 174446 output 6 (took 0.01980 seconds)
+Step 7000: distortion 0.399249 num_query 203144 output 6 (took 0.01847 seconds)
+Step 8000: distortion 0.396902 num_query 231795 output 6 (took 0.01797 seconds)
+Step 9000: distortion 0.394951 num_query 260366 output 6 (took 0.01455 seconds)
+Step 10000: distortion 0.394137 num_query 289073 output 6 (took 0.01587 seconds)
+Norm L2 and queries of image 3130 is 0.3941366970539093 and 289074
+6
+9298
+run with verbose=True to see details
+Step 0: distortion 0.996764 num_query 49 output 9
+Step 1000: distortion 0.026913 num_query 30147 output 9 (took 0.01906 seconds)
+Step 2000: distortion 0.020450 num_query 52606 output 9 (took 0.01475 seconds)
+Step 3000: distortion 0.018733 num_query 79462 output 9 (took 0.01714 seconds)
+Step 4000: distortion 0.018067 num_query 106539 output 9 (took 0.01861 seconds)
+Checkpoint Step 5000: distortion 0.017785 num_query 135183 output 9 (took 0.01605 seconds)
+Step 6000: distortion 0.017673 num_query 163841 output 9 (took 0.01603 seconds)
+Step 6690: distortion 0.017651 num_query 183061 output 1
+Step 6810: distortion 0.017651 num_query 186387 output 1
+Step 6820: distortion 0.017651 num_query 186718 output 1
+Step 6830: distortion 0.017651 num_query 187048 output 1
+Step 6840: distortion 0.017651 num_query 187402 output 1
+Step 6850: distortion 0.017651 num_query 187767 output 1
+Step 6860: distortion 0.017651 num_query 188128 output 1
+Step 6870: distortion 0.017651 num_query 188495 output 1
+Step 6880: distortion 0.017651 num_query 188849 output 1
+Step 6890: distortion 0.017651 num_query 189210 output 1
+Step 6900: distortion 0.017651 num_query 189554 output 1
+Norm L2 and queries of image 9298 is 0.017651112750172615 and 189588
+1
+3632
+run with verbose=True to see details
+Step 0: distortion 6.330169 num_query 287 output 9
+Step 1000: distortion 0.321616 num_query 31119 output 9 (took 0.01433 seconds)
+Step 2000: distortion 0.233447 num_query 55619 output 9 (took 0.01614 seconds)
+Step 3000: distortion 0.209255 num_query 80825 output 9 (took 0.01739 seconds)
+Step 4000: distortion 0.200021 num_query 107755 output 9 (took 0.01580 seconds)
+Checkpoint Step 5000: distortion 0.196472 num_query 136432 output 9 (took 0.01538 seconds)
+Step 6000: distortion 0.194156 num_query 165085 output 9 (took 0.02074 seconds)
+Step 7000: distortion 0.193218 num_query 193739 output 9 (took 0.01619 seconds)
+Step 8000: distortion 0.192727 num_query 222481 output 9 (took 0.01815 seconds)
+Step 9000: distortion 0.192261 num_query 250938 output 9 (took 0.01670 seconds)
+Step 9430: distortion 0.192230 num_query 263028 output 9
+Step 9540: distortion 0.192230 num_query 266036 output 9
+Step 9550: distortion 0.192230 num_query 266329 output 9
+Step 9560: distortion 0.192230 num_query 266629 output 9
+Step 9570: distortion 0.192230 num_query 266991 output 9
+Step 9580: distortion 0.192230 num_query 267357 output 9
+Step 9590: distortion 0.192230 num_query 267736 output 9
+Step 9600: distortion 0.192230 num_query 268064 output 9
+Step 9610: distortion 0.192230 num_query 268452 output 9
+Step 9620: distortion 0.192230 num_query 268842 output 9
+Step 9630: distortion 0.192230 num_query 269213 output 9
+Norm L2 and queries of image 3632 is 0.1922300159931183 and 269502
+9
+3909
+run with verbose=True to see details
+Step 0: distortion 0.673970 num_query 36 output 3
+Step 1000: distortion 0.009846 num_query 29245 output 3 (took 0.01445 seconds)
+Step 2000: distortion 0.007321 num_query 57832 output 3 (took 0.01620 seconds)
+Step 3000: distortion 0.006682 num_query 83652 output 3 (took 0.01530 seconds)
+Step 4000: distortion 0.006435 num_query 112247 output 5 (took 0.01573 seconds)
+Checkpoint Step 5000: distortion 0.006350 num_query 140687 output 3 (took 0.01324 seconds)
+Step 5340: distortion 0.006350 num_query 149880 output 5
+Step 5450: distortion 0.006350 num_query 153000 output 3
+Step 5460: distortion 0.006350 num_query 153342 output 3
+Step 5470: distortion 0.006350 num_query 153674 output 3
+Step 5480: distortion 0.006350 num_query 154018 output 3
+Step 5490: distortion 0.006350 num_query 154358 output 3
+Step 5500: distortion 0.006350 num_query 154701 output 3
+Step 5510: distortion 0.006350 num_query 155053 output 3
+Step 5520: distortion 0.006350 num_query 155418 output 3
+Step 5530: distortion 0.006350 num_query 155773 output 3
+Step 5540: distortion 0.006350 num_query 156116 output 3
+Norm L2 and queries of image 3909 is 0.006349596660584211 and 156223
+3
+2334
+run with verbose=True to see details
+Step 0: distortion 5.316132 num_query 233 output 6
+Step 1000: distortion 0.454264 num_query 31350 output 6 (took 0.01699 seconds)
+Step 2000: distortion 0.328408 num_query 59973 output 6 (took 0.01775 seconds)
+Step 3000: distortion 0.293858 num_query 88656 output 6 (took 0.01624 seconds)
+Step 4000: distortion 0.280855 num_query 117225 output 6 (took 0.01896 seconds)
+Checkpoint Step 5000: distortion 0.274527 num_query 145830 output 6 (took 0.01371 seconds)
+Step 6000: distortion 0.271463 num_query 174462 output 6 (took 0.01741 seconds)
+Step 7000: distortion 0.269582 num_query 203137 output 6 (took 0.01371 seconds)
+Step 8000: distortion 0.268773 num_query 231858 output 6 (took 0.01492 seconds)
+Step 9000: distortion 0.268385 num_query 260471 output 6 (took 0.01562 seconds)
+Step 10000: distortion 0.267994 num_query 289133 output 6 (took 0.01832 seconds)
+Norm L2 and queries of image 2334 is 0.26799410581588745 and 289134
+6
+8896
+run with verbose=True to see details
+Step 0: distortion 4.910847 num_query 240 output 4
+Step 1000: distortion 0.259495 num_query 30923 output 0 (took 0.01684 seconds)
+Step 2000: distortion 0.181173 num_query 58730 output 0 (took 0.01599 seconds)
+Step 3000: distortion 0.160762 num_query 86577 output 0 (took 0.01748 seconds)
+Step 4000: distortion 0.151482 num_query 114395 output 0 (took 0.01880 seconds)
+Checkpoint Step 5000: distortion 0.147461 num_query 142219 output 0 (took 0.01789 seconds)
+Step 6000: distortion 0.145465 num_query 170045 output 0 (took 0.01641 seconds)
+Step 7000: distortion 0.144439 num_query 197856 output 0 (took 0.01470 seconds)
+Step 8000: distortion 0.144058 num_query 225664 output 0 (took 0.01781 seconds)
+Step 9000: distortion 0.143835 num_query 253540 output 0 (took 0.01784 seconds)
+Step 10000: distortion 0.143599 num_query 281280 output 0 (took 0.01857 seconds)
+Norm L2 and queries of image 8896 is 0.14359858632087708 and 281281
+0
+7339
+run with verbose=True to see details
+Step 0: distortion 16.749180 num_query 740 output 8
+Step 1000: distortion 0.665165 num_query 31960 output 0 (took 0.01620 seconds)
+Step 2000: distortion 0.399766 num_query 60492 output 0 (took 0.02459 seconds)
+Step 3000: distortion 0.340179 num_query 89031 output 0 (took 0.01718 seconds)
+Step 4000: distortion 0.315886 num_query 117563 output 0 (took 0.01516 seconds)
+Checkpoint Step 5000: distortion 0.304493 num_query 146177 output 0 (took 0.02020 seconds)
+Step 6000: distortion 0.298835 num_query 174836 output 0 (took 0.01753 seconds)
+Step 7000: distortion 0.295018 num_query 203439 output 0 (took 0.01731 seconds)
+Step 8000: distortion 0.293100 num_query 232053 output 0 (took 0.01611 seconds)
+Step 9000: distortion 0.292009 num_query 260705 output 0 (took 0.01401 seconds)
+Step 10000: distortion 0.291194 num_query 289251 output 0 (took 0.01560 seconds)
+Norm L2 and queries of image 7339 is 0.2911944091320038 and 289252
+0
+1494
+run with verbose=True to see details
+Step 0: distortion 0.548124 num_query 22 output 3
+Step 1000: distortion 0.012683 num_query 28667 output 3 (took 0.01844 seconds)
+Step 2000: distortion 0.009642 num_query 57348 output 3 (took 0.02033 seconds)
+Step 3000: distortion 0.008795 num_query 86056 output 3 (took 0.01831 seconds)
+Step 4000: distortion 0.008481 num_query 114716 output 3 (took 0.01481 seconds)
+Checkpoint Step 5000: distortion 0.008366 num_query 143323 output 3 (took 0.01533 seconds)
+Step 5990: distortion 0.008325 num_query 171054 output 7
+Step 6000: distortion 0.008325 num_query 171326 output 7 (took 0.01330 seconds)
+Step 6100: distortion 0.008325 num_query 174191 output 7
+Step 6110: distortion 0.008325 num_query 174519 output 7
+Step 6120: distortion 0.008325 num_query 174859 output 7
+Step 6130: distortion 0.008325 num_query 175193 output 7
+Step 6140: distortion 0.008325 num_query 175530 output 7
+Step 6150: distortion 0.008325 num_query 175881 output 7
+Step 6160: distortion 0.008325 num_query 176236 output 7
+Step 6170: distortion 0.008325 num_query 176587 output 7
+Step 6180: distortion 0.008325 num_query 176924 output 7
+Step 6190: distortion 0.008325 num_query 177282 output 7
+Norm L2 and queries of image 1494 is 0.0083247609436512 and 177283
+7
+1318
+Norm L2 and queries of image 1318 is 0.0 and 1
+3
+5243
+run with verbose=True to see details
+/home/cmhcbb/blackbox-attack/foolbox/attacks/base.py:93: UserWarning: Not running the attack because the original input is already misclassified and the adversarial thus has a distance of 0.
+  warnings.warn('Not running the attack because the original input'
+Step 0: distortion 7.173621 num_query 296 output 6
+Step 1000: distortion 0.533639 num_query 31684 output 3 (took 0.01710 seconds)
+Step 2000: distortion 0.377573 num_query 60349 output 3 (took 0.01762 seconds)
+Step 3000: distortion 0.332763 num_query 89021 output 3 (took 0.01697 seconds)
+Step 4000: distortion 0.314806 num_query 117659 output 3 (took 0.01667 seconds)
+Checkpoint Step 5000: distortion 0.306942 num_query 146331 output 3 (took 0.01800 seconds)
+Step 6000: distortion 0.301856 num_query 174862 output 3 (took 0.01630 seconds)
+Step 7000: distortion 0.299319 num_query 203495 output 3 (took 0.01640 seconds)
+Step 8000: distortion 0.297932 num_query 232021 output 3 (took 0.02149 seconds)
+Step 9000: distortion 0.297329 num_query 260545 output 3 (took 0.01931 seconds)
+Step 10000: distortion 0.296929 num_query 289182 output 3 (took 0.01738 seconds)
+Norm L2 and queries of image 5243 is 0.29692909121513367 and 289183
+3
+8322
+run with verbose=True to see details
+Step 0: distortion 3.165691 num_query 157 output 2
+Step 1000: distortion 0.054287 num_query 29239 output 2 (took 0.01518 seconds)
+Step 2000: distortion 0.040560 num_query 57854 output 2 (took 0.01616 seconds)
+Step 3000: distortion 0.036978 num_query 86546 output 2 (took 0.01542 seconds)
+Step 4000: distortion 0.035450 num_query 115085 output 2 (took 0.01654 seconds)
+Checkpoint Step 5000: distortion 0.034820 num_query 143635 output 2 (took 0.01844 seconds)
+Step 6000: distortion 0.034545 num_query 172276 output 2 (took 0.02051 seconds)
+Step 7000: distortion 0.034410 num_query 200804 output 2 (took 0.01644 seconds)
+Step 7670: distortion 0.034383 num_query 219593 output 2
+Step 7790: distortion 0.034383 num_query 222906 output 2
+Step 7800: distortion 0.034383 num_query 223290 output 2
+Step 7810: distortion 0.034383 num_query 223660 output 2
+Step 7820: distortion 0.034383 num_query 224017 output 4
+Step 7830: distortion 0.034383 num_query 224376 output 4
+Step 7840: distortion 0.034383 num_query 224688 output 4
+Step 7850: distortion 0.034383 num_query 225050 output 4
+Step 7860: distortion 0.034383 num_query 225440 output 4
+Step 7870: distortion 0.034383 num_query 225797 output 4
+Step 7880: distortion 0.034383 num_query 226159 output 4
+Norm L2 and queries of image 8322 is 0.034382618963718414 and 226198
+4
+8016
+run with verbose=True to see details
+Step 0: distortion 7.704700 num_query 376 output 6
+Step 1000: distortion 0.005174 num_query 29971 output 6 (took 0.01515 seconds)
+Step 2000: distortion 0.003823 num_query 58557 output 6 (took 0.01644 seconds)
+Step 3000: distortion 0.003464 num_query 87276 output 6 (took 0.01543 seconds)
+Step 4000: distortion 0.003345 num_query 115792 output 6 (took 0.01726 seconds)
+Step 4960: distortion 0.003318 num_query 142481 output 4
+Checkpoint Step 5000: distortion 0.003318 num_query 143564 output 4 (took 0.01206 seconds)
+Step 5070: distortion 0.003318 num_query 145648 output 6
+Step 5080: distortion 0.003318 num_query 145995 output 6
+Step 5090: distortion 0.003318 num_query 146349 output 6
+Step 5100: distortion 0.003318 num_query 146704 output 6
+Step 5110: distortion 0.003318 num_query 147044 output 6
+Step 5120: distortion 0.003318 num_query 147391 output 6
+Step 5130: distortion 0.003318 num_query 147745 output 6
+Step 5140: distortion 0.003318 num_query 148106 output 6
+Step 5150: distortion 0.003318 num_query 148452 output 6
+Step 5160: distortion 0.003318 num_query 148807 output 6
+Norm L2 and queries of image 8016 is 0.0033176031429320574 and 149081
+6
+1786
+run with verbose=True to see details
+Step 0: distortion 8.201168 num_query 350 output 8
+Step 1000: distortion 0.196005 num_query 30378 output 9 (took 0.01531 seconds)
+Step 2000: distortion 0.139235 num_query 59049 output 9 (took 0.01696 seconds)
+Step 3000: distortion 0.125767 num_query 87626 output 9 (took 0.01534 seconds)
+Step 4000: distortion 0.120165 num_query 116356 output 9 (took 0.01612 seconds)
+Checkpoint Step 5000: distortion 0.117803 num_query 144974 output 9 (took 0.01380 seconds)
+Step 6000: distortion 0.116605 num_query 173523 output 9 (took 0.01664 seconds)
+Step 7000: distortion 0.116058 num_query 202146 output 9 (took 0.01762 seconds)
+Step 8000: distortion 0.115722 num_query 230778 output 9 (took 0.01757 seconds)
+Step 8850: distortion 0.115653 num_query 254781 output 1
+Step 8950: distortion 0.115653 num_query 257597 output 1
+Step 8960: distortion 0.115653 num_query 257936 output 1
+Step 8970: distortion 0.115653 num_query 258283 output 1
+Step 8980: distortion 0.115653 num_query 258604 output 1
+Step 8990: distortion 0.115653 num_query 258966 output 1
+Step 9000: distortion 0.115653 num_query 259342 output 1 (took 0.01715 seconds)
+Step 9000: distortion 0.115653 num_query 259343 output 1
+Step 9010: distortion 0.115653 num_query 259709 output 1
+Step 9020: distortion 0.115653 num_query 260072 output 1
+Step 9030: distortion 0.115653 num_query 260443 output 1
+Step 9040: distortion 0.115653 num_query 260777 output 1
+Norm L2 and queries of image 1786 is 0.11565262079238892 and 261079
+1
+4938
+Norm L2 and queries of image 4938 is 0.0 and 1
+5
+9031
+run with verbose=True to see details
+Step 0: distortion 2.099847 num_query 110 output 4
+/home/cmhcbb/blackbox-attack/foolbox/attacks/base.py:93: UserWarning: Not running the attack because the original input is already misclassified and the adversarial thus has a distance of 0.
+  warnings.warn('Not running the attack because the original input'
+Step 1000: distortion 0.205709 num_query 30621 output 4 (took 0.01418 seconds)
+Step 2000: distortion 0.153171 num_query 59166 output 4 (took 0.01861 seconds)
+Step 3000: distortion 0.137070 num_query 87763 output 4 (took 0.01660 seconds)
+Step 4000: distortion 0.130480 num_query 116438 output 4 (took 0.01807 seconds)
+Checkpoint Step 5000: distortion 0.127565 num_query 144983 output 4 (took 0.01483 seconds)
+Step 6000: distortion 0.126197 num_query 173553 output 4 (took 0.01683 seconds)
+Step 7000: distortion 0.125332 num_query 202170 output 4 (took 0.01646 seconds)
+Step 8000: distortion 0.124934 num_query 230902 output 4 (took 0.01919 seconds)
+Step 9000: distortion 0.124623 num_query 259510 output 4 (took 0.01405 seconds)
+Step 10000: distortion 0.124540 num_query 288036 output 4 (took 0.01807 seconds)
+Norm L2 and queries of image 9031 is 0.12453960627317429 and 288037
+4
+4769
+run with verbose=True to see details
+Step 0: distortion 16.831440 num_query 833 output 5
+Step 1000: distortion 0.619522 num_query 29965 output 2 (took 0.02004 seconds)
+Step 2000: distortion 0.432078 num_query 58638 output 2 (took 0.01833 seconds)
+Step 3000: distortion 0.380235 num_query 87215 output 2 (took 0.01757 seconds)
+Step 4000: distortion 0.358812 num_query 115886 output 2 (took 0.01671 seconds)
+Checkpoint Step 5000: distortion 0.348800 num_query 144513 output 2 (took 0.01709 seconds)
+Step 6000: distortion 0.343333 num_query 173139 output 2 (took 0.01800 seconds)
+Step 7000: distortion 0.340883 num_query 201778 output 2 (took 0.01564 seconds)
+Step 8000: distortion 0.339747 num_query 230457 output 2 (took 0.01425 seconds)
+Step 9000: distortion 0.338708 num_query 259170 output 2 (took 0.01568 seconds)
+Step 10000: distortion 0.338133 num_query 287754 output 2 (took 0.01607 seconds)
+Norm L2 and queries of image 4769 is 0.33813315629959106 and 287755
+2
+2044
+Norm L2 and queries of image 2044 is 0.0 and 1
+5
+8969
+run with verbose=True to see details
+/home/cmhcbb/blackbox-attack/foolbox/attacks/base.py:93: UserWarning: Not running the attack because the original input is already misclassified and the adversarial thus has a distance of 0.
+  warnings.warn('Not running the attack because the original input'
+Step 0: distortion 3.058192 num_query 169 output 2
+Step 1000: distortion 0.348466 num_query 28019 output 2 (took 0.01620 seconds)
+Step 2000: distortion 0.262683 num_query 56705 output 2 (took 0.01816 seconds)
+Step 3000: distortion 0.235851 num_query 85494 output 2 (took 0.01810 seconds)
+Step 4000: distortion 0.224686 num_query 114126 output 2 (took 0.01618 seconds)
+Checkpoint Step 5000: distortion 0.219463 num_query 142854 output 2 (took 0.01726 seconds)
+Step 6000: distortion 0.216758 num_query 171378 output 2 (took 0.01765 seconds)
+Step 7000: distortion 0.215104 num_query 199945 output 2 (took 0.01481 seconds)
+Step 8000: distortion 0.214356 num_query 228529 output 2 (took 0.01754 seconds)
+Step 9000: distortion 0.213965 num_query 257117 output 2 (took 0.01887 seconds)
+Step 10000: distortion 0.213707 num_query 285661 output 2 (took 0.01797 seconds)
+Norm L2 and queries of image 8969 is 0.21370714902877808 and 285662
+2
+5451
+run with verbose=True to see details
+Step 0: distortion 13.634130 num_query 708 output 8
+Step 1000: distortion 0.442375 num_query 29536 output 4 (took 0.01596 seconds)
+Step 2000: distortion 0.262342 num_query 56564 output 4 (took 0.01806 seconds)
+Step 3000: distortion 0.224296 num_query 84385 output 4 (took 0.01898 seconds)
+Step 4000: distortion 0.211748 num_query 112178 output 4 (took 0.01587 seconds)
+Checkpoint Step 5000: distortion 0.206182 num_query 139977 output 4 (took 0.01646 seconds)
+Step 6000: distortion 0.203465 num_query 167743 output 4 (took 0.01551 seconds)
+Step 7000: distortion 0.202453 num_query 195553 output 4 (took 0.01814 seconds)
+Step 8000: distortion 0.201880 num_query 223378 output 4 (took 0.01706 seconds)
+Step 9000: distortion 0.201586 num_query 251199 output 4 (took 0.01574 seconds)
+Step 10000: distortion 0.201507 num_query 278962 output 6 (took 0.01868 seconds)
+Norm L2 and queries of image 5451 is 0.2015073001384735 and 278963
+6
+8852
+run with verbose=True to see details
+Step 0: distortion 3.745294 num_query 191 output 4
+Step 1000: distortion 0.225897 num_query 31038 output 4 (took 0.01562 seconds)
+Step 2000: distortion 0.164082 num_query 59577 output 4 (took 0.01674 seconds)
+Step 3000: distortion 0.147977 num_query 88086 output 4 (took 0.01642 seconds)
+Step 4000: distortion 0.141886 num_query 116739 output 4 (took 0.01968 seconds)
+Checkpoint Step 5000: distortion 0.138873 num_query 145347 output 4 (took 0.01444 seconds)
+Step 6000: distortion 0.137269 num_query 174010 output 4 (took 0.01549 seconds)
+Step 7000: distortion 0.136455 num_query 202584 output 4 (took 0.01490 seconds)
+Step 8000: distortion 0.136074 num_query 231229 output 4 (took 0.01553 seconds)
+Step 9000: distortion 0.135915 num_query 259785 output 4 (took 0.01767 seconds)
+Step 9610: distortion 0.135877 num_query 276870 output 7
+Step 9720: distortion 0.135877 num_query 279943 output 4
+Step 9730: distortion 0.135877 num_query 280219 output 4
+Step 9740: distortion 0.135877 num_query 280504 output 4
+Step 9750: distortion 0.135877 num_query 280842 output 4
+Step 9760: distortion 0.135877 num_query 281226 output 4
+Step 9770: distortion 0.135877 num_query 281576 output 4
+Step 9780: distortion 0.135877 num_query 281943 output 4
+Step 9790: distortion 0.135877 num_query 282316 output 4
+Step 9800: distortion 0.135877 num_query 282684 output 4
+Step 9810: distortion 0.135877 num_query 283043 output 4
+Norm L2 and queries of image 8852 is 0.13587693870067596 and 283149
+4
+3329
+run with verbose=True to see details
+Step 0: distortion 2.078374 num_query 104 output 2
+Step 1000: distortion 0.010838 num_query 30686 output 5 (took 0.01604 seconds)
+Step 2000: distortion 0.008367 num_query 56088 output 5 (took 0.01762 seconds)
+Step 3000: distortion 0.007697 num_query 83049 output 5 (took 0.01831 seconds)
+Step 4000: distortion 0.007445 num_query 111701 output 5 (took 0.01589 seconds)
+Checkpoint Step 5000: distortion 0.007360 num_query 140080 output 3 (took 0.01588 seconds)
+Step 5180: distortion 0.007360 num_query 144980 output 5
+Step 5300: distortion 0.007360 num_query 148592 output 5
+Step 5310: distortion 0.007360 num_query 148937 output 5
+Step 5320: distortion 0.007360 num_query 149292 output 5
+Step 5330: distortion 0.007360 num_query 149625 output 5
+Step 5340: distortion 0.007360 num_query 149970 output 5
+Step 5350: distortion 0.007360 num_query 150305 output 5
+Step 5360: distortion 0.007360 num_query 150644 output 5
+Step 5370: distortion 0.007360 num_query 150976 output 5
+Step 5380: distortion 0.007360 num_query 151330 output 5
+Step 5390: distortion 0.007360 num_query 151688 output 5
+Norm L2 and queries of image 3329 is 0.00736042857170105 and 151722
+5
+9882
+run with verbose=True to see details
+Step 0: distortion 7.182941 num_query 330 output 9
+Step 1000: distortion 0.509210 num_query 30296 output 9 (took 0.01623 seconds)
+Step 2000: distortion 0.384221 num_query 58771 output 9 (took 0.01462 seconds)
+Step 3000: distortion 0.347148 num_query 87375 output 9 (took 0.01745 seconds)
+Step 4000: distortion 0.331513 num_query 116002 output 9 (took 0.01790 seconds)
+Checkpoint Step 5000: distortion 0.325170 num_query 144607 output 9 (took 0.01833 seconds)
+Step 6000: distortion 0.321683 num_query 173289 output 9 (took 0.01863 seconds)
+Step 7000: distortion 0.320194 num_query 202028 output 9 (took 0.01494 seconds)
+Step 8000: distortion 0.319236 num_query 230595 output 9 (took 0.01438 seconds)
+Step 9000: distortion 0.318847 num_query 259148 output 9 (took 0.02086 seconds)
+Step 10000: distortion 0.318461 num_query 287734 output 9 (took 0.01473 seconds)
+Norm L2 and queries of image 9882 is 0.318461149930954 and 287735
+9
+8965
+run with verbose=True to see details
+Step 0: distortion 4.817672 num_query 247 output 2
+Step 1000: distortion 0.112093 num_query 31272 output 2 (took 0.01726 seconds)
+Step 2000: distortion 0.085465 num_query 59778 output 2 (took 0.01663 seconds)
+Step 3000: distortion 0.077038 num_query 88369 output 2 (took 0.01554 seconds)
+Step 4000: distortion 0.073743 num_query 116987 output 2 (took 0.01853 seconds)
+Checkpoint Step 5000: distortion 0.072352 num_query 145632 output 2 (took 0.01680 seconds)
+Step 6000: distortion 0.071609 num_query 174201 output 2 (took 0.02097 seconds)
+Step 7000: distortion 0.071338 num_query 202824 output 4 (took 0.01829 seconds)
+Step 8000: distortion 0.071203 num_query 231056 output 2 (took 0.01728 seconds)
+Step 8170: distortion 0.071202 num_query 235650 output 2
+Step 8280: distortion 0.071202 num_query 238686 output 2
+Step 8290: distortion 0.071202 num_query 238966 output 2
+Step 8300: distortion 0.071202 num_query 239275 output 2
+Step 8310: distortion 0.071202 num_query 239618 output 2
+Step 8320: distortion 0.071202 num_query 239975 output 2
+Step 8330: distortion 0.071202 num_query 240336 output 2
+Step 8340: distortion 0.071202 num_query 240729 output 2
+Step 8350: distortion 0.071202 num_query 241117 output 2
+Step 8360: distortion 0.071202 num_query 241492 output 2
+Step 8370: distortion 0.071202 num_query 241866 output 2
+Norm L2 and queries of image 8965 is 0.07120248675346375 and 242127
+2
+9627
+run with verbose=True to see details
+Step 0: distortion 8.825363 num_query 504 output 6
+Step 1000: distortion 0.092270 num_query 27806 output 2 (took 0.02133 seconds)
+Step 2000: distortion 0.063462 num_query 56398 output 2 (took 0.01895 seconds)
+Step 3000: distortion 0.056563 num_query 84970 output 2 (took 0.02373 seconds)
+Step 4000: distortion 0.053861 num_query 113603 output 2 (took 0.01646 seconds)
+Checkpoint Step 5000: distortion 0.052677 num_query 142183 output 2 (took 0.02392 seconds)
+Step 6000: distortion 0.052051 num_query 170806 output 2 (took 0.01865 seconds)
+Step 7000: distortion 0.051773 num_query 199359 output 2 (took 0.02362 seconds)
+Step 8000: distortion 0.051689 num_query 227849 output 2 (took 0.01692 seconds)
+Step 8170: distortion 0.051689 num_query 232449 output 2
+Step 8280: distortion 0.051689 num_query 235620 output 2
+Step 8290: distortion 0.051689 num_query 235933 output 4
+Step 8300: distortion 0.051689 num_query 236264 output 2
+Step 8310: distortion 0.051689 num_query 236628 output 4
+Step 8320: distortion 0.051689 num_query 236973 output 4
+Step 8330: distortion 0.051689 num_query 237350 output 2
+Step 8340: distortion 0.051689 num_query 237703 output 2
+Step 8350: distortion 0.051689 num_query 238070 output 4
+Step 8360: distortion 0.051689 num_query 238425 output 4
+Step 8370: distortion 0.051689 num_query 238793 output 4
+Norm L2 and queries of image 9627 is 0.05168929696083069 and 238941
+4
+4712
+run with verbose=True to see details
+Step 0: distortion 3.915661 num_query 191 output 2
+Step 1000: distortion 0.120113 num_query 30011 output 2 (took 0.01943 seconds)
+Step 2000: distortion 0.089959 num_query 58675 output 2 (took 0.01771 seconds)
+Step 3000: distortion 0.081320 num_query 87266 output 2 (took 0.01857 seconds)
+Step 4000: distortion 0.078029 num_query 115937 output 2 (took 0.01719 seconds)
+Checkpoint Step 5000: distortion 0.076494 num_query 144525 output 2 (took 0.01922 seconds)
+Step 6000: distortion 0.075745 num_query 173144 output 2 (took 0.01943 seconds)
+Step 7000: distortion 0.075439 num_query 201852 output 2 (took 0.01962 seconds)
+Step 8000: distortion 0.075259 num_query 230459 output 4 (took 0.02388 seconds)
+Step 9000: distortion 0.075111 num_query 259125 output 2 (took 0.01463 seconds)
+Step 10000: distortion 0.075005 num_query 287745 output 2 (took 0.01646 seconds)
+Norm L2 and queries of image 4712 is 0.07500507682561874 and 287746
+2
+7290
+run with verbose=True to see details
+Step 0: distortion 13.744416 num_query 648 output 8
+Step 1000: distortion 0.358036 num_query 28516 output 9 (took 0.01496 seconds)
+Step 2000: distortion 0.238948 num_query 52187 output 9 (took 0.01745 seconds)
+Step 3000: distortion 0.213318 num_query 80701 output 9 (took 0.01840 seconds)
+Step 4000: distortion 0.203339 num_query 104048 output 9 (took 0.01902 seconds)
+Checkpoint Step 5000: distortion 0.198628 num_query 132716 output 9 (took 0.01629 seconds)
+Step 6000: distortion 0.196354 num_query 161269 output 9 (took 0.01695 seconds)
+Step 7000: distortion 0.194791 num_query 189806 output 9 (took 0.01544 seconds)
+Step 8000: distortion 0.193936 num_query 218486 output 9 (took 0.01886 seconds)
+Step 9000: distortion 0.193543 num_query 247057 output 9 (took 0.01856 seconds)
+Step 10000: distortion 0.193295 num_query 275676 output 9 (took 0.01674 seconds)
+Norm L2 and queries of image 7290 is 0.1932949423789978 and 275677
+9
+1501
+Norm L2 and queries of image 1501 is 0.0 and 1
+3
+9769
+run with verbose=True to see details
+/home/cmhcbb/blackbox-attack/foolbox/attacks/base.py:93: UserWarning: Not running the attack because the original input is already misclassified and the adversarial thus has a distance of 0.
+  warnings.warn('Not running the attack because the original input'
+Step 0: distortion 5.107211 num_query 272 output 4
+Step 1000: distortion 0.394247 num_query 27713 output 0 (took 0.01870 seconds)
+Step 2000: distortion 0.260799 num_query 52208 output 0 (took 0.01751 seconds)
+Step 3000: distortion 0.224001 num_query 74509 output 0 (took 0.01462 seconds)
+Step 4000: distortion 0.209932 num_query 103108 output 0 (took 0.01900 seconds)
+Checkpoint Step 5000: distortion 0.203323 num_query 131743 output 0 (took 0.01475 seconds)
+Step 6000: distortion 0.200039 num_query 160330 output 0 (took 0.01988 seconds)
+Step 7000: distortion 0.197981 num_query 188933 output 0 (took 0.02133 seconds)
+Step 8000: distortion 0.196876 num_query 217664 output 0 (took 0.01714 seconds)
+Step 9000: distortion 0.196577 num_query 246153 output 0 (took 0.01900 seconds)
+Step 10000: distortion 0.196400 num_query 274780 output 0 (took 0.01593 seconds)
+Norm L2 and queries of image 9769 is 0.19639995694160461 and 274781
+0
+6306
+run with verbose=True to see details
+Step 0: distortion 8.529461 num_query 333 output 4
+Step 1000: distortion 0.571884 num_query 31230 output 4 (took 0.02007 seconds)
+Step 2000: distortion 0.397275 num_query 59865 output 4 (took 0.01963 seconds)
+Step 3000: distortion 0.355570 num_query 88599 output 4 (took 0.01570 seconds)
+Step 4000: distortion 0.336385 num_query 117231 output 4 (took 0.01840 seconds)
+Checkpoint Step 5000: distortion 0.327617 num_query 145914 output 4 (took 0.01762 seconds)
+Step 6000: distortion 0.322846 num_query 174542 output 4 (took 0.01333 seconds)
+Step 7000: distortion 0.318907 num_query 203126 output 4 (took 0.02089 seconds)
+Step 8000: distortion 0.316568 num_query 231710 output 4 (took 0.01694 seconds)
+Step 9000: distortion 0.314993 num_query 260471 output 4 (took 0.01670 seconds)
+Step 10000: distortion 0.313623 num_query 289160 output 4 (took 0.01386 seconds)
+Norm L2 and queries of image 6306 is 0.3136225640773773 and 289161
+4
+5194
+run with verbose=True to see details
+Step 0: distortion 1.821832 num_query 95 output 4
+Step 1000: distortion 0.134262 num_query 31116 output 4 (took 0.01927 seconds)
+Step 2000: distortion 0.101335 num_query 59706 output 4 (took 0.02271 seconds)
+Step 3000: distortion 0.092280 num_query 88453 output 4 (took 0.01584 seconds)
+Step 4000: distortion 0.087919 num_query 117099 output 4 (took 0.01458 seconds)
+Checkpoint Step 5000: distortion 0.086228 num_query 145714 output 4 (took 0.01430 seconds)
+Step 6000: distortion 0.085315 num_query 174204 output 4 (took 0.02164 seconds)
+Step 7000: distortion 0.084881 num_query 202819 output 4 (took 0.01878 seconds)
+Step 8000: distortion 0.084551 num_query 231350 output 4 (took 0.01614 seconds)
+Step 9000: distortion 0.084418 num_query 259950 output 4 (took 0.01418 seconds)
+Step 9400: distortion 0.084405 num_query 271147 output 7
+Step 9510: distortion 0.084405 num_query 274364 output 4
+Step 9520: distortion 0.084405 num_query 274636 output 4
+Step 9530: distortion 0.084405 num_query 274909 output 4
+Step 9540: distortion 0.084405 num_query 275192 output 4
+Step 9550: distortion 0.084405 num_query 275536 output 4
+Step 9560: distortion 0.084405 num_query 275919 output 7
+Step 9570: distortion 0.084405 num_query 276295 output 7
+Step 9580: distortion 0.084405 num_query 276651 output 7
+Step 9590: distortion 0.084405 num_query 277030 output 7
+Step 9600: distortion 0.084405 num_query 277380 output 7
+Norm L2 and queries of image 5194 is 0.08440499752759933 and 277698
+4
+9431
+Norm L2 and queries of image 9431 is 0.0 and 1
+5
+3966
+run with verbose=True to see details
+/home/cmhcbb/blackbox-attack/foolbox/attacks/base.py:93: UserWarning: Not running the attack because the original input is already misclassified and the adversarial thus has a distance of 0.
+  warnings.warn('Not running the attack because the original input'
+Step 0: distortion 4.635125 num_query 254 output 6
+Step 1000: distortion 0.066503 num_query 30967 output 2 (took 0.01847 seconds)
+Step 2000: distortion 0.048623 num_query 59516 output 2 (took 0.01548 seconds)
+Step 3000: distortion 0.043810 num_query 88159 output 2 (took 0.01715 seconds)
+Step 4000: distortion 0.041877 num_query 116857 output 2 (took 0.01593 seconds)
+Checkpoint Step 5000: distortion 0.041072 num_query 145401 output 2 (took 0.01685 seconds)
+Step 6000: distortion 0.040699 num_query 173935 output 2 (took 0.01774 seconds)
+Step 7000: distortion 0.040524 num_query 202604 output 2 (took 0.01877 seconds)
+Step 7950: distortion 0.040465 num_query 229474 output 2
+Step 8000: distortion 0.040465 num_query 230828 output 2 (took 0.01280 seconds)
+Step 8060: distortion 0.040465 num_query 232517 output 4
+Step 8070: distortion 0.040465 num_query 232806 output 4
+Step 8080: distortion 0.040465 num_query 233140 output 4
+Step 8090: distortion 0.040465 num_query 233531 output 2
+Step 8100: distortion 0.040465 num_query 233877 output 4
+Step 8110: distortion 0.040465 num_query 234238 output 4
+Step 8120: distortion 0.040465 num_query 234599 output 4
+Step 8130: distortion 0.040465 num_query 234963 output 4
+Step 8140: distortion 0.040465 num_query 235338 output 4
+Step 8150: distortion 0.040465 num_query 235697 output 4
+Norm L2 and queries of image 3966 is 0.0404648594558239 and 235961
+4
+4756
+run with verbose=True to see details
+Step 0: distortion 4.439705 num_query 239 output 2
+Step 1000: distortion 0.195919 num_query 31653 output 2 (took 0.01597 seconds)
+Step 2000: distortion 0.143113 num_query 60285 output 2 (took 0.02233 seconds)
+Step 3000: distortion 0.128376 num_query 88893 output 2 (took 0.01533 seconds)
+Step 4000: distortion 0.123050 num_query 117585 output 2 (took 0.01586 seconds)
+Checkpoint Step 5000: distortion 0.120562 num_query 146138 output 2 (took 0.01461 seconds)
+Step 6000: distortion 0.119398 num_query 174794 output 2 (took 0.01671 seconds)
+Step 7000: distortion 0.118747 num_query 203452 output 2 (took 0.01636 seconds)
+Step 8000: distortion 0.118447 num_query 232094 output 2 (took 0.01417 seconds)
+Step 9000: distortion 0.118198 num_query 260714 output 2 (took 0.01380 seconds)
+Step 10000: distortion 0.118059 num_query 289224 output 2 (took 0.01808 seconds)
+Norm L2 and queries of image 4756 is 0.11805906146764755 and 289225
+2
+3012
+run with verbose=True to see details
+Step 0: distortion 4.515961 num_query 215 output 8
+Step 1000: distortion 0.293903 num_query 29098 output 8 (took 0.01518 seconds)
+Step 2000: distortion 0.218508 num_query 56881 output 8 (took 0.01396 seconds)
+Step 3000: distortion 0.197060 num_query 84637 output 8 (took 0.01518 seconds)
+Step 4000: distortion 0.187759 num_query 112479 output 8 (took 0.02020 seconds)
+Checkpoint Step 5000: distortion 0.183837 num_query 140256 output 8 (took 0.01399 seconds)
+Step 6000: distortion 0.181949 num_query 168099 output 8 (took 0.01375 seconds)
+Step 7000: distortion 0.180955 num_query 195934 output 8 (took 0.01446 seconds)
+Step 8000: distortion 0.180334 num_query 223778 output 8 (took 0.01412 seconds)
+Step 9000: distortion 0.179948 num_query 251524 output 8 (took 0.01598 seconds)
+Step 9970: distortion 0.179835 num_query 278368 output 1
+Step 10000: distortion 0.179835 num_query 279177 output 1 (took 0.01477 seconds)
+Norm L2 and queries of image 3012 is 0.17983478307724 and 279178
+1
+3102
+run with verbose=True to see details
+Step 0: distortion 3.845766 num_query 196 output 4
+Step 1000: distortion 0.310393 num_query 31240 output 4 (took 0.01516 seconds)
+Step 2000: distortion 0.231614 num_query 59743 output 4 (took 0.01535 seconds)
+Step 3000: distortion 0.209407 num_query 88366 output 4 (took 0.01989 seconds)
+Step 4000: distortion 0.200720 num_query 116955 output 4 (took 0.01453 seconds)
+Checkpoint Step 5000: distortion 0.196898 num_query 145585 output 4 (took 0.01623 seconds)
+Step 6000: distortion 0.195088 num_query 174129 output 4 (took 0.01299 seconds)
+Step 7000: distortion 0.194077 num_query 202711 output 4 (took 0.01666 seconds)
+Step 8000: distortion 0.193592 num_query 231384 output 4 (took 0.01650 seconds)
+Step 9000: distortion 0.193322 num_query 259992 output 4 (took 0.01686 seconds)
+Step 9410: distortion 0.193301 num_query 271415 output 0
+Step 9520: distortion 0.193301 num_query 274469 output 4
+Step 9530: distortion 0.193301 num_query 274775 output 4
+Step 9540: distortion 0.193301 num_query 275102 output 4
+Step 9550: distortion 0.193301 num_query 275475 output 4
+Step 9560: distortion 0.193301 num_query 275820 output 4
+Step 9570: distortion 0.193301 num_query 276182 output 4
+Step 9580: distortion 0.193301 num_query 276526 output 4
+Step 9590: distortion 0.193301 num_query 276879 output 4
+Step 9600: distortion 0.193301 num_query 277255 output 4
+Step 9610: distortion 0.193301 num_query 277628 output 4
+Norm L2 and queries of image 3102 is 0.1933007836341858 and 277738
+4
+3059
+Norm L2 and queries of image 3059 is 0.0 and 1
+7
+540
+run with verbose=True to see details
+/home/cmhcbb/blackbox-attack/foolbox/attacks/base.py:93: UserWarning: Not running the attack because the original input is already misclassified and the adversarial thus has a distance of 0.
+  warnings.warn('Not running the attack because the original input'
+Step 0: distortion 5.090755 num_query 234 output 9
+Step 1000: distortion 0.413240 num_query 31286 output 9 (took 0.01493 seconds)
+Step 2000: distortion 0.307820 num_query 59956 output 9 (took 0.01483 seconds)
+Step 3000: distortion 0.278350 num_query 88559 output 9 (took 0.01511 seconds)
+Step 4000: distortion 0.264912 num_query 117066 output 9 (took 0.01361 seconds)
+Checkpoint Step 5000: distortion 0.259482 num_query 145711 output 9 (took 0.01627 seconds)
+Step 6000: distortion 0.256817 num_query 174272 output 9 (took 0.01599 seconds)
+Step 7000: distortion 0.255380 num_query 202897 output 9 (took 0.02097 seconds)
+Step 8000: distortion 0.254744 num_query 231494 output 9 (took 0.01621 seconds)
+Step 9000: distortion 0.254517 num_query 259823 output 1 (took 0.01167 seconds)
+Step 9020: distortion 0.254517 num_query 260372 output 9
+Step 9130: distortion 0.254517 num_query 263531 output 9
+Step 9140: distortion 0.254517 num_query 263812 output 9
+Step 9150: distortion 0.254517 num_query 264094 output 9
+Step 9160: distortion 0.254517 num_query 264420 output 9
+Step 9170: distortion 0.254517 num_query 264705 output 9
+Step 9180: distortion 0.254517 num_query 264995 output 9
+Step 9190: distortion 0.254517 num_query 265338 output 9
+Step 9200: distortion 0.254517 num_query 265700 output 9
+Step 9210: distortion 0.254517 num_query 266058 output 9
+Step 9220: distortion 0.254517 num_query 266427 output 9
+Norm L2 and queries of image 540 is 0.2545165717601776 and 266462
+9
+4260
+run with verbose=True to see details
+Step 0: distortion 6.894762 num_query 276 output 2
+Step 1000: distortion 0.458042 num_query 29854 output 2 (took 0.01701 seconds)
+Step 2000: distortion 0.324688 num_query 58413 output 2 (took 0.01576 seconds)
+Step 3000: distortion 0.291090 num_query 87071 output 2 (took 0.02155 seconds)
+Step 4000: distortion 0.277366 num_query 115735 output 2 (took 0.01609 seconds)
+Checkpoint Step 5000: distortion 0.270235 num_query 144364 output 2 (took 0.01829 seconds)
+Step 6000: distortion 0.266358 num_query 172940 output 2 (took 0.01655 seconds)
+Step 7000: distortion 0.264449 num_query 201538 output 2 (took 0.02094 seconds)
+Step 8000: distortion 0.263346 num_query 230050 output 2 (took 0.01816 seconds)
+Step 9000: distortion 0.262926 num_query 258668 output 2 (took 0.01494 seconds)
+Step 10000: distortion 0.262659 num_query 287344 output 2 (took 0.01443 seconds)
+Norm L2 and queries of image 4260 is 0.2626594007015228 and 287345
+2
+7807
+run with verbose=True to see details
+Step 0: distortion 2.649752 num_query 120 output 6
+Step 1000: distortion 0.173559 num_query 26571 output 2 (took 0.01447 seconds)
+Step 2000: distortion 0.123612 num_query 49333 output 2 (took 0.01541 seconds)
+Step 3000: distortion 0.110757 num_query 78058 output 2 (took 0.01583 seconds)
+Step 4000: distortion 0.105231 num_query 106751 output 2 (took 0.01468 seconds)
+Checkpoint Step 5000: distortion 0.102882 num_query 135387 output 2 (took 0.01467 seconds)
+Step 6000: distortion 0.101768 num_query 164003 output 2 (took 0.01398 seconds)
+Step 7000: distortion 0.101103 num_query 192681 output 2 (took 0.01394 seconds)
+Step 8000: distortion 0.100787 num_query 221273 output 2 (took 0.01525 seconds)
+Step 9000: distortion 0.100667 num_query 249721 output 2 (took 0.01557 seconds)
+Step 9120: distortion 0.100667 num_query 252975 output 2
+Step 9240: distortion 0.100667 num_query 256290 output 2
+Step 9250: distortion 0.100667 num_query 256625 output 2
+Step 9260: distortion 0.100667 num_query 256958 output 2
+Step 9270: distortion 0.100667 num_query 257318 output 2
+Step 9280: distortion 0.100667 num_query 257692 output 3
+Step 9290: distortion 0.100667 num_query 258056 output 3
+Step 9300: distortion 0.100667 num_query 258433 output 3
+Step 9310: distortion 0.100667 num_query 258809 output 3
+Step 9320: distortion 0.100667 num_query 259170 output 3
+Step 9330: distortion 0.100667 num_query 259516 output 2
+Norm L2 and queries of image 7807 is 0.100666843354702 and 259553
+2
+1131
+Norm L2 and queries of image 1131 is 0.0 and 1
+9
+1471
+run with verbose=True to see details
+Step 0: distortion 3.048952 num_query 161 output 2
+/home/cmhcbb/blackbox-attack/foolbox/attacks/base.py:93: UserWarning: Not running the attack because the original input is already misclassified and the adversarial thus has a distance of 0.
+  warnings.warn('Not running the attack because the original input'
+Step 1000: distortion 0.116927 num_query 30823 output 2 (took 0.01501 seconds)
+Step 2000: distortion 0.084423 num_query 59436 output 2 (took 0.01424 seconds)
+Step 3000: distortion 0.074342 num_query 87976 output 2 (took 0.01325 seconds)
+Step 4000: distortion 0.070269 num_query 116606 output 2 (took 0.01476 seconds)
+Checkpoint Step 5000: distortion 0.068465 num_query 145226 output 2 (took 0.01443 seconds)
+Step 6000: distortion 0.067590 num_query 173898 output 2 (took 0.01728 seconds)
+Step 7000: distortion 0.067192 num_query 202495 output 2 (took 0.01619 seconds)
+Step 8000: distortion 0.066916 num_query 231083 output 2 (took 0.01584 seconds)
+Step 9000: distortion 0.066711 num_query 259688 output 2 (took 0.01814 seconds)
+Step 10000: distortion 0.066636 num_query 287882 output 2 (took 0.01697 seconds)
+Norm L2 and queries of image 1471 is 0.06663597375154495 and 287883
+2
+2133
+run with verbose=True to see details
+Step 0: distortion 3.980466 num_query 194 output 6
+Step 1000: distortion 0.238672 num_query 27780 output 6 (took 0.01497 seconds)
+Step 2000: distortion 0.176849 num_query 53981 output 6 (took 0.01600 seconds)
+Step 3000: distortion 0.160093 num_query 80143 output 6 (took 0.01330 seconds)
+Step 4000: distortion 0.153268 num_query 106446 output 6 (took 0.01495 seconds)
+Checkpoint Step 5000: distortion 0.150026 num_query 132898 output 6 (took 0.01390 seconds)
+Step 6000: distortion 0.148060 num_query 159127 output 6 (took 0.01379 seconds)
+Step 7000: distortion 0.147256 num_query 185466 output 6 (took 0.01391 seconds)
+Step 8000: distortion 0.146884 num_query 211668 output 6 (took 0.01445 seconds)
+Step 9000: distortion 0.146655 num_query 237940 output 6 (took 0.01562 seconds)
+Step 9740: distortion 0.146581 num_query 257377 output 3
+Step 9860: distortion 0.146581 num_query 260655 output 3
+Step 9870: distortion 0.146581 num_query 260956 output 3
+Step 9880: distortion 0.146581 num_query 261272 output 3
+Step 9890: distortion 0.146581 num_query 261604 output 3
+Step 9900: distortion 0.146581 num_query 261930 output 3
+Step 9910: distortion 0.146581 num_query 262268 output 3
+Step 9920: distortion 0.146581 num_query 262607 output 3
+Step 9930: distortion 0.146581 num_query 262932 output 3
+Step 9940: distortion 0.146581 num_query 263239 output 3
+Step 9950: distortion 0.146581 num_query 263545 output 3
+Norm L2 and queries of image 2133 is 0.14658069610595703 and 263576
+3
+2450
+run with verbose=True to see details
+Step 0: distortion 5.498300 num_query 262 output 8
+Step 1000: distortion 0.669327 num_query 31907 output 8 (took 0.02087 seconds)
+Step 2000: distortion 0.508354 num_query 60590 output 8 (took 0.01490 seconds)
+Step 3000: distortion 0.459673 num_query 89213 output 8 (took 0.01596 seconds)
+Step 4000: distortion 0.438124 num_query 117835 output 8 (took 0.01434 seconds)
+Checkpoint Step 5000: distortion 0.428695 num_query 146447 output 8 (took 0.01351 seconds)
+Step 6000: distortion 0.423613 num_query 175067 output 8 (took 0.01765 seconds)
+Step 7000: distortion 0.420945 num_query 203671 output 8 (took 0.01508 seconds)
+Step 8000: distortion 0.419669 num_query 232296 output 8 (took 0.01858 seconds)
+Step 9000: distortion 0.419062 num_query 261003 output 8 (took 0.01561 seconds)
+Step 10000: distortion 0.418797 num_query 289634 output 8 (took 0.01585 seconds)
+Norm L2 and queries of image 2450 is 0.4187965989112854 and 289635
+8
+633
+run with verbose=True to see details
+Step 0: distortion 6.264800 num_query 284 output 6
+Step 1000: distortion 0.263681 num_query 30834 output 6 (took 0.01596 seconds)
+Step 2000: distortion 0.188172 num_query 59066 output 6 (took 0.01468 seconds)
+Step 3000: distortion 0.170958 num_query 87636 output 6 (took 0.01521 seconds)
+Step 4000: distortion 0.163893 num_query 116298 output 6 (took 0.01622 seconds)
+Checkpoint Step 5000: distortion 0.160906 num_query 145058 output 6 (took 0.01439 seconds)
+Step 6000: distortion 0.159444 num_query 173740 output 6 (took 0.01765 seconds)
+Step 7000: distortion 0.158732 num_query 202447 output 6 (took 0.01923 seconds)
+Step 8000: distortion 0.158371 num_query 229252 output 6 (took 0.01526 seconds)
+Step 9000: distortion 0.158231 num_query 253778 output 6 (took 0.01508 seconds)
+Step 9030: distortion 0.158231 num_query 254583 output 6
+Step 9140: distortion 0.158231 num_query 257630 output 6
+Step 9150: distortion 0.158231 num_query 257924 output 6
+Step 9160: distortion 0.158231 num_query 258205 output 6
+Step 9170: distortion 0.158231 num_query 258499 output 6
+Step 9180: distortion 0.158231 num_query 258826 output 8
+Step 9190: distortion 0.158231 num_query 259136 output 8
+Step 9200: distortion 0.158231 num_query 259468 output 6
+Step 9210: distortion 0.158231 num_query 259868 output 6
+Step 9220: distortion 0.158231 num_query 260273 output 6
+Step 9230: distortion 0.158231 num_query 260650 output 6
+Norm L2 and queries of image 633 is 0.15823085606098175 and 260953
+6
+1314
+run with verbose=True to see details
+Step 0: distortion 7.555253 num_query 321 output 8
+Step 1000: distortion 0.583658 num_query 29021 output 8 (took 0.02055 seconds)
+Step 2000: distortion 0.420611 num_query 57517 output 8 (took 0.01514 seconds)
+Step 3000: distortion 0.378924 num_query 86123 output 8 (took 0.01662 seconds)
+Step 4000: distortion 0.361552 num_query 114779 output 8 (took 0.01523 seconds)
+Checkpoint Step 5000: distortion 0.352123 num_query 143389 output 8 (took 0.01622 seconds)
+Step 6000: distortion 0.347383 num_query 172015 output 8 (took 0.01796 seconds)
+Step 7000: distortion 0.345395 num_query 200754 output 8 (took 0.01434 seconds)
+Step 8000: distortion 0.344079 num_query 229388 output 8 (took 0.01673 seconds)
+Step 9000: distortion 0.343312 num_query 258019 output 8 (took 0.01673 seconds)
+Step 10000: distortion 0.342986 num_query 286584 output 8 (took 0.01590 seconds)
+Norm L2 and queries of image 1314 is 0.3429863750934601 and 286585
+8
+8857
+run with verbose=True to see details
+Step 0: distortion 3.951943 num_query 193 output 4
+Step 1000: distortion 0.282777 num_query 29778 output 4 (took 0.01416 seconds)
+Step 2000: distortion 0.209598 num_query 58378 output 4 (took 0.01469 seconds)
+Step 3000: distortion 0.187093 num_query 87075 output 4 (took 0.01513 seconds)
+Step 4000: distortion 0.175439 num_query 115623 output 4 (took 0.01914 seconds)
+Checkpoint Step 5000: distortion 0.170188 num_query 144106 output 4 (took 0.01522 seconds)
+Step 6000: distortion 0.167843 num_query 172729 output 4 (took 0.01815 seconds)
+Step 7000: distortion 0.166235 num_query 201482 output 4 (took 0.01652 seconds)
+Step 8000: distortion 0.165159 num_query 229959 output 4 (took 0.01597 seconds)
+Step 9000: distortion 0.164438 num_query 258596 output 4 (took 0.01912 seconds)
+Step 10000: distortion 0.163939 num_query 287207 output 4 (took 0.01480 seconds)
+Norm L2 and queries of image 8857 is 0.16393913328647614 and 287208
+4
+6410
+run with verbose=True to see details
+Step 0: distortion 11.158984 num_query 439 output 8
+Step 1000: distortion 0.941450 num_query 28826 output 8 (took 0.01450 seconds)
+Step 2000: distortion 0.659035 num_query 55463 output 8 (took 0.02229 seconds)
+Step 3000: distortion 0.577255 num_query 83299 output 8 (took 0.01882 seconds)
+Step 4000: distortion 0.542632 num_query 111114 output 8 (took 0.01476 seconds)
+Checkpoint Step 5000: distortion 0.525231 num_query 138903 output 8 (took 0.01472 seconds)
+Step 6000: distortion 0.514604 num_query 166683 output 8 (took 0.01598 seconds)
+Step 7000: distortion 0.510137 num_query 194567 output 8 (took 0.01341 seconds)
+Step 8000: distortion 0.506720 num_query 222375 output 8 (took 0.01705 seconds)
+Step 9000: distortion 0.504803 num_query 250172 output 8 (took 0.01577 seconds)
+Step 10000: distortion 0.503888 num_query 278040 output 8 (took 0.01455 seconds)
+Norm L2 and queries of image 6410 is 0.5038875341415405 and 278041
+8
+8594
+run with verbose=True to see details
+Step 0: distortion 8.221592 num_query 376 output 6
+Step 1000: distortion 0.453844 num_query 30883 output 6 (took 0.02424 seconds)
+Step 2000: distortion 0.310287 num_query 58617 output 6 (took 0.02000 seconds)
+Step 3000: distortion 0.275795 num_query 86415 output 6 (took 0.01793 seconds)
+Step 4000: distortion 0.261469 num_query 114196 output 6 (took 0.01601 seconds)
+Checkpoint Step 5000: distortion 0.254548 num_query 141995 output 6 (took 0.01526 seconds)
+Step 6000: distortion 0.251174 num_query 169722 output 6 (took 0.01507 seconds)
+Step 7000: distortion 0.249664 num_query 197568 output 6 (took 0.01551 seconds)
+Step 8000: distortion 0.248830 num_query 225372 output 6 (took 0.01954 seconds)
+Step 9000: distortion 0.248343 num_query 253175 output 6 (took 0.01454 seconds)
+Step 10000: distortion 0.248173 num_query 280886 output 6 (took 0.01845 seconds)
+Norm L2 and queries of image 8594 is 0.24817341566085815 and 280887
+6
+4515
+run with verbose=True to see details
+Step 0: distortion 3.612269 num_query 168 output 4
+Step 1000: distortion 0.342687 num_query 29238 output 4 (took 0.01565 seconds)
+Step 2000: distortion 0.261215 num_query 57889 output 4 (took 0.01331 seconds)
+Step 3000: distortion 0.238967 num_query 86497 output 4 (took 0.01358 seconds)
+Step 4000: distortion 0.229850 num_query 115232 output 4 (took 0.01512 seconds)
+Checkpoint Step 5000: distortion 0.225375 num_query 143824 output 4 (took 0.01373 seconds)
+Step 6000: distortion 0.223222 num_query 172322 output 4 (took 0.01445 seconds)
+Step 7000: distortion 0.222286 num_query 200906 output 4 (took 0.01425 seconds)
+Step 8000: distortion 0.221843 num_query 229573 output 4 (took 0.01507 seconds)
+Step 9000: distortion 0.221475 num_query 258245 output 4 (took 0.01446 seconds)
+Step 10000: distortion 0.221131 num_query 286992 output 4 (took 0.01304 seconds)
+Norm L2 and queries of image 4515 is 0.22113122045993805 and 286993
+4
+8549
+run with verbose=True to see details
+Step 0: distortion 7.283964 num_query 351 output 6
+Step 1000: distortion 0.239903 num_query 31110 output 9 (took 0.01514 seconds)
+Step 2000: distortion 0.179757 num_query 59702 output 9 (took 0.01899 seconds)
+Step 3000: distortion 0.165418 num_query 88497 output 9 (took 0.01568 seconds)
+Step 4000: distortion 0.158562 num_query 117098 output 9 (took 0.01666 seconds)
+Checkpoint Step 5000: distortion 0.155615 num_query 145679 output 9 (took 0.01705 seconds)
+Step 6000: distortion 0.154198 num_query 174310 output 9 (took 0.01823 seconds)
+Step 7000: distortion 0.153669 num_query 203033 output 9 (took 0.01457 seconds)
+Step 8000: distortion 0.153352 num_query 231645 output 9 (took 0.01766 seconds)
+Step 8720: distortion 0.153292 num_query 251911 output 9
+Step 8840: distortion 0.153292 num_query 255172 output 9
+Step 8850: distortion 0.153292 num_query 255486 output 9
+Step 8860: distortion 0.153292 num_query 255769 output 9
+Step 8870: distortion 0.153292 num_query 256043 output 9
+Step 8880: distortion 0.153292 num_query 256313 output 9
+Step 8890: distortion 0.153292 num_query 256583 output 9
+Step 8900: distortion 0.153292 num_query 256853 output 9
+Step 8910: distortion 0.153292 num_query 257123 output 9
+Step 8920: distortion 0.153292 num_query 257393 output 9
+Step 8930: distortion 0.153292 num_query 257663 output 9
+Norm L2 and queries of image 8549 is 0.15329180657863617 and 257691
+9
+3858
+run with verbose=True to see details
+Step 0: distortion 2.616814 num_query 142 output 6
+Step 1000: distortion 0.294682 num_query 26079 output 6 (took 0.01534 seconds)
+Step 2000: distortion 0.207297 num_query 51734 output 6 (took 0.01617 seconds)
+Step 3000: distortion 0.180884 num_query 80389 output 6 (took 0.01610 seconds)
+Step 4000: distortion 0.170144 num_query 109062 output 6 (took 0.01659 seconds)
+Checkpoint Step 5000: distortion 0.164067 num_query 137675 output 6 (took 0.01535 seconds)
+Step 6000: distortion 0.161381 num_query 166367 output 6 (took 0.01589 seconds)
+Step 7000: distortion 0.159565 num_query 195028 output 6 (took 0.01519 seconds)
+Step 8000: distortion 0.158468 num_query 223684 output 6 (took 0.01709 seconds)
+Step 9000: distortion 0.157759 num_query 252411 output 6 (took 0.02181 seconds)
+Step 10000: distortion 0.157217 num_query 280954 output 6 (took 0.01843 seconds)
+Norm L2 and queries of image 3858 is 0.15721693634986877 and 280955
+6
+3525
+run with verbose=True to see details
+Step 0: distortion 10.732541 num_query 563 output 6
+Step 1000: distortion 0.300321 num_query 27579 output 6 (took 0.01626 seconds)
+Step 2000: distortion 0.199754 num_query 56152 output 6 (took 0.01572 seconds)
+Step 3000: distortion 0.177672 num_query 84763 output 6 (took 0.01651 seconds)
+Step 4000: distortion 0.168917 num_query 113400 output 6 (took 0.01977 seconds)
+Checkpoint Step 5000: distortion 0.164497 num_query 142077 output 6 (took 0.01835 seconds)
+Step 6000: distortion 0.162306 num_query 170808 output 6 (took 0.01606 seconds)
+Step 7000: distortion 0.161108 num_query 199422 output 6 (took 0.01928 seconds)
+Step 8000: distortion 0.160559 num_query 228048 output 6 (took 0.01609 seconds)
+Step 9000: distortion 0.160169 num_query 256581 output 6 (took 0.02023 seconds)
+Step 10000: distortion 0.160040 num_query 284935 output 6 (took 0.01813 seconds)
+Norm L2 and queries of image 3525 is 0.16003988683223724 and 284936
+6
+6411
+run with verbose=True to see details
+Step 0: distortion 14.066695 num_query 635 output 6
+Step 1000: distortion 0.193009 num_query 28484 output 3 (took 0.01785 seconds)
+Step 2000: distortion 0.134499 num_query 57180 output 3 (took 0.01832 seconds)
+Step 3000: distortion 0.120105 num_query 85845 output 3 (took 0.02040 seconds)
+Step 4000: distortion 0.114326 num_query 114415 output 3 (took 0.01635 seconds)
+Checkpoint Step 5000: distortion 0.111803 num_query 143045 output 3 (took 0.01575 seconds)
+Step 6000: distortion 0.110529 num_query 171684 output 3 (took 0.02071 seconds)
+Step 7000: distortion 0.109991 num_query 200366 output 3 (took 0.01813 seconds)
+Step 8000: distortion 0.109676 num_query 228962 output 3 (took 0.01788 seconds)
+Step 9000: distortion 0.109549 num_query 257491 output 3 (took 0.01706 seconds)
+Step 9260: distortion 0.109543 num_query 264754 output 8
+Step 9370: distortion 0.109543 num_query 267812 output 8
+Step 9380: distortion 0.109543 num_query 268089 output 8
+Step 9390: distortion 0.109543 num_query 268378 output 3
+Step 9400: distortion 0.109543 num_query 268741 output 8
+Step 9410: distortion 0.109543 num_query 269118 output 8
+Step 9420: distortion 0.109543 num_query 269501 output 8
+Step 9430: distortion 0.109543 num_query 269858 output 3
+Step 9440: distortion 0.109543 num_query 270235 output 3
+Step 9450: distortion 0.109543 num_query 270610 output 3
+Step 9460: distortion 0.109543 num_query 270982 output 3
+Norm L2 and queries of image 6411 is 0.10954257100820541 and 271074
+3
+4360
+run with verbose=True to see details
+Step 0: distortion 11.438172 num_query 478 output 8
+Step 1000: distortion 0.193167 num_query 31516 output 1 (took 0.01794 seconds)
+Step 2000: distortion 0.138980 num_query 60148 output 1 (took 0.01682 seconds)
+Step 3000: distortion 0.124065 num_query 88785 output 1 (took 0.01822 seconds)
+Step 4000: distortion 0.118159 num_query 110954 output 1 (took 0.01664 seconds)
+Checkpoint Step 5000: distortion 0.115523 num_query 132695 output 1 (took 0.01771 seconds)
+Step 6000: distortion 0.114233 num_query 160589 output 1 (took 0.01562 seconds)
+Step 7000: distortion 0.113670 num_query 189184 output 1 (took 0.01628 seconds)
+Step 8000: distortion 0.113418 num_query 217835 output 6 (took 0.01852 seconds)
+Step 9000: distortion 0.113240 num_query 246411 output 1 (took 0.01840 seconds)
+Step 9560: distortion 0.113204 num_query 262083 output 1
+Step 9680: distortion 0.113204 num_query 265343 output 1
+Step 9690: distortion 0.113204 num_query 265621 output 1
+Step 9700: distortion 0.113204 num_query 265915 output 1
+Step 9710: distortion 0.113204 num_query 266237 output 1
+Step 9720: distortion 0.113204 num_query 266583 output 1
+Step 9730: distortion 0.113204 num_query 266927 output 1
+Step 9740: distortion 0.113204 num_query 267265 output 1
+Step 9750: distortion 0.113204 num_query 267595 output 1
+Step 9760: distortion 0.113204 num_query 267929 output 1
+Step 9770: distortion 0.113204 num_query 268271 output 1
+Norm L2 and queries of image 4360 is 0.11320380866527557 and 268446
+1
+7753
+run with verbose=True to see details
+Step 0: distortion 7.900073 num_query 339 output 6
+Step 1000: distortion 0.382245 num_query 28835 output 7 (took 0.01708 seconds)
+Step 2000: distortion 0.239286 num_query 51133 output 7 (took 0.01301 seconds)
+Step 3000: distortion 0.208987 num_query 77400 output 7 (took 0.01548 seconds)
+Step 4000: distortion 0.196922 num_query 106020 output 7 (took 0.01676 seconds)
+Checkpoint Step 5000: distortion 0.192155 num_query 134632 output 7 (took 0.01408 seconds)
+Step 6000: distortion 0.189646 num_query 163200 output 7 (took 0.01993 seconds)
+Step 7000: distortion 0.188495 num_query 191829 output 7 (took 0.01789 seconds)
+Step 8000: distortion 0.187920 num_query 220443 output 7 (took 0.02373 seconds)
+Step 9000: distortion 0.187427 num_query 249033 output 7 (took 0.01655 seconds)
+Step 10000: distortion 0.187168 num_query 277541 output 7 (took 0.01885 seconds)
+Norm L2 and queries of image 7753 is 0.18716846406459808 and 277542
+7
+7413
+run with verbose=True to see details
+Step 0: distortion 3.675775 num_query 154 output 6
+Step 1000: distortion 0.221377 num_query 25403 output 6 (took 0.01718 seconds)
+Step 2000: distortion 0.163110 num_query 54001 output 6 (took 0.01885 seconds)
+Step 3000: distortion 0.147407 num_query 82554 output 6 (took 0.02040 seconds)
+Step 4000: distortion 0.141304 num_query 111265 output 6 (took 0.01443 seconds)
+Checkpoint Step 5000: distortion 0.138504 num_query 139820 output 6 (took 0.01452 seconds)
+Step 6000: distortion 0.137124 num_query 168399 output 6 (took 0.01691 seconds)
+Step 7000: distortion 0.136431 num_query 197032 output 6 (took 0.01567 seconds)
+Step 8000: distortion 0.136094 num_query 225665 output 6 (took 0.01683 seconds)
+Step 9000: distortion 0.135884 num_query 254366 output 6 (took 0.01579 seconds)
+Step 9690: distortion 0.135850 num_query 273919 output 1
+Step 9800: distortion 0.135850 num_query 276949 output 1
+Step 9810: distortion 0.135850 num_query 277230 output 1
+Step 9820: distortion 0.135850 num_query 277576 output 6
+Step 9830: distortion 0.135850 num_query 277931 output 6
+Step 9840: distortion 0.135850 num_query 278269 output 6
+Step 9850: distortion 0.135850 num_query 278616 output 6
+Step 9860: distortion 0.135850 num_query 278987 output 6
+Step 9870: distortion 0.135850 num_query 279340 output 1
+Step 9880: distortion 0.135850 num_query 279700 output 1
+Step 9890: distortion 0.135850 num_query 280065 output 1
+Norm L2 and queries of image 7413 is 0.1358499675989151 and 280304
+1
+684
+run with verbose=True to see details
+Step 0: distortion 5.086862 num_query 222 output 8
+Step 1000: distortion 0.205961 num_query 29669 output 8 (took 0.01810 seconds)
+Step 2000: distortion 0.151702 num_query 53724 output 8 (took 0.01550 seconds)
+Step 3000: distortion 0.136184 num_query 81566 output 8 (took 0.01811 seconds)
+Step 4000: distortion 0.130104 num_query 109383 output 8 (took 0.02274 seconds)
+Checkpoint Step 5000: distortion 0.127346 num_query 137196 output 8 (took 0.01831 seconds)
+Step 6000: distortion 0.126084 num_query 165045 output 8 (took 0.01874 seconds)
+Step 7000: distortion 0.125464 num_query 192908 output 8 (took 0.02030 seconds)
+Step 8000: distortion 0.124996 num_query 220706 output 8 (took 0.02018 seconds)
+Step 9000: distortion 0.124883 num_query 247708 output 8 (took 0.01542 seconds)
+Step 9330: distortion 0.124872 num_query 256611 output 9
+Step 9440: distortion 0.124872 num_query 259665 output 8
+Step 9450: distortion 0.124872 num_query 259936 output 8
+Step 9460: distortion 0.124872 num_query 260216 output 8
+Step 9470: distortion 0.124872 num_query 260492 output 8
+Step 9480: distortion 0.124872 num_query 260788 output 8
+Step 9490: distortion 0.124872 num_query 261088 output 8
+Step 9500: distortion 0.124872 num_query 261388 output 8
+Step 9510: distortion 0.124872 num_query 261688 output 8
+Step 9520: distortion 0.124872 num_query 261988 output 8
+Step 9530: distortion 0.124872 num_query 262288 output 8
+Norm L2 and queries of image 684 is 0.12487184256315231 and 262499
+8
+3343
+run with verbose=True to see details
+Step 0: distortion 7.231600 num_query 274 output 6
+Step 1000: distortion 0.105761 num_query 30675 output 2 (took 0.01806 seconds)
+Step 2000: distortion 0.078337 num_query 59242 output 2 (took 0.01785 seconds)
+Step 3000: distortion 0.071214 num_query 87959 output 2 (took 0.01853 seconds)
+Step 4000: distortion 0.068403 num_query 116613 output 2 (took 0.01663 seconds)
+Checkpoint Step 5000: distortion 0.067088 num_query 145223 output 2 (took 0.01958 seconds)
+Step 6000: distortion 0.066497 num_query 173806 output 2 (took 0.01516 seconds)
+Step 7000: distortion 0.066387 num_query 202260 output 2 (took 0.01744 seconds)
+Step 7120: distortion 0.066387 num_query 205527 output 2
+Step 7240: distortion 0.066387 num_query 208844 output 2
+Step 7250: distortion 0.066387 num_query 209183 output 2
+Step 7260: distortion 0.066387 num_query 209512 output 2
+Step 7270: distortion 0.066387 num_query 209849 output 2
+Step 7280: distortion 0.066387 num_query 210212 output 2
+Step 7290: distortion 0.066387 num_query 210595 output 2
+Step 7300: distortion 0.066387 num_query 210977 output 2
+Step 7310: distortion 0.066387 num_query 211337 output 2
+Step 7320: distortion 0.066387 num_query 211683 output 2
+Step 7330: distortion 0.066387 num_query 212042 output 2
+Norm L2 and queries of image 3343 is 0.06638665497303009 and 212076
+2
+6785
+run with verbose=True to see details
+Step 0: distortion 6.765403 num_query 343 output 2
+Step 1000: distortion 0.337277 num_query 31313 output 2 (took 0.01513 seconds)
+Step 2000: distortion 0.236693 num_query 58890 output 2 (took 0.01895 seconds)
+Step 3000: distortion 0.210981 num_query 86424 output 2 (took 0.01473 seconds)
+Step 4000: distortion 0.200716 num_query 114985 output 2 (took 0.01721 seconds)
+Checkpoint Step 5000: distortion 0.196512 num_query 143544 output 2 (took 0.01832 seconds)
+Step 6000: distortion 0.194464 num_query 172216 output 2 (took 0.01394 seconds)
+Step 7000: distortion 0.193401 num_query 200866 output 2 (took 0.01903 seconds)
+Step 8000: distortion 0.192335 num_query 229535 output 2 (took 0.01794 seconds)
+Step 9000: distortion 0.191938 num_query 256966 output 2 (took 0.01526 seconds)
+Step 10000: distortion 0.191685 num_query 282409 output 2 (took 0.01852 seconds)
+Norm L2 and queries of image 6785 is 0.1916852742433548 and 282410
+2
+7079
+run with verbose=True to see details
+Step 0: distortion 6.717468 num_query 326 output 4
+Step 1000: distortion 0.515570 num_query 30463 output 4 (took 0.02023 seconds)
+Step 2000: distortion 0.361664 num_query 54318 output 4 (took 0.01563 seconds)
+Step 3000: distortion 0.317363 num_query 82931 output 4 (took 0.01839 seconds)
+Step 4000: distortion 0.300247 num_query 111609 output 4 (took 0.01716 seconds)
+Checkpoint Step 5000: distortion 0.291736 num_query 140098 output 4 (took 0.01382 seconds)
+Step 6000: distortion 0.287590 num_query 168744 output 4 (took 0.01782 seconds)
+Step 7000: distortion 0.285525 num_query 197380 output 4 (took 0.01546 seconds)
+Step 8000: distortion 0.284321 num_query 225956 output 4 (took 0.01466 seconds)
+Step 9000: distortion 0.283745 num_query 254591 output 4 (took 0.01518 seconds)
+Step 10000: distortion 0.283337 num_query 283211 output 4 (took 0.01956 seconds)
+Norm L2 and queries of image 7079 is 0.2833366096019745 and 283212
+4
+2263
+run with verbose=True to see details
+Step 0: distortion 16.498652 num_query 866 output 7
+Step 1000: distortion 0.384486 num_query 25272 output 4 (took 0.01297 seconds)
+Step 2000: distortion 0.244811 num_query 45278 output 4 (took 0.01456 seconds)
+Step 3000: distortion 0.210203 num_query 70797 output 4 (took 0.01549 seconds)
+Step 4000: distortion 0.196306 num_query 96029 output 4 (took 0.01648 seconds)
+Checkpoint Step 5000: distortion 0.189769 num_query 121493 output 4 (took 0.01596 seconds)
+Step 6000: distortion 0.186305 num_query 146938 output 4 (took 0.02329 seconds)
+Step 7000: distortion 0.185031 num_query 172332 output 4 (took 0.01879 seconds)
+Step 8000: distortion 0.184384 num_query 197927 output 4 (took 0.01550 seconds)
+Step 9000: distortion 0.184089 num_query 223351 output 4 (took 0.01614 seconds)
+Step 10000: distortion 0.183906 num_query 248986 output 4 (took 0.02006 seconds)
+Norm L2 and queries of image 2263 is 0.1839059591293335 and 248987
+4
+0.15426081336801872 256291.18

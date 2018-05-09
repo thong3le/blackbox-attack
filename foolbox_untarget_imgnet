@@ -1,0 +1,932 @@
+25248
+2.64 -2.117904
+run with verbose=True to see details
+Step 0: distortion 101.218750 num_query 129 output 966
+Step 1000: distortion 7.089173 num_query 24802 output 441 (took 0.47691 seconds)
+Step 2000: distortion 4.231980 num_query 43798 output 441 (took 0.69071 seconds)
+Step 3000: distortion 3.271018 num_query 69644 output 441 (took 0.51034 seconds)
+Step 4000: distortion 2.699141 num_query 97484 output 441 (took 0.34578 seconds)
+Checkpoint Step 5000: distortion 2.326826 num_query 125367 output 441 (took 0.51088 seconds)
+Step 6000: distortion 2.057469 num_query 152715 output 441 (took 0.45307 seconds)
+Step 7000: distortion 1.865897 num_query 179705 output 441 (took 0.42843 seconds)
+Step 8000: distortion 1.720715 num_query 207450 output 441 (took 0.42569 seconds)
+Step 9000: distortion 1.612475 num_query 235296 output 441 (took 0.42018 seconds)
+Step 10000: distortion 1.523714 num_query 263149 output 441 (took 0.42888 seconds)
+49674
+2.64 -2.0665298
+27563
+2.64 -2.117904
+run with verbose=True to see details
+/home/cmhcbb/blackbox-attack/foolbox/attacks/base.py:93: UserWarning: Not running the attack because the original input is already misclassified and the adversarial thus has a distance of 0.
+  warnings.warn('Not running the attack because the original input'
+Step 0: distortion 211.541946 num_query 299 output 477
+Step 1000: distortion 19.993349 num_query 25138 output 477 (took 0.51740 seconds)
+Step 2000: distortion 10.513152 num_query 45301 output 477 (took 0.09834 seconds)
+Step 3000: distortion 7.360396 num_query 69665 output 477 (took 0.45148 seconds)
+Step 4000: distortion 5.831569 num_query 96746 output 477 (took 0.52099 seconds)
+Checkpoint Step 5000: distortion 4.897914 num_query 123818 output 477 (took 0.56188 seconds)
+Step 6000: distortion 4.293564 num_query 150931 output 477 (took 0.47864 seconds)
+Step 7000: distortion 3.860574 num_query 177914 output 477 (took 0.39622 seconds)
+Step 8000: distortion 3.561905 num_query 204866 output 477 (took 0.46698 seconds)
+Step 9000: distortion 3.327123 num_query 231954 output 477 (took 0.41615 seconds)
+Step 10000: distortion 3.123587 num_query 259023 output 477 (took 0.47745 seconds)
+2654
+2.6051416 -2.117904
+run with verbose=True to see details
+Step 0: distortion 299.934143 num_query 440 output 68
+Step 1000: distortion 51.265892 num_query 27298 output 58 (took 0.47365 seconds)
+Step 2000: distortion 29.012480 num_query 47738 output 58 (took 0.52941 seconds)
+Step 3000: distortion 21.403641 num_query 70834 output 58 (took 0.61240 seconds)
+Step 4000: distortion 17.766111 num_query 92209 output 58 (took 0.52645 seconds)
+Checkpoint Step 5000: distortion 15.256906 num_query 119271 output 58 (took 0.46867 seconds)
+Step 6000: distortion 13.376105 num_query 146332 output 58 (took 0.63117 seconds)
+Step 7000: distortion 12.084094 num_query 173314 output 58 (took 0.46953 seconds)
+Step 8000: distortion 11.059703 num_query 200367 output 58 (took 0.41288 seconds)
+Step 9000: distortion 10.319825 num_query 227452 output 58 (took 0.45395 seconds)
+Step 10000: distortion 9.679992 num_query 254481 output 58 (took 0.41185 seconds)
+16969
+2.64 -2.0836544
+run with verbose=True to see details
+Step 0: distortion 327.055756 num_query 449 output 386
+Step 1000: distortion 56.881893 num_query 20983 output 354 (took 0.52323 seconds)
+Step 2000: distortion 13.223487 num_query 42837 output 354 (took 0.60963 seconds)
+Step 3000: distortion 7.910674 num_query 65651 output 354 (took 0.56245 seconds)
+Step 4000: distortion 5.881449 num_query 93453 output 354 (took 0.37998 seconds)
+Checkpoint Step 5000: distortion 4.806272 num_query 121257 output 354 (took 0.41611 seconds)
+Step 6000: distortion 4.202101 num_query 149130 output 354 (took 0.41263 seconds)
+Step 7000: distortion 3.751489 num_query 176262 output 354 (took 0.59812 seconds)
+Step 8000: distortion 2.785480 num_query 203637 output 603 (took 0.39124 seconds)
+Step 9000: distortion 1.915308 num_query 231488 output 603 (took 0.40596 seconds)
+Step 10000: distortion 1.524999 num_query 259255 output 603 (took 0.40601 seconds)
+33507
+2.3935575 -2.117904
+31846
+2.64 -2.0151556
+run with verbose=True to see details
+/home/cmhcbb/blackbox-attack/foolbox/attacks/base.py:93: UserWarning: Not running the attack because the original input is already misclassified and the adversarial thus has a distance of 0.
+  warnings.warn('Not running the attack because the original input'
+Step 0: distortion 190.897156 num_query 281 output 765
+Step 1000: distortion 7.653271 num_query 22616 output 414 (took 0.55336 seconds)
+Step 2000: distortion 4.315928 num_query 44913 output 414 (took 0.44882 seconds)
+Step 3000: distortion 3.537435 num_query 70113 output 414 (took 0.41089 seconds)
+Step 4000: distortion 2.674414 num_query 97235 output 414 (took 0.43960 seconds)
+Checkpoint Step 5000: distortion 2.360878 num_query 124306 output 414 (took 0.41053 seconds)
+Step 6000: distortion 2.095924 num_query 151320 output 414 (took 0.58393 seconds)
+Step 7000: distortion 1.916179 num_query 178283 output 414 (took 0.38389 seconds)
+Step 8000: distortion 1.777045 num_query 205328 output 414 (took 0.52897 seconds)
+Step 9000: distortion 1.667242 num_query 232343 output 414 (took 0.48531 seconds)
+Step 10000: distortion 1.563963 num_query 259365 output 414 (took 0.41906 seconds)
+26538
+2.64 -2.0182073
+run with verbose=True to see details
+Step 0: distortion 114.641289 num_query 122 output 632
+Step 1000: distortion 3.349808 num_query 23623 output 921 (took 0.43880 seconds)
+Step 2000: distortion 1.738628 num_query 44795 output 921 (took 0.54195 seconds)
+Step 3000: distortion 1.296419 num_query 68914 output 921 (took 0.43199 seconds)
+Step 4000: distortion 1.082128 num_query 96460 output 921 (took 0.37274 seconds)
+Checkpoint Step 5000: distortion 0.941204 num_query 124324 output 921 (took 0.40445 seconds)
+Step 6000: distortion 0.842121 num_query 152086 output 921 (took 0.42578 seconds)
+Step 7000: distortion 0.767887 num_query 179860 output 921 (took 0.42834 seconds)
+Step 8000: distortion 0.711147 num_query 207648 output 921 (took 0.47503 seconds)
+Step 9000: distortion 0.666631 num_query 235443 output 921 (took 0.40318 seconds)
+Step 10000: distortion 0.630515 num_query 263300 output 921 (took 0.40480 seconds)
+19878
+2.622571 -2.117904
+run with verbose=True to see details
+Step 0: distortion 261.334564 num_query 379 output 48
+Step 1000: distortion 72.854607 num_query 26416 output 48 (took 0.58452 seconds)
+Step 2000: distortion 43.012463 num_query 44553 output 48 (took 0.58819 seconds)
+Step 3000: distortion 28.470121 num_query 68967 output 48 (took 0.46310 seconds)
+Step 4000: distortion 21.430519 num_query 94739 output 48 (took 0.44385 seconds)
+Checkpoint Step 5000: distortion 17.827784 num_query 122595 output 48 (took 0.42567 seconds)
+Step 6000: distortion 15.173285 num_query 150469 output 48 (took 0.41612 seconds)
+Step 7000: distortion 13.346527 num_query 178283 output 48 (took 0.38487 seconds)
+Step 8000: distortion 11.944627 num_query 206077 output 48 (took 0.50160 seconds)
+Step 9000: distortion 10.945860 num_query 233883 output 48 (took 0.38479 seconds)
+Step 10000: distortion 10.143774 num_query 261679 output 48 (took 0.48409 seconds)
+31235
+2.64 -2.117904
+23466
+2.64 -2.0007002
+run with verbose=True to see details
+/home/cmhcbb/blackbox-attack/foolbox/attacks/base.py:93: UserWarning: Not running the attack because the original input is already misclassified and the adversarial thus has a distance of 0.
+  warnings.warn('Not running the attack because the original input'
+Step 0: distortion 60.927162 num_query 87 output 762
+Step 1000: distortion 1.326101 num_query 24143 output 762 (took 0.30610 seconds)
+Step 2000: distortion 0.829568 num_query 44087 output 762 (took 0.46037 seconds)
+Step 3000: distortion 0.657076 num_query 69564 output 762 (took 0.41487 seconds)
+Step 4000: distortion 0.567644 num_query 96891 output 762 (took 0.40674 seconds)
+Checkpoint Step 5000: distortion 0.505622 num_query 124731 output 762 (took 0.37072 seconds)
+Step 6000: distortion 0.462287 num_query 152550 output 762 (took 0.58786 seconds)
+Step 7000: distortion 0.424814 num_query 180320 output 762 (took 0.46075 seconds)
+Step 8000: distortion 0.399426 num_query 208197 output 762 (took 0.34985 seconds)
+Step 9000: distortion 0.378315 num_query 236028 output 762 (took 0.49092 seconds)
+Step 10000: distortion 0.359798 num_query 263907 output 762 (took 0.42923 seconds)
+38233
+2.6051416 -2.117904
+run with verbose=True to see details
+Step 0: distortion 128.301010 num_query 190 output 777
+Step 1000: distortion 1.955908 num_query 27457 output 587 (took 0.40144 seconds)
+Step 2000: distortion 1.246801 num_query 45400 output 587 (took 0.45821 seconds)
+Step 3000: distortion 0.996200 num_query 67220 output 587 (took 0.49317 seconds)
+Step 4000: distortion 0.854675 num_query 93742 output 587 (took 0.51808 seconds)
+Checkpoint Step 5000: distortion 0.757275 num_query 119888 output 587 (took 0.47951 seconds)
+Step 6000: distortion 0.684590 num_query 146897 output 587 (took 0.45313 seconds)
+Step 7000: distortion 0.630772 num_query 173936 output 587 (took 0.45261 seconds)
+Step 8000: distortion 0.588979 num_query 201019 output 587 (took 0.46747 seconds)
+Step 9000: distortion 0.557113 num_query 228108 output 587 (took 0.48893 seconds)
+Step 10000: distortion 0.527817 num_query 255200 output 587 (took 0.48842 seconds)
+14316
+2.3262744 -1.7240347
+run with verbose=True to see details
+Step 0: distortion 195.953537 num_query 343 output 296
+Step 1000: distortion 34.794861 num_query 25137 output 296 (took 0.45541 seconds)
+Step 2000: distortion 13.820683 num_query 46012 output 296 (took 0.36807 seconds)
+Step 3000: distortion 8.191794 num_query 71954 output 296 (took 0.39274 seconds)
+Step 4000: distortion 6.084452 num_query 99825 output 296 (took 0.39415 seconds)
+Checkpoint Step 5000: distortion 5.027156 num_query 127659 output 296 (took 0.36074 seconds)
+Step 6000: distortion 4.341574 num_query 155511 output 296 (took 0.35540 seconds)
+Step 7000: distortion 3.884270 num_query 183395 output 296 (took 0.42878 seconds)
+Step 8000: distortion 3.544116 num_query 211218 output 296 (took 0.40763 seconds)
+Step 9000: distortion 3.275584 num_query 239099 output 296 (took 0.46200 seconds)
+Step 10000: distortion 3.043016 num_query 266948 output 296 (took 0.37289 seconds)
+33076
+2.5005665 -2.117904
+run with verbose=True to see details
+Step 0: distortion 350.647186 num_query 491 output 665
+Step 1000: distortion 33.117531 num_query 23780 output 665 (took 0.45570 seconds)
+Step 2000: distortion 13.790032 num_query 46087 output 665 (took 0.52240 seconds)
+Step 3000: distortion 9.125317 num_query 70285 output 665 (took 0.45169 seconds)
+Step 4000: distortion 7.099267 num_query 97630 output 665 (took 0.40525 seconds)
+Checkpoint Step 5000: distortion 5.964723 num_query 125493 output 665 (took 0.39601 seconds)
+Step 6000: distortion 5.256023 num_query 153336 output 665 (took 0.42180 seconds)
+Step 7000: distortion 4.745819 num_query 181106 output 665 (took 0.44370 seconds)
+Step 8000: distortion 4.335145 num_query 208957 output 665 (took 0.42921 seconds)
+Step 9000: distortion 4.036333 num_query 236809 output 665 (took 0.41126 seconds)
+Step 10000: distortion 3.785033 num_query 264653 output 665 (took 0.42043 seconds)
+9128
+2.64 -1.9980307
+run with verbose=True to see details
+Step 0: distortion 295.583160 num_query 403 output 261
+Step 1000: distortion 20.548571 num_query 25531 output 174 (took 0.38078 seconds)
+Step 2000: distortion 9.009787 num_query 46292 output 174 (took 0.44013 seconds)
+Step 3000: distortion 6.234411 num_query 71093 output 174 (took 0.46951 seconds)
+Step 4000: distortion 4.980984 num_query 98939 output 174 (took 0.45573 seconds)
+Checkpoint Step 5000: distortion 4.223189 num_query 126772 output 174 (took 0.47146 seconds)
+Step 6000: distortion 3.748833 num_query 153941 output 174 (took 0.53221 seconds)
+Step 7000: distortion 3.399674 num_query 181148 output 174 (took 0.38141 seconds)
+Step 8000: distortion 3.124646 num_query 208921 output 174 (took 0.38372 seconds)
+Step 9000: distortion 2.914808 num_query 236757 output 174 (took 0.37549 seconds)
+Step 10000: distortion 2.734422 num_query 264595 output 174 (took 0.40583 seconds)
+18471
+2.1834733 -1.980906
+9159
+2.64 -1.5699118
+run with verbose=True to see details
+/home/cmhcbb/blackbox-attack/foolbox/attacks/base.py:93: UserWarning: Not running the attack because the original input is already misclassified and the adversarial thus has a distance of 0.
+  warnings.warn('Not running the attack because the original input'
+Step 0: distortion 36.903885 num_query 56 output 265
+Step 1000: distortion 1.856971 num_query 23740 output 266 (took 0.43392 seconds)
+Step 2000: distortion 1.183418 num_query 42735 output 266 (took 0.46825 seconds)
+Step 3000: distortion 0.931676 num_query 68414 output 266 (took 0.41655 seconds)
+Step 4000: distortion 0.782115 num_query 95921 output 266 (took 0.43705 seconds)
+Checkpoint Step 5000: distortion 0.691892 num_query 123540 output 266 (took 0.39320 seconds)
+Step 6000: distortion 0.625725 num_query 150526 output 266 (took 0.40809 seconds)
+Step 7000: distortion 0.579166 num_query 177522 output 266 (took 0.57324 seconds)
+Step 8000: distortion 0.541279 num_query 205259 output 266 (took 0.45078 seconds)
+Step 9000: distortion 0.510984 num_query 233019 output 266 (took 0.46762 seconds)
+Step 10000: distortion 0.484930 num_query 260859 output 266 (took 0.40126 seconds)
+49533
+2.64 -1.8081232
+run with verbose=True to see details
+Step 0: distortion 211.476822 num_query 307 output 957
+Step 1000: distortion 37.618889 num_query 24565 output 957 (took 0.28894 seconds)
+Step 2000: distortion 19.463169 num_query 46179 output 957 (took 0.39444 seconds)
+Step 3000: distortion 13.311780 num_query 70533 output 957 (took 0.45857 seconds)
+Step 4000: distortion 10.290632 num_query 96749 output 957 (took 0.56360 seconds)
+Checkpoint Step 5000: distortion 8.583682 num_query 122929 output 957 (took 0.49589 seconds)
+Step 6000: distortion 7.412611 num_query 149482 output 957 (took 0.42824 seconds)
+Step 7000: distortion 6.593150 num_query 177305 output 957 (took 0.45898 seconds)
+Step 8000: distortion 5.998410 num_query 205149 output 957 (took 0.39162 seconds)
+Step 9000: distortion 5.517276 num_query 232942 output 957 (took 0.45021 seconds)
+Step 10000: distortion 5.139921 num_query 260812 output 957 (took 0.45262 seconds)
+6215
+2.64 -2.117904
+/home/cmhcbb/blackbox-attack/foolbox/attacks/base.py:93: UserWarning: Not running the attack because the original input is already misclassified and the adversarial thus has a distance of 0.
+  warnings.warn('Not running the attack because the original input'
+40526
+2.64 -2.117904
+16418
+2.535425 -2.0357141
+run with verbose=True to see details
+/home/cmhcbb/blackbox-attack/foolbox/attacks/base.py:93: UserWarning: Not running the attack because the original input is already misclassified and the adversarial thus has a distance of 0.
+  warnings.warn('Not running the attack because the original input'
+Step 0: distortion 389.901978 num_query 504 output 562
+Step 1000: distortion 0.600087 num_query 28991 output 108 (took 0.78810 seconds)
+Step 2000: distortion 0.334306 num_query 48859 output 108 (took 0.47667 seconds)
+Step 3000: distortion 0.259531 num_query 74149 output 108 (took 0.39119 seconds)
+Step 4000: distortion 0.219046 num_query 100185 output 108 (took 0.54090 seconds)
+Checkpoint Step 5000: distortion 0.193863 num_query 128022 output 108 (took 0.41981 seconds)
+Step 6000: distortion 0.176198 num_query 155778 output 328 (took 0.38980 seconds)
+Step 7000: distortion 0.163478 num_query 183678 output 328 (took 0.58329 seconds)
+Step 8000: distortion 0.152118 num_query 211433 output 108 (took 0.41067 seconds)
+Step 9000: distortion 0.143187 num_query 239252 output 108 (took 0.41697 seconds)
+Step 10000: distortion 0.136165 num_query 267128 output 108 (took 0.54976 seconds)
+34903
+2.64 -2.0494049
+run with verbose=True to see details
+Step 0: distortion 204.119202 num_query 283 output 483
+Step 1000: distortion 2.771308 num_query 24637 output 483 (took 0.65734 seconds)
+Step 2000: distortion 2.097797 num_query 45035 output 483 (took 0.46447 seconds)
+Step 3000: distortion 2.097797 num_query 69474 output 483 (took 0.39724 seconds)
+Step 4000: distortion 2.097797 num_query 97242 output 483 (took 0.42379 seconds)
+Checkpoint Step 5000: distortion 2.097797 num_query 124998 output 483 (took 0.39154 seconds)
+Step 6000: distortion 2.097797 num_query 152875 output 483 (took 0.40442 seconds)
+Step 7000: distortion 2.097797 num_query 180731 output 483 (took 0.38637 seconds)
+Step 8000: distortion 2.097797 num_query 208551 output 483 (took 0.46993 seconds)
+Step 9000: distortion 2.097797 num_query 236460 output 483 (took 0.43903 seconds)
+Step 10000: distortion 2.097797 num_query 264302 output 483 (took 0.39957 seconds)
+46215
+2.2885156 -2.0357141
+run with verbose=True to see details
+Step 0: distortion 165.132874 num_query 233 output 809
+Step 1000: distortion 2.623220 num_query 26694 output 923 (took 0.36627 seconds)
+Step 2000: distortion 1.571206 num_query 44982 output 923 (took 0.33027 seconds)
+Step 3000: distortion 1.227486 num_query 69733 output 923 (took 0.79240 seconds)
+Step 4000: distortion 1.036341 num_query 97193 output 923 (took 0.41935 seconds)
+Checkpoint Step 5000: distortion 0.926957 num_query 125037 output 923 (took 0.64085 seconds)
+Step 6000: distortion 0.840777 num_query 152868 output 923 (took 0.39371 seconds)
+Step 7000: distortion 0.777467 num_query 180678 output 923 (took 0.47347 seconds)
+Step 8000: distortion 0.727070 num_query 208458 output 923 (took 0.48680 seconds)
+Step 9000: distortion 0.685615 num_query 236280 output 923 (took 0.42144 seconds)
+Step 10000: distortion 0.651708 num_query 264133 output 923 (took 0.41214 seconds)
+39447
+2.5877128 -2.117904
+run with verbose=True to see details
+Step 0: distortion 107.933853 num_query 143 output 771
+Step 1000: distortion 6.367997 num_query 24797 output 613 (took 0.48041 seconds)
+Step 2000: distortion 3.531085 num_query 44991 output 613 (took 0.57753 seconds)
+Step 3000: distortion 2.680407 num_query 71049 output 613 (took 0.44451 seconds)
+Step 4000: distortion 2.190068 num_query 98900 output 613 (took 0.53029 seconds)
+Checkpoint Step 5000: distortion 1.906952 num_query 126765 output 613 (took 0.35750 seconds)
+Step 6000: distortion 1.722989 num_query 154575 output 613 (took 0.44543 seconds)
+Step 7000: distortion 1.575222 num_query 182421 output 613 (took 0.50658 seconds)
+Step 8000: distortion 1.461971 num_query 210271 output 613 (took 0.48267 seconds)
+Step 9000: distortion 1.364413 num_query 238041 output 613 (took 0.40321 seconds)
+Step 10000: distortion 1.288505 num_query 265865 output 613 (took 0.41076 seconds)
+9632
+2.1632845 -1.7906162
+run with verbose=True to see details
+Step 0: distortion 259.303986 num_query 411 output 186
+Step 1000: distortion 33.838009 num_query 24630 output 186 (took 0.58488 seconds)
+Step 2000: distortion 15.395339 num_query 46191 output 186 (took 0.45156 seconds)
+Step 3000: distortion 10.276756 num_query 69433 output 186 (took 0.53702 seconds)
+Step 4000: distortion 8.146065 num_query 97234 output 186 (took 0.39553 seconds)
+Checkpoint Step 5000: distortion 6.877853 num_query 125141 output 186 (took 0.40081 seconds)
+Step 6000: distortion 5.993577 num_query 153010 output 186 (took 0.71457 seconds)
+Step 7000: distortion 5.368358 num_query 180855 output 186 (took 0.43052 seconds)
+Step 8000: distortion 4.895884 num_query 208645 output 186 (took 0.39060 seconds)
+Step 9000: distortion 4.508220 num_query 236477 output 186 (took 0.42636 seconds)
+Step 10000: distortion 4.207439 num_query 264285 output 186 (took 0.44876 seconds)
+20326
+2.4308496 -2.117904
+run with verbose=True to see details
+Step 0: distortion 234.163071 num_query 351 output 741
+Step 1000: distortion 60.107948 num_query 23197 output 741 (took 0.59360 seconds)
+Step 2000: distortion 35.836330 num_query 44851 output 741 (took 0.82194 seconds)
+Step 3000: distortion 25.364967 num_query 70201 output 741 (took 0.38516 seconds)
+Step 4000: distortion 14.336423 num_query 97237 output 497 (took 0.59025 seconds)
+Checkpoint Step 5000: distortion 9.395275 num_query 124304 output 497 (took 0.71086 seconds)
+Step 6000: distortion 7.141454 num_query 151309 output 497 (took 0.43323 seconds)
+Step 7000: distortion 5.880219 num_query 178284 output 497 (took 0.44825 seconds)
+Step 8000: distortion 5.109566 num_query 205290 output 497 (took 0.34254 seconds)
+Step 9000: distortion 4.574230 num_query 232345 output 497 (took 0.57953 seconds)
+Step 10000: distortion 4.155839 num_query 259772 output 497 (took 0.54760 seconds)
+6473
+2.64 -2.1007793
+run with verbose=True to see details
+Step 0: distortion 322.097534 num_query 462 output 99
+Step 1000: distortion 60.206249 num_query 24517 output 130 (took 0.52709 seconds)
+Step 2000: distortion 24.993990 num_query 45026 output 130 (took 0.39597 seconds)
+Step 3000: distortion 17.148041 num_query 67632 output 130 (took 0.40326 seconds)
+Step 4000: distortion 13.540107 num_query 95134 output 130 (took 0.49293 seconds)
+Checkpoint Step 5000: distortion 11.578625 num_query 123002 output 130 (took 0.46098 seconds)
+Step 6000: distortion 10.284338 num_query 150860 output 130 (took 0.41955 seconds)
+Step 7000: distortion 9.293913 num_query 178740 output 130 (took 0.40408 seconds)
+Step 8000: distortion 8.449362 num_query 206561 output 130 (took 0.45997 seconds)
+Step 9000: distortion 7.863077 num_query 234442 output 130 (took 0.42920 seconds)
+Step 10000: distortion 7.378454 num_query 262316 output 130 (took 0.49921 seconds)
+47831
+2.235994 -1.6212862
+4833
+2.4285715 -2.117904
+run with verbose=True to see details
+/home/cmhcbb/blackbox-attack/foolbox/attacks/base.py:93: UserWarning: Not running the attack because the original input is already misclassified and the adversarial thus has a distance of 0.
+  warnings.warn('Not running the attack because the original input'
+Step 0: distortion 296.509888 num_query 343 output 145
+Step 1000: distortion 34.722935 num_query 24052 output 145 (took 0.53086 seconds)
+Step 2000: distortion 15.796332 num_query 46077 output 145 (took 0.48662 seconds)
+Step 3000: distortion 10.460757 num_query 70323 output 145 (took 0.40047 seconds)
+Step 4000: distortion 8.214987 num_query 98140 output 145 (took 0.41276 seconds)
+Checkpoint Step 5000: distortion 6.879332 num_query 125970 output 145 (took 0.39262 seconds)
+Step 6000: distortion 5.983098 num_query 153798 output 145 (took 0.44914 seconds)
+Step 7000: distortion 5.330801 num_query 181662 output 145 (took 0.43124 seconds)
+Step 8000: distortion 4.859707 num_query 209494 output 145 (took 0.43044 seconds)
+Step 9000: distortion 4.489477 num_query 237331 output 145 (took 0.43007 seconds)
+Step 10000: distortion 4.193877 num_query 265175 output 145 (took 0.41645 seconds)
+44826
+2.3262744 -2.117904
+run with verbose=True to see details
+Step 0: distortion 24.580479 num_query 45 output 861
+Step 1000: distortion 1.059102 num_query 23299 output 861 (took 0.39863 seconds)
+Step 2000: distortion 0.644337 num_query 43177 output 861 (took 0.43580 seconds)
+Step 3000: distortion 0.503138 num_query 68627 output 861 (took 0.39091 seconds)
+Step 4000: distortion 0.422449 num_query 96131 output 861 (took 0.43673 seconds)
+Checkpoint Step 5000: distortion 0.369260 num_query 124034 output 861 (took 0.43251 seconds)
+Step 6000: distortion 0.333044 num_query 151877 output 861 (took 0.42852 seconds)
+Step 7000: distortion 0.306827 num_query 179678 output 861 (took 0.47815 seconds)
+Step 8000: distortion 0.284976 num_query 207404 output 861 (took 0.40945 seconds)
+Step 9000: distortion 0.268938 num_query 235288 output 861 (took 0.52957 seconds)
+Step 10000: distortion 0.254911 num_query 263118 output 861 (took 0.32797 seconds)
+21640
+2.64 -2.1007793
+run with verbose=True to see details
+Step 0: distortion 43.938385 num_query 57 output 776
+Step 1000: distortion 2.744616 num_query 27114 output 776 (took 0.53560 seconds)
+Step 2000: distortion 1.723648 num_query 43501 output 776 (took 0.43563 seconds)
+Step 3000: distortion 1.334460 num_query 67997 output 776 (took 0.50257 seconds)
+Step 4000: distortion 1.125483 num_query 95811 output 776 (took 0.76128 seconds)
+Checkpoint Step 5000: distortion 0.992303 num_query 123187 output 776 (took 0.63323 seconds)
+Step 6000: distortion 0.897934 num_query 150891 output 776 (took 0.48331 seconds)
+Step 7000: distortion 0.826826 num_query 178175 output 776 (took 0.41053 seconds)
+Step 8000: distortion 0.769173 num_query 206033 output 776 (took 0.59762 seconds)
+Step 9000: distortion 0.723935 num_query 233816 output 776 (took 0.58254 seconds)
+Step 10000: distortion 0.686648 num_query 261023 output 776 (took 0.45645 seconds)
+30943
+2.64 -1.8267832
+36688
+2.64 -1.7240347
+6600
+2.64 -1.4500387
+run with verbose=True to see details
+/home/cmhcbb/blackbox-attack/foolbox/attacks/base.py:93: UserWarning: Not running the attack because the original input is already misclassified and the adversarial thus has a distance of 0.
+  warnings.warn('Not running the attack because the original input'
+/home/cmhcbb/blackbox-attack/foolbox/attacks/base.py:93: UserWarning: Not running the attack because the original input is already misclassified and the adversarial thus has a distance of 0.
+  warnings.warn('Not running the attack because the original input'
+Step 0: distortion 238.964493 num_query 358 output 299
+Step 1000: distortion 60.786613 num_query 25714 output 371 (took 0.72048 seconds)
+Step 2000: distortion 33.396599 num_query 45280 output 374 (took 0.58061 seconds)
+Step 3000: distortion 23.156382 num_query 70027 output 374 (took 0.52123 seconds)
+Step 4000: distortion 16.637264 num_query 97897 output 374 (took 0.39698 seconds)
+Checkpoint Step 5000: distortion 13.420657 num_query 125733 output 374 (took 0.42668 seconds)
+Step 6000: distortion 11.540530 num_query 153597 output 374 (took 0.41703 seconds)
+Step 7000: distortion 9.987258 num_query 181422 output 374 (took 0.56080 seconds)
+Step 8000: distortion 8.939412 num_query 209231 output 374 (took 0.42054 seconds)
+Step 9000: distortion 8.173407 num_query 237086 output 374 (took 0.39819 seconds)
+Step 10000: distortion 7.504498 num_query 264829 output 374 (took 0.45176 seconds)
+23187
+2.64 -2.0836544
+run with verbose=True to see details
+Step 0: distortion 466.952057 num_query 600 output 469
+Step 1000: distortion 58.284370 num_query 23800 output 544 (took 0.71511 seconds)
+Step 2000: distortion 22.000635 num_query 45263 output 544 (took 0.60628 seconds)
+Step 3000: distortion 22.000635 num_query 69980 output 544 (took 4.41346 seconds)
+Step 4000: distortion 22.000635 num_query 97572 output 544 (took 0.44865 seconds)
+Checkpoint Step 5000: distortion 22.000635 num_query 125407 output 544 (took 0.38411 seconds)
+Step 6000: distortion 22.000635 num_query 153202 output 544 (took 0.60102 seconds)
+Step 7000: distortion 22.000635 num_query 180995 output 544 (took 0.42260 seconds)
+Step 8000: distortion 22.000635 num_query 208829 output 544 (took 0.47285 seconds)
+Step 9000: distortion 22.000635 num_query 236677 output 544 (took 0.48532 seconds)
+Step 10000: distortion 22.000635 num_query 264558 output 544 (took 0.50659 seconds)
+28454
+2.64 -2.117904
+run with verbose=True to see details
+Step 0: distortion 67.457581 num_query 97 output 867
+Step 1000: distortion 5.036753 num_query 23112 output 867 (took 0.24970 seconds)
+Step 2000: distortion 2.864881 num_query 44332 output 867 (took 0.45880 seconds)
+Step 3000: distortion 2.138308 num_query 69323 output 867 (took 0.52334 seconds)
+Step 4000: distortion 1.778673 num_query 96339 output 867 (took 0.44356 seconds)
+Checkpoint Step 5000: distortion 1.552683 num_query 123357 output 867 (took 0.47919 seconds)
+Step 6000: distortion 1.391092 num_query 150395 output 867 (took 0.50320 seconds)
+Step 7000: distortion 1.268904 num_query 177362 output 867 (took 0.48350 seconds)
+Step 8000: distortion 1.183804 num_query 204447 output 867 (took 0.45567 seconds)
+Step 9000: distortion 1.110813 num_query 231567 output 867 (took 0.47065 seconds)
+Step 10000: distortion 1.049243 num_query 258678 output 867 (took 0.46513 seconds)
+20723
+2.64 -2.117904
+40036
+2.622571 -2.1007793
+run with verbose=True to see details
+/home/cmhcbb/blackbox-attack/foolbox/attacks/base.py:93: UserWarning: Not running the attack because the original input is already misclassified and the adversarial thus has a distance of 0.
+  warnings.warn('Not running the attack because the original input'
+Step 0: distortion 250.113083 num_query 345 output 507
+Step 1000: distortion 16.898455 num_query 25866 output 507 (took 0.44557 seconds)
+Step 2000: distortion 8.441310 num_query 45829 output 507 (took 0.49262 seconds)
+Step 3000: distortion 6.114137 num_query 69145 output 507 (took 0.43792 seconds)
+Step 4000: distortion 4.944250 num_query 96243 output 507 (took 0.47711 seconds)
+Checkpoint Step 5000: distortion 4.270753 num_query 123294 output 507 (took 0.43894 seconds)
+Step 6000: distortion 3.809070 num_query 150292 output 507 (took 0.38193 seconds)
+Step 7000: distortion 3.473094 num_query 177318 output 507 (took 0.55909 seconds)
+Step 8000: distortion 3.207615 num_query 204361 output 507 (took 0.40165 seconds)
+Step 9000: distortion 3.006443 num_query 231374 output 507 (took 0.50009 seconds)
+Step 10000: distortion 2.841467 num_query 258384 output 507 (took 0.43155 seconds)
+41971
+2.64 -2.0357141
+run with verbose=True to see details
+Step 0: distortion 70.254883 num_query 102 output 718
+Step 1000: distortion 0.182050 num_query 23879 output 718 (took 0.52600 seconds)
+Step 2000: distortion 0.103412 num_query 45397 output 718 (took 0.44127 seconds)
+Step 3000: distortion 0.080990 num_query 68805 output 718 (took 0.43999 seconds)
+Step 4000: distortion 0.068836 num_query 96629 output 718 (took 0.47661 seconds)
+Checkpoint Step 5000: distortion 0.060798 num_query 124095 output 718 (took 0.38591 seconds)
+Step 6000: distortion 0.055514 num_query 151710 output 718 (took 0.42426 seconds)
+Step 7000: distortion 0.051243 num_query 179504 output 718 (took 0.40355 seconds)
+Step 8000: distortion 0.048283 num_query 207325 output 718 (took 0.40327 seconds)
+Step 9000: distortion 0.045896 num_query 235240 output 718 (took 0.43784 seconds)
+Step 10000: distortion 0.043759 num_query 263069 output 718 (took 0.40129 seconds)
+13401
+2.5877128 -2.117904
+run with verbose=True to see details
+Step 0: distortion 190.877762 num_query 305 output 199
+Step 1000: distortion 10.392970 num_query 23725 output 199 (took 0.51537 seconds)
+Step 2000: distortion 5.917030 num_query 45775 output 199 (took 0.67005 seconds)
+Step 3000: distortion 4.478365 num_query 69554 output 199 (took 0.43752 seconds)
+Step 4000: distortion 3.709689 num_query 96657 output 199 (took 0.38444 seconds)
+Checkpoint Step 5000: distortion 3.234139 num_query 123766 output 199 (took 0.42459 seconds)
+Step 6000: distortion 2.898868 num_query 150843 output 199 (took 0.39324 seconds)
+Step 7000: distortion 2.644295 num_query 177909 output 199 (took 0.58670 seconds)
+Step 8000: distortion 2.448609 num_query 204904 output 199 (took 0.51763 seconds)
+Step 9000: distortion 2.290561 num_query 231935 output 199 (took 0.60036 seconds)
+Step 10000: distortion 2.164026 num_query 259784 output 199 (took 0.42976 seconds)
+36211
+2.64 -2.117904
+run with verbose=True to see details
+Step 0: distortion 390.939758 num_query 465 output 815
+Step 1000: distortion 30.430302 num_query 23101 output 875 (took 0.29446 seconds)
+Step 2000: distortion 14.726376 num_query 46265 output 875 (took 0.38830 seconds)
+Step 3000: distortion 9.661180 num_query 70074 output 875 (took 0.38399 seconds)
+Step 4000: distortion 7.523499 num_query 96565 output 875 (took 0.50115 seconds)
+Checkpoint Step 5000: distortion 6.162543 num_query 122890 output 875 (took 0.52316 seconds)
+Step 6000: distortion 5.313715 num_query 149201 output 875 (took 0.61063 seconds)
+Step 7000: distortion 4.701623 num_query 175406 output 875 (took 0.51607 seconds)
+Step 8000: distortion 4.250152 num_query 201602 output 875 (took 0.47302 seconds)
+Step 9000: distortion 3.875717 num_query 227793 output 875 (took 0.57313 seconds)
+Step 10000: distortion 3.600308 num_query 254391 output 875 (took 0.57887 seconds)
+31262
+2.3088455 -2.117904
+run with verbose=True to see details
+Step 0: distortion 287.172913 num_query 399 output 833
+Step 1000: distortion 41.011963 num_query 23333 output 814 (took 0.47601 seconds)
+Step 2000: distortion 20.182478 num_query 43950 output 814 (took 0.54030 seconds)
+Step 3000: distortion 14.055827 num_query 68923 output 814 (took 0.41941 seconds)
+Step 4000: distortion 11.050643 num_query 95226 output 814 (took 0.55156 seconds)
+Checkpoint Step 5000: distortion 9.208822 num_query 122084 output 814 (took 0.39473 seconds)
+Step 6000: distortion 7.976983 num_query 149153 output 814 (took 0.45870 seconds)
+Step 7000: distortion 7.194886 num_query 176183 output 814 (took 0.38729 seconds)
+Step 8000: distortion 6.504118 num_query 203220 output 814 (took 0.40552 seconds)
+Step 9000: distortion 5.984036 num_query 230216 output 814 (took 0.44690 seconds)
+Step 10000: distortion 5.592726 num_query 257116 output 814 (took 0.44726 seconds)
+29013
+2.64 -1.9124069
+run with verbose=True to see details
+Step 0: distortion 197.985031 num_query 264 output 904
+Step 1000: distortion 6.291773 num_query 24880 output 905 (took 0.42171 seconds)
+Step 2000: distortion 6.144292 num_query 48048 output 905 (took 0.43041 seconds)
+Step 3000: distortion 6.144292 num_query 67737 output 905 (took 0.60400 seconds)
+Step 4000: distortion 6.144292 num_query 84114 output 905 (took 0.15426 seconds)
+Checkpoint Step 5000: distortion 6.144292 num_query 111138 output 905 (took 0.52688 seconds)
+Step 6000: distortion 6.144292 num_query 138936 output 905 (took 0.34202 seconds)
+Step 7000: distortion 6.144292 num_query 166748 output 905 (took 0.48693 seconds)
+Step 8000: distortion 6.144292 num_query 194599 output 905 (took 0.39881 seconds)
+Step 9000: distortion 6.144292 num_query 222447 output 905 (took 0.35446 seconds)
+Step 10000: distortion 6.144292 num_query 250330 output 905 (took 0.42108 seconds)
+34168
+2.64 -2.0007002
+17072
+2.5179958 -1.9295317
+4082
+2.6051416 -1.8081232
+run with verbose=True to see details
+/home/cmhcbb/blackbox-attack/foolbox/attacks/base.py:93: UserWarning: Not running the attack because the original input is already misclassified and the adversarial thus has a distance of 0.
+  warnings.warn('Not running the attack because the original input'
+/home/cmhcbb/blackbox-attack/foolbox/attacks/base.py:93: UserWarning: Not running the attack because the original input is already misclassified and the adversarial thus has a distance of 0.
+  warnings.warn('Not running the attack because the original input'
+Step 0: distortion 299.574493 num_query 448 output 980
+Step 1000: distortion 30.036625 num_query 26811 output 139 (took 0.64345 seconds)
+Step 2000: distortion 15.688185 num_query 45602 output 139 (took 0.34633 seconds)
+Step 3000: distortion 11.183200 num_query 69283 output 139 (took 0.35203 seconds)
+Step 4000: distortion 8.974036 num_query 96313 output 139 (took 0.42471 seconds)
+Checkpoint Step 5000: distortion 7.584691 num_query 122987 output 139 (took 0.40366 seconds)
+Step 6000: distortion 6.621974 num_query 150077 output 139 (took 0.45949 seconds)
+Step 7000: distortion 5.944482 num_query 176795 output 139 (took 0.35787 seconds)
+Step 8000: distortion 5.466305 num_query 203812 output 139 (took 0.54709 seconds)
+Step 9000: distortion 5.083807 num_query 230835 output 139 (took 0.34931 seconds)
+Step 10000: distortion 4.750418 num_query 257397 output 139 (took 0.51701 seconds)
+35960
+2.2565577 -2.117904
+run with verbose=True to see details
+Step 0: distortion 49.997448 num_query 80 output 570
+Step 1000: distortion 2.375590 num_query 24102 output 570 (took 0.14247 seconds)
+Step 2000: distortion 1.438126 num_query 44047 output 570 (took 0.34589 seconds)
+Step 3000: distortion 1.102834 num_query 68282 output 570 (took 0.42353 seconds)
+Step 4000: distortion 0.910985 num_query 92870 output 570 (took 0.41389 seconds)
+Checkpoint Step 5000: distortion 0.795240 num_query 120751 output 570 (took 0.51491 seconds)
+Step 6000: distortion 0.715566 num_query 148574 output 570 (took 0.47205 seconds)
+Step 7000: distortion 0.653772 num_query 176331 output 570 (took 0.43211 seconds)
+Step 8000: distortion 0.607244 num_query 204141 output 570 (took 0.39199 seconds)
+Step 9000: distortion 0.571060 num_query 231971 output 570 (took 0.41189 seconds)
+Step 10000: distortion 0.540864 num_query 259905 output 570 (took 0.38649 seconds)
+921
+2.64 -1.9124069
+run with verbose=True to see details
+Step 0: distortion 259.246887 num_query 378 output 145
+Step 1000: distortion 9.281056 num_query 26192 output 17 (took 0.24274 seconds)
+Step 2000: distortion 4.941432 num_query 47091 output 17 (took 0.18466 seconds)
+Step 3000: distortion 3.744439 num_query 70581 output 17 (took 0.49521 seconds)
+Step 4000: distortion 3.070022 num_query 97916 output 17 (took 0.38399 seconds)
+Checkpoint Step 5000: distortion 2.663739 num_query 125774 output 17 (took 0.47599 seconds)
+Step 6000: distortion 2.392736 num_query 153607 output 17 (took 0.38397 seconds)
+Step 7000: distortion 2.181182 num_query 180593 output 17 (took 0.55302 seconds)
+Step 8000: distortion 2.028803 num_query 207477 output 17 (took 0.36464 seconds)
+Step 9000: distortion 1.904496 num_query 235351 output 17 (took 0.38642 seconds)
+Step 10000: distortion 1.796231 num_query 263229 output 17 (took 0.41214 seconds)
+6113
+2.535425 -2.0357141
+run with verbose=True to see details
+Step 0: distortion 207.143387 num_query 289 output 124
+Step 1000: distortion 6.621259 num_query 22783 output 124 (took 0.56957 seconds)
+Step 2000: distortion 3.725942 num_query 41887 output 124 (took 0.40469 seconds)
+Step 3000: distortion 2.834962 num_query 67558 output 124 (took 0.50608 seconds)
+Step 4000: distortion 2.346839 num_query 94541 output 124 (took 0.48402 seconds)
+Checkpoint Step 5000: distortion 2.055006 num_query 122310 output 124 (took 0.61680 seconds)
+Step 6000: distortion 1.856994 num_query 150136 output 124 (took 0.48172 seconds)
+Step 7000: distortion 1.700834 num_query 177934 output 124 (took 0.35660 seconds)
+Step 8000: distortion 1.580733 num_query 205783 output 124 (took 0.38414 seconds)
+Step 9000: distortion 1.484737 num_query 233608 output 124 (took 0.39919 seconds)
+Step 10000: distortion 1.403576 num_query 261493 output 124 (took 0.36934 seconds)
+47167
+2.2885156 -2.117904
+run with verbose=True to see details
+Step 0: distortion 45.471066 num_query 59 output 939
+Step 1000: distortion 4.277658 num_query 23020 output 939 (took 0.33464 seconds)
+Step 2000: distortion 2.596074 num_query 45481 output 939 (took 0.36898 seconds)
+Step 3000: distortion 2.017580 num_query 70712 output 939 (took 0.45390 seconds)
+Step 4000: distortion 1.695490 num_query 98461 output 939 (took 0.43954 seconds)
+Checkpoint Step 5000: distortion 1.496502 num_query 126300 output 939 (took 0.35755 seconds)
+Step 6000: distortion 1.355070 num_query 154153 output 939 (took 0.37155 seconds)
+Step 7000: distortion 1.242711 num_query 181887 output 939 (took 0.36439 seconds)
+Step 8000: distortion 1.160381 num_query 209723 output 939 (took 0.39308 seconds)
+Step 9000: distortion 1.093615 num_query 237556 output 939 (took 0.39887 seconds)
+Step 10000: distortion 1.038738 num_query 265397 output 939 (took 0.38351 seconds)
+26138
+2.6051416 -2.1007793
+46548
+2.2042704 -2.117904
+run with verbose=True to see details
+/home/cmhcbb/blackbox-attack/foolbox/attacks/base.py:93: UserWarning: Not running the attack because the original input is already misclassified and the adversarial thus has a distance of 0.
+  warnings.warn('Not running the attack because the original input'
+Step 0: distortion 290.994354 num_query 422 output 753
+Step 1000: distortion 11.022879 num_query 24233 output 859 (took 0.55889 seconds)
+Step 2000: distortion 5.992979 num_query 43361 output 859 (took 0.44164 seconds)
+Step 3000: distortion 4.456191 num_query 67714 output 859 (took 0.35237 seconds)
+Step 4000: distortion 3.671582 num_query 94758 output 859 (took 0.49474 seconds)
+Checkpoint Step 5000: distortion 3.196391 num_query 121356 output 859 (took 0.60095 seconds)
+Step 6000: distortion 2.853820 num_query 148692 output 859 (took 0.42421 seconds)
+Step 7000: distortion 2.622436 num_query 176546 output 859 (took 0.36654 seconds)
+Step 8000: distortion 2.430286 num_query 204458 output 859 (took 0.41411 seconds)
+Step 9000: distortion 2.285324 num_query 232280 output 859 (took 0.39170 seconds)
+Step 10000: distortion 2.161289 num_query 260135 output 859 (took 0.36488 seconds)
+43789
+2.3785625 -2.117904
+40978
+2.64 -1.9831933
+75
+2.622571 -2.1007793
+run with verbose=True to see details
+/home/cmhcbb/blackbox-attack/foolbox/attacks/base.py:93: UserWarning: Not running the attack because the original input is already misclassified and the adversarial thus has a distance of 0.
+  warnings.warn('Not running the attack because the original input'
+/home/cmhcbb/blackbox-attack/foolbox/attacks/base.py:93: UserWarning: Not running the attack because the original input is already misclassified and the adversarial thus has a distance of 0.
+  warnings.warn('Not running the attack because the original input'
+Step 0: distortion 378.931427 num_query 518 output 107
+Step 1000: distortion 72.488533 num_query 27336 output 126 (took 0.55147 seconds)
+Step 2000: distortion 43.719006 num_query 45100 output 126 (took 0.34980 seconds)
+Step 3000: distortion 32.531563 num_query 64925 output 126 (took 0.10190 seconds)
+Step 4000: distortion 25.814356 num_query 85408 output 126 (took 0.41614 seconds)
+Checkpoint Step 5000: distortion 21.128826 num_query 112398 output 126 (took 0.49279 seconds)
+Step 6000: distortion 17.994781 num_query 139426 output 126 (took 0.34248 seconds)
+Step 7000: distortion 15.692263 num_query 166441 output 126 (took 0.39295 seconds)
+Step 8000: distortion 13.974054 num_query 193403 output 126 (took 0.45729 seconds)
+Step 9000: distortion 12.686592 num_query 220457 output 126 (took 0.37333 seconds)
+Step 10000: distortion 11.688734 num_query 247457 output 126 (took 0.44046 seconds)
+40102
+2.535425 -2.0665298
+run with verbose=True to see details
+Step 0: distortion 333.778473 num_query 494 output 606
+Step 1000: distortion 36.989708 num_query 24540 output 621 (took 0.71341 seconds)
+Step 2000: distortion 15.089612 num_query 46651 output 621 (took 0.55582 seconds)
+Step 3000: distortion 10.679048 num_query 69524 output 621 (took 0.64046 seconds)
+Step 4000: distortion 8.161488 num_query 96932 output 621 (took 0.48241 seconds)
+Checkpoint Step 5000: distortion 6.806828 num_query 123917 output 621 (took 0.73241 seconds)
+Step 6000: distortion 5.916274 num_query 150898 output 621 (took 0.42586 seconds)
+Step 7000: distortion 5.280472 num_query 178138 output 621 (took 0.49893 seconds)
+Step 8000: distortion 4.819260 num_query 205964 output 621 (took 0.45879 seconds)
+Step 9000: distortion 4.434388 num_query 233044 output 621 (took 0.48257 seconds)
+Step 10000: distortion 4.147502 num_query 260295 output 621 (took 0.40331 seconds)
+32348
+2.64 -2.0665298
+run with verbose=True to see details
+Step 0: distortion 412.814789 num_query 600 output 506
+Step 1000: distortion 145.814529 num_query 24209 output 506 (took 0.44263 seconds)
+Step 2000: distortion 2.280165 num_query 37146 output 254 (took 0.64147 seconds)
+Step 3000: distortion 0.768827 num_query 62341 output 254 (took 0.52931 seconds)
+Step 4000: distortion 0.560945 num_query 90187 output 254 (took 0.51494 seconds)
+Checkpoint Step 5000: distortion 0.456329 num_query 118011 output 254 (took 0.43266 seconds)
+Step 6000: distortion 0.397396 num_query 145846 output 254 (took 0.41466 seconds)
+Step 7000: distortion 0.357844 num_query 173686 output 254 (took 0.38633 seconds)
+Step 8000: distortion 0.327102 num_query 201439 output 254 (took 0.44710 seconds)
+Step 9000: distortion 0.305174 num_query 229316 output 254 (took 0.59906 seconds)
+Step 10000: distortion 0.287591 num_query 257184 output 646 (took 0.99210 seconds)
+21833
+2.622571 -1.4671633
+15985
+2.622571 -2.0494049
+47860
+2.64 -1.9980307
+21313
+2.2184873 -2.0836544
+run with verbose=True to see details
+/home/cmhcbb/blackbox-attack/foolbox/attacks/base.py:93: UserWarning: Not running the attack because the original input is already misclassified and the adversarial thus has a distance of 0.
+  warnings.warn('Not running the attack because the original input'
+/home/cmhcbb/blackbox-attack/foolbox/attacks/base.py:93: UserWarning: Not running the attack because the original input is already misclassified and the adversarial thus has a distance of 0.
+  warnings.warn('Not running the attack because the original input'
+/home/cmhcbb/blackbox-attack/foolbox/attacks/base.py:93: UserWarning: Not running the attack because the original input is already misclassified and the adversarial thus has a distance of 0.
+  warnings.warn('Not running the attack because the original input'
+Step 0: distortion 173.327805 num_query 243 output 826
+Step 1000: distortion 2.836524 num_query 24052 output 826 (took 0.54287 seconds)
+Step 2000: distortion 1.406500 num_query 44331 output 826 (took 0.58375 seconds)
+Step 3000: distortion 1.065195 num_query 69511 output 826 (took 0.57644 seconds)
+Step 4000: distortion 0.884407 num_query 97276 output 826 (took 0.43571 seconds)
+Checkpoint Step 5000: distortion 0.780182 num_query 125120 output 826 (took 0.39409 seconds)
+Step 6000: distortion 0.701673 num_query 152979 output 826 (took 0.42123 seconds)
+Step 7000: distortion 0.647260 num_query 180831 output 826 (took 0.39663 seconds)
+Step 8000: distortion 0.601740 num_query 208624 output 826 (took 0.49384 seconds)
+Step 9000: distortion 0.565205 num_query 236489 output 826 (took 0.37741 seconds)
+Step 10000: distortion 0.534798 num_query 264299 output 826 (took 0.39506 seconds)
+46114
+1.454815 -1.5455182
+run with verbose=True to see details
+Step 0: distortion 188.241684 num_query 333 output 741
+Step 1000: distortion 70.487518 num_query 26880 output 741 (took 0.44108 seconds)
+Step 2000: distortion 41.304825 num_query 47880 output 741 (took 0.57339 seconds)
+Step 3000: distortion 30.059307 num_query 71791 output 741 (took 0.43422 seconds)
+Step 4000: distortion 23.757889 num_query 99623 output 741 (took 0.38366 seconds)
+Checkpoint Step 5000: distortion 19.796417 num_query 127421 output 741 (took 0.47935 seconds)
+Step 6000: distortion 16.966368 num_query 155228 output 741 (took 0.41213 seconds)
+Step 7000: distortion 14.953963 num_query 183023 output 741 (took 0.38027 seconds)
+Step 8000: distortion 13.562877 num_query 210899 output 741 (took 0.39227 seconds)
+Step 9000: distortion 12.504117 num_query 238733 output 741 (took 0.35957 seconds)
+Step 10000: distortion 11.545123 num_query 266561 output 741 (took 0.42900 seconds)
+4128
+2.64 -2.1007793
+run with verbose=True to see details
+Step 0: distortion 220.675232 num_query 313 output 69
+Step 1000: distortion 20.890516 num_query 22923 output 69 (took 0.40644 seconds)
+Step 2000: distortion 10.505204 num_query 46048 output 69 (took 0.60247 seconds)
+Step 3000: distortion 7.521488 num_query 65456 output 69 (took 0.45234 seconds)
+Step 4000: distortion 6.060499 num_query 91733 output 69 (took 0.44116 seconds)
+Checkpoint Step 5000: distortion 5.225656 num_query 117928 output 69 (took 0.44311 seconds)
+Step 6000: distortion 4.663534 num_query 144112 output 69 (took 0.43948 seconds)
+Step 7000: distortion 4.228060 num_query 170539 output 69 (took 0.40583 seconds)
+Step 8000: distortion 3.901763 num_query 196780 output 69 (took 0.59189 seconds)
+Step 9000: distortion 3.647695 num_query 222941 output 69 (took 0.42442 seconds)
+Step 10000: distortion 3.431484 num_query 249271 output 69 (took 0.49079 seconds)
+12522
+2.169412 -2.0322802
+37193
+2.622571 -2.117904
+run with verbose=True to see details
+/home/cmhcbb/blackbox-attack/foolbox/attacks/base.py:93: UserWarning: Not running the attack because the original input is already misclassified and the adversarial thus has a distance of 0.
+  warnings.warn('Not running the attack because the original input'
+Step 0: distortion 27.216812 num_query 36 output 568
+Step 1000: distortion 1.145310 num_query 24250 output 568 (took 0.41667 seconds)
+Step 2000: distortion 0.692908 num_query 42492 output 568 (took 0.47444 seconds)
+Step 3000: distortion 0.547451 num_query 68711 output 568 (took 0.57702 seconds)
+Step 4000: distortion 0.469975 num_query 96533 output 568 (took 0.38985 seconds)
+Checkpoint Step 5000: distortion 0.416994 num_query 124384 output 568 (took 0.46938 seconds)
+Step 6000: distortion 0.377396 num_query 152150 output 568 (took 0.49003 seconds)
+Step 7000: distortion 0.349339 num_query 179141 output 568 (took 0.46687 seconds)
+Step 8000: distortion 0.328297 num_query 205509 output 568 (took 0.50963 seconds)
+Step 9000: distortion 0.309728 num_query 232399 output 568 (took 0.58027 seconds)
+Step 10000: distortion 0.294499 num_query 259555 output 568 (took 0.39507 seconds)
+14530
+2.622571 -1.6998693
+run with verbose=True to see details
+Step 0: distortion 323.991302 num_query 461 output 109
+Step 1000: distortion 71.003906 num_query 26829 output 973 (took 0.45756 seconds)
+Step 2000: distortion 35.864197 num_query 44407 output 973 (took 0.57380 seconds)
+Step 3000: distortion 24.386454 num_query 70394 output 973 (took 0.43032 seconds)
+Step 4000: distortion 18.804056 num_query 98273 output 973 (took 0.41177 seconds)
+Checkpoint Step 5000: distortion 15.538056 num_query 125441 output 973 (took 0.40526 seconds)
+Step 6000: distortion 13.270659 num_query 151995 output 973 (took 0.51901 seconds)
+Step 7000: distortion 11.541036 num_query 179839 output 973 (took 0.37102 seconds)
+Step 8000: distortion 10.289880 num_query 207614 output 973 (took 0.38358 seconds)
+Step 9000: distortion 9.290771 num_query 235458 output 973 (took 0.44340 seconds)
+Step 10000: distortion 8.484570 num_query 263294 output 973 (took 0.41595 seconds)
+15638
+2.0822659 -2.1007793
+run with verbose=True to see details
+Step 0: distortion 151.750809 num_query 242 output 314
+Step 1000: distortion 8.259746 num_query 23114 output 314 (took 0.47279 seconds)
+Step 2000: distortion 4.227878 num_query 45758 output 314 (took 0.51301 seconds)
+Step 3000: distortion 3.217156 num_query 70068 output 314 (took 0.43298 seconds)
+Step 4000: distortion 2.669126 num_query 97062 output 314 (took 0.61391 seconds)
+Checkpoint Step 5000: distortion 2.332458 num_query 124906 output 314 (took 0.47028 seconds)
+Step 6000: distortion 2.094175 num_query 152710 output 314 (took 0.44265 seconds)
+Step 7000: distortion 1.916131 num_query 180501 output 314 (took 0.50305 seconds)
+Step 8000: distortion 1.786131 num_query 208324 output 314 (took 0.38327 seconds)
+Step 9000: distortion 1.675154 num_query 236200 output 314 (took 0.48631 seconds)
+Step 10000: distortion 1.589260 num_query 264057 output 314 (took 0.42142 seconds)
+9339
+2.2317834 -2.0836544
+run with verbose=True to see details
+Step 0: distortion 277.935028 num_query 423 output 259
+Step 1000: distortion 19.516893 num_query 24082 output 193 (took 0.74597 seconds)
+Step 2000: distortion 10.785145 num_query 43794 output 193 (took 0.36770 seconds)
+Step 3000: distortion 7.858252 num_query 69364 output 193 (took 0.37514 seconds)
+Step 4000: distortion 6.401403 num_query 97270 output 193 (took 0.41530 seconds)
+Checkpoint Step 5000: distortion 5.483017 num_query 124465 output 193 (took 0.36995 seconds)
+Step 6000: distortion 4.882940 num_query 152294 output 193 (took 0.37619 seconds)
+Step 7000: distortion 4.423679 num_query 180097 output 193 (took 0.40705 seconds)
+Step 8000: distortion 4.100917 num_query 207980 output 193 (took 0.49674 seconds)
+Step 9000: distortion 3.822569 num_query 235877 output 193 (took 0.40254 seconds)
+Step 10000: distortion 3.595925 num_query 263766 output 193 (took 0.44745 seconds)
+35586
+2.64 -2.1007793
+run with verbose=True to see details
+Step 0: distortion 161.918625 num_query 188 output 633
+Step 1000: distortion 0.203585 num_query 24231 output 551 (took 0.62715 seconds)
+Step 2000: distortion 0.187614 num_query 46199 output 551 (took 0.41698 seconds)
+Step 3000: distortion 0.187614 num_query 68099 output 551 (took 0.54120 seconds)
+Step 4000: distortion 0.187614 num_query 95768 output 551 (took 0.45496 seconds)
+Checkpoint Step 5000: distortion 0.187614 num_query 123624 output 551 (took 0.39676 seconds)
+Step 6000: distortion 0.187614 num_query 151484 output 551 (took 0.41191 seconds)
+Step 7000: distortion 0.187614 num_query 179356 output 551 (took 0.48812 seconds)
+Step 8000: distortion 0.187614 num_query 207238 output 551 (took 0.37465 seconds)
+Step 9000: distortion 0.187614 num_query 235117 output 551 (took 0.43099 seconds)
+Step 10000: distortion 0.187614 num_query 262594 output 551 (took 0.38628 seconds)
+29359
+2.64 -1.7240347
+run with verbose=True to see details
+Step 0: distortion 62.261581 num_query 103 output 784
+Step 1000: distortion 0.301978 num_query 24635 output 784 (took 0.42070 seconds)
+Step 2000: distortion 0.194764 num_query 43819 output 784 (took 0.58997 seconds)
+Step 3000: distortion 0.154944 num_query 69136 output 784 (took 0.65032 seconds)
+Step 4000: distortion 0.133081 num_query 96078 output 784 (took 0.73108 seconds)
+Checkpoint Step 5000: distortion 0.119160 num_query 123871 output 784 (took 0.37444 seconds)
+Step 6000: distortion 0.108899 num_query 151687 output 784 (took 0.52439 seconds)
+Step 7000: distortion 0.100838 num_query 179478 output 784 (took 0.37324 seconds)
+Step 8000: distortion 0.094858 num_query 207277 output 784 (took 0.39369 seconds)
+Step 9000: distortion 0.090083 num_query 235130 output 784 (took 0.41462 seconds)
+Step 10000: distortion 0.085789 num_query 262911 output 784 (took 0.40871 seconds)
+5978
+2.622571 -1.9466565
+run with verbose=True to see details
+Step 0: distortion 94.110603 num_query 147 output 973
+Step 1000: distortion 0.384245 num_query 25836 output 599 (took 0.44455 seconds)
+Step 2000: distortion 0.227997 num_query 45149 output 599 (took 0.56720 seconds)
+Step 3000: distortion 0.180637 num_query 69672 output 599 (took 0.44704 seconds)
+Step 4000: distortion 0.155923 num_query 96754 output 599 (took 0.43204 seconds)
+Checkpoint Step 5000: distortion 0.139069 num_query 124484 output 599 (took 0.41618 seconds)
+Step 6000: distortion 0.126646 num_query 151762 output 599 (took 0.35034 seconds)
+Step 7000: distortion 0.117291 num_query 178445 output 599 (took 0.40957 seconds)
+Step 8000: distortion 0.110034 num_query 206270 output 599 (took 0.42542 seconds)
+Step 9000: distortion 0.103970 num_query 234129 output 599 (took 0.45183 seconds)
+Step 10000: distortion 0.099209 num_query 261947 output 599 (took 0.48079 seconds)
+5273
+2.64 -2.117904
+20976
+2.3959913 -1.9131652
+run with verbose=True to see details
+/home/cmhcbb/blackbox-attack/foolbox/attacks/base.py:93: UserWarning: Not running the attack because the original input is already misclassified and the adversarial thus has a distance of 0.
+  warnings.warn('Not running the attack because the original input'
+Step 0: distortion 215.329529 num_query 368 output 804
+Step 1000: distortion 5.807077 num_query 24938 output 496 (took 0.24405 seconds)
+Step 2000: distortion 2.901585 num_query 43749 output 496 (took 0.30892 seconds)
+Step 3000: distortion 2.151270 num_query 69909 output 496 (took 0.37608 seconds)
+Step 4000: distortion 1.750546 num_query 96071 output 496 (took 0.34062 seconds)
+Checkpoint Step 5000: distortion 1.531181 num_query 123019 output 496 (took 0.47602 seconds)
+Step 6000: distortion 1.379551 num_query 149983 output 496 (took 0.47576 seconds)
+Step 7000: distortion 1.267114 num_query 176981 output 496 (took 0.44704 seconds)
+Step 8000: distortion 1.179078 num_query 204027 output 496 (took 0.47957 seconds)
+Step 9000: distortion 1.105073 num_query 231097 output 496 (took 0.35436 seconds)
+Step 10000: distortion 1.043968 num_query 258149 output 496 (took 0.43832 seconds)
+33289
+2.622571 -1.9131652
+run with verbose=True to see details
+Step 0: distortion 14.716763 num_query 24 output 621
+Step 1000: distortion 0.647332 num_query 24004 output 621 (took 0.61911 seconds)
+Step 2000: distortion 0.428663 num_query 45529 output 621 (took 0.36010 seconds)
+Step 3000: distortion 0.341021 num_query 70135 output 621 (took 0.37762 seconds)
+Step 4000: distortion 0.298869 num_query 92199 output 621 (took 0.47474 seconds)
+Checkpoint Step 5000: distortion 0.266553 num_query 119359 output 621 (took 0.50167 seconds)
+Step 6000: distortion 0.242088 num_query 146375 output 621 (took 0.51869 seconds)
+Step 7000: distortion 0.224323 num_query 173401 output 621 (took 0.42410 seconds)
+Step 8000: distortion 0.210516 num_query 200439 output 621 (took 0.46013 seconds)
+Step 9000: distortion 0.198624 num_query 227532 output 621 (took 0.40708 seconds)
+Step 10000: distortion 0.189288 num_query 254570 output 621 (took 0.50949 seconds)
+32066
+2.64 -2.117904
+run with verbose=True to see details
+Step 0: distortion 92.380768 num_query 102 output 642
+Step 1000: distortion 4.169378 num_query 24537 output 819 (took 0.79165 seconds)
+Step 2000: distortion 4.125656 num_query 44723 output 819 (took 0.42432 seconds)
+Step 3000: distortion 4.125656 num_query 68676 output 819 (took 0.56655 seconds)
+Step 4000: distortion 1.724528 num_query 95747 output 819 (took 0.44927 seconds)
+Checkpoint Step 5000: distortion 1.422186 num_query 122819 output 819 (took 0.38509 seconds)
+Step 6000: distortion 1.263320 num_query 150182 output 819 (took 0.33114 seconds)
+Step 7000: distortion 1.116874 num_query 178029 output 819 (took 0.38522 seconds)
+Step 8000: distortion 1.022202 num_query 205287 output 819 (took 0.48029 seconds)
+Step 9000: distortion 0.962731 num_query 232305 output 819 (took 0.38518 seconds)
+Step 10000: distortion 0.912013 num_query 259356 output 819 (took 0.38452 seconds)
+7148
+2.060536 -1.7347276
+run with verbose=True to see details
+Step 0: distortion 217.612427 num_query 368 output 490
+Step 1000: distortion 52.094803 num_query 25567 output 67 (took 0.43006 seconds)
+Step 2000: distortion 31.080631 num_query 47062 output 67 (took 0.46546 seconds)
+Step 3000: distortion 22.819750 num_query 70599 output 67 (took 0.43783 seconds)
+Step 4000: distortion 18.123062 num_query 97646 output 67 (took 0.44194 seconds)
+Checkpoint Step 5000: distortion 14.992229 num_query 124276 output 67 (took 0.42138 seconds)
+Step 6000: distortion 13.005165 num_query 151571 output 67 (took 0.41089 seconds)
+Step 7000: distortion 11.523003 num_query 179411 output 67 (took 0.45721 seconds)
+Step 8000: distortion 10.432579 num_query 207308 output 67 (took 0.39844 seconds)
+Step 9000: distortion 9.501934 num_query 235150 output 67 (took 0.43275 seconds)
+Step 10000: distortion 8.802490 num_query 262983 output 67 (took 0.59276 seconds)
+19756
+2.5877128 -1.9466565
+run with verbose=True to see details
+Step 0: distortion 233.794022 num_query 313 output 764
+Step 1000: distortion 11.331244 num_query 24867 output 62 (took 0.51000 seconds)
+Step 2000: distortion 6.438873 num_query 45736 output 62 (took 0.45862 seconds)
+Step 3000: distortion 4.840349 num_query 68479 output 62 (took 0.37617 seconds)
+Step 4000: distortion 3.987525 num_query 94910 output 62 (took 0.58792 seconds)
+Checkpoint Step 5000: distortion 3.450529 num_query 122060 output 62 (took 0.45935 seconds)
+Step 6000: distortion 3.069579 num_query 149312 output 62 (took 0.35731 seconds)
+Step 7000: distortion 2.799987 num_query 176811 output 62 (took 0.47276 seconds)
+Step 8000: distortion 2.562429 num_query 203789 output 62 (took 0.45304 seconds)
+Step 9000: distortion 2.370851 num_query 230809 output 62 (took 0.44384 seconds)
+Step 10000: distortion 2.233419 num_query 257894 output 62 (took 0.39136 seconds)
+36128
+2.0784314 -2.117904
+19077
+2.6051416 -2.0151556
+run with verbose=True to see details
+/home/cmhcbb/blackbox-attack/foolbox/attacks/base.py:93: UserWarning: Not running the attack because the original input is already misclassified and the adversarial thus has a distance of 0.
+  warnings.warn('Not running the attack because the original input'
+Step 0: distortion 175.086380 num_query 270 output 371
+Step 1000: distortion 12.322213 num_query 23955 output 371 (took 0.39754 seconds)
+Step 2000: distortion 7.282156 num_query 47375 output 371 (took 0.43445 seconds)
+Step 3000: distortion 5.501347 num_query 70213 output 371 (took 0.39183 seconds)
+Step 4000: distortion 4.659324 num_query 96287 output 371 (took 0.40432 seconds)
+Checkpoint Step 5000: distortion 4.106681 num_query 114875 output 371 (took 0.28289 seconds)
+Step 6000: distortion 3.702836 num_query 127924 output 371 (took 0.18184 seconds)
+Step 7000: distortion 3.421907 num_query 139860 output 371 (took 0.34341 seconds)
+Step 8000: distortion 3.193318 num_query 152134 output 371 (took 0.37956 seconds)
+Step 9000: distortion 3.000435 num_query 165782 output 371 (took 0.14300 seconds)
+Step 10000: distortion 2.852939 num_query 176998 output 371 (took 0.40435 seconds)
+46306
+2.64 -2.0836544
+run with verbose=True to see details
+Step 0: distortion 171.256699 num_query 247 output 521
+Step 1000: distortion 9.873815 num_query 26474 output 521 (took 0.60125 seconds)
+Step 2000: distortion 5.441862 num_query 47007 output 521 (took 0.75817 seconds)
+Step 3000: distortion 4.039106 num_query 70588 output 521 (took 0.45386 seconds)
+Step 4000: distortion 3.301005 num_query 98453 output 521 (took 0.41619 seconds)
+Checkpoint Step 5000: distortion 2.849204 num_query 126234 output 521 (took 0.41441 seconds)
+Step 6000: distortion 2.550371 num_query 153623 output 521 (took 0.54986 seconds)
+Step 7000: distortion 2.333227 num_query 180159 output 521 (took 0.40490 seconds)
+Step 8000: distortion 2.154808 num_query 208001 output 521 (took 0.55893 seconds)
+Step 9000: distortion 2.017810 num_query 235819 output 521 (took 0.51579 seconds)
+Step 10000: distortion 1.895978 num_query 263666 output 521 (took 0.40774 seconds)
+8180
+2.2391288 -1.8952821
+35878
+2.5702832 -2.117904
+run with verbose=True to see details
+/home/cmhcbb/blackbox-attack/foolbox/attacks/base.py:93: UserWarning: Not running the attack because the original input is already misclassified and the adversarial thus has a distance of 0.
+  warnings.warn('Not running the attack because the original input'
+Step 0: distortion 228.148895 num_query 298 output 864
+Step 1000: distortion 36.125809 num_query 23832 output 864 (took 0.52560 seconds)
+Step 2000: distortion 19.065990 num_query 45104 output 864 (took 0.49291 seconds)
+Step 3000: distortion 13.506976 num_query 67834 output 864 (took 0.43948 seconds)
+Step 4000: distortion 10.099906 num_query 94834 output 864 (took 0.42535 seconds)
+Checkpoint Step 5000: distortion 8.359333 num_query 121824 output 864 (took 0.47120 seconds)
+Step 6000: distortion 3.154114 num_query 148927 output 468 (took 0.52781 seconds)
+Step 7000: distortion 1.814913 num_query 175198 output 468 (took 0.52076 seconds)
+Step 8000: distortion 1.364280 num_query 202079 output 468 (took 0.77430 seconds)
+Step 9000: distortion 1.124638 num_query 229926 output 468 (took 0.44206 seconds)
+Step 10000: distortion 0.986482 num_query 257753 output 468 (took 0.44672 seconds)
+21808
+2.6051416 -2.117904
+35409
+1.7865399 -2.117904
