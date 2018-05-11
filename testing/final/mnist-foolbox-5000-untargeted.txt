@@ -1,0 +1,47 @@
+6312
+
+
+
+
+======== Image 6312 =========
+run with verbose=True to see details
+Step 0: 2.70063e-02, stepsizes = 1.0e-02/1.0e-02: 
+Step 1000: 1.67717e-03, stepsizes = 1.5e-02/1.7e-04: d. reduced by 0.03% (5.8185e-07) (took 0.01530 seconds)
+Step 2000: 1.50587e-03, stepsizes = 8.8e-04/1.0e-05:  (took 0.01519 seconds)
+Step 3000: 1.49544e-03, stepsizes = 2.6e-04/3.0e-06: d. reduced by 0.00% (6.0574e-09) (took 0.01260 seconds)
+Step 4000: 1.49088e-03, stepsizes = 1.2e-04/1.3e-06: d. reduced by 0.00% (3.9507e-09) (took 0.01300 seconds)
+Step 5000: 1.48973e-03, stepsizes = 1.5e-05/1.2e-07: d. reduced by 0.00% (3.7247e-10) (took 0.01405 seconds)
+Norm and queries of 6312 is 1.0807178020477295 and 131714 with target 8
+6891
+
+
+
+
+======== Image 6891 =========
+run with verbose=True to see details
+Step 0: 1.01950e-02, stepsizes = 1.0e-02/1.0e-02: 
+Step 1000: 1.15652e-03, stepsizes = 1.5e-02/2.6e-04: d. reduced by 0.05% (6.0189e-07) (took 0.01274 seconds)
+Step 2000: 1.01402e-03, stepsizes = 3.0e-03/3.4e-05: d. reduced by 0.01% (6.9446e-08) (took 0.01238 seconds)
+Step 3000: 9.93203e-04, stepsizes = 3.9e-04/4.5e-06: d. reduced by 0.00% (8.9729e-09) (took 0.01277 seconds)
+Step 4000: 9.89238e-04, stepsizes = 1.2e-04/8.9e-07: d. reduced by 0.00% (1.1561e-09) (took 0.01712 seconds)
+Step 5000: 9.88011e-04, stepsizes = 3.4e-05/2.6e-07: d. reduced by 0.00% (5.1990e-10) (took 0.01628 seconds)
+/home/tle/anaconda3/lib/python3.6/site-packages/foolbox/attacks/blended_noise.py:69: UserWarning: BlendedUniformNoiseAttack failed to draw a random image that is adversarial.
+  warnings.warn('BlendedUniformNoiseAttack failed to draw a'
+/home/tle/anaconda3/lib/python3.6/site-packages/foolbox/attacks/base.py:103: UserWarning: BlendedUniformNoiseAttack did not find an adversarial, maybe the model or the criterion is not supported by this attack.
+  ' attack.'.format(self.name()))
+/home/tle/anaconda3/lib/python3.6/site-packages/foolbox/attacks/boundary_attack.py:215: UserWarning: Initialization failed. If the criterion is targeted, it might be necessary to pass an explicit starting point or targeted initialization attack.
+  'Initialization failed. If the criterion is targeted,'
+/home/tle/anaconda3/lib/python3.6/site-packages/foolbox/attacks/base.py:103: UserWarning: BoundaryAttack did not find an adversarial, maybe the model or the criterion is not supported by this attack.
+  ' attack.'.format(self.name()))
+Norm and queries of 6891 is 0.8801138997077942 and 131461 with target 4
+664
+
+
+
+
+======== Image 664 =========
+run with verbose=True to see details
+Traceback (most recent call last):
+  File "test_foolbox_mnist.py", line 36, in <module>
+    dis = LA.norm(adv.image-image)
+TypeError: unsupported operand type(s) for -: 'NoneType' and 'float'
