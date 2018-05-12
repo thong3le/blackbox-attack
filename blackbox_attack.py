@@ -216,7 +216,7 @@ def attack_untargeted(model, train_dataset, x0, y0, alpha = 0.2, beta = 0.001, i
             theta = xi - x0
             initial_lbd = torch.norm(theta)
             theta = theta/torch.norm(theta)
-            lbd, count = fine_grained_binary_search(model, x0, y0, theta, initial_lbd)
+            lbd, count = fine_grained_binary_search(model, x0, y0, theta, initial_lbd, g_theta)
             query_count += count
             if lbd < g_theta:
                 best_theta, g_theta = theta, lbd
@@ -232,6 +232,8 @@ def attack_untargeted(model, train_dataset, x0, y0, alpha = 0.2, beta = 0.001, i
     theta, g2 = best_theta.clone(), g_theta
     torch.manual_seed(0)
     opt_count = 0
+    stopping = 0.01
+    prev_obj = 100000
     for i in range(iterations):
         gradient = torch.zeros(theta.size())
         q = 10
@@ -251,6 +253,9 @@ def attack_untargeted(model, train_dataset, x0, y0, alpha = 0.2, beta = 0.001, i
 
         if (i+1)%50 == 0:
             print("Iteration %3d: g(theta + beta*u) = %.4f g(theta) = %.4f distortion %.4f num_queries %d" % (i+1, g1, g2, torch.norm(g2*theta), opt_count))
+            if g2 > prev_obj-stopping:
+                break
+            prev_obj = g2
 
         min_theta = theta
         min_g2 = g2
@@ -303,7 +308,7 @@ def attack_untargeted(model, train_dataset, x0, y0, alpha = 0.2, beta = 0.001, i
 def fine_grained_binary_search_local(model, x0, y0, theta, initial_lbd = 1.0, tol=1e-5):
     nquery = 0
     lbd = initial_lbd
-   
+     
     if model.predict(x0+lbd*theta) == y0:
         lbd_lo = lbd
         lbd_hi = lbd*1.01
@@ -330,14 +335,23 @@ def fine_grained_binary_search_local(model, x0, y0, theta, initial_lbd = 1.0, to
             lbd_lo = lbd_mid
     return lbd_hi, nquery
 
-def fine_grained_binary_search(model, x0, y0, theta, initial_lbd = 1.0):
+def fine_grained_binary_search(model, x0, y0, theta, initial_lbd, current_best):
     nquery = 0
-    lbd = initial_lbd
-    while model.predict(x0 + lbd*theta) == y0:
-        lbd *= 2
-        nquery += 1
-        if lbd > 100:
+    if initial_lbd > current_best: 
+        if model.predict(x0+current_best*theta) == y0:
+            nquery += 1
             return float('inf'), nquery
+        lbd = current_best
+    else:
+        lbd = initial_lbd
+    
+    ## original version
+    #lbd = initial_lbd
+    #while model.predict(x0 + lbd*theta) == y0:
+    #    lbd *= 2
+    #    nquery += 1
+    #    if lbd > 100:
+    #        return float('inf'), nquery
     
     #num_intervals = 100
 
@@ -441,6 +455,7 @@ def attack_cifar10(alpha= 0.2, beta= 0.001, isTarget= False, num_attacks= 100):
     samples = [6311, 6890, 663, 4242, 8376, 7961, 6634, 4969, 7808, 5866, 9558, 3578, 8268, 2281, 2289, 1553, 4104, 8725, 9861, 2407, 5081, 1618, 1208, 5409, 7735, 9171, 1649, 5796, 7113, 5180, 3350,9052, 7253, 8541, 4267, 1020, 8989, 230, 1528, 6534, 18, 8086, 3996, 1031, 3130, 9298, 3632, 3909, 2334, 8896, 7339, 1494, 5243, 8322, 8016, 1786, 9031, 4769, 8969, 5451, 8852, 3329, 9882, 8965, 9627, 4712, 7290, 9769, 6306, 5194, 3966, 4756, 3012, 3102, 540, 4260, 7807, 1471, 2133, 2450, 633, 1314, 8857, 6410, 8594, 4515, 8549, 3858, 3525, 6411, 4360, 7753, 7413, 684,3343, 6785, 7079, 2263] 
     #true_labels = [3, 5, 6, 8, 7, 3, 4, 1, 8, 4, 0, 7, 5, 5, 1, 4, 0, 8, 6, 9, 5, 7, 3, 1, 4, 2, 5, 5, 9, 9, 8, 0, 4, 8, 7, 1, 4, 5, 2, 7, 8, 4, 6, 3, 3, 1, 1, 5, 1, 8, 6, 7, 1, 4, 4, 1, 0, 8, 8, 6, 7, 3, 1, 4, 4, 4, 6, 8, 0, 7, 4, 6, 1, 0, 1, 8, 3, 8, 3, 1, 8, 9, 0, 1, 3, 0, 1, 8, 2, 8, 6, 9, 1, 9, 3, 6, 7, 6]
     #samples = [7753, 1314, 633]
+    samples = [6311]
     for idx in samples:
         #idx = random.randint(100, len(test_dataset)-1)
         image, label = test_dataset[idx]
@@ -486,8 +501,8 @@ if __name__ == '__main__':
     random.seed(0)
     
     #attack_mnist(alpha=2, beta=0.005, isTarget= False)
-    #attack_cifar10(alpha=5, beta=0.001, isTarget= False)
-    attack_imagenet(arch='resnet50', alpha=10, beta=0.005, isTarget= False)
+    attack_cifar10(alpha=5, beta=0.001, isTarget= False)
+    #attack_imagenet(arch='resnet50', alpha=10, beta=0.005, isTarget= False)
     #attack_imagenet(arch='vgg19', alpha=0.05, beta=0.001, isTarget= False, num_attacks= 10)
 
     #attack_mnist(alpha=2, beta=0.005, isTarget= True)
