@@ -366,7 +366,7 @@ def train_mnist(model, train_loader):
                     %(epoch+1, num_epochs, i+1, loss.data[0]))
 
 
-def test_minst(model, test_loader):
+def test_mnist(model, test_loader):
     # Test the Model
     model.eval()  # Change model to 'eval' mode (BN uses moving mean/var).
     correct = 0
