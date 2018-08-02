@@ -466,7 +466,8 @@ if __name__ == '__main__':
     train_mnist(net, train_loader)
     #load_model(net, 'models/mnist_gpu.pt')
     #load_model(net, 'models/mnist.pt')
-    test(net, test_loader)
+    test_mnist(net, test_loader)
+    #test_cifar10(net, test_loader)
     save_model(net,'./models/mnist.pt')
     #net.eval()
 
